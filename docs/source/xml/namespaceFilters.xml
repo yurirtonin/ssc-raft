@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespaceFilters" kind="namespace" language="C++">
+    <compoundname>Filters</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="operations_8hpp_1a58eac2748049cbe44089f3c413f38700" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int Filters::bd</definition>
+        <argsstring></argsstring>
+        <name>bd</name>
+        <initializer>= 4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="338" column="15" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" bodystart="338" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="operations_8hpp_1a19ca8b9b129da5c359372076103de4e3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__device__ int</type>
+        <definition>__device__ int Filters::addrclamp</definition>
+        <argsstring>(int x, int a, int b)</argsstring>
+        <name>addrclamp</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="334" column="23" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" bodystart="334" bodyend="334"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1a24c9c7c73fbfbce6f6496f245bf274d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__device__ float</type>
+        <definition>__device__ float Filters::SoftThresh</definition>
+        <argsstring>(float v, float mu)</argsstring>
+        <name>SoftThresh</name>
+        <param>
+          <type>float</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>mu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="335" column="25" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" bodystart="335" bodyend="335"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1a0c18d1be9df1671771ab583d7c7271ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__device__ <ref refid="structcomplex" kindref="compound">complex</ref></type>
+        <definition>__device__ complex Filters::SoftThresh</definition>
+        <argsstring>(complex v, float mu)</argsstring>
+        <name>SoftThresh</name>
+        <param>
+          <type><ref refid="structcomplex" kindref="compound">complex</ref></type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>mu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="336" column="27" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" bodystart="336" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1a2cce013e3607dc1f69ea7587e479d045" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>__forceinline__ __device__ void</type>
+        <definition>__forceinline__ __device__ void Filters::DTV2D</definition>
+        <argsstring>(Type shout[][16+2 *bd], const Type shin[][16+2 *bd], const Type sh0[][16+2 *bd], float mu)</argsstring>
+        <name>DTV2D</name>
+        <param>
+          <type>Type</type>
+          <declname>shout</declname>
+          <array>[][16+2 *bd]</array>
+        </param>
+        <param>
+          <type>const Type</type>
+          <declname>shin</declname>
+          <array>[][16+2 *bd]</array>
+        </param>
+        <param>
+          <type>const Type</type>
+          <declname>sh0</declname>
+          <array>[][16+2 *bd]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>mu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="341" column="33" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" bodystart="341" bodyend="360"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1adcef0a837d7114724cf4c164f71794bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void Filters::KTV2D</definition>
+        <argsstring>(Type *img, float mu, dim3 shape, Type *gradout)</argsstring>
+        <name>KTV2D</name>
+        <param>
+          <type>Type *</type>
+          <declname>img</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>mu</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>shape</declname>
+        </param>
+        <param>
+          <type>Type *</type>
+          <declname>gradout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If gradout == nullptr, store img=tv(img). Else, store gradout += tv(img)-img. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="366" column="17" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="366" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1a57e323e92dd92e07b73c334c5f1f6f7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>__forceinline__ __device__ void</type>
+        <definition>__forceinline__ __device__ void Filters::DMappedTV</definition>
+        <argsstring>(Type shout[][16+2 *bd], const Type shin[][16+2 *bd], const Type sh0[][16+2 *bd], const float mumap[][16+2 *bd])</argsstring>
+        <name>DMappedTV</name>
+        <param>
+          <type>Type</type>
+          <declname>shout</declname>
+          <array>[][16+2 *bd]</array>
+        </param>
+        <param>
+          <type>const Type</type>
+          <declname>shin</declname>
+          <array>[][16+2 *bd]</array>
+        </param>
+        <param>
+          <type>const Type</type>
+          <declname>sh0</declname>
+          <array>[][16+2 *bd]</array>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>mumap</declname>
+          <array>[][16+2 *bd]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="369" column="33" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" bodystart="369" bodyend="389"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1a3492f402c23c67fc3109687e5b278873" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void Filters::KMappedTV</definition>
+        <argsstring>(Type *grad, const Type *imgin, float phi, dim3 shape, const float *lambdamap)</argsstring>
+        <name>KMappedTV</name>
+        <param>
+          <type>Type *</type>
+          <declname>grad</declname>
+        </param>
+        <param>
+          <type>const Type *</type>
+          <declname>imgin</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>shape</declname>
+        </param>
+        <param>
+          <type>const float *</type>
+          <declname>lambdamap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="392" column="17" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="392" declcolumn="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="333" column="1"/>
+  </compounddef>
+</doxygen>

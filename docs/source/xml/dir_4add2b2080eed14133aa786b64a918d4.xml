@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_4add2b2080eed14133aa786b64a918d4" kind="dir">
+    <compoundname>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel</compoundname>
+    <innerdir refid="dir_091861abe3c988ea553e762686e58399">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods</innerdir>
+    <innerdir refid="dir_a4bfcb5e21393e5ad9bc27d3559cda0b">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/"/>
+  </compounddef>
+</doxygen>

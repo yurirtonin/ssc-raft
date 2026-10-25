@@ -1,0 +1,280 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structGArray" kind="struct" language="C++" prot="public">
+    <compoundname>GArray</compoundname>
+    <includes refid="types_8hpp" local="no">types.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Type</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structGArray_1a4454f6f6b9b710485e5095fdb6ef7500" prot="public" static="no" mutable="no">
+        <type>Type *</type>
+        <definition>Type* GArray&lt; Type &gt;::ptr</definition>
+        <argsstring></argsstring>
+        <name>ptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="752" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="752" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGArray_1a42f732985b7b9b99e8e58f95e5961e9d" prot="public" static="no" mutable="no">
+        <type>dim3</type>
+        <definition>dim3 GArray&lt; Type &gt;::shape</definition>
+        <argsstring></argsstring>
+        <name>shape</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="753" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="753" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structGArray_1a51ef7d9204e67302b3bbbb84d7f65b88" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GArray&lt; Type &gt;::GArray</definition>
+        <argsstring>(Type *_ptr, const dim3 &amp;_shape)</argsstring>
+        <name>GArray</name>
+        <param>
+          <type>Type *</type>
+          <declname>_ptr</declname>
+        </param>
+        <param>
+          <type>const dim3 &amp;</type>
+          <declname>_shape</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="714" column="13" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="727" bodyend="727"/>
+      </memberdef>
+      <memberdef kind="function" id="structGArray_1a2fab12f2f9e1a5ff050671f431291c25" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GArray&lt; Type &gt;::GArray</definition>
+        <argsstring>(Type *_ptr, size_t x, size_t y, size_t z)</argsstring>
+        <name>GArray</name>
+        <param>
+          <type>Type *</type>
+          <declname>_ptr</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="714" column="13" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="731" bodyend="731"/>
+      </memberdef>
+      <memberdef kind="function" id="structGArray_1a23dc483f81f5964906d80dd74256adaf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GArray&lt; Type &gt;::GArray</definition>
+        <argsstring>(const Image2D&lt; Type &gt; &amp;img)</argsstring>
+        <name>GArray</name>
+        <param>
+          <type>const <ref refid="structImage2D" kindref="compound">Image2D</ref>&lt; Type &gt; &amp;</type>
+          <declname>img</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generates a kernel array form given Image/Volume </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="714" column="13" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="736" bodyend="736"/>
+      </memberdef>
+      <memberdef kind="function" id="structGArray_1ad83db3745cf61646b8dcbbbcee8193bc" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GArray&lt; Type &gt;::GArray</definition>
+        <argsstring>(const Image2D&lt; Type &gt; &amp;img, dim3 shapeoffset)</argsstring>
+        <name>GArray</name>
+        <param>
+          <type>const <ref refid="structImage2D" kindref="compound">Image2D</ref>&lt; Type &gt; &amp;</type>
+          <declname>img</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>shapeoffset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Shapeoffset is meant to create a slice: -&gt; ptr += shape -&gt; newshape = shape - shapeoffset It is the caller&apos;s responsibility to deal with a possible noncontiguous memory issue. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="714" column="13" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="744" bodyend="750"/>
+      </memberdef>
+      <memberdef kind="function" id="structGArray_1af2350b640b3f06917af518ac7be302fd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__hevice Type &amp;</type>
+        <definition>__hevice Type&amp; GArray&lt; Type &gt;::operator[]</definition>
+        <argsstring>(size_t i)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="755" column="19" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="755" bodyend="755"/>
+      </memberdef>
+      <memberdef kind="function" id="structGArray_1aa1ee6f1feab75139f1c8d74ed44f6c65" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>__hevice const Type &amp;</type>
+        <definition>__hevice const Type&amp; GArray&lt; Type &gt;::operator[]</definition>
+        <argsstring>(size_t i) const</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="756" column="25" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="756" bodyend="756"/>
+      </memberdef>
+      <memberdef kind="function" id="structGArray_1ab0d81e1d3236c94a9f2efb08b67d0f96" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__hevice Type &amp;</type>
+        <definition>__hevice Type&amp; GArray&lt; Type &gt;::operator()</definition>
+        <argsstring>(size_t k, size_t j, size_t i)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>size_t</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="757" column="19" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="757" bodyend="757"/>
+      </memberdef>
+      <memberdef kind="function" id="structGArray_1a803adf40aefdeeac0b0ac65150781f39" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>__hevice const Type &amp;</type>
+        <definition>__hevice const Type&amp; GArray&lt; Type &gt;::operator()</definition>
+        <argsstring>(size_t k, size_t j, size_t i) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>size_t</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="758" column="25" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="758" bodyend="760"/>
+      </memberdef>
+      <memberdef kind="function" id="structGArray_1a0e97eff872ca76279ab28d30efa5d372" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__hevice Type &amp;</type>
+        <definition>__hevice Type&amp; GArray&lt; Type &gt;::operator()</definition>
+        <argsstring>(size_t j, size_t i)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>size_t</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="761" column="19" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="761" bodyend="761"/>
+      </memberdef>
+      <memberdef kind="function" id="structGArray_1ab0f62edb5b2aacecf12b25e1c378d3ac" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>__hevice const Type &amp;</type>
+        <definition>__hevice const Type&amp; GArray&lt; Type &gt;::operator()</definition>
+        <argsstring>(size_t j, size_t i) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>size_t</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="762" column="25" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="762" bodyend="762"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class meant to be passed to a kernel launch. Provides a ndarray-like structure to cuda kernels. </para>
+    </detaileddescription>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="723" column="1" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="723" bodyend="763"/>
+    <listofallmembers>
+      <member refid="structGArray_1a51ef7d9204e67302b3bbbb84d7f65b88" prot="public" virt="non-virtual"><scope>GArray</scope><name>GArray</name></member>
+      <member refid="structGArray_1a2fab12f2f9e1a5ff050671f431291c25" prot="public" virt="non-virtual"><scope>GArray</scope><name>GArray</name></member>
+      <member refid="structGArray_1a23dc483f81f5964906d80dd74256adaf" prot="public" virt="non-virtual"><scope>GArray</scope><name>GArray</name></member>
+      <member refid="structGArray_1ad83db3745cf61646b8dcbbbcee8193bc" prot="public" virt="non-virtual"><scope>GArray</scope><name>GArray</name></member>
+      <member refid="structGArray_1ab0d81e1d3236c94a9f2efb08b67d0f96" prot="public" virt="non-virtual"><scope>GArray</scope><name>operator()</name></member>
+      <member refid="structGArray_1a803adf40aefdeeac0b0ac65150781f39" prot="public" virt="non-virtual"><scope>GArray</scope><name>operator()</name></member>
+      <member refid="structGArray_1a0e97eff872ca76279ab28d30efa5d372" prot="public" virt="non-virtual"><scope>GArray</scope><name>operator()</name></member>
+      <member refid="structGArray_1ab0f62edb5b2aacecf12b25e1c378d3ac" prot="public" virt="non-virtual"><scope>GArray</scope><name>operator()</name></member>
+      <member refid="structGArray_1af2350b640b3f06917af518ac7be302fd" prot="public" virt="non-virtual"><scope>GArray</scope><name>operator[]</name></member>
+      <member refid="structGArray_1aa1ee6f1feab75139f1c8d74ed44f6c65" prot="public" virt="non-virtual"><scope>GArray</scope><name>operator[]</name></member>
+      <member refid="structGArray_1a4454f6f6b9b710485e5095fdb6ef7500" prot="public" virt="non-virtual"><scope>GArray</scope><name>ptr</name></member>
+      <member refid="structGArray_1a42f732985b7b9b99e8e58f95e5961e9d" prot="public" virt="non-virtual"><scope>GArray</scope><name>shape</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

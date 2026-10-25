@@ -1,0 +1,399 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__CUDART__INTEROP" kind="group">
+    <compoundname>CUDART_INTEROP</compoundname>
+    <title>Graphics Interoperability</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__CUDART__INTEROP_1gac74d4fcaee9ae3a5e67c96ef4d8cd481" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphicsUnregisterResource</definition>
+        <argsstring>(cudaGraphicsResource_t resource)</argsstring>
+        <name>cudaGraphicsUnregisterResource</name>
+        <param>
+          <type>cudaGraphicsResource_t</type>
+          <declname>resource</declname>
+        </param>
+        <briefdescription>
+<para>Unregisters a graphics resource for access by CUDA. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Unregisters the graphics resource <computeroutput>resource</computeroutput> so it is not accessible by CUDA unless registered again.</para>
+<para>If <computeroutput>resource</computeroutput> is invalid then ::cudaErrorInvalidResourceHandle is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>resource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Resource to unregister</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidResourceHandle, ::cudaErrorUnknown \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para>::cudaGraphicsD3D9RegisterResource, ::cudaGraphicsD3D10RegisterResource, ::cudaGraphicsD3D11RegisterResource, ::cudaGraphicsGLRegisterBuffer, ::cudaGraphicsGLRegisterImage, ::cuGraphicsUnregisterResource </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="7302" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="7302" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__INTEROP_1ga86789d34a9eb54f9c81a660b919db955" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphicsResourceSetMapFlags</definition>
+        <argsstring>(cudaGraphicsResource_t resource, unsigned int flags)</argsstring>
+        <name>cudaGraphicsResourceSetMapFlags</name>
+        <param>
+          <type>cudaGraphicsResource_t</type>
+          <declname>resource</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Set usage flags for mapping a graphics resource. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set <computeroutput>flags</computeroutput> for mapping the graphics resource <computeroutput>resource</computeroutput>.</para>
+<para>Changes to <computeroutput>flags</computeroutput> will take effect the next time <computeroutput>resource</computeroutput> is mapped. The <computeroutput>flags</computeroutput> argument may be any of the following:<itemizedlist>
+<listitem><para>::cudaGraphicsMapFlagsNone: Specifies no hints about how <computeroutput>resource</computeroutput> will be used. It is therefore assumed that CUDA may read from or write to <computeroutput>resource</computeroutput>.</para>
+</listitem><listitem><para>::cudaGraphicsMapFlagsReadOnly: Specifies that CUDA will not write to <computeroutput>resource</computeroutput>.</para>
+</listitem><listitem><para>::cudaGraphicsMapFlagsWriteDiscard: Specifies CUDA will not read from <computeroutput>resource</computeroutput> and will write over the entire contents of <computeroutput>resource</computeroutput>, so none of the data previously stored in <computeroutput>resource</computeroutput> will be preserved.</para>
+</listitem></itemizedlist>
+</para>
+<para>If <computeroutput>resource</computeroutput> is presently mapped for access by CUDA then ::cudaErrorUnknown is returned. If <computeroutput>flags</computeroutput> is not one of the above values then ::cudaErrorInvalidValue is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>resource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Registered resource to set flags for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Parameters for resource mapping</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, ::cudaErrorInvalidResourceHandle, ::cudaErrorUnknown, \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__INTEROP_1gabc7904efc45129de34b4938a456ffd2a" kindref="member">cudaGraphicsMapResources</ref>, ::cuGraphicsResourceSetMapFlags </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="7337" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="7337" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__INTEROP_1gabc7904efc45129de34b4938a456ffd2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphicsMapResources</definition>
+        <argsstring>(int count, cudaGraphicsResource_t *resources, cudaStream_t stream __dv(0))</argsstring>
+        <name>cudaGraphicsMapResources</name>
+        <param>
+          <type>int</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>cudaGraphicsResource_t *</type>
+          <declname>resources</declname>
+        </param>
+        <param>
+          <type>cudaStream_t stream </type>
+          <declname>__dv</declname>
+          <array>0</array>
+        </param>
+        <briefdescription>
+<para>Map graphics resources for access by CUDA. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Maps the <computeroutput>count</computeroutput> graphics resources in <computeroutput>resources</computeroutput> for access by CUDA.</para>
+<para>The resources in <computeroutput>resources</computeroutput> may be accessed by CUDA until they are unmapped. The graphics API from which <computeroutput>resources</computeroutput> were registered should not access any resources while they are mapped by CUDA. If an application does so, the results are undefined.</para>
+<para>This function provides the synchronization guarantee that any graphics calls issued before <ref refid="group__CUDART__INTEROP_1gabc7904efc45129de34b4938a456ffd2a" kindref="member">cudaGraphicsMapResources()</ref> will complete before any subsequent CUDA work issued in <computeroutput>stream</computeroutput> begins.</para>
+<para>If <computeroutput>resources</computeroutput> contains any duplicate entries then ::cudaErrorInvalidResourceHandle is returned. If any of <computeroutput>resources</computeroutput> are presently mapped for access by CUDA then ::cudaErrorUnknown is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Number of resources to map </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>resources</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Resources to map for CUDA </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Stream for synchronization</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidResourceHandle, ::cudaErrorUnknown \note_null_stream \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__INTEROP_1gaef15ca3947a7163fb1c66a5d3e0bbacd" kindref="member">cudaGraphicsResourceGetMappedPointer</ref>, <ref refid="group__CUDART__INTEROP_1ga3accc00514ec65869bbbe79d900c29f6" kindref="member">cudaGraphicsSubResourceGetMappedArray</ref>, <ref refid="group__CUDART__INTEROP_1gaedb0072175c5d299914979ee36f310f0" kindref="member">cudaGraphicsUnmapResources</ref>, ::cuGraphicsMapResources </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="7376" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="7376" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__INTEROP_1gaedb0072175c5d299914979ee36f310f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphicsUnmapResources</definition>
+        <argsstring>(int count, cudaGraphicsResource_t *resources, cudaStream_t stream __dv(0))</argsstring>
+        <name>cudaGraphicsUnmapResources</name>
+        <param>
+          <type>int</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>cudaGraphicsResource_t *</type>
+          <declname>resources</declname>
+        </param>
+        <param>
+          <type>cudaStream_t stream </type>
+          <declname>__dv</declname>
+          <array>0</array>
+        </param>
+        <briefdescription>
+<para>Unmap graphics resources. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Unmaps the <computeroutput>count</computeroutput> graphics resources in <computeroutput>resources</computeroutput>.</para>
+<para>Once unmapped, the resources in <computeroutput>resources</computeroutput> may not be accessed by CUDA until they are mapped again.</para>
+<para>This function provides the synchronization guarantee that any CUDA work issued in <computeroutput>stream</computeroutput> before <ref refid="group__CUDART__INTEROP_1gaedb0072175c5d299914979ee36f310f0" kindref="member">cudaGraphicsUnmapResources()</ref> will complete before any subsequently issued graphics work begins.</para>
+<para>If <computeroutput>resources</computeroutput> contains any duplicate entries then ::cudaErrorInvalidResourceHandle is returned. If any of <computeroutput>resources</computeroutput> are not presently mapped for access by CUDA then ::cudaErrorUnknown is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Number of resources to unmap </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>resources</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Resources to unmap </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Stream for synchronization</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidResourceHandle, ::cudaErrorUnknown \note_null_stream \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__INTEROP_1gabc7904efc45129de34b4938a456ffd2a" kindref="member">cudaGraphicsMapResources</ref>, ::cuGraphicsUnmapResources </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="7411" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="7411" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__INTEROP_1gaef15ca3947a7163fb1c66a5d3e0bbacd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphicsResourceGetMappedPointer</definition>
+        <argsstring>(void **devPtr, size_t *size, cudaGraphicsResource_t resource)</argsstring>
+        <name>cudaGraphicsResourceGetMappedPointer</name>
+        <param>
+          <type>void **</type>
+          <declname>devPtr</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>cudaGraphicsResource_t</type>
+          <declname>resource</declname>
+        </param>
+        <briefdescription>
+<para>Get an device pointer through which to access a mapped graphics resource. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns in <computeroutput>*devPtr</computeroutput> a pointer through which the mapped graphics resource <computeroutput>resource</computeroutput> may be accessed. Returns in <computeroutput>*size</computeroutput> the size of the memory in bytes which may be accessed from that pointer. The value set in <computeroutput>devPtr</computeroutput> may change every time that <computeroutput>resource</computeroutput> is mapped.</para>
+<para>If <computeroutput>resource</computeroutput> is not a buffer then it cannot be accessed via a pointer and ::cudaErrorUnknown is returned. If <computeroutput>resource</computeroutput> is not mapped then ::cudaErrorUnknown is returned.<itemizedlist>
+<listitem><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>devPtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returned pointer through which <computeroutput>resource</computeroutput> may be accessed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returned size of the buffer accessible starting at <computeroutput>*devPtr</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>resource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Mapped resource to access</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, ::cudaErrorInvalidResourceHandle, ::cudaErrorUnknown \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__INTEROP_1gabc7904efc45129de34b4938a456ffd2a" kindref="member">cudaGraphicsMapResources</ref>, <ref refid="group__CUDART__INTEROP_1ga3accc00514ec65869bbbe79d900c29f6" kindref="member">cudaGraphicsSubResourceGetMappedArray</ref>, ::cuGraphicsResourceGetMappedPointer </para>
+</simplesect>
+</para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="7443" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="7443" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__INTEROP_1ga3accc00514ec65869bbbe79d900c29f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphicsSubResourceGetMappedArray</definition>
+        <argsstring>(cudaArray_t *array, cudaGraphicsResource_t resource, unsigned int arrayIndex, unsigned int mipLevel)</argsstring>
+        <name>cudaGraphicsSubResourceGetMappedArray</name>
+        <param>
+          <type>cudaArray_t *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>cudaGraphicsResource_t</type>
+          <declname>resource</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>arrayIndex</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>mipLevel</declname>
+        </param>
+        <briefdescription>
+<para>Get an array through which to access a subresource of a mapped graphics resource. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns in <computeroutput>*array</computeroutput> an array through which the subresource of the mapped graphics resource <computeroutput>resource</computeroutput> which corresponds to array index <computeroutput>arrayIndex</computeroutput> and mipmap level <computeroutput>mipLevel</computeroutput> may be accessed. The value set in <computeroutput>array</computeroutput> may change every time that <computeroutput>resource</computeroutput> is mapped.</para>
+<para>If <computeroutput>resource</computeroutput> is not a texture then it cannot be accessed via an array and ::cudaErrorUnknown is returned. If <computeroutput>arrayIndex</computeroutput> is not a valid array index for <computeroutput>resource</computeroutput> then ::cudaErrorInvalidValue is returned. If <computeroutput>mipLevel</computeroutput> is not a valid mipmap level for <computeroutput>resource</computeroutput> then ::cudaErrorInvalidValue is returned. If <computeroutput>resource</computeroutput> is not mapped then ::cudaErrorUnknown is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returned array through which a subresource of <computeroutput>resource</computeroutput> may be accessed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>resource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Mapped resource to access </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arrayIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Array index for array textures or cubemap face index as defined by ::cudaGraphicsCubeFace for cubemap textures for the subresource to access </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mipLevel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Mipmap level for the subresource to access</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, ::cudaErrorInvalidResourceHandle, ::cudaErrorUnknown \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__INTEROP_1gaef15ca3947a7163fb1c66a5d3e0bbacd" kindref="member">cudaGraphicsResourceGetMappedPointer</ref>, ::cuGraphicsSubResourceGetMappedArray </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="7481" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="7481" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__INTEROP_1ga8f50e69728a48bd3731bc9c7269bae64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphicsResourceGetMappedMipmappedArray</definition>
+        <argsstring>(cudaMipmappedArray_t *mipmappedArray, cudaGraphicsResource_t resource)</argsstring>
+        <name>cudaGraphicsResourceGetMappedMipmappedArray</name>
+        <param>
+          <type>cudaMipmappedArray_t *</type>
+          <declname>mipmappedArray</declname>
+        </param>
+        <param>
+          <type>cudaGraphicsResource_t</type>
+          <declname>resource</declname>
+        </param>
+        <briefdescription>
+<para>Get a mipmapped array through which to access a mapped graphics resource. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns in <computeroutput>*mipmappedArray</computeroutput> a mipmapped array through which the mapped graphics resource <computeroutput>resource</computeroutput> may be accessed. The value set in <computeroutput>mipmappedArray</computeroutput> may change every time that <computeroutput>resource</computeroutput> is mapped.</para>
+<para>If <computeroutput>resource</computeroutput> is not a texture then it cannot be accessed via an array and ::cudaErrorUnknown is returned. If <computeroutput>resource</computeroutput> is not mapped then ::cudaErrorUnknown is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mipmappedArray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returned mipmapped array through which <computeroutput>resource</computeroutput> may be accessed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>resource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Mapped resource to access</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, ::cudaErrorInvalidResourceHandle, ::cudaErrorUnknown \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__INTEROP_1gaef15ca3947a7163fb1c66a5d3e0bbacd" kindref="member">cudaGraphicsResourceGetMappedPointer</ref>, ::cuGraphicsResourceGetMappedMipmappedArray </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="7510" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="7510" declcolumn="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>___MANBRIEF___ graphics interoperability functions of the CUDA runtime API (___CURRENT_FILE___) ___ENDMANBRIEF___</para>
+<para>This section describes the graphics interoperability functions of the CUDA runtime application programming interface. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

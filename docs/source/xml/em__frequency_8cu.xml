@@ -1,0 +1,1016 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="em__frequency_8cu" kind="file" language="C++">
+    <compoundname>em_frequency.cu</compoundname>
+    <includes refid="configs_8hpp" local="yes">common/configs.hpp</includes>
+    <includes refid="complex_8hpp" local="yes">common/complex.hpp</includes>
+    <includes refid="types_8hpp" local="yes">common/types.hpp</includes>
+    <includes refid="operations_8hpp" local="yes">common/operations.hpp</includes>
+    <includes refid="opt_8hpp" local="yes">common/opt.hpp</includes>
+    <includes refid="parallel_2em_8hpp" local="yes">geometries/parallel/em.hpp</includes>
+    <includes refid="radon_8hpp" local="yes">geometries/parallel/radon.hpp</includes>
+    <includes refid="bst_8hpp" local="yes">geometries/parallel/bst.hpp</includes>
+    <includes refid="cufft__utils_8h" local="yes">common10/cufft_utils.h</includes>
+    <incdepgraph>
+      <node id="33">
+        <label>helper_cuda.h</label>
+        <link refid="helper__cuda_8h_source"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>cuda_runtime_api.h</label>
+        <link refid="cuda__runtime__api_8h_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>common10/cufft_utils.h</label>
+        <link refid="cufft__utils_8h_source"/>
+      </node>
+      <node id="41">
+        <label>geometries/parallel/em.hpp</label>
+        <link refid="parallel_2em_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>operations.hpp</label>
+        <link refid="operations_8hpp_source"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>limits</label>
+      </node>
+      <node id="12">
+        <label>cuda_device_runtime_api.h</label>
+      </node>
+      <node id="36">
+        <label>helper_string.h</label>
+        <link refid="helper__string_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>assert.h</label>
+      </node>
+      <node id="23">
+        <label>cstdint</label>
+      </node>
+      <node id="7">
+        <label>cufft.h</label>
+      </node>
+      <node id="34">
+        <label>stdint.h</label>
+      </node>
+      <node id="35">
+        <label>stdlib.h</label>
+      </node>
+      <node id="30">
+        <label>cuda_runtime.h</label>
+      </node>
+      <node id="22">
+        <label>cassert</label>
+      </node>
+      <node id="5">
+        <label>vector_types.h</label>
+      </node>
+      <node id="26">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>builtin_types.h</label>
+      </node>
+      <node id="31">
+        <label>common/logerror.hpp</label>
+        <link refid="logerror_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>cufftXt.h</label>
+      </node>
+      <node id="37">
+        <label>fstream</label>
+      </node>
+      <node id="4">
+        <label>driver_types.h</label>
+      </node>
+      <node id="2">
+        <label>common/configs.hpp</label>
+        <link refid="configs_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>common/complex.hpp</label>
+        <link refid="complex_8hpp"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>geometries/parallel/radon.hpp</label>
+        <link refid="radon_8hpp_source"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>string.h</label>
+      </node>
+      <node id="21">
+        <label>cstdio</label>
+      </node>
+      <node id="14">
+        <label>future</label>
+      </node>
+      <node id="29">
+        <label>common/opt.hpp</label>
+        <link refid="opt_8hpp"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>cuda_fp16.h</label>
+      </node>
+      <node id="27">
+        <label>vector</label>
+      </node>
+      <node id="3">
+        <label>complex.h</label>
+      </node>
+      <node id="25">
+        <label>sstream</label>
+      </node>
+      <node id="18">
+        <label>cuComplex.h</label>
+      </node>
+      <node id="40">
+        <label>math.h</label>
+      </node>
+      <node id="13">
+        <label>iostream</label>
+      </node>
+      <node id="38">
+        <label>strings.h</label>
+      </node>
+      <node id="6">
+        <label>cstddef</label>
+      </node>
+      <node id="10">
+        <label>crt/host_defines.h</label>
+      </node>
+      <node id="16">
+        <label>cuda.h</label>
+      </node>
+      <node id="44">
+        <label>geometries/parallel/bst.hpp</label>
+        <link refid="bst_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>csignal</label>
+      </node>
+      <node id="19">
+        <label>common/types.hpp</label>
+        <link refid="types_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/em_frequency.cu</label>
+        <link refid="em__frequency_8cu"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="em__frequency_8cu_1a0b87ff4d460d145fc239bbcba1534100" prot="public" static="no">
+        <name>NITER_MIN_REG</name>
+        <initializer>20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/em_frequency.cu" line="11" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/em_frequency.cu" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="em__frequency_8cu_1a46664bee9e5f6c5db6721f3de8200eee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void get_tEM_FQ</definition>
+        <argsstring>(float *sino_cu, float *recon_cu, float *angles_cu, float *flat_cu, float *backcounts_cu, float *back_cu, cufftComplex *ft_sino_cu, cufftComplex *ft_recon_cu, int nrays, int nangles, int blocksize, size_t recon_size, size_t ft_recon_size, float scale, cudaStream_t stream, cufftHandle plan_2D_forward, cufftHandle plan_1D_inverse, cImage &amp;cartesianblock, cImage &amp;polarblock, cImage &amp;realpolar, cufftHandle plan1d, cufftHandle plan2d, int blocksize_bst, int zpad, int interpolation, float dx, float tv_param, int niter)</argsstring>
+        <name>get_tEM_FQ</name>
+        <param>
+          <type>float *</type>
+          <declname>sino_cu</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>recon_cu</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles_cu</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>flat_cu</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>backcounts_cu</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>back_cu</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>ft_sino_cu</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>ft_recon_cu</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blocksize</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>recon_size</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>ft_recon_size</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>scale</declname>
+        </param>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>cufftHandle</type>
+          <declname>plan_2D_forward</declname>
+        </param>
+        <param>
+          <type>cufftHandle</type>
+          <declname>plan_1D_inverse</declname>
+        </param>
+        <param>
+          <type><ref refid="structImage2D" kindref="compound">cImage</ref> &amp;</type>
+          <declname>cartesianblock</declname>
+        </param>
+        <param>
+          <type><ref refid="structImage2D" kindref="compound">cImage</ref> &amp;</type>
+          <declname>polarblock</declname>
+        </param>
+        <param>
+          <type><ref refid="structImage2D" kindref="compound">cImage</ref> &amp;</type>
+          <declname>realpolar</declname>
+        </param>
+        <param>
+          <type>cufftHandle</type>
+          <declname>plan1d</declname>
+        </param>
+        <param>
+          <type>cufftHandle</type>
+          <declname>plan2d</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blocksize_bst</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>zpad</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>interpolation</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>tv_param</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>niter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/em_frequency.cu" line="14" column="6" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/em_frequency.cu" bodystart="14" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="em__frequency_8cu_1a97930cb0b62c48f3f490e0fe58fb8d66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void get_tEM_FQ_GPU</definition>
+        <argsstring>(CFG configs, REC ReconParam, float *sino, float *recon, float *angles, float *flat, int blocksize, int gpu)</argsstring>
+        <name>get_tEM_FQ_GPU</name>
+        <param>
+          <type><ref refid="structconfig" kindref="compound">CFG</ref></type>
+          <declname>configs</declname>
+        </param>
+        <param>
+          <type><ref refid="structReconstruction" kindref="compound">REC</ref></type>
+          <declname>ReconParam</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>sino</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>recon</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>flat</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blocksize</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>gpu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/em_frequency.cu" line="91" column="6" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/em_frequency.cu" bodystart="91" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="em__frequency_8cu_1a555da2186a9b1ad87b54115a76b56bae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _get_tEM_FQ_GPU</definition>
+        <argsstring>(CFG configs, REC ReconParam, float *count, float *obj, float *angles, float *flat, int blockgpu, int gpu)</argsstring>
+        <name>_get_tEM_FQ_GPU</name>
+        <param>
+          <type><ref refid="structconfig" kindref="compound">CFG</ref></type>
+          <declname>configs</declname>
+        </param>
+        <param>
+          <type><ref refid="structReconstruction" kindref="compound">REC</ref></type>
+          <declname>ReconParam</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>flat</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blockgpu</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>gpu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/em_frequency.cu" line="301" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/em_frequency.cu" bodystart="301" bodyend="337"/>
+      </memberdef>
+      <memberdef kind="function" id="em__frequency_8cu_1a9e4e8fd1d61a6bf19c0f4dfcc3c65990" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void get_tEM_FQ_MultiGPU</definition>
+        <argsstring>(DIM tomo, DIM obj, GEO geometry, REC ReconParam, int *gpus, int ngpus, float *count, float *object, float *angles, float *flat)</argsstring>
+        <name>get_tEM_FQ_MultiGPU</name>
+        <param>
+          <type><ref refid="structdimension" kindref="compound">DIM</ref></type>
+          <declname>tomo</declname>
+        </param>
+        <param>
+          <type><ref refid="structdimension" kindref="compound">DIM</ref></type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type><ref refid="structgeometry" kindref="compound">GEO</ref></type>
+          <declname>geometry</declname>
+        </param>
+        <param>
+          <type><ref refid="structReconstruction" kindref="compound">REC</ref></type>
+          <declname>ReconParam</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>gpus</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ngpus</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>object</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>flat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/em_frequency.cu" line="339" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/em_frequency.cu" bodystart="339" bodyend="394"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;common/configs.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="complex_8hpp" kindref="compound">common/complex.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8hpp" kindref="compound">common/types.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;common/operations.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="opt_8hpp" kindref="compound">common/opt.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;geometries/parallel/em.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;geometries/parallel/radon.hpp&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*<sp/>FST<sp/>is<sp/>found<sp/>here!!<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;geometries/parallel/bst.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;common10/cufft_utils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NITER_MIN_REG<sp/>20<sp/></highlight><highlight class="comment">//<sp/>must<sp/>be<sp/>greater<sp/>than<sp/>1<sp/>so<sp/>back_cu<sp/>and<sp/>recon_cu<sp/>are<sp/>all<sp/>meaningful.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>get_tEM_FQ(</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*sino_cu,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*recon_cu,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles_cu,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*flat_cu,</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*backcounts_cu,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*back_cu,<sp/>cufftComplex<sp/>*ft_sino_cu,<sp/>cufftComplex<sp/>*ft_recon_cu,</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blocksize,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>recon_size,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ft_recon_size,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>scale,<sp/>cudaStream_t<sp/>stream,<sp/>cufftHandle<sp/>plan_2D_forward,<sp/>cufftHandle<sp/>plan_1D_inverse,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><ref refid="structImage2D" kindref="compound">cImage</ref>&amp;<sp/>cartesianblock,<sp/><ref refid="structImage2D" kindref="compound">cImage</ref>&amp;<sp/>polarblock,<sp/><ref refid="structImage2D" kindref="compound">cImage</ref>&amp;<sp/>realpolar,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">cufftHandle<sp/>plan1d,<sp/>cufftHandle<sp/>plan2d,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blocksize_bst,<sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>zpad,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>interpolation,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dx,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>tv_param,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>niter)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeimage<sp/>=<sp/>nrays;<sp/><sp/></highlight><highlight class="comment">/*<sp/>Size<sp/>of<sp/>reconstruction<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pad0<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>zpad+1;<sp/></highlight><highlight class="comment">/*<sp/>Padding<sp/>value<sp/>for<sp/>FST<sp/>(zpad)<sp/>and<sp/>BST<sp/>(pad0)*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Initialize<sp/>variables<sp/>with<sp/>BST<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>EMFQ_BST(backcounts_cu,<sp/>sino_cu,<sp/>angles_cu,<sp/>nrays,<sp/>nangles,<sp/>blocksize,<sp/>nrays,<sp/>pad0);<sp/></highlight><highlight class="comment">//zpad+1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Compute<sp/>(1.0/backcounts_cu)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>calc_reciprocal_element_wise&lt;&lt;&lt;recon_size/NUM_THREADS,<sp/>NUM_THREADS&gt;&gt;&gt;(backcounts_cu,recon_size);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set_value&lt;&lt;&lt;recon_size/NUM_THREADS,<sp/>NUM_THREADS&gt;&gt;&gt;(recon_cu,<sp/>1.0,<sp/>recon_size);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CUDA_RT_CALL(cudaPeekAtLastError());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CUDA_RT_CALL(cudaDeviceSynchronize());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Begin<sp/>EM<sp/>Frequency<sp/>iterations<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>0;<sp/>k<sp/>&lt;<sp/>niter;<sp/>++k)<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>FST<sp/>call<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Set<sp/>ft_recon_cu<sp/>to<sp/>zero<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__MEMORY_1gadee9f2369cfbe4b48574c7513fbb06ea" kindref="member">cudaMemsetAsync</ref>(ft_recon_cu,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(data_type)*ft_recon_size,<sp/>stream));</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>FST<sp/>function<sp/>for<sp/>counts<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pst_counts_real(ft_sino_cu,<sp/>ft_recon_cu,<sp/>sino_cu,<sp/>recon_cu,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>angles_cu,<sp/>flat_cu,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>plan_2D_forward,<sp/>plan_1D_inverse,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nrays,<sp/>nangles,<sp/>blocksize,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zpad,<sp/>interpolation,<sp/>scale,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stream);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>BST<sp/>call<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EMFQ_BST_ITER(<sp/><sp/>back_cu,<sp/>sino_cu,<sp/>angles_cu,<sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cartesianblock,<sp/>polarblock,<sp/>realpolar,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>plan1d,<sp/>plan2d,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nrays,<sp/>nangles,<sp/>blocksize,<sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>blocksize_bst,<sp/>sizeimage,<sp/>pad0);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>multiply_element_wise&lt;&lt;&lt;recon_size/NUM_THREADS,<sp/>NUM_THREADS&gt;&gt;&gt;(back_cu,<sp/>backcounts_cu,<sp/>recon_size);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__ERROR_1gae4a63d8d66089be26858fc8344d9f52e" kindref="member">cudaPeekAtLastError</ref>());</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__DEVICE_1gabad4c7a01961e63aa4744ce597cfaf1d" kindref="member">cudaDeviceSynchronize</ref>());</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Call<sp/>for<sp/>Total<sp/>variation<sp/>regularization<sp/>(TV)</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Fev<sp/>2024<sp/>-<sp/>Memory<sp/>bugs<sp/>(or<sp/>something<sp/>else)<sp/>persist!<sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;tv_param&apos;<sp/>is<sp/>the<sp/>regularization<sp/>parameter<sp/>od<sp/>TV.</highlight></codeline>
+<codeline lineno="68"><highlight class="comment"></highlight></codeline>
+<codeline lineno="69"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>If<sp/>&apos;tv_param<sp/>==<sp/>0&apos;,<sp/>then<sp/>it<sp/>does<sp/>not<sp/>enter<sp/>the<sp/>TV<sp/>computation</highlight></codeline>
+<codeline lineno="70"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(0.0<sp/>&lt;<sp/>tv_param<sp/>&amp;&amp;<sp/>NITER_MIN_REG<sp/>&lt;<sp/>k)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>total_variation_2d&lt;&lt;&lt;recon_size/NUM_THREADS,<sp/>NUM_THREADS&gt;&gt;&gt;(back_cu,<sp/>recon_cu,<sp/>backcounts_cu,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>recon_size,<sp/>nrays,<sp/>nrays,<sp/>blocksize,tv_param);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__ERROR_1gae4a63d8d66089be26858fc8344d9f52e" kindref="member">cudaPeekAtLastError</ref>());</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__DEVICE_1gabad4c7a01961e63aa4744ce597cfaf1d" kindref="member">cudaDeviceSynchronize</ref>());</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>End<sp/>call<sp/>for<sp/>Total<sp/>variation<sp/>(TV)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>multiply_element_wise&lt;&lt;&lt;recon_size/NUM_THREADS,<sp/>NUM_THREADS&gt;&gt;&gt;(recon_cu,<sp/>back_cu,<sp/>recon_size);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>norm<sp/>=<sp/>opt::norm2_max(recon_cu,<sp/>dim3<sp/>(nrays,nangles,blocksize));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__ERROR_1gae4a63d8d66089be26858fc8344d9f52e" kindref="member">cudaPeekAtLastError</ref>());</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__DEVICE_1gabad4c7a01961e63aa4744ce597cfaf1d" kindref="member">cudaDeviceSynchronize</ref>());</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>get_tEM_FQ_GPU(<ref refid="structconfig" kindref="compound">CFG</ref><sp/>configs,<sp/><ref refid="structReconstruction" kindref="compound">REC</ref><sp/>ReconParam,<sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*sino,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*recon,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*flat,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blocksize,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>gpu)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="96"><highlight class="comment"><sp/><sp/><sp/><sp/>Definition<sp/>of<sp/>variables:</highlight></codeline>
+<codeline lineno="97"><highlight class="comment"><sp/><sp/><sp/><sp/>blocksize:</highlight></codeline>
+<codeline lineno="98"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>Value<sp/>of<sp/>vertical<sp/>block<sp/>to<sp/>be<sp/>computed<sp/>(fraction<sp/>of<sp/>nslices)</highlight></codeline>
+<codeline lineno="99"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__DEVICE_1ga7b63629909800b614427aae92b22d606" kindref="member">cudaSetDevice</ref>(gpu));</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Projection<sp/>data<sp/>sizes<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays<sp/><sp/><sp/><sp/><sp/>=<sp/>configs.tomo.size.x;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles<sp/><sp/><sp/>=<sp/>configs.tomo.size.y;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*zpad:</highlight></codeline>
+<codeline lineno="108"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>Padding<sp/>number</highlight></codeline>
+<codeline lineno="109"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>Integer<sp/>values:<sp/>0,<sp/>1,<sp/>2,<sp/>3</highlight></codeline>
+<codeline lineno="110"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>total<sp/>padding<sp/>=<sp/>zpad<sp/>*<sp/>nrays</highlight></codeline>
+<codeline lineno="111"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>zpad<sp/>=<sp/>configs.tomo.pad.x;<sp/><sp/></highlight><highlight class="comment">/*<sp/>Padding<sp/>value<sp/>for<sp/>FST<sp/>(zpad)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*interpolation:</highlight></codeline>
+<codeline lineno="115"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>Options:<sp/>&apos;bilinear&apos;<sp/>and<sp/>&apos;nearest&apos;</highlight></codeline>
+<codeline lineno="116"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>&apos;nearest&apos;<sp/><sp/>=<sp/>0<sp/>(see<sp/>Python<sp/>function)</highlight></codeline>
+<codeline lineno="117"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>&apos;bilinear&apos;<sp/>=<sp/>1<sp/>(see<sp/>Python<sp/>function)</highlight></codeline>
+<codeline lineno="118"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>interpolation<sp/>=<sp/>ReconParam.interpolation;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*dx:<sp/></highlight></codeline>
+<codeline lineno="122"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>Detector<sp/>pixel<sp/>size<sp/>in<sp/>[X]<sp/>units<sp/>(can<sp/>be<sp/>any)</highlight></codeline>
+<codeline lineno="123"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>My<sp/>preference<sp/>is<sp/>to<sp/>always<sp/>use<sp/>METERS<sp/></highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>Be<sp/>consistent<sp/>with<sp/>the<sp/>units!!</highlight></codeline>
+<codeline lineno="125"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dx<sp/>=<sp/>configs.geometry.detector_pixel.x;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>tv_param:</highlight></codeline>
+<codeline lineno="129"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>Regularization<sp/>parameter<sp/>for<sp/>total<sp/>variation<sp/>(TV)<sp/>regularization</highlight></codeline>
+<codeline lineno="130"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>If<sp/>&apos;tv_param&apos;<sp/>=&lt;<sp/>0.0,<sp/>there<sp/>is<sp/>no<sp/>application<sp/>of<sp/>TV<sp/>regularization</highlight></codeline>
+<codeline lineno="131"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>tv_param<sp/>=<sp/>ReconParam.total_variation;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>niter:</highlight></codeline>
+<codeline lineno="135"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>Number<sp/>of<sp/>iterations<sp/>for<sp/>EM</highlight></codeline>
+<codeline lineno="136"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>niter<sp/>=<sp/>ReconParam.iterations;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Declaration<sp/>of<sp/>FST<sp/>variables<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Cuda<sp/>kernels<sp/>parameters<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>cudaStream_t<sp/>stream,<sp/>stream_H2D,<sp/>stream_D2H;<sp/></highlight><highlight class="comment">//<sp/>&apos;stream&apos;<sp/>variable<sp/>is<sp/>for<sp/>cuFFT<sp/>and<sp/>kernels.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>cuFFT<sp/>parameters<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>cufftHandle<sp/>plan_2D_forward;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>cufftHandle<sp/>plan_1D_inverse;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>cufftComplex<sp/>*ft_recon_cu<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>pointer<sp/>to<sp/>2D<sp/>Fourier<sp/>transform<sp/>of<sp/>recon<sp/>on<sp/>GPU.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>cufftComplex<sp/>*ft_sino_cu<sp/><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>pointer<sp/>to<sp/>1D<sp/>Fourier<sp/>transform<sp/>of<sp/>sino<sp/>on<sp/>GPU.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>cuFFT<sp/>Dimensions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>std::array&lt;int,<sp/>FT_PST_RANK_FORWARD&gt;<sp/>forward_fft_dim<sp/>=<sp/>{nrays*(1+zpad),<sp/>nrays*(1+zpad)};</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>std::array&lt;int,<sp/>FT_PST_RANK_INVERSE&gt;<sp/>inverse_fft_dim<sp/>=<sp/>{nrays*(1+zpad)};</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>GPU<sp/>ptr<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*recon_cu<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>pointer<sp/>to<sp/>recon<sp/>on<sp/>GPU.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*back_cu<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>Auxiliar<sp/>pointer<sp/>to<sp/>iterations<sp/>backprojection<sp/>on<sp/>GPU.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*sino_cu<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>pointer<sp/>to<sp/>tomogram<sp/>(sinogram)<sp/>on<sp/>GPU.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*backcounts_cu<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>Auxiliar<sp/>pointer<sp/>to<sp/>iterations<sp/>backcounts<sp/>on<sp/>GPU.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles_cu<sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>pointer<sp/>to<sp/>angles<sp/>list<sp/>on<sp/>GPU.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*flat_cu<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>pointer<sp/>to<sp/>flat<sp/>on<sp/>GPU.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Datas<sp/>Dimensions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>recon_size<sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(blocksize<sp/>*<sp/>nrays)<sp/>*<sp/>nrays;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sino_size<sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(blocksize<sp/>*<sp/>nrays)<sp/>*<sp/>nangles;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ft_sino_size<sp/><sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(blocksize<sp/>*<sp/>nangles)<sp/>*<sp/>nrays<sp/>*<sp/>(1<sp/>+<sp/>zpad);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ft_recon_size<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(blocksize<sp/>*<sp/>nrays<sp/>*<sp/>(1<sp/>+<sp/>zpad))<sp/>*<sp/>nrays<sp/>*<sp/>(1<sp/>+<sp/>zpad);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>scale<sp/>=<sp/>(0<sp/>&lt;<sp/>dx)?<sp/>dx/(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)inverse_fft_dim[0]<sp/>:<sp/>1.0/(float)inverse_fft_dim[0];</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Begin<sp/>of<sp/>FST<sp/>initialization<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>cuFFT<sp/>parameters<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>CUFFT_CALL(cufftCreate(&amp;plan_2D_forward));</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>CUFFT_CALL(cufftPlanMany(</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;plan_2D_forward,<sp/>FT_PST_RANK_FORWARD,<sp/>forward_fft_dim.data(),<sp/><sp/></highlight><highlight class="comment">//<sp/>*plan,<sp/>rank,<sp/>*n,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>1,<sp/>forward_fft_dim[0]<sp/>*<sp/>forward_fft_dim[1],<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*inembed,<sp/>istride,<sp/>idist,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>1,<sp/>forward_fft_dim[0]<sp/>*<sp/>forward_fft_dim[1],<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*onembed,<sp/>ostride,<sp/>odist,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CUFFT_C2C,<sp/>blocksize));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>type,<sp/>batch.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>CUFFT_CALL(cufftCreate(&amp;plan_1D_inverse));</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>CUFFT_CALL(cufftPlanMany(<sp/></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;plan_1D_inverse,<sp/>FT_PST_RANK_INVERSE,<sp/>inverse_fft_dim.data(),<sp/><sp/></highlight><highlight class="comment">//<sp/>*plan,<sp/>rank,<sp/>*n,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>1,<sp/>inverse_fft_dim[0],<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*inembed,<sp/>istride,<sp/>idist,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>1,<sp/>inverse_fft_dim[0],<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>*onembed,<sp/>ostride,<sp/>odist,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CUFFT_C2C,<sp/>nangles<sp/>*<sp/>blocksize));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>type,<sp/>batch.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Cuda<sp/>kernels<sp/>parameters<sp/>-<sp/>too<sp/>advanced<sp/>for<sp/>me<sp/>right<sp/>now<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__STREAM_1ga11a80128d72f5ecf20072976122c7cd4" kindref="member">cudaStreamCreate</ref>(&amp;stream_H2D));</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__STREAM_1ga11a80128d72f5ecf20072976122c7cd4" kindref="member">cudaStreamCreate</ref>(&amp;stream_D2H));</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__STREAM_1ga1e83cee9f385f715e74083778ee362a9" kindref="member">cudaStreamCreateWithFlags</ref>(&amp;stream,<sp/>cudaStreamNonBlocking));</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>CUFFT_CALL(cufftSetStream(plan_2D_forward,<sp/>stream));</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>CUFFT_CALL(cufftSetStream(plan_1D_inverse,<sp/>stream));</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>GPU<sp/>ptr<sp/>allocation<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__MEMORY_1gab14cbfaca14c4de9d06a5af14c9307f6" kindref="member">cudaHostRegister</ref>(recon,</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(real_data_type)<sp/>*<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(blocksize)<sp/>*<sp/>nrays<sp/>*<sp/>nrays,</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cudaHostRegisterDefault));</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__MEMORY_1gab14cbfaca14c4de9d06a5af14c9307f6" kindref="member">cudaHostRegister</ref>(sino,</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(real_data_type)<sp/>*<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(blocksize)<sp/>*<sp/>nangles<sp/>*<sp/>nrays,</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cudaHostRegisterDefault));</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__MEMORY_1ga2ec57cea7c57e8e3c4beca43dd327134" kindref="member">cudaMalloc</ref>(&amp;recon_cu<sp/><sp/><sp/><sp/><sp/>,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(real_data_type)<sp/>*<sp/>recon_size<sp/><sp/><sp/><sp/><sp/>));</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__MEMORY_1ga2ec57cea7c57e8e3c4beca43dd327134" kindref="member">cudaMalloc</ref>(&amp;back_cu<sp/><sp/><sp/><sp/><sp/><sp/>,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(real_data_type)<sp/>*<sp/>recon_size<sp/><sp/><sp/><sp/><sp/>));</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__MEMORY_1ga2ec57cea7c57e8e3c4beca43dd327134" kindref="member">cudaMalloc</ref>(&amp;backcounts_cu,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(real_data_type)<sp/>*<sp/>recon_size<sp/><sp/><sp/><sp/><sp/>));</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__MEMORY_1ga2ec57cea7c57e8e3c4beca43dd327134" kindref="member">cudaMalloc</ref>(&amp;sino_cu<sp/><sp/><sp/><sp/><sp/><sp/>,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(real_data_type)<sp/>*<sp/>sino_size<sp/><sp/><sp/><sp/><sp/><sp/>));</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__MEMORY_1ga2ec57cea7c57e8e3c4beca43dd327134" kindref="member">cudaMalloc</ref>(&amp;ft_recon_cu<sp/><sp/>,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(data_type)<sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>ft_recon_size<sp/><sp/>));</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__MEMORY_1ga2ec57cea7c57e8e3c4beca43dd327134" kindref="member">cudaMalloc</ref>(&amp;ft_sino_cu<sp/><sp/><sp/>,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(data_type)<sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>ft_sino_size<sp/><sp/><sp/>));</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__MEMORY_1ga2ec57cea7c57e8e3c4beca43dd327134" kindref="member">cudaMalloc</ref>(&amp;flat_cu<sp/><sp/><sp/><sp/><sp/><sp/>,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>nrays*blocksize));</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__MEMORY_1ga2ec57cea7c57e8e3c4beca43dd327134" kindref="member">cudaMalloc</ref>(&amp;angles_cu<sp/><sp/><sp/><sp/>,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>nangles<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>));</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Copy<sp/>data<sp/>to<sp/>GPU<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__MEMORY_1gafb6d05d580838d8efbe581ca69cd7ac7" kindref="member">cudaMemcpyAsync</ref>(angles_cu,angles,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)<sp/>*<sp/>nangles<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,cudaMemcpyHostToDevice,stream_H2D));</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__MEMORY_1gafb6d05d580838d8efbe581ca69cd7ac7" kindref="member">cudaMemcpyAsync</ref>(flat_cu<sp/><sp/>,flat<sp/><sp/>,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)<sp/>*<sp/>nrays*blocksize,cudaMemcpyHostToDevice,stream_H2D));</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__MEMORY_1gafb6d05d580838d8efbe581ca69cd7ac7" kindref="member">cudaMemcpyAsync</ref>(sino_cu<sp/><sp/>,sino<sp/><sp/>,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)<sp/>*<sp/>sino_size<sp/><sp/><sp/><sp/><sp/><sp/>,cudaMemcpyHostToDevice,stream_H2D));</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__MEMORY_1gafb6d05d580838d8efbe581ca69cd7ac7" kindref="member">cudaMemcpyAsync</ref>(recon_cu<sp/>,recon<sp/>,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)<sp/>*<sp/>recon_size<sp/><sp/><sp/><sp/><sp/>,cudaMemcpyHostToDevice,stream_H2D));</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__STREAM_1ga13ddca855befb29078fd09e8aa484ebe" kindref="member">cudaStreamSynchronize</ref>(stream_H2D));</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>End<sp/>of<sp/>FST<sp/>initialization<sp/>*/</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Begin<sp/>of<sp/>BST<sp/>initialization<sp/>*/</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blocksize_bst<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeimage<sp/><sp/><sp/><sp/><sp/>=<sp/>nrays;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pad0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>zpad+1;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>CImage<sp/>complex<sp/>C++<sp/>Giovanni<sp/>struct<sp/>pointers<sp/></highlight></codeline>
+<codeline lineno="228"><highlight class="comment"><sp/><sp/><sp/><sp/>for<sp/>BST<sp/>implementation<sp/>-<sp/>See<sp/>&apos;inc/commons/types.hpp&apos;</highlight></codeline>
+<codeline lineno="229"><highlight class="comment"><sp/><sp/><sp/><sp/>Change<sp/>near<sp/>future!!<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>GPU<sp/>ptr<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structImage2D" kindref="compound">cImage</ref><sp/>cartesianblock_bst(sizeimage<sp/><sp/><sp/>,<sp/>sizeimage<sp/>*<sp/>blocksize_bst);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structImage2D" kindref="compound">cImage</ref><sp/><sp/><sp/><sp/><sp/>polarblock_bst(nrays<sp/>*<sp/>pad0,<sp/>nangles<sp/><sp/><sp/>*<sp/>blocksize_bst);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structImage2D" kindref="compound">cImage</ref><sp/><sp/><sp/><sp/><sp/><sp/>realpolar_bst(nrays<sp/>*<sp/>pad0,<sp/>nangles<sp/><sp/><sp/>*<sp/>blocksize_bst);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>cuFFT<sp/>parameters<sp/>*/</highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>cufftHandle<sp/>plan1d_bst;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>cufftHandle<sp/>plan2d_bst;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dimms1d[]<sp/>=<sp/>{(int)nrays*pad0/2};</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dimms2d[]<sp/>=<sp/>{(int)sizeimage,(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)sizeimage};</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>beds[]<sp/><sp/><sp/><sp/>=<sp/>{nrays*pad0/2};</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>HANDLE_FFTERROR(<sp/>cufftPlanMany(&amp;plan1d_bst,<sp/>1,<sp/>dimms1d,<sp/>beds,<sp/>1,<sp/></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nrays*pad0/2,<sp/>beds,<sp/>1,<sp/>nrays*pad0/2,<sp/>CUFFT_C2C,<sp/>nangles*blocksize_bst*2)<sp/>);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/>HANDLE_FFTERROR(<sp/>cufftPlanMany(&amp;plan2d_bst,<sp/>2,<sp/>dimms2d,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>0,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>0,<sp/>0,<sp/>CUFFT_C2C,<sp/>blocksize_bst)<sp/>);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>End<sp/>of<sp/>BST<sp/>initialization<sp/>*/</highlight><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Calls<sp/>EM<sp/>Frequency<sp/>iterations<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>get_tEM_FQ(<sp/>sino_cu,<sp/>recon_cu,<sp/>angles_cu,<sp/>flat_cu,</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>backcounts_cu,<sp/>back_cu,<sp/>ft_sino_cu,<sp/>ft_recon_cu,</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nrays,<sp/>nangles,<sp/>blocksize,<sp/>recon_size,<sp/>ft_recon_size,</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scale,<sp/>stream,<sp/>plan_2D_forward,<sp/>plan_1D_inverse,</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cartesianblock_bst,<sp/>polarblock_bst,<sp/>realpolar_bst,</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>plan1d_bst,<sp/>plan2d_bst,<sp/>blocksize_bst,<sp/></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zpad,<sp/>interpolation,<sp/>dx,<sp/>tv_param,<sp/>niter);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Copy<sp/>computed<sp/>reconstruction<sp/>back<sp/>to<sp/>CPU<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__MEMORY_1gafb6d05d580838d8efbe581ca69cd7ac7" kindref="member">cudaMemcpyAsync</ref>(<sp/><sp/><sp/>recon,<sp/>recon_cu,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(real_data_type)<sp/>*<sp/>recon_size,</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cudaMemcpyDeviceToHost,<sp/>stream_D2H));</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__STREAM_1ga13ddca855befb29078fd09e8aa484ebe" kindref="member">cudaStreamSynchronize</ref>(stream_D2H));</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Free<sp/>ptr<sp/>-<sp/>Dealocation<sp/>*/</highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__MEMORY_1gaa34734225c1a88e5b14f254fb70b567c" kindref="member">cudaHostUnregister</ref>(recon));</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__MEMORY_1gaa34734225c1a88e5b14f254fb70b567c" kindref="member">cudaHostUnregister</ref>(sino));</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Free<sp/>and<sp/>Destroy<sp/>FST<sp/>allocations<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/>free_cuda_counts_real(</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>angles_cu,<sp/>flat_cu,<sp/>recon_cu,<sp/>sino_cu,</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ft_recon_cu,<sp/>ft_sino_cu,</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>plan_2D_forward,<sp/>plan_1D_inverse,</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stream,<sp/>stream_H2D,<sp/>stream_D2H);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Free<sp/>FST<sp/>auxiliar<sp/>allocations<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__MEMORY_1ga5635c759c41d1d2ea21fd46bb5744f15" kindref="member">cudaFree</ref>(back_cu));</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/>CUDA_RT_CALL(<ref refid="group__CUDART__MEMORY_1ga5635c759c41d1d2ea21fd46bb5744f15" kindref="member">cudaFree</ref>(backcounts_cu));</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Destroy<sp/>BST<sp/>plans<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/>CUFFT_CALL(cufftDestroy(plan1d_bst));</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/>CUFFT_CALL(cufftDestroy(plan2d_bst));</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Apagar<sp/>(só<sp/>coloquei<sp/>pra<sp/>ver<sp/>em<sp/>qual<sp/>crasha):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>cartesianblock_bst.~cImage();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>polarblock_bst.~cImage();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>realpolar_bst.~cImage();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Apagar<sp/>(não<sp/>deveria<sp/>ser<sp/>necessário):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CUDA_RT_CALL(cudaDeviceReset());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="293"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight><highlight class="comment">//----------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight><highlight class="comment">//<sp/>EM<sp/>on<sp/>frequency<sp/>Threads<sp/>Block<sp/>algorithm</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight><highlight class="comment">//----------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>_get_tEM_FQ_GPU(<ref refid="structconfig" kindref="compound">CFG</ref><sp/>configs,<sp/><ref refid="structReconstruction" kindref="compound">REC</ref><sp/>ReconParam,</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*count,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*obj,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*flat,<sp/></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blockgpu,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>gpu)</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Projection<sp/>data<sp/>sizes<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays<sp/><sp/><sp/><sp/><sp/>=<sp/>configs.tomo.size.x;</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles<sp/><sp/><sp/>=<sp/>configs.tomo.size.y;</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pad<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>configs.tomo.pad.x;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blocksize<sp/>=<sp/>configs.tomo.blocksize;</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>blocksize<sp/>==<sp/>0<sp/>){</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blocksize_aux<sp/>=<sp/>calc_blocksize(blockgpu,<sp/>nangles,<sp/>nrays,<sp/>pad,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);<sp/></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>blocksize<sp/><sp/><sp/><sp/><sp/>=<sp/>min(blockgpu,<sp/>blocksize_aux);</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Indexes<sp/>and<sp/>pointers<sp/>for<sp/>subBlocks<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ind_block<sp/>=<sp/>(int)ceil(<sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)<sp/>blockgpu<sp/>/<sp/>blocksize<sp/>);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>subblock,<sp/>ptr<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>ind_block;<sp/>i++){</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>subblock<sp/>=<sp/>min(blockgpu<sp/>-<sp/>ptr,<sp/>blocksize);</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>printf(&quot;Subblock<sp/>of<sp/>get_tEM_FQ_GPU<sp/>on<sp/>block<sp/>%d:<sp/>%d<sp/>\n&quot;,i,subblock);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get_tEM_FQ_GPU(<sp/>configs,<sp/>ReconParam,</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>count<sp/>+<sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">)ptr*nrays*nangles,<sp/></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>obj<sp/><sp/><sp/>+<sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">)ptr*nrays*nrays,</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>angles,<sp/></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flat<sp/><sp/>+<sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">)ptr*nrays,</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>subblock,<sp/>gpu);</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Update<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr<sp/>=<sp/>ptr<sp/>+<sp/>subblock;</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HANDLE_ERROR(<ref refid="group__CUDART__DEVICE_1gabad4c7a01961e63aa4744ce597cfaf1d" kindref="member">cudaDeviceSynchronize</ref>());</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>get_tEM_FQ_MultiGPU(<ref refid="structdimension" kindref="compound">DIM</ref><sp/>tomo,<sp/><ref refid="structdimension" kindref="compound">DIM</ref><sp/>obj,<sp/><ref refid="structgeometry" kindref="compound">GEO</ref><sp/><ref refid="structgeometry" kindref="compound">geometry</ref>,<sp/><ref refid="structReconstruction" kindref="compound">REC</ref><sp/>ReconParam,</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>gpus,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ngpus,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*count,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*flat)</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/>Maxgpudev;</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Multiples<sp/>devices<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HANDLE_ERROR(<ref refid="group__CUDART__DEVICE_1ga5b0c57f32cb245582010c07e952753e6" kindref="member">cudaGetDeviceCount</ref>(&amp;Maxgpudev));</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>devices<sp/>input<sp/>are<sp/>larger<sp/>than<sp/>actual<sp/>devices<sp/>on<sp/>GPU,<sp/>exit<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>ngpus;<sp/>i++)<sp/></highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(gpus[i]<sp/>&lt;<sp/>Maxgpudev<sp/>&amp;&amp;<sp/></highlight><highlight class="stringliteral">&quot;Invalid<sp/>device<sp/>number.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>General<sp/>struct<sp/>found<sp/>on<sp/>inc/common/configs.hpp<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structconfig" kindref="compound">CFG</ref><sp/>configs;</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>configs.tomo<sp/><sp/><sp/><sp/><sp/>=<sp/>tomo;</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>configs.obj<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>obj;</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>configs.geometry<sp/>=<sp/><ref refid="structgeometry" kindref="compound">geometry</ref>;</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Projection<sp/>data<sp/>sizes<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays<sp/><sp/><sp/><sp/>=<sp/>configs.tomo.size.x;</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles<sp/><sp/>=<sp/>configs.tomo.size.y;</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nslices<sp/><sp/>=<sp/>configs.tomo.size.z;</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Indexes<sp/>and<sp/>pointers<sp/>for<sp/>GPUs<sp/>blocks<sp/>*/</highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>t;</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blockgpu<sp/>=<sp/>(nslices<sp/>+<sp/>ngpus<sp/>-<sp/>1)<sp/>/<sp/>ngpus;</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>subblock,<sp/>ptr<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::future&lt;void&gt;&gt;<sp/>threads;</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>threads.reserve(ngpus);</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ngpus<sp/>==<sp/>1){</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"></highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_get_tEM_FQ_GPU(configs,<sp/>ReconParam,<sp/>count,<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,<sp/>angles,<sp/>flat,<sp/>nslices,<sp/>gpus[0]);</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(t<sp/>=<sp/>0;<sp/>t<sp/>&lt;<sp/>ngpus;<sp/>t++){<sp/></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>subblock<sp/>=<sp/>min(nslices<sp/>-<sp/>ptr,<sp/>blockgpu);</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>threads.push_back(std::async(<sp/>std::launch::async,<sp/>_get_tEM_FQ_GPU,<sp/></highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>configs,<sp/>ReconParam,</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>count<sp/><sp/>+<sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">)ptr<sp/>*<sp/>nrays<sp/>*<sp/>nangles,<sp/></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>+<sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">)ptr<sp/>*<sp/>nrays<sp/>*<sp/>nrays,<sp/></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>angles,<sp/></highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flat<sp/>+<sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">)ptr<sp/>*<sp/>nrays,<sp/></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>subblock,<sp/>gpus[t]));</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Update<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr<sp/>=<sp/>ptr<sp/>+<sp/>subblock;</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>t<sp/>:<sp/>threads)</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t.get();</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="395"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/em_frequency.cu"/>
+  </compounddef>
+</doxygen>

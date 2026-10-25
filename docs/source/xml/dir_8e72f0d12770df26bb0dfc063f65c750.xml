@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_8e72f0d12770df26bb0dfc063f65c750" kind="dir">
+    <compoundname>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing</compoundname>
+    <innerdir refid="dir_2a6d2ebc826a8f981f185a4296d0d790">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/filters</innerdir>
+    <innerdir refid="dir_3489d36fd2a9c1116e23d28130b00d17">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/phase</innerdir>
+    <innerfile refid="background__correction_8cu">background_correction.cu</innerfile>
+    <innerfile refid="excentric__tomo_8cu">excentric_tomo.cu</innerfile>
+    <innerfile refid="rings_8cu">rings.cu</innerfile>
+    <innerfile refid="rotation__axis_8cu">rotation_axis.cu</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/"/>
+  </compounddef>
+</doxygen>

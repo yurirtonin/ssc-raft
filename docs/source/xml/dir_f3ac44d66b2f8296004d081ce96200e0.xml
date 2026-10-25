@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_f3ac44d66b2f8296004d081ce96200e0" kind="dir">
+    <compoundname>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common</compoundname>
+    <innerfile refid="complex_8hpp">complex.hpp</innerfile>
+    <innerfile refid="configs_8hpp">configs.hpp</innerfile>
+    <innerfile refid="logerror_8hpp">logerror.hpp</innerfile>
+    <innerfile refid="operations_8hpp">operations.hpp</innerfile>
+    <innerfile refid="opt_8hpp">opt.hpp</innerfile>
+    <innerfile refid="types_8hpp">types.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/"/>
+  </compounddef>
+</doxygen>

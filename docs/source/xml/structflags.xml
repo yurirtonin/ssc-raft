@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structflags" kind="struct" language="C++" prot="public">
+    <compoundname>flags</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structflags_1a90860477969e2ba6627755386ce51dba" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int flags::do_flat_dark_correction</definition>
+        <argsstring></argsstring>
+        <name>do_flat_dark_correction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="108" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structflags_1a9f49bde9515715cc3b352ed57c26cc6e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int flags::do_flat_dark_log</definition>
+        <argsstring></argsstring>
+        <name>do_flat_dark_log</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="109" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structflags_1a1fd215064f699835d94cab7cdb129de8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int flags::do_paganin_filter</definition>
+        <argsstring></argsstring>
+        <name>do_paganin_filter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="110" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structflags_1ad3fb7adc499f1db194b7db9db37ea519" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int flags::do_rings</definition>
+        <argsstring></argsstring>
+        <name>do_rings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="111" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structflags_1a25208a8ea249fcb91c6a869e6f48de1e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int flags::do_rotation_axis_offset</definition>
+        <argsstring></argsstring>
+        <name>do_rotation_axis_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="112" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structflags_1a8f4c5d55c5d323aa89a3cf5ee2b78e2f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int flags::do_rotation_correction</definition>
+        <argsstring></argsstring>
+        <name>do_rotation_correction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="113" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structflags_1aa2b90e9ba91d9df69830d3d84fa48a13" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int flags::do_alignment</definition>
+        <argsstring></argsstring>
+        <name>do_alignment</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="114" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structflags_1a0ef0597ccfc8775fd170245a3e25b788" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int flags::do_excentric_offset</definition>
+        <argsstring></argsstring>
+        <name>do_excentric_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="115" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structflags_1a0ee072f6a2d5f46636a62a02f7557785" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int flags::do_excentric</definition>
+        <argsstring></argsstring>
+        <name>do_excentric</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="116" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structflags_1a827a927fe890eb426ac1bc5bc260c0de" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int flags::do_reconstruction</definition>
+        <argsstring></argsstring>
+        <name>do_reconstruction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="117" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="105" column="1" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="106" bodyend="118"/>
+    <listofallmembers>
+      <member refid="structflags_1aa2b90e9ba91d9df69830d3d84fa48a13" prot="public" virt="non-virtual"><scope>flags</scope><name>do_alignment</name></member>
+      <member refid="structflags_1a0ee072f6a2d5f46636a62a02f7557785" prot="public" virt="non-virtual"><scope>flags</scope><name>do_excentric</name></member>
+      <member refid="structflags_1a0ef0597ccfc8775fd170245a3e25b788" prot="public" virt="non-virtual"><scope>flags</scope><name>do_excentric_offset</name></member>
+      <member refid="structflags_1a90860477969e2ba6627755386ce51dba" prot="public" virt="non-virtual"><scope>flags</scope><name>do_flat_dark_correction</name></member>
+      <member refid="structflags_1a9f49bde9515715cc3b352ed57c26cc6e" prot="public" virt="non-virtual"><scope>flags</scope><name>do_flat_dark_log</name></member>
+      <member refid="structflags_1a1fd215064f699835d94cab7cdb129de8" prot="public" virt="non-virtual"><scope>flags</scope><name>do_paganin_filter</name></member>
+      <member refid="structflags_1a827a927fe890eb426ac1bc5bc260c0de" prot="public" virt="non-virtual"><scope>flags</scope><name>do_reconstruction</name></member>
+      <member refid="structflags_1ad3fb7adc499f1db194b7db9db37ea519" prot="public" virt="non-virtual"><scope>flags</scope><name>do_rings</name></member>
+      <member refid="structflags_1a25208a8ea249fcb91c6a869e6f48de1e" prot="public" virt="non-virtual"><scope>flags</scope><name>do_rotation_axis_offset</name></member>
+      <member refid="structflags_1a8f4c5d55c5d323aa89a3cf5ee2b78e2f" prot="public" virt="non-virtual"><scope>flags</scope><name>do_rotation_correction</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

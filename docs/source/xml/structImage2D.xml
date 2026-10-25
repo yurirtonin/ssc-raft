@@ -1,0 +1,1462 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structImage2D" kind="struct" language="C++" prot="public">
+    <compoundname>Image2D</compoundname>
+    <includes refid="types_8hpp" local="no">types.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Type</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structImage2D_1aa7034568150f8bc4465f8daf5a24bf60" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1a462bfa9dfea81692463ecb192183dd01" kindref="member">MemoryType</ref></type>
+        <definition>MemoryType Image2D&lt; Type &gt;::memorytype</definition>
+        <argsstring></argsstring>
+        <name>memorytype</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="167" column="16" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structImage2D_1a9674558ae3354d0cb19604a52203582a" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Image2D&lt; Type &gt;::sizex</definition>
+        <argsstring></argsstring>
+        <name>sizex</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="233" column="12" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structImage2D_1a206df5b213c38d60d91baaa0d4ee76a8" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Image2D&lt; Type &gt;::sizey</definition>
+        <argsstring></argsstring>
+        <name>sizey</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="234" column="12" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structImage2D_1aecef682c3d580eef51dd6ebf7ca6abc8" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Image2D&lt; Type &gt;::sizez</definition>
+        <argsstring></argsstring>
+        <name>sizez</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="235" column="12" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structImage2D_1a38e4e3320b69a9736b6e2ef2e4a75fdc" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Image2D&lt; Type &gt;::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>sizex*sizey*sizez </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="237" column="12" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structImage2D_1a877039138e3a9144a2e35b0e5428d5f3" prot="public" static="no" mutable="no">
+        <type>Type *</type>
+        <definition>Type* Image2D&lt; Type &gt;::gpuptr</definition>
+        <argsstring></argsstring>
+        <name>gpuptr</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Pointer in GPU Memory. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="239" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="239" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structImage2D_1a8b72cdb68b23946f8f9f9ea6d59585ff" prot="public" static="no" mutable="no">
+        <type>Type *</type>
+        <definition>Type* Image2D&lt; Type &gt;::cpuptr</definition>
+        <argsstring></argsstring>
+        <name>cpuptr</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Pointer in CPU Memory. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="240" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="240" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="structImage2D_1a41f512813eecb2cab0ca6589fe608663" prot="public" static="yes" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t Image2D&lt; Type &gt;::blocksize</definition>
+        <argsstring></argsstring>
+        <name>blocksize</name>
+        <initializer>= 64</initializer>
+        <briefdescription>
+<para>Default number of threads per block. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="263" column="25" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="263" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structImage2D_1a958df03603d8adad5c808c5d560704ee" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Image2D&lt; Type &gt;::bIsManaged</definition>
+        <argsstring>() const</argsstring>
+        <name>bIsManaged</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="169" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="169" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1aabb67db9cca65e2969bf2a85dbf330c4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Image2D&lt; Type &gt;::bHasAllocCPU</definition>
+        <argsstring>() const</argsstring>
+        <name>bHasAllocCPU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="170" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="170" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1aeb232029652640c4f11212b2fb107591" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Image2D&lt; Type &gt;::bHasAllocGPU</definition>
+        <argsstring>() const</argsstring>
+        <name>bHasAllocGPU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="171" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="171" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a17f1a343b8b25c6912cfcc249d0136c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Image2D&lt; Type &gt;::Image2D</definition>
+        <argsstring>(size_t _sizex, size_t _sizey, size_t _sizez=1, MemoryType memtype=MemoryType::EAllocCPUGPU, cudaStream_t stream=0)</argsstring>
+        <name>Image2D</name>
+        <param>
+          <type>size_t</type>
+          <declname>_sizex</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>_sizey</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>_sizez</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a462bfa9dfea81692463ecb192183dd01" kindref="member">MemoryType</ref></type>
+          <declname>memtype</declname>
+          <defval><ref refid="types_8hpp_1a462bfa9dfea81692463ecb192183dd01a93bc97f6438e6703edbd117c81f0be4a" kindref="member">MemoryType::EAllocCPUGPU</ref></defval>
+        </param>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="176" column="5" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="176" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a3b73bf621857153811c2452d8f3660c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Image2D&lt; Type &gt;::Image2D</definition>
+        <argsstring>(Type *newdata, size_t _sizex, size_t _sizey, size_t _sizez=1, MemoryType memtype=MemoryType::EAllocCPUGPU, cudaStream_t stream=0)</argsstring>
+        <name>Image2D</name>
+        <param>
+          <type>Type *</type>
+          <declname>newdata</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>_sizex</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>_sizey</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>_sizez</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a462bfa9dfea81692463ecb192183dd01" kindref="member">MemoryType</ref></type>
+          <declname>memtype</declname>
+          <defval><ref refid="types_8hpp_1a462bfa9dfea81692463ecb192183dd01a93bc97f6438e6703edbd117c81f0be4a" kindref="member">MemoryType::EAllocCPUGPU</ref></defval>
+        </param>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Makes a copy from a given pointer during construction. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="191" column="5" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="191" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a27872e21fb714c892dc73bf4c8a3d7df" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Image2D&lt; Type &gt;::Image2D</definition>
+        <argsstring>(Image2D&lt; Type &gt; &amp;other)</argsstring>
+        <name>Image2D</name>
+        <param>
+          <type><ref refid="structImage2D" kindref="compound">Image2D</ref>&lt; Type &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Makes a copy of given array. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="205" column="14" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="205" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a0a60608aa65e2f6bd3db66fffddbf195" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Image2D&lt; Type &gt;::Image2D</definition>
+        <argsstring>(const dim3 &amp;dim, MemoryType memtype=MemoryType::EAllocCPUGPU)</argsstring>
+        <name>Image2D</name>
+        <param>
+          <type>const dim3 &amp;</type>
+          <declname>dim</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a462bfa9dfea81692463ecb192183dd01" kindref="member">MemoryType</ref></type>
+          <declname>memtype</declname>
+          <defval><ref refid="types_8hpp_1a462bfa9dfea81692463ecb192183dd01a93bc97f6438e6703edbd117c81f0be4a" kindref="member">MemoryType::EAllocCPUGPU</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="213" column="5" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="213" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a6350f7cb2164a6893be8af25247b2f4e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Image2D&lt; Type &gt;::Image2D</definition>
+        <argsstring>(Type *newdata, const dim3 &amp;dim, MemoryType memtype=MemoryType::EAllocCPUGPU)</argsstring>
+        <name>Image2D</name>
+        <param>
+          <type>Type *</type>
+          <declname>newdata</declname>
+        </param>
+        <param>
+          <type>const dim3 &amp;</type>
+          <declname>dim</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a462bfa9dfea81692463ecb192183dd01" kindref="member">MemoryType</ref></type>
+          <declname>memtype</declname>
+          <defval><ref refid="types_8hpp_1a462bfa9dfea81692463ecb192183dd01a93bc97f6438e6703edbd117c81f0be4a" kindref="member">MemoryType::EAllocCPUGPU</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="217" column="5" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="217" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1ab6c912e7a96196df0de7d5bd625d8c7a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual Image2D&lt; Type &gt;::~Image2D</definition>
+        <argsstring>()</argsstring>
+        <name>~Image2D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="223" column="13" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="223" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1af6f13b33ab0debf448c4ba2ebb6dc1ff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::SetGPUToZero</definition>
+        <argsstring>()</argsstring>
+        <name>SetGPUToZero</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Zero-fill. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="244" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="244" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1aa089c1b0a731c8e96b62321a49251e03" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::SetGPUToZero</definition>
+        <argsstring>(cudaStream_t stream)</argsstring>
+        <name>SetGPUToZero</name>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stramem zero-fill. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="251" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="251" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a1d0da2d672f2159a15a80b949c0fe719" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::SetCPUToZero</definition>
+        <argsstring>()</argsstring>
+        <name>SetCPUToZero</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Zero-fill. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="258" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="258" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a65c4d365abfa83514d1c9a442c866b30" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>dim3</type>
+        <definition>dim3 Image2D&lt; Type &gt;::Shape</definition>
+        <argsstring>() const</argsstring>
+        <name>Shape</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="265" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="265" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a493a7b84bf179b28426d0fb80a8a2e47" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>dim3</type>
+        <definition>dim3 Image2D&lt; Type &gt;::ShapeThread</definition>
+        <argsstring>() const</argsstring>
+        <name>ShapeThread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a dim3() object for kernel launch. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="269" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="269" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a0d6aef0667d166a583c86f9758b00d62" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>dim3</type>
+        <definition>dim3 Image2D&lt; Type &gt;::ShapeBlock</definition>
+        <argsstring>() const</argsstring>
+        <name>ShapeBlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a dim3() object for kernel launch. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="276" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="276" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1ae12d697285217c9e9b7bf10935a7680e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>dim3</type>
+        <definition>dim3 Image2D&lt; Type &gt;::LinearThread</definition>
+        <argsstring>() const</argsstring>
+        <name>LinearThread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="281" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="281" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a19a8edae0c298c8d0c8abca50ab436cb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>dim3</type>
+        <definition>dim3 Image2D&lt; Type &gt;::LinearBlock</definition>
+        <argsstring>() const</argsstring>
+        <name>LinearBlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="285" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="285" bodyend="288"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a1105ec4613666cdc831a25fbceec8434" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::AllocGPU</definition>
+        <argsstring>(cudaStream_t stream=0)</argsstring>
+        <name>AllocGPU</name>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="290" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="290" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a4418d19aaf4821549f947d7f0b65715f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::DeallocGPU</definition>
+        <argsstring>(cudaStream_t stream=0)</argsstring>
+        <name>DeallocGPU</name>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="293" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="293" bodyend="296"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a9190d8a7079a2bef47a6d1505735588c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::AllocCPU</definition>
+        <argsstring>()</argsstring>
+        <name>AllocCPU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="297" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="297" bodyend="299"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1ad80e5db0c43c45507d1fb3f544036222" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::DeallocCPU</definition>
+        <argsstring>()</argsstring>
+        <name>DeallocCPU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="300" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="300" bodyend="303"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a66dc15321474b65bde093295c7989c36" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::AllocManaged</definition>
+        <argsstring>()</argsstring>
+        <name>AllocManaged</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="304" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="304" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1afa8c04210b57c8b0093a1078c3586112" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::DeallocManaged</definition>
+        <argsstring>()</argsstring>
+        <name>DeallocManaged</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="310" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="310" bodyend="315"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1ad7092c0f9b01fc66e84c528125a05836" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type2</type>
+            <defval>Type</defval>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool Image2D&lt; Type &gt;::operator==</definition>
+        <argsstring>(const Image2D&lt; Type2 &gt; &amp;other) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="structImage2D" kindref="compound">Image2D</ref>&lt; Type2 &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="318" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="318" bodyend="325"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1aa2cb670a0c4ba01656417b51225925c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type2</type>
+            <defval>Type</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structImage2D" kindref="compound">Image2D</ref>&lt; Type &gt; &amp;</type>
+        <definition>Image2D&lt;Type&gt;&amp; Image2D&lt; Type &gt;::operator+=</definition>
+        <argsstring>(const Image2D&lt; Type2 &gt; &amp;other)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>const <ref refid="structImage2D" kindref="compound">Image2D</ref>&lt; Type2 &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="328" column="13" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="328" bodyend="333"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a9a9e320e0e9a15c20c4a60b2bbe48234" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type2</type>
+            <defval>Type</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structImage2D" kindref="compound">Image2D</ref>&lt; Type &gt; &amp;</type>
+        <definition>Image2D&lt;Type&gt;&amp; Image2D&lt; Type &gt;::operator-=</definition>
+        <argsstring>(const Image2D&lt; Type2 &gt; &amp;other)</argsstring>
+        <name>operator-=</name>
+        <param>
+          <type>const <ref refid="structImage2D" kindref="compound">Image2D</ref>&lt; Type2 &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="335" column="13" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="335" bodyend="340"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1af0f8cfdfa622396a174a20ffb3f114fd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type2</type>
+            <defval>Type</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structImage2D" kindref="compound">Image2D</ref>&lt; Type &gt; &amp;</type>
+        <definition>Image2D&lt;Type&gt;&amp; Image2D&lt; Type &gt;::operator*=</definition>
+        <argsstring>(const Image2D&lt; Type2 &gt; &amp;other)</argsstring>
+        <name>operator*=</name>
+        <param>
+          <type>const <ref refid="structImage2D" kindref="compound">Image2D</ref>&lt; Type2 &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="342" column="13" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="342" bodyend="348"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a280b289c9e4974b76eb1468ba7cbe24e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type2</type>
+            <defval>Type</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structImage2D" kindref="compound">Image2D</ref>&lt; Type &gt; &amp;</type>
+        <definition>Image2D&lt;Type&gt;&amp; Image2D&lt; Type &gt;::operator/=</definition>
+        <argsstring>(const Image2D&lt; Type2 &gt; &amp;other)</argsstring>
+        <name>operator/=</name>
+        <param>
+          <type>const <ref refid="structImage2D" kindref="compound">Image2D</ref>&lt; Type2 &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="350" column="13" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="350" bodyend="355"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a52e626a2b1fb5589b23c698952857919" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type2</type>
+            <defval>Type</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structImage2D" kindref="compound">Image2D</ref>&lt; Type &gt; &amp;</type>
+        <definition>Image2D&lt;Type&gt;&amp; Image2D&lt; Type &gt;::operator+=</definition>
+        <argsstring>(Type2 other)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>Type2</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="358" column="13" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="358" bodyend="361"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a202c81f5d4455a35d1cc42ff8a7adb53" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type2</type>
+            <defval>Type</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structImage2D" kindref="compound">Image2D</ref>&lt; Type &gt; &amp;</type>
+        <definition>Image2D&lt;Type&gt;&amp; Image2D&lt; Type &gt;::operator-=</definition>
+        <argsstring>(Type2 other)</argsstring>
+        <name>operator-=</name>
+        <param>
+          <type>Type2</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="363" column="13" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="363" bodyend="366"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a3b4b878a0a6455b9b70960f25647a5d2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type2</type>
+            <defval>Type</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structImage2D" kindref="compound">Image2D</ref>&lt; Type &gt; &amp;</type>
+        <definition>Image2D&lt;Type&gt;&amp; Image2D&lt; Type &gt;::operator*=</definition>
+        <argsstring>(Type2 other)</argsstring>
+        <name>operator*=</name>
+        <param>
+          <type>Type2</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="368" column="13" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="368" bodyend="371"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a8c7db6f1577cdb05c8196f6c454db17f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type2</type>
+            <defval>Type</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structImage2D" kindref="compound">Image2D</ref>&lt; Type &gt; &amp;</type>
+        <definition>Image2D&lt;Type&gt;&amp; Image2D&lt; Type &gt;::operator/=</definition>
+        <argsstring>(Type2 other)</argsstring>
+        <name>operator/=</name>
+        <param>
+          <type>Type2</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="373" column="13" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="373" bodyend="376"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a364640b78e4851d55553150b1ca64430" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type2</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::DataAs</definition>
+        <argsstring>(Type2 *fill, size_t tsize=0, float threshold=-1) const</argsstring>
+        <name>DataAs</name>
+        <param>
+          <type>Type2 *</type>
+          <declname>fill</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>tsize</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>threshold</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="379" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="379" bodyend="385"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1aa5eeef5d4c47adde71649837491983e2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::DataAs</definition>
+        <argsstring>(void *fill, EType::TypeEnum type, size_t tsize=0, float threshold=-1) const</argsstring>
+        <name>DataAs</name>
+        <param>
+          <type>void *</type>
+          <declname>fill</declname>
+        </param>
+        <param>
+          <type>EType::TypeEnum</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>tsize</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>threshold</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="387" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="387" bodyend="412"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1ac818ed6bfda4e800ae8f6f7dac4377f6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::CopyFrom</definition>
+        <argsstring>(const Type *other, cudaStream_t stream=0, int64_t cpysize=-1)</argsstring>
+        <name>CopyFrom</name>
+        <param>
+          <type>const Type *</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>cpysize</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copies memory from given pointer. Cpysize == -1 -&gt; Cpysize = this-&gt;size </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="417" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="417" bodyend="427"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a265ec3d2328c4f6d77c015a2925f5546" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::CopyTo</definition>
+        <argsstring>(Type *outptr, cudaStream_t stream=0, int64_t cpysize=-1)</argsstring>
+        <name>CopyTo</name>
+        <param>
+          <type>Type *</type>
+          <declname>outptr</declname>
+        </param>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>cpysize</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copies memory to given pointer. Cpysize == -1 -&gt; Cpysize = this-&gt;size </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="431" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="431" bodyend="444"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1aee73b8b5331ab3e13f9f99c4bf7a8a21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::CopyRoiTo</definition>
+        <argsstring>(Type *outptr, dim3 offset, dim3 roi_size)</argsstring>
+        <name>CopyRoiTo</name>
+        <param>
+          <type>Type *</type>
+          <declname>outptr</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>roi_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="446" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="446" bodyend="479"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1aee8091ecb8f9b9a077c44d4f0bb1221f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::CopyRoiTo</definition>
+        <argsstring>(Image2D&lt; Type &gt; &amp;other, dim3 offset, dim3 roi_size)</argsstring>
+        <name>CopyRoiTo</name>
+        <param>
+          <type><ref refid="structImage2D" kindref="compound">Image2D</ref>&lt; Type &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>roi_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="481" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="481" bodyend="483"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1af697a74b4a25d62cb976cfa368620787" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::CopyFrom</definition>
+        <argsstring>(const Image2D&lt; Type &gt; &amp;other, cudaStream_t stream=0, int64_t cpysize=-1)</argsstring>
+        <name>CopyFrom</name>
+        <param>
+          <type>const <ref refid="structImage2D" kindref="compound">Image2D</ref>&lt; Type &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>cpysize</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copies from given array. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="488" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="488" bodyend="490"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a82734d46b620cb05aabbfded30affd0e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::CopyTo</definition>
+        <argsstring>(Image2D&lt; Type &gt; &amp;other, cudaStream_t stream=0, int64_t cpysize=-1)</argsstring>
+        <name>CopyTo</name>
+        <param>
+          <type><ref refid="structImage2D" kindref="compound">Image2D</ref>&lt; Type &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>cpysize</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copies to given array. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="494" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="494" bodyend="496"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a35e2abcea440a563d8cb18bf62abb07b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::LoadToGPU</definition>
+        <argsstring>(cudaStream_t stream=0, int64_t cpysize=-1)</argsstring>
+        <name>LoadToGPU</name>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>cpysize</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If the allocation is not using unified address, copies the contents of cpuptr to gpuptr. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="501" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="501" bodyend="517"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a54e473e04860cfd4e63518d23b6f4c37" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::LoadFromGPU</definition>
+        <argsstring>(cudaStream_t stream=0, int64_t cpysize=-1)</argsstring>
+        <name>LoadFromGPU</name>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>cpysize</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If the allocation is not using unified address, copies the contents of gpuptr to cpuptr. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="521" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="521" bodyend="535"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a5baf809ec3440dc1a9a69af2dcd4c5cd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Image2D&lt; Type &gt;::GetSize</definition>
+        <argsstring>() const</argsstring>
+        <name>GetSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="537" column="12" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="537" bodyend="537"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1af51394650c4a491b943ab1d4b1a4d5bd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::exp</definition>
+        <argsstring>(bool bNeg=false)</argsstring>
+        <name>exp</name>
+        <param>
+          <type>bool</type>
+          <declname>bNeg</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Natural exponential. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="541" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="541" bodyend="541"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a72f516712c9c800f96cf600a56bd1a51" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::ln</definition>
+        <argsstring>()</argsstring>
+        <name>ln</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Natural logarithm. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="545" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="545" bodyend="545"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1ac4d7292f6169cf72ec5468647b30624d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::exp1j</definition>
+        <argsstring>(Image2D&lt; float &gt; &amp;other)</argsstring>
+        <name>exp1j</name>
+        <param>
+          <type><ref refid="structImage2D" kindref="compound">Image2D</ref>&lt; float &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Computes *this = exp(i*other) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="550" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="550" bodyend="552"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a35bef05a385b07bf0cb431e32eaa7ab1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::angle</definition>
+        <argsstring>(Image2D&lt; float &gt; &amp;other)</argsstring>
+        <name>angle</name>
+        <param>
+          <type><ref refid="structImage2D" kindref="compound">Image2D</ref>&lt; float &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Computes *this = arctan(other.imag/other.real) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="556" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="556" bodyend="558"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a40a28ef983f4e3ae96c3f26e5d5e521b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::SwapZ</definition>
+        <argsstring>()</argsstring>
+        <name>SwapZ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="560" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="560" bodyend="563"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1ad739f6a1afff4e595028bcfc76af859b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>cufftHandle</type>
+        <definition>cufftHandle Image2D&lt; Type &gt;::GetFFTPlan1D</definition>
+        <argsstring>(int batch=-1)</argsstring>
+        <name>GetFFTPlan1D</name>
+        <param>
+          <type>int</type>
+          <declname>batch</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a cufft plan to 1D-transform this-&gt;shape. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="567" column="17" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="567" bodyend="571"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a41aed8029e43dba64b7e6b96d89ab379" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>cufftHandle</type>
+        <definition>cufftHandle Image2D&lt; Type &gt;::GetFFTPlan2D</definition>
+        <argsstring>()</argsstring>
+        <name>GetFFTPlan2D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a cufft plan to 2D-transform this-&gt;shape. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="575" column="17" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="575" bodyend="579"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a73f0f060bc9214dba5a2e48d8ef7b68b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>cufftHandle</type>
+        <definition>cufftHandle Image2D&lt; Type &gt;::GetFFTPlan3D</definition>
+        <argsstring>()</argsstring>
+        <name>GetFFTPlan3D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a cufft plan to 3D-transform this-&gt;shape. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="583" column="17" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="583" bodyend="587"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1ac4d9c2f50dde24d6e4b8320d736a0fb3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::FFT</definition>
+        <argsstring>(cufftHandle plan)</argsstring>
+        <name>FFT</name>
+        <param>
+          <type>cufftHandle</type>
+          <declname>plan</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Executes FFT on this array. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="591" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="591" bodyend="594"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a9c01079df29f9da45d4324a1dc58ec55" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::IFFT</definition>
+        <argsstring>(cufftHandle plan)</argsstring>
+        <name>IFFT</name>
+        <param>
+          <type>cufftHandle</type>
+          <declname>plan</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Executes IFFT on this array. Not normalized. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="598" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="598" bodyend="601"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a3a1ca86462fc4c9c2cf5a8deee9c073a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::Clamp</definition>
+        <argsstring>(Type a, Type b)</argsstring>
+        <name>Clamp</name>
+        <param>
+          <type>Type</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>Type</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ensures: a &lt;= *this &lt;= b </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="606" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="606" bodyend="608"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a201005d6bb4f041849488a3cb68bbff0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::Power</definition>
+        <argsstring>(float P)</argsstring>
+        <name>Power</name>
+        <param>
+          <type>float</type>
+          <declname>P</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>*this = (*this)^P </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="612" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="612" bodyend="612"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a009ec37ef6e1dd1664a4d705e544a1ee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::abs2</definition>
+        <argsstring>(Image2D&lt; float &gt; &amp;out)</argsstring>
+        <name>abs2</name>
+        <param>
+          <type><ref refid="structImage2D" kindref="compound">Image2D</ref>&lt; float &gt; &amp;</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Dumps absolute value^2 to out. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="616" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="616" bodyend="618"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a4183323d69af64ce90f61e7c3a56f8dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type</type>
+        <definition>Type Image2D&lt; Type &gt;::SumCPU</definition>
+        <argsstring>()</argsstring>
+        <name>SumCPU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sum reduction </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="623" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="623" bodyend="627"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1abda9de709cfef2087e57019523710ac2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type</type>
+        <definition>Type Image2D&lt; Type &gt;::SumGPU</definition>
+        <argsstring>(cudaStream_t stream=0)</argsstring>
+        <name>SumGPU</name>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sum reduction </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="679" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="679" bodyend="683"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a587c840eafb6aed83cb3dcfdafb86714" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::FFTShift1</definition>
+        <argsstring>()</argsstring>
+        <name>FFTShift1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Applies the 1d-fftshift to this array. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="688" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="688" bodyend="688"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1af7f8c73302233450aac9d2af99d6cfa6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::FFTShift2</definition>
+        <argsstring>()</argsstring>
+        <name>FFTShift2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Applies the 2d-fftshift to this array. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="692" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="692" bodyend="692"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a7f6b3e352b01c4a199656fec6ec6ddac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::FFTShift3</definition>
+        <argsstring>()</argsstring>
+        <name>FFTShift3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Applies the 3d-fftshift to this array. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="696" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="696" bodyend="696"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a49b5ec08f84ca937d516da282595d90e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::TotalVariation</definition>
+        <argsstring>(float lambda)</argsstring>
+        <name>TotalVariation</name>
+        <param>
+          <type>float</type>
+          <declname>lambda</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Runs 10 total variation steps on this image. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="701" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="701" bodyend="704"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1a7703d31eee3db848d4a5396323bb9565" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Op</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void Image2D&lt; Type &gt;::UnaryOperator</definition>
+        <argsstring>(Op op)</argsstring>
+        <name>UnaryOperator</name>
+        <param>
+          <type>Op</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="707" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="707" bodyend="709"/>
+      </memberdef>
+      <memberdef kind="function" id="structImage2D_1ad697ffa258390779f2050a809a57a024" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structImage2D" kindref="compound">Image2D</ref>&lt; Type &gt; *</type>
+        <definition>Image2D&lt;Type&gt;* Image2D&lt; Type &gt;::SliceZ</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>SliceZ</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns reference array containing the Z-index specified </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="714" column="13" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="714" bodyend="716"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Base class for single GPU basic operations and memory management. </para>
+    </detaileddescription>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="166" column="1" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="166" bodyend="717"/>
+    <listofallmembers>
+      <member refid="structImage2D_1a009ec37ef6e1dd1664a4d705e544a1ee" prot="public" virt="non-virtual"><scope>Image2D</scope><name>abs2</name></member>
+      <member refid="structImage2D_1a9190d8a7079a2bef47a6d1505735588c" prot="public" virt="non-virtual"><scope>Image2D</scope><name>AllocCPU</name></member>
+      <member refid="structImage2D_1a1105ec4613666cdc831a25fbceec8434" prot="public" virt="non-virtual"><scope>Image2D</scope><name>AllocGPU</name></member>
+      <member refid="structImage2D_1a66dc15321474b65bde093295c7989c36" prot="public" virt="non-virtual"><scope>Image2D</scope><name>AllocManaged</name></member>
+      <member refid="structImage2D_1a35bef05a385b07bf0cb431e32eaa7ab1" prot="public" virt="non-virtual"><scope>Image2D</scope><name>angle</name></member>
+      <member refid="structImage2D_1aabb67db9cca65e2969bf2a85dbf330c4" prot="public" virt="non-virtual"><scope>Image2D</scope><name>bHasAllocCPU</name></member>
+      <member refid="structImage2D_1aeb232029652640c4f11212b2fb107591" prot="public" virt="non-virtual"><scope>Image2D</scope><name>bHasAllocGPU</name></member>
+      <member refid="structImage2D_1a958df03603d8adad5c808c5d560704ee" prot="public" virt="non-virtual"><scope>Image2D</scope><name>bIsManaged</name></member>
+      <member refid="structImage2D_1a41f512813eecb2cab0ca6589fe608663" prot="public" virt="non-virtual"><scope>Image2D</scope><name>blocksize</name></member>
+      <member refid="structImage2D_1a3a1ca86462fc4c9c2cf5a8deee9c073a" prot="public" virt="non-virtual"><scope>Image2D</scope><name>Clamp</name></member>
+      <member refid="structImage2D_1ac818ed6bfda4e800ae8f6f7dac4377f6" prot="public" virt="non-virtual"><scope>Image2D</scope><name>CopyFrom</name></member>
+      <member refid="structImage2D_1af697a74b4a25d62cb976cfa368620787" prot="public" virt="non-virtual"><scope>Image2D</scope><name>CopyFrom</name></member>
+      <member refid="structImage2D_1aee73b8b5331ab3e13f9f99c4bf7a8a21" prot="public" virt="non-virtual"><scope>Image2D</scope><name>CopyRoiTo</name></member>
+      <member refid="structImage2D_1aee8091ecb8f9b9a077c44d4f0bb1221f" prot="public" virt="non-virtual"><scope>Image2D</scope><name>CopyRoiTo</name></member>
+      <member refid="structImage2D_1a265ec3d2328c4f6d77c015a2925f5546" prot="public" virt="non-virtual"><scope>Image2D</scope><name>CopyTo</name></member>
+      <member refid="structImage2D_1a82734d46b620cb05aabbfded30affd0e" prot="public" virt="non-virtual"><scope>Image2D</scope><name>CopyTo</name></member>
+      <member refid="structImage2D_1a8b72cdb68b23946f8f9f9ea6d59585ff" prot="public" virt="non-virtual"><scope>Image2D</scope><name>cpuptr</name></member>
+      <member refid="structImage2D_1a364640b78e4851d55553150b1ca64430" prot="public" virt="non-virtual"><scope>Image2D</scope><name>DataAs</name></member>
+      <member refid="structImage2D_1aa5eeef5d4c47adde71649837491983e2" prot="public" virt="non-virtual"><scope>Image2D</scope><name>DataAs</name></member>
+      <member refid="structImage2D_1ad80e5db0c43c45507d1fb3f544036222" prot="public" virt="non-virtual"><scope>Image2D</scope><name>DeallocCPU</name></member>
+      <member refid="structImage2D_1a4418d19aaf4821549f947d7f0b65715f" prot="public" virt="non-virtual"><scope>Image2D</scope><name>DeallocGPU</name></member>
+      <member refid="structImage2D_1afa8c04210b57c8b0093a1078c3586112" prot="public" virt="non-virtual"><scope>Image2D</scope><name>DeallocManaged</name></member>
+      <member refid="structImage2D_1af51394650c4a491b943ab1d4b1a4d5bd" prot="public" virt="non-virtual"><scope>Image2D</scope><name>exp</name></member>
+      <member refid="structImage2D_1ac4d7292f6169cf72ec5468647b30624d" prot="public" virt="non-virtual"><scope>Image2D</scope><name>exp1j</name></member>
+      <member refid="structImage2D_1ac4d9c2f50dde24d6e4b8320d736a0fb3" prot="public" virt="non-virtual"><scope>Image2D</scope><name>FFT</name></member>
+      <member refid="structImage2D_1a587c840eafb6aed83cb3dcfdafb86714" prot="public" virt="non-virtual"><scope>Image2D</scope><name>FFTShift1</name></member>
+      <member refid="structImage2D_1af7f8c73302233450aac9d2af99d6cfa6" prot="public" virt="non-virtual"><scope>Image2D</scope><name>FFTShift2</name></member>
+      <member refid="structImage2D_1a7f6b3e352b01c4a199656fec6ec6ddac" prot="public" virt="non-virtual"><scope>Image2D</scope><name>FFTShift3</name></member>
+      <member refid="structImage2D_1ad739f6a1afff4e595028bcfc76af859b" prot="public" virt="non-virtual"><scope>Image2D</scope><name>GetFFTPlan1D</name></member>
+      <member refid="structImage2D_1a41aed8029e43dba64b7e6b96d89ab379" prot="public" virt="non-virtual"><scope>Image2D</scope><name>GetFFTPlan2D</name></member>
+      <member refid="structImage2D_1a73f0f060bc9214dba5a2e48d8ef7b68b" prot="public" virt="non-virtual"><scope>Image2D</scope><name>GetFFTPlan3D</name></member>
+      <member refid="structImage2D_1a5baf809ec3440dc1a9a69af2dcd4c5cd" prot="public" virt="non-virtual"><scope>Image2D</scope><name>GetSize</name></member>
+      <member refid="structImage2D_1a877039138e3a9144a2e35b0e5428d5f3" prot="public" virt="non-virtual"><scope>Image2D</scope><name>gpuptr</name></member>
+      <member refid="structImage2D_1a9c01079df29f9da45d4324a1dc58ec55" prot="public" virt="non-virtual"><scope>Image2D</scope><name>IFFT</name></member>
+      <member refid="structImage2D_1a17f1a343b8b25c6912cfcc249d0136c4" prot="public" virt="non-virtual"><scope>Image2D</scope><name>Image2D</name></member>
+      <member refid="structImage2D_1a3b73bf621857153811c2452d8f3660c9" prot="public" virt="non-virtual"><scope>Image2D</scope><name>Image2D</name></member>
+      <member refid="structImage2D_1a27872e21fb714c892dc73bf4c8a3d7df" prot="public" virt="non-virtual"><scope>Image2D</scope><name>Image2D</name></member>
+      <member refid="structImage2D_1a0a60608aa65e2f6bd3db66fffddbf195" prot="public" virt="non-virtual"><scope>Image2D</scope><name>Image2D</name></member>
+      <member refid="structImage2D_1a6350f7cb2164a6893be8af25247b2f4e" prot="public" virt="non-virtual"><scope>Image2D</scope><name>Image2D</name></member>
+      <member refid="structImage2D_1a19a8edae0c298c8d0c8abca50ab436cb" prot="public" virt="non-virtual"><scope>Image2D</scope><name>LinearBlock</name></member>
+      <member refid="structImage2D_1ae12d697285217c9e9b7bf10935a7680e" prot="public" virt="non-virtual"><scope>Image2D</scope><name>LinearThread</name></member>
+      <member refid="structImage2D_1a72f516712c9c800f96cf600a56bd1a51" prot="public" virt="non-virtual"><scope>Image2D</scope><name>ln</name></member>
+      <member refid="structImage2D_1a54e473e04860cfd4e63518d23b6f4c37" prot="public" virt="non-virtual"><scope>Image2D</scope><name>LoadFromGPU</name></member>
+      <member refid="structImage2D_1a35e2abcea440a563d8cb18bf62abb07b" prot="public" virt="non-virtual"><scope>Image2D</scope><name>LoadToGPU</name></member>
+      <member refid="structImage2D_1aa7034568150f8bc4465f8daf5a24bf60" prot="public" virt="non-virtual"><scope>Image2D</scope><name>memorytype</name></member>
+      <member refid="structImage2D_1af0f8cfdfa622396a174a20ffb3f114fd" prot="public" virt="non-virtual"><scope>Image2D</scope><name>operator*=</name></member>
+      <member refid="structImage2D_1a3b4b878a0a6455b9b70960f25647a5d2" prot="public" virt="non-virtual"><scope>Image2D</scope><name>operator*=</name></member>
+      <member refid="structImage2D_1aa2cb670a0c4ba01656417b51225925c0" prot="public" virt="non-virtual"><scope>Image2D</scope><name>operator+=</name></member>
+      <member refid="structImage2D_1a52e626a2b1fb5589b23c698952857919" prot="public" virt="non-virtual"><scope>Image2D</scope><name>operator+=</name></member>
+      <member refid="structImage2D_1a9a9e320e0e9a15c20c4a60b2bbe48234" prot="public" virt="non-virtual"><scope>Image2D</scope><name>operator-=</name></member>
+      <member refid="structImage2D_1a202c81f5d4455a35d1cc42ff8a7adb53" prot="public" virt="non-virtual"><scope>Image2D</scope><name>operator-=</name></member>
+      <member refid="structImage2D_1a280b289c9e4974b76eb1468ba7cbe24e" prot="public" virt="non-virtual"><scope>Image2D</scope><name>operator/=</name></member>
+      <member refid="structImage2D_1a8c7db6f1577cdb05c8196f6c454db17f" prot="public" virt="non-virtual"><scope>Image2D</scope><name>operator/=</name></member>
+      <member refid="structImage2D_1ad7092c0f9b01fc66e84c528125a05836" prot="public" virt="non-virtual"><scope>Image2D</scope><name>operator==</name></member>
+      <member refid="structImage2D_1a201005d6bb4f041849488a3cb68bbff0" prot="public" virt="non-virtual"><scope>Image2D</scope><name>Power</name></member>
+      <member refid="structImage2D_1a1d0da2d672f2159a15a80b949c0fe719" prot="public" virt="non-virtual"><scope>Image2D</scope><name>SetCPUToZero</name></member>
+      <member refid="structImage2D_1af6f13b33ab0debf448c4ba2ebb6dc1ff" prot="public" virt="non-virtual"><scope>Image2D</scope><name>SetGPUToZero</name></member>
+      <member refid="structImage2D_1aa089c1b0a731c8e96b62321a49251e03" prot="public" virt="non-virtual"><scope>Image2D</scope><name>SetGPUToZero</name></member>
+      <member refid="structImage2D_1a65c4d365abfa83514d1c9a442c866b30" prot="public" virt="non-virtual"><scope>Image2D</scope><name>Shape</name></member>
+      <member refid="structImage2D_1a0d6aef0667d166a583c86f9758b00d62" prot="public" virt="non-virtual"><scope>Image2D</scope><name>ShapeBlock</name></member>
+      <member refid="structImage2D_1a493a7b84bf179b28426d0fb80a8a2e47" prot="public" virt="non-virtual"><scope>Image2D</scope><name>ShapeThread</name></member>
+      <member refid="structImage2D_1a38e4e3320b69a9736b6e2ef2e4a75fdc" prot="public" virt="non-virtual"><scope>Image2D</scope><name>size</name></member>
+      <member refid="structImage2D_1a9674558ae3354d0cb19604a52203582a" prot="public" virt="non-virtual"><scope>Image2D</scope><name>sizex</name></member>
+      <member refid="structImage2D_1a206df5b213c38d60d91baaa0d4ee76a8" prot="public" virt="non-virtual"><scope>Image2D</scope><name>sizey</name></member>
+      <member refid="structImage2D_1aecef682c3d580eef51dd6ebf7ca6abc8" prot="public" virt="non-virtual"><scope>Image2D</scope><name>sizez</name></member>
+      <member refid="structImage2D_1ad697ffa258390779f2050a809a57a024" prot="public" virt="non-virtual"><scope>Image2D</scope><name>SliceZ</name></member>
+      <member refid="structImage2D_1a4183323d69af64ce90f61e7c3a56f8dd" prot="public" virt="non-virtual"><scope>Image2D</scope><name>SumCPU</name></member>
+      <member refid="structImage2D_1abda9de709cfef2087e57019523710ac2" prot="public" virt="non-virtual"><scope>Image2D</scope><name>SumGPU</name></member>
+      <member refid="structImage2D_1a40a28ef983f4e3ae96c3f26e5d5e521b" prot="public" virt="non-virtual"><scope>Image2D</scope><name>SwapZ</name></member>
+      <member refid="structImage2D_1a49b5ec08f84ca937d516da282595d90e" prot="public" virt="non-virtual"><scope>Image2D</scope><name>TotalVariation</name></member>
+      <member refid="structImage2D_1a7703d31eee3db848d4a5396323bb9565" prot="public" virt="non-virtual"><scope>Image2D</scope><name>UnaryOperator</name></member>
+      <member refid="structImage2D_1ab6c912e7a96196df0de7d5bd625d8c7a" prot="public" virt="virtual"><scope>Image2D</scope><name>~Image2D</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

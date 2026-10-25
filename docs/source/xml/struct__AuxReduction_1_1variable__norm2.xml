@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct__AuxReduction_1_1variable__norm2" kind="struct" language="C++" prot="public">
+    <compoundname>_AuxReduction::variable_norm2</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct__AuxReduction_1_1variable__norm2_1aac7c4f3cad53714ba89b424877374cfa" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>__hevice float</type>
+        <definition>__hevice float _AuxReduction::variable_norm2&lt; T &gt;::operator()</definition>
+        <argsstring>(const T &amp;x) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="133" column="20" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="133" bodyend="133"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="132" column="1" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="132" bodyend="134"/>
+    <listofallmembers>
+      <member refid="struct__AuxReduction_1_1variable__norm2_1aac7c4f3cad53714ba89b424877374cfa" prot="public" virt="non-virtual"><scope>_AuxReduction::variable_norm2</scope><name>operator()</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__CUDART__UNIFIED" kind="group">
+    <compoundname>CUDART_UNIFIED</compoundname>
+    <title>Unified Addressing</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__CUDART__UNIFIED_1gafdc25be0be9b7eed05fa659b80bd82e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaPointerGetAttributes</definition>
+        <argsstring>(struct cudaPointerAttributes *attributes, const void *ptr)</argsstring>
+        <name>cudaPointerGetAttributes</name>
+        <param>
+          <type>struct cudaPointerAttributes *</type>
+          <declname>attributes</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Returns attributes about a specified pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns in <computeroutput>*attributes</computeroutput> the attributes of the pointer <computeroutput>ptr</computeroutput>. If pointer was not allocated in, mapped by or registered with context supporting unified addressing ::cudaErrorInvalidValue is returned.</para>
+<para><simplesect kind="note"><para>In CUDA 11.0 forward passing host pointer will return ::cudaMemoryTypeUnregistered in ::cudaPointerAttributes::type and call will return ::cudaSuccess.</para>
+</simplesect>
+The ::cudaPointerAttributes structure is defined as: <programlisting><codeline><highlight class="normal">struct<sp/>cudaPointerAttributes<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>enum<sp/>cudaMemoryType<sp/>memoryType;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>enum<sp/>cudaMemoryType<sp/>type;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>device;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>*devicePointer;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>*hostPointer;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>isManaged;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> In this structure, the individual fields mean</para>
+<para><itemizedlist>
+<listitem><para>::cudaPointerAttributes::memoryType identifies the location of the memory associated with pointer <computeroutput>ptr</computeroutput>. It can be ::cudaMemoryTypeHost for host memory or ::cudaMemoryTypeDevice for device and managed memory. It has been deprecated in favour of ::cudaPointerAttributes::type.</para>
+</listitem><listitem><para>::cudaPointerAttributes::type identifies type of memory. It can be ::cudaMemoryTypeUnregistered for unregistered host memory, ::cudaMemoryTypeHost for registered host memory, ::cudaMemoryTypeDevice for device memory or ::cudaMemoryTypeManaged for managed memory.</para>
+</listitem><listitem><para>device is the device against which <computeroutput>ptr</computeroutput> was allocated. If <computeroutput>ptr</computeroutput> has memory type ::cudaMemoryTypeDevice then this identifies the device on which the memory referred to by <computeroutput>ptr</computeroutput> physically resides. If <computeroutput>ptr</computeroutput> has memory type ::cudaMemoryTypeHost then this identifies the device which was current when the allocation was made (and if that device is deinitialized then this allocation will vanish with that device&apos;s state).</para>
+</listitem><listitem><para>devicePointer is the device pointer alias through which the memory referred to by <computeroutput>ptr</computeroutput> may be accessed on the current device. If the memory referred to by <computeroutput>ptr</computeroutput> cannot be accessed directly by the current device then this is NULL.</para>
+</listitem><listitem><para>hostPointer is the host pointer alias through which the memory referred to by <computeroutput>ptr</computeroutput> may be accessed on the host. If the memory referred to by <computeroutput>ptr</computeroutput> cannot be accessed directly by the host then this is NULL.</para>
+</listitem><listitem><para>isManaged indicates if the pointer <computeroutput>ptr</computeroutput> points to managed memory or not. It has been deprecated in favour of ::cudaPointerAttributes::type.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>attributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Attributes for the specified pointer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Pointer to get attributes for</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidDevice, ::cudaErrorInvalidValue \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__DEVICE_1ga5b0c57f32cb245582010c07e952753e6" kindref="member">cudaGetDeviceCount</ref>, <ref refid="group__CUDART__DEVICE_1ga33e2490308f833d7fc5edc76ad9c4416" kindref="member">cudaGetDevice</ref>, <ref refid="group__CUDART__DEVICE_1ga7b63629909800b614427aae92b22d606" kindref="member">cudaSetDevice</ref>, <ref refid="group__CUDART__DEVICE_1gaa6d5ae4a673c833a8d18fdab5dea3e70" kindref="member">cudaChooseDevice</ref>, ::cuPointerGetAttributes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="7134" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="7134" declcolumn="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>___MANBRIEF___ unified addressing functions of the CUDA runtime API (___CURRENT_FILE___) ___ENDMANBRIEF___</para>
+<para>This section describes the unified addressing functions of the CUDA runtime application programming interface.</para>
+<sect1 id="group__CUDART__UNIFIED_1CUDART_UNIFIED_overview">
+<title>Overview</title>
+<para>CUDA devices can share a unified address space with the host. For these devices there is no distinction between a device pointer and a host pointer <ndash/> the same pointer value may be used to access memory from the host program and from a kernel running on the device (with exceptions enumerated below).</para>
+</sect1>
+<sect1 id="group__CUDART__UNIFIED_1CUDART_UNIFIED_support">
+<title>Supported Platforms</title>
+<para>Whether or not a device supports unified addressing may be queried by calling <ref refid="group__CUDART__DEVICE_1ga3b5b6abf4a8eeabb2e3a4ca60a9d26d3" kindref="member">cudaGetDeviceProperties()</ref> with the device property ::cudaDeviceProp::unifiedAddressing.</para>
+<para>Unified addressing is automatically enabled in 64-bit processes .</para>
+<para>Unified addressing is not yet supported on Windows Vista or Windows 7 for devices that do not use the TCC driver model.</para>
+</sect1>
+<sect1 id="group__CUDART__UNIFIED_1CUDART_UNIFIED_lookup">
+<title>Looking Up Information from Pointer Values</title>
+<para>It is possible to look up information about the memory which backs a pointer value. For instance, one may want to know if a pointer points to host or device memory. As another example, in the case of device memory, one may want to know on which CUDA device the memory resides. These properties may be queried using the function <ref refid="group__CUDART__UNIFIED_1gafdc25be0be9b7eed05fa659b80bd82e9" kindref="member">cudaPointerGetAttributes()</ref></para>
+<para>Since pointers are unique, it is not necessary to specify information about the pointers specified to <ref refid="group__CUDART__MEMORY_1gae2bbb87e03bde890140dae4b348e1886" kindref="member">cudaMemcpy()</ref> and other copy functions. The copy direction ::cudaMemcpyDefault may be used to specify that the CUDA runtime should infer the location of the pointer from its value.</para>
+</sect1>
+<sect1 id="group__CUDART__UNIFIED_1CUDART_UNIFIED_automaphost">
+<title>Automatic Mapping of Host Allocated Host Memory</title>
+<para>All host memory allocated through all devices using <ref refid="group__CUDART__MEMORY_1ga9319967aebbae316ea45f540f27974b7" kindref="member">cudaMallocHost()</ref> and <ref refid="group__CUDART__MEMORY_1ga82f207b7718d36489753c35ad398a41a" kindref="member">cudaHostAlloc()</ref> is always directly accessible from all devices that support unified addressing. This is the case regardless of whether or not the flags ::cudaHostAllocPortable and ::cudaHostAllocMapped are specified.</para>
+<para>The pointer value through which allocated host memory may be accessed in kernels on all devices that support unified addressing is the same as the pointer value through which that memory is accessed on the host. It is not necessary to call <ref refid="group__CUDART__MEMORY_1gac03e953b51e1011847c199286de44ac9" kindref="member">cudaHostGetDevicePointer()</ref> to get the device pointer for these allocations.</para>
+<para>Note that this is not the case for memory allocated using the flag ::cudaHostAllocWriteCombined, as discussed below.</para>
+</sect1>
+<sect1 id="group__CUDART__UNIFIED_1CUDART_UNIFIED_autopeerregister">
+<title>Direct Access of Peer Memory</title>
+<para>Upon enabling direct access from a device that supports unified addressing to another peer device that supports unified addressing using <ref refid="group__CUDART__PEER_1ga7443ed162ccf7463a7caf15dc799cc6d" kindref="member">cudaDeviceEnablePeerAccess()</ref> all memory allocated in the peer device using <ref refid="group__CUDART__MEMORY_1ga2ec57cea7c57e8e3c4beca43dd327134" kindref="member">cudaMalloc()</ref> and <ref refid="group__CUDART__MEMORY_1gafba768d1a49ed27c0672832403544252" kindref="member">cudaMallocPitch()</ref> will immediately be accessible by the current device. The device pointer value through which any peer&apos;s memory may be accessed in the current device is the same pointer value through which that memory may be accessed from the peer device.</para>
+</sect1>
+<sect1 id="group__CUDART__UNIFIED_1CUDART_UNIFIED_exceptions">
+<title>Exceptions, Disjoint Addressing</title>
+<para>Not all memory may be accessed on devices through the same pointer value through which they are accessed on the host. These exceptions are host memory registered using <ref refid="group__CUDART__MEMORY_1gab14cbfaca14c4de9d06a5af14c9307f6" kindref="member">cudaHostRegister()</ref> and host memory allocated using the flag ::cudaHostAllocWriteCombined. For these exceptions, there exists a distinct host and device address for the memory. The device address is guaranteed to not overlap any valid host pointer range and is guaranteed to have the same value across all devices that support unified addressing.</para>
+<para>This device address may be queried using <ref refid="group__CUDART__MEMORY_1gac03e953b51e1011847c199286de44ac9" kindref="member">cudaHostGetDevicePointer()</ref> when a device using unified addressing is current. Either the host or the unified device pointer value may be used to refer to this memory in <ref refid="group__CUDART__MEMORY_1gae2bbb87e03bde890140dae4b348e1886" kindref="member">cudaMemcpy()</ref> and similar functions using the ::cudaMemcpyDefault memory direction. </para>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

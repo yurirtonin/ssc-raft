@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="pipeline_8hpp" kind="file" language="C++">
+    <compoundname>pipeline.hpp</compoundname>
+    <includes refid="configs_8hpp" local="yes">common/configs.hpp</includes>
+    <includes refid="processing_8hpp" local="yes">processing/processing.hpp</includes>
+    <includedby refid="pipeline_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/pipelines/pipeline.cu</includedby>
+    <incdepgraph>
+      <node id="9">
+        <label>cuda_runtime_api.h</label>
+        <link refid="cuda__runtime__api_8h_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>cuda_device_runtime_api.h</label>
+      </node>
+      <node id="7">
+        <label>cufft.h</label>
+      </node>
+      <node id="5">
+        <label>vector_types.h</label>
+      </node>
+      <node id="11">
+        <label>builtin_types.h</label>
+      </node>
+      <node id="4">
+        <label>driver_types.h</label>
+      </node>
+      <node id="2">
+        <label>common/configs.hpp</label>
+        <link refid="configs_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>common/complex.hpp</label>
+        <link refid="complex_8hpp"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>future</label>
+      </node>
+      <node id="18">
+        <label>cuda_fp16.h</label>
+      </node>
+      <node id="1">
+        <label>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/pipelines/pipeline.hpp</label>
+        <link refid="pipeline_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>complex.h</label>
+      </node>
+      <node id="19">
+        <label>cuComplex.h</label>
+      </node>
+      <node id="13">
+        <label>iostream</label>
+      </node>
+      <node id="6">
+        <label>cstddef</label>
+      </node>
+      <node id="10">
+        <label>crt/host_defines.h</label>
+      </node>
+      <node id="17">
+        <label>cuda.h</label>
+      </node>
+      <node id="15">
+        <label>processing/processing.hpp</label>
+        <link refid="processing_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="pipeline_8hpp_1ab658325d34a56e479d86c41128589a2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ReconstructionPipelineMultiGPU</definition>
+        <argsstring>(CFG configs, int *gpus, int ngpus, float *object, float *data, float *flats, float *darks, float *angles)</argsstring>
+        <name>ReconstructionPipelineMultiGPU</name>
+        <param>
+          <type><ref refid="structconfig" kindref="compound">CFG</ref></type>
+          <declname>configs</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>gpus</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ngpus</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>object</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>flats</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>darks</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/pipelines/pipeline.hpp" line="10" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/pipelines/pipeline.cu" bodystart="239" bodyend="315" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/pipelines/pipeline.hpp" declline="10" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="pipeline_8hpp_1a924a4e81499705ded7fdd771e8407081" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ReconstructionPipelineProcessMultiGPU</definition>
+        <argsstring>(CFG configs, int *gpus, int ngpus, float *object, float *data, float *flats, float *darks, float *angles)</argsstring>
+        <name>ReconstructionPipelineProcessMultiGPU</name>
+        <param>
+          <type><ref refid="structconfig" kindref="compound">CFG</ref></type>
+          <declname>configs</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>gpus</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ngpus</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>object</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>flats</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>darks</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/pipelines/pipeline.hpp" line="13" column="10" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/pipelines/pipeline.hpp" declline="13" declcolumn="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>RAFT_PIPE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RAFT_PIPE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;common/configs.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;processing/processing.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ReconstructionPipelineMultiGPU(<ref refid="structconfig" kindref="compound">CFG</ref><sp/>configs,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*gpus,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ngpus,</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*flats,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*darks,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ReconstructionPipelineProcessMultiGPU(<ref refid="structconfig" kindref="compound">CFG</ref><sp/>configs,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*gpus,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ngpus,</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*flats,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*darks,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight></codeline>
+    </programlisting>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/pipelines/pipeline.hpp"/>
+  </compounddef>
+</doxygen>

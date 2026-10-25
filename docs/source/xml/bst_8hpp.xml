@@ -1,0 +1,472 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="bst_8hpp" kind="file" language="C++">
+    <compoundname>bst.hpp</compoundname>
+    <includes refid="configs_8hpp" local="yes">common/configs.hpp</includes>
+    <includes refid="operations_8hpp" local="yes">common/operations.hpp</includes>
+    <includes refid="types_8hpp" local="yes">common/types.hpp</includes>
+    <includedby refid="bst_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/bst.cu</includedby>
+    <includedby refid="em__frequency_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/em_frequency.cu</includedby>
+    <includedby refid="pipeline_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/pipelines/pipeline.cu</includedby>
+    <incdepgraph>
+      <node id="9">
+        <label>cuda_runtime_api.h</label>
+        <link refid="cuda__runtime__api_8h_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>common/operations.hpp</label>
+        <link refid="operations_8hpp_source"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>limits</label>
+      </node>
+      <node id="12">
+        <label>cuda_device_runtime_api.h</label>
+      </node>
+      <node id="25">
+        <label>cstdint</label>
+      </node>
+      <node id="7">
+        <label>cufft.h</label>
+      </node>
+      <node id="24">
+        <label>cassert</label>
+      </node>
+      <node id="5">
+        <label>vector_types.h</label>
+      </node>
+      <node id="16">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>builtin_types.h</label>
+      </node>
+      <node id="4">
+        <label>driver_types.h</label>
+      </node>
+      <node id="2">
+        <label>common/configs.hpp</label>
+        <link refid="configs_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>complex.hpp</label>
+        <link refid="complex_8hpp"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>cstdio</label>
+      </node>
+      <node id="14">
+        <label>future</label>
+      </node>
+      <node id="19">
+        <label>cuda_fp16.h</label>
+      </node>
+      <node id="28">
+        <label>vector</label>
+      </node>
+      <node id="3">
+        <label>complex.h</label>
+      </node>
+      <node id="27">
+        <label>sstream</label>
+      </node>
+      <node id="20">
+        <label>cuComplex.h</label>
+      </node>
+      <node id="13">
+        <label>iostream</label>
+      </node>
+      <node id="6">
+        <label>cstddef</label>
+      </node>
+      <node id="10">
+        <label>crt/host_defines.h</label>
+      </node>
+      <node id="18">
+        <label>cuda.h</label>
+      </node>
+      <node id="1">
+        <label>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/bst.hpp</label>
+        <link refid="bst_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>csignal</label>
+      </node>
+      <node id="21">
+        <label>common/types.hpp</label>
+        <link refid="types_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structworkspaceBST" prot="public">workspaceBST</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="bst_8hpp_1acbbd6ccb61d0e83898be924e28a63b65" prot="public" static="no">
+        <type>struct <ref refid="structworkspaceBST" kindref="compound">workspaceBST</ref></type>
+        <definition>typedef struct workspaceBST WBST</definition>
+        <argsstring></argsstring>
+        <name>WBST</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/bst.hpp" line="12" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="bst_8hpp_1afa343cf96d5eee6a61243172bd99b649" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structworkspaceBST" kindref="compound">WBST</ref> *</type>
+        <definition>WBST* InitializeBST_workspace</definition>
+        <argsstring>(dim3 tomo_size, dim3 obj_size, int bst_padd, int blocksize_bst)</argsstring>
+        <name>InitializeBST_workspace</name>
+        <param>
+          <type>dim3</type>
+          <declname>tomo_size</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>obj_size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bst_padd</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blocksize_bst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/bst.hpp" line="16" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/bst.cu" bodystart="23" bodyend="50" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/bst.hpp" declline="16" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="bst_8hpp_1af8ba13d7c983cfacd64bab2e83a03185" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void freeBSTWorkspace</definition>
+        <argsstring>(WBST *workspace)</argsstring>
+        <name>freeBSTWorkspace</name>
+        <param>
+          <type><ref refid="structworkspaceBST" kindref="compound">WBST</ref> *</type>
+          <declname>workspace</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/bst.hpp" line="17" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/bst.cu" bodystart="52" bodyend="66" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/bst.hpp" declline="17" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="bst_8hpp_1ac94c657de056bbafca236ede7309c489" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void getBST</definition>
+        <argsstring>(float *blockRecon, float *wholesinoblock, float *angles, int Nrays, int Nangles, int trueblocksize, int sizeimage, int pad0, float reg, float paganin, int filter_type, float offset, float pixel, WBST *bst_workspace, cudaStream_t stream)</argsstring>
+        <name>getBST</name>
+        <param>
+          <type>float *</type>
+          <declname>blockRecon</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>wholesinoblock</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>trueblocksize</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizeimage</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pad0</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>paganin</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>filter_type</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>pixel</declname>
+        </param>
+        <param>
+          <type><ref refid="structworkspaceBST" kindref="compound">WBST</ref> *</type>
+          <declname>bst_workspace</declname>
+        </param>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/bst.hpp" line="19" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/bst.cu" bodystart="298" bodyend="356" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/bst.hpp" declline="19" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="bst_8hpp_1ab0d0686bc752f7172ad46a56e8b9b51b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EMFQ_BST</definition>
+        <argsstring>(float *blockRecon, float *wholesinoblock, float *angles, int Nrays, int Nangles, int trueblocksize, int sizeimage, int pad0)</argsstring>
+        <name>EMFQ_BST</name>
+        <param>
+          <type>float *</type>
+          <declname>blockRecon</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>wholesinoblock</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>trueblocksize</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizeimage</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pad0</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/bst.hpp" line="24" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/bst.cu" bodystart="186" bodyend="249" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/bst.hpp" declline="24" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="bst_8hpp_1aff5218acc131ba49b5700fdb968487b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EMFQ_BST_ITER</definition>
+        <argsstring>(float *blockRecon, float *wholesinoblock, float *angles, cImage &amp;cartesianblock, cImage &amp;polarblock, cImage &amp;realpolar, cufftHandle plan1d, cufftHandle plan2d, int Nrays, int Nangles, int trueblocksize, int blocksize, int sizeimage, int pad0)</argsstring>
+        <name>EMFQ_BST_ITER</name>
+        <param>
+          <type>float *</type>
+          <declname>blockRecon</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>wholesinoblock</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type><ref refid="structImage2D" kindref="compound">cImage</ref> &amp;</type>
+          <declname>cartesianblock</declname>
+        </param>
+        <param>
+          <type><ref refid="structImage2D" kindref="compound">cImage</ref> &amp;</type>
+          <declname>polarblock</declname>
+        </param>
+        <param>
+          <type><ref refid="structImage2D" kindref="compound">cImage</ref> &amp;</type>
+          <declname>realpolar</declname>
+        </param>
+        <param>
+          <type>cufftHandle</type>
+          <declname>plan1d</declname>
+        </param>
+        <param>
+          <type>cufftHandle</type>
+          <declname>plan2d</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>trueblocksize</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blocksize</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizeimage</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pad0</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/bst.hpp" line="27" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/bst.cu" bodystart="251" bodyend="295" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/bst.hpp" declline="27" declcolumn="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>RAFT_BST_PAR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RAFT_BST_PAR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;common/configs.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;common/operations.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8hpp" kindref="compound">common/types.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="structworkspaceBST" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structworkspaceBST" kindref="compound">workspaceBST</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>cufftHandle<sp/>plan1d,<sp/>plan2d,<sp/>filterplan;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structImage2D" kindref="compound">cImage</ref><sp/>*filtersino,<sp/>*cartesianblock,<sp/>*polarblock,<sp/>*realpolar;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}<ref refid="structworkspaceBST" kindref="compound">WBST</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structworkspaceBST" kindref="compound">WBST</ref><sp/>*InitializeBST_workspace(dim3<sp/>tomo_size,<sp/>dim3<sp/>obj_size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bst_padd,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blocksize_bst);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>freeBSTWorkspace(<ref refid="structworkspaceBST" kindref="compound">WBST</ref><sp/>*<ref refid="structworkspace" kindref="compound">workspace</ref>);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getBST(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>blockRecon,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>wholesinoblock,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>angles,<sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Nangles,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>trueblocksize,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeimage,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pad0,<sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>reg,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>paganin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>filter_type,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>offset,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pixel,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structworkspaceBST" kindref="compound">WBST</ref><sp/>*bst_workspace,<sp/>cudaStream_t<sp/>stream);<sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>EMFQ_BST(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>blockRecon,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*wholesinoblock,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Nangles,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>trueblocksize,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeimage,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pad0);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>EMFQ_BST_ITER(</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>blockRecon,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*wholesinoblock,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structImage2D" kindref="compound">cImage</ref>&amp;<sp/>cartesianblock,<sp/><ref refid="structImage2D" kindref="compound">cImage</ref>&amp;<sp/>polarblock,<sp/><ref refid="structImage2D" kindref="compound">cImage</ref>&amp;<sp/>realpolar,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>cufftHandle<sp/>plan1d,<sp/>cufftHandle<sp/>plan2d,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Nangles,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>trueblocksize,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blocksize,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeimage,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pad0);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/bst.hpp"/>
+  </compounddef>
+</doxygen>

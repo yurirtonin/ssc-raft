@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespace__AuxReduction" kind="namespace" language="C++">
+    <compoundname>_AuxReduction</compoundname>
+    <innerclass refid="struct__AuxReduction_1_1variable__norm2" prot="public">_AuxReduction::variable_norm2</innerclass>
+    <innerclass refid="struct__AuxReduction_1_1variable__norm2_3_01complex_01_4" prot="public">_AuxReduction::variable_norm2&lt; complex &gt;</innerclass>
+    <innerclass refid="struct__AuxReduction_1_1productstruct" prot="public">_AuxReduction::productstruct</innerclass>
+    <innerclass refid="struct__AuxReduction_1_1productstruct_3_01T1_00_01complex_01_4" prot="public">_AuxReduction::productstruct&lt; T1, complex &gt;</innerclass>
+    <innerclass refid="struct__AuxReduction_1_1productstruct_3_01complex_00_01T2_01_4" prot="public">_AuxReduction::productstruct&lt; complex, T2 &gt;</innerclass>
+    <innerclass refid="struct__AuxReduction_1_1productstruct_3_01complex_00_01complex_01_4" prot="public">_AuxReduction::productstruct&lt; complex, complex &gt;</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="130" column="1"/>
+  </compounddef>
+</doxygen>

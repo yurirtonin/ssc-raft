@@ -1,0 +1,1499 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__CUDART__DEVICE" kind="group">
+    <compoundname>CUDART_DEVICE</compoundname>
+    <title>Device Management</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__CUDART__DEVICE_1gadf472c0854e8464c58659e2bde63eee9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaDeviceReset</definition>
+        <argsstring>(void)</argsstring>
+        <name>cudaDeviceReset</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Destroy all allocations and reset all state on the current device in the current process. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Explicitly destroys and cleans up all resources associated with the current device in the current process. Any subsequent API call to this device will reinitialize the device.</para>
+<para>Note that this function will reset the device immediately. It is the caller&apos;s responsibility to ensure that the device is not being accessed by any other host threads from the process when this function is called.</para>
+<para><simplesect kind="return"><para>::cudaSuccess \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__DEVICE_1gabad4c7a01961e63aa4744ce597cfaf1d" kindref="member">cudaDeviceSynchronize</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="280" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="280" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__DEVICE_1gabad4c7a01961e63aa4744ce597cfaf1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ __cudart_builtin__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ __cudart_builtin__ cudaError_t CUDARTAPI cudaDeviceSynchronize</definition>
+        <argsstring>(void)</argsstring>
+        <name>cudaDeviceSynchronize</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Wait for compute device to finish. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Blocks until the device has completed all preceding requested tasks. <ref refid="group__CUDART__DEVICE_1gabad4c7a01961e63aa4744ce597cfaf1d" kindref="member">cudaDeviceSynchronize()</ref> returns an error if one of the preceding tasks has failed. If the ::cudaDeviceScheduleBlockingSync flag was set for this device, the host thread will block until the device has finished its work.</para>
+<para><simplesect kind="return"><para>::cudaSuccess \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__DEVICE_1gadf472c0854e8464c58659e2bde63eee9" kindref="member">cudaDeviceReset</ref>, ::cuCtxSynchronize </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="301" column="58" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="301" declcolumn="58"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__DEVICE_1ga2f463a1b29df6299944e0c1004a26f89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaDeviceSetLimit</definition>
+        <argsstring>(enum cudaLimit limit, size_t value)</argsstring>
+        <name>cudaDeviceSetLimit</name>
+        <param>
+          <type>enum cudaLimit</type>
+          <declname>limit</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Set resource limits. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Setting <computeroutput>limit</computeroutput> to <computeroutput>value</computeroutput> is a request by the application to update the current limit maintained by the device. The driver is free to modify the requested value to meet h/w requirements (this could be clamping to minimum or maximum values, rounding up to nearest element size, etc). The application can use <ref refid="group__CUDART__DEVICE_1ga2c4a5358355c4bc76824c847d81de8f8" kindref="member">cudaDeviceGetLimit()</ref> to find out exactly what the limit has been set to.</para>
+<para>Setting each ::cudaLimit has its own specific restrictions, so each is discussed here.</para>
+<para><itemizedlist>
+<listitem><para>::cudaLimitStackSize controls the stack size in bytes of each GPU thread. Note that the CUDA driver will set the <computeroutput>limit</computeroutput> to the maximum of <computeroutput>value</computeroutput> and what the kernel function requires.</para>
+</listitem><listitem><para>::cudaLimitPrintfFifoSize controls the size in bytes of the shared FIFO used by the ::printf() device system call. Setting ::cudaLimitPrintfFifoSize must not be performed after launching any kernel that uses the ::printf() device system call - in such case ::cudaErrorInvalidValue will be returned.</para>
+</listitem><listitem><para>::cudaLimitMallocHeapSize controls the size in bytes of the heap used by the ::malloc() and ::free() device system calls. Setting ::cudaLimitMallocHeapSize must not be performed after launching any kernel that uses the ::malloc() or ::free() device system calls - in such case ::cudaErrorInvalidValue will be returned.</para>
+</listitem><listitem><para>::cudaLimitDevRuntimeSyncDepth controls the maximum nesting depth of a grid at which a thread can safely call <ref refid="group__CUDART__DEVICE_1gabad4c7a01961e63aa4744ce597cfaf1d" kindref="member">cudaDeviceSynchronize()</ref>. Setting this limit must be performed before any launch of a kernel that uses the device runtime and calls <ref refid="group__CUDART__DEVICE_1gabad4c7a01961e63aa4744ce597cfaf1d" kindref="member">cudaDeviceSynchronize()</ref> above the default sync depth, two levels of grids. Calls to <ref refid="group__CUDART__DEVICE_1gabad4c7a01961e63aa4744ce597cfaf1d" kindref="member">cudaDeviceSynchronize()</ref> will fail with error code ::cudaErrorSyncDepthExceeded if the limitation is violated. This limit can be set smaller than the default or up the maximum launch depth of 24. When setting this limit, keep in mind that additional levels of sync depth require the runtime to reserve large amounts of device memory which can no longer be used for user allocations. If these reservations of device memory fail, <ref refid="group__CUDART__DEVICE_1ga2f463a1b29df6299944e0c1004a26f89" kindref="member">cudaDeviceSetLimit</ref> will return ::cudaErrorMemoryAllocation, and the limit can be reset to a lower value. This limit is only applicable to devices of compute capability 3.5 and higher. Attempting to set this limit on devices of compute capability less than 3.5 will result in the error ::cudaErrorUnsupportedLimit being returned.</para>
+</listitem><listitem><para>::cudaLimitDevRuntimePendingLaunchCount controls the maximum number of outstanding device runtime launches that can be made from the current device. A grid is outstanding from the point of launch up until the grid is known to have been completed. Device runtime launches which violate this limitation fail and return ::cudaErrorLaunchPendingCountExceeded when <ref refid="group__CUDART__ERROR_1ga63b4ef56febc6ec907b3d7ae1708f201" kindref="member">cudaGetLastError()</ref> is called after launch. If more pending launches than the default (2048 launches) are needed for a module using the device runtime, this limit can be increased. Keep in mind that being able to sustain additional pending launches will require the runtime to reserve larger amounts of device memory upfront which can no longer be used for allocations. If these reservations fail, <ref refid="group__CUDART__DEVICE_1ga2f463a1b29df6299944e0c1004a26f89" kindref="member">cudaDeviceSetLimit</ref> will return ::cudaErrorMemoryAllocation, and the limit can be reset to a lower value. This limit is only applicable to devices of compute capability 3.5 and higher. Attempting to set this limit on devices of compute capability less than 3.5 will result in the error ::cudaErrorUnsupportedLimit being returned.</para>
+</listitem><listitem><para>::cudaLimitMaxL2FetchGranularity controls the L2 cache fetch granularity. Values can range from 0B to 128B. This is purely a performance hint and it can be ignored or clamped depending on the platform.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>limit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Limit to set </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Size of limit</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorUnsupportedLimit, ::cudaErrorInvalidValue, ::cudaErrorMemoryAllocation \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__DEVICE_1ga2c4a5358355c4bc76824c847d81de8f8" kindref="member">cudaDeviceGetLimit</ref>, ::cuCtxSetLimit </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="386" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="386" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__DEVICE_1ga2c4a5358355c4bc76824c847d81de8f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ __cudart_builtin__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ __cudart_builtin__ cudaError_t CUDARTAPI cudaDeviceGetLimit</definition>
+        <argsstring>(size_t *pValue, enum cudaLimit limit)</argsstring>
+        <name>cudaDeviceGetLimit</name>
+        <param>
+          <type>size_t *</type>
+          <declname>pValue</declname>
+        </param>
+        <param>
+          <type>enum cudaLimit</type>
+          <declname>limit</declname>
+        </param>
+        <briefdescription>
+<para>Returns resource limits. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns in <computeroutput>*pValue</computeroutput> the current size of <computeroutput>limit</computeroutput>. The supported ::cudaLimit values are:<itemizedlist>
+<listitem><para>::cudaLimitStackSize: stack size in bytes of each GPU thread;</para>
+</listitem><listitem><para>::cudaLimitPrintfFifoSize: size in bytes of the shared FIFO used by the ::printf() device system call.</para>
+</listitem><listitem><para>::cudaLimitMallocHeapSize: size in bytes of the heap used by the ::malloc() and ::free() device system calls;</para>
+</listitem><listitem><para>::cudaLimitDevRuntimeSyncDepth: maximum grid depth at which a thread can isssue the device runtime call <ref refid="group__CUDART__DEVICE_1gabad4c7a01961e63aa4744ce597cfaf1d" kindref="member">cudaDeviceSynchronize()</ref> to wait on child grid launches to complete.</para>
+</listitem><listitem><para>::cudaLimitDevRuntimePendingLaunchCount: maximum number of outstanding device runtime launches.</para>
+</listitem><listitem><para>::cudaLimitMaxL2FetchGranularity: L2 cache fetch granularity.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>limit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Limit to query </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returned size of the limit</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorUnsupportedLimit, ::cudaErrorInvalidValue \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__DEVICE_1ga2f463a1b29df6299944e0c1004a26f89" kindref="member">cudaDeviceSetLimit</ref>, ::cuCtxGetLimit </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="420" column="58" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="420" declcolumn="58"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__DEVICE_1gaf4b5597c316c70af59499dde077b9345" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ __cudart_builtin__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ __cudart_builtin__ cudaError_t CUDARTAPI cudaDeviceGetCacheConfig</definition>
+        <argsstring>(enum cudaFuncCache *pCacheConfig)</argsstring>
+        <name>cudaDeviceGetCacheConfig</name>
+        <param>
+          <type>enum cudaFuncCache *</type>
+          <declname>pCacheConfig</declname>
+        </param>
+        <briefdescription>
+<para>Returns the preferred cache configuration for the current device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>On devices where the L1 cache and shared memory use the same hardware resources, this returns through <computeroutput>pCacheConfig</computeroutput> the preferred cache configuration for the current device. This is only a preference. The runtime will use the requested configuration if possible, but it is free to choose a different configuration if required to execute functions.</para>
+<para>This will return a <computeroutput>pCacheConfig</computeroutput> of ::cudaFuncCachePreferNone on devices where the size of the L1 cache and shared memory are fixed.</para>
+<para>The supported cache configurations are:<itemizedlist>
+<listitem><para>::cudaFuncCachePreferNone: no preference for shared memory or L1 (default)</para>
+</listitem><listitem><para>::cudaFuncCachePreferShared: prefer larger shared memory and smaller L1 cache</para>
+</listitem><listitem><para>::cudaFuncCachePreferL1: prefer larger L1 cache and smaller shared memory</para>
+</listitem><listitem><para>::cudaFuncCachePreferEqual: prefer equal size L1 cache and shared memory</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pCacheConfig</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returned cache configuration</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__DEVICE_1ga4749a277602c902676e092c0c446ace4" kindref="member">cudaDeviceSetCacheConfig</ref>, <ref refid="group__CUDART__EXECUTION_1ga75ebd65ac35ab892628fbda45bf13372" kindref="member">cudaFuncSetCacheConfig (C API)</ref>, cudaFuncSetCacheConfig (C++ API), ::cuCtxGetCacheConfig </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="453" column="58" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="453" declcolumn="58"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__DEVICE_1ga32bb02368f45be8e8ae2084b999382de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ __cudart_builtin__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ __cudart_builtin__ cudaError_t CUDARTAPI cudaDeviceGetStreamPriorityRange</definition>
+        <argsstring>(int *leastPriority, int *greatestPriority)</argsstring>
+        <name>cudaDeviceGetStreamPriorityRange</name>
+        <param>
+          <type>int *</type>
+          <declname>leastPriority</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>greatestPriority</declname>
+        </param>
+        <briefdescription>
+<para>Returns numerical values that correspond to the least and greatest stream priorities. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns in <computeroutput>*leastPriority</computeroutput> and <computeroutput>*greatestPriority</computeroutput> the numerical values that correspond to the least and greatest stream priorities respectively. Stream priorities follow a convention where lower numbers imply greater priorities. The range of meaningful stream priorities is given by [<computeroutput>*greatestPriority</computeroutput>, <computeroutput>*leastPriority</computeroutput>]. If the user attempts to create a stream with a priority value that is outside the the meaningful range as specified by this API, the priority is automatically clamped down or up to either <computeroutput>*leastPriority</computeroutput> or <computeroutput>*greatestPriority</computeroutput> respectively. See <ref refid="group__CUDART__STREAM_1gaa028ceaec5dc941c48c49678915126bc" kindref="member">cudaStreamCreateWithPriority</ref> for details on creating a priority stream. A NULL may be passed in for <computeroutput>*leastPriority</computeroutput> or <computeroutput>*greatestPriority</computeroutput> if the value is not desired.</para>
+<para>This function will return &apos;0&apos; in both <computeroutput>*leastPriority</computeroutput> and <computeroutput>*greatestPriority</computeroutput> if the current context&apos;s device does not support stream priorities (see <ref refid="group__CUDART__DEVICE_1gade765bf7bb5df793bc506f4b8ad97d19" kindref="member">cudaDeviceGetAttribute</ref>).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>leastPriority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Pointer to an int in which the numerical value for least stream priority is returned </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>greatestPriority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Pointer to an int in which the numerical value for greatest stream priority is returned</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__STREAM_1gaa028ceaec5dc941c48c49678915126bc" kindref="member">cudaStreamCreateWithPriority</ref>, <ref refid="group__CUDART__STREAM_1ga5dcdf1d633286546219e1e6bb72125a4" kindref="member">cudaStreamGetPriority</ref>, ::cuCtxGetStreamPriorityRange </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="490" column="58" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="490" declcolumn="58"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__DEVICE_1ga4749a277602c902676e092c0c446ace4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaDeviceSetCacheConfig</definition>
+        <argsstring>(enum cudaFuncCache cacheConfig)</argsstring>
+        <name>cudaDeviceSetCacheConfig</name>
+        <param>
+          <type>enum cudaFuncCache</type>
+          <declname>cacheConfig</declname>
+        </param>
+        <briefdescription>
+<para>Sets the preferred cache configuration for the current device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>On devices where the L1 cache and shared memory use the same hardware resources, this sets through <computeroutput>cacheConfig</computeroutput> the preferred cache configuration for the current device. This is only a preference. The runtime will use the requested configuration if possible, but it is free to choose a different configuration if required to execute the function. Any function preference set via <ref refid="group__CUDART__EXECUTION_1ga75ebd65ac35ab892628fbda45bf13372" kindref="member">cudaFuncSetCacheConfig (C API)</ref> or cudaFuncSetCacheConfig (C++ API) will be preferred over this device-wide setting. Setting the device-wide cache configuration to ::cudaFuncCachePreferNone will cause subsequent kernel launches to prefer to not change the cache configuration unless required to launch the kernel.</para>
+<para>This setting does nothing on devices where the size of the L1 cache and shared memory are fixed.</para>
+<para>Launching a kernel with a different preference than the most recent preference setting may insert a device-side synchronization point.</para>
+<para>The supported cache configurations are:<itemizedlist>
+<listitem><para>::cudaFuncCachePreferNone: no preference for shared memory or L1 (default)</para>
+</listitem><listitem><para>::cudaFuncCachePreferShared: prefer larger shared memory and smaller L1 cache</para>
+</listitem><listitem><para>::cudaFuncCachePreferL1: prefer larger L1 cache and smaller shared memory</para>
+</listitem><listitem><para>::cudaFuncCachePreferEqual: prefer equal size L1 cache and shared memory</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cacheConfig</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Requested cache configuration</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__DEVICE_1gaf4b5597c316c70af59499dde077b9345" kindref="member">cudaDeviceGetCacheConfig</ref>, <ref refid="group__CUDART__EXECUTION_1ga75ebd65ac35ab892628fbda45bf13372" kindref="member">cudaFuncSetCacheConfig (C API)</ref>, cudaFuncSetCacheConfig (C++ API), ::cuCtxSetCacheConfig </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="534" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="534" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__DEVICE_1ga17312cb2ff90cc2ece48f81243ac7003" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ __cudart_builtin__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ __cudart_builtin__ cudaError_t CUDARTAPI cudaDeviceGetSharedMemConfig</definition>
+        <argsstring>(enum cudaSharedMemConfig *pConfig)</argsstring>
+        <name>cudaDeviceGetSharedMemConfig</name>
+        <param>
+          <type>enum cudaSharedMemConfig *</type>
+          <declname>pConfig</declname>
+        </param>
+        <briefdescription>
+<para>Returns the shared memory configuration for the current device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will return in <computeroutput>pConfig</computeroutput> the current size of shared memory banks on the current device. On devices with configurable shared memory banks, <ref refid="group__CUDART__DEVICE_1ga49193b2fb2ca48691d46fdf1941f44b1" kindref="member">cudaDeviceSetSharedMemConfig</ref> can be used to change this setting, so that all subsequent kernel launches will by default use the new bank size. When <ref refid="group__CUDART__DEVICE_1ga17312cb2ff90cc2ece48f81243ac7003" kindref="member">cudaDeviceGetSharedMemConfig</ref> is called on devices without configurable shared memory, it will return the fixed bank size of the hardware.</para>
+<para>The returned bank configurations can be either:<itemizedlist>
+<listitem><para>::cudaSharedMemBankSizeFourByte - shared memory bank width is four bytes.</para>
+</listitem><listitem><para>::cudaSharedMemBankSizeEightByte - shared memory bank width is eight bytes.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pConfig</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returned cache configuration</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__DEVICE_1ga4749a277602c902676e092c0c446ace4" kindref="member">cudaDeviceSetCacheConfig</ref>, <ref refid="group__CUDART__DEVICE_1gaf4b5597c316c70af59499dde077b9345" kindref="member">cudaDeviceGetCacheConfig</ref>, <ref refid="group__CUDART__DEVICE_1ga49193b2fb2ca48691d46fdf1941f44b1" kindref="member">cudaDeviceSetSharedMemConfig</ref>, <ref refid="group__CUDART__EXECUTION_1ga75ebd65ac35ab892628fbda45bf13372" kindref="member">cudaFuncSetCacheConfig</ref>, ::cuCtxGetSharedMemConfig </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="565" column="58" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="565" declcolumn="58"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__DEVICE_1ga49193b2fb2ca48691d46fdf1941f44b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaDeviceSetSharedMemConfig</definition>
+        <argsstring>(enum cudaSharedMemConfig config)</argsstring>
+        <name>cudaDeviceSetSharedMemConfig</name>
+        <param>
+          <type>enum cudaSharedMemConfig</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>Sets the shared memory configuration for the current device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>On devices with configurable shared memory banks, this function will set the shared memory bank size which is used for all subsequent kernel launches. Any per-function setting of shared memory set via <ref refid="group__CUDART__EXECUTION_1gabe77ac48ebbd881d815ae541116596a9" kindref="member">cudaFuncSetSharedMemConfig</ref> will override the device wide setting.</para>
+<para>Changing the shared memory configuration between launches may introduce a device side synchronization point.</para>
+<para>Changing the shared memory bank size will not increase shared memory usage or affect occupancy of kernels, but may have major effects on performance. Larger bank sizes will allow for greater potential bandwidth to shared memory, but will change what kinds of accesses to shared memory will result in bank conflicts.</para>
+<para>This function will do nothing on devices with fixed shared memory bank size.</para>
+<para>The supported bank configurations are:<itemizedlist>
+<listitem><para>::cudaSharedMemBankSizeDefault: set bank width the device default (currently, four bytes)</para>
+</listitem><listitem><para>::cudaSharedMemBankSizeFourByte: set shared memory bank width to be four bytes natively.</para>
+</listitem><listitem><para>::cudaSharedMemBankSizeEightByte: set shared memory bank width to be eight bytes natively.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Requested cache configuration</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__DEVICE_1ga4749a277602c902676e092c0c446ace4" kindref="member">cudaDeviceSetCacheConfig</ref>, <ref refid="group__CUDART__DEVICE_1gaf4b5597c316c70af59499dde077b9345" kindref="member">cudaDeviceGetCacheConfig</ref>, <ref refid="group__CUDART__DEVICE_1ga17312cb2ff90cc2ece48f81243ac7003" kindref="member">cudaDeviceGetSharedMemConfig</ref>, <ref refid="group__CUDART__EXECUTION_1ga75ebd65ac35ab892628fbda45bf13372" kindref="member">cudaFuncSetCacheConfig</ref>, ::cuCtxSetSharedMemConfig </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="609" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="609" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__DEVICE_1ga032ddf668dc3c66b57317c3d80a37b12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaDeviceGetByPCIBusId</definition>
+        <argsstring>(int *device, const char *pciBusId)</argsstring>
+        <name>cudaDeviceGetByPCIBusId</name>
+        <param>
+          <type>int *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pciBusId</declname>
+        </param>
+        <briefdescription>
+<para>Returns a handle to a compute device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns in <computeroutput>*device</computeroutput> a device ordinal given a PCI bus ID string.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returned device ordinal</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pciBusId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- String in one of the following forms:</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+where <computeroutput>domain</computeroutput>, <computeroutput>bus</computeroutput>, <computeroutput>device</computeroutput>, and <computeroutput>function</computeroutput> are all hexadecimal values</para>
+<para><simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, ::cudaErrorInvalidDevice \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__DEVICE_1ga36fe6034418bf5f4c5c72337fd722b33" kindref="member">cudaDeviceGetPCIBusId</ref>, ::cuDeviceGetByPCIBusId </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="636" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="636" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__DEVICE_1ga36fe6034418bf5f4c5c72337fd722b33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaDeviceGetPCIBusId</definition>
+        <argsstring>(char *pciBusId, int len, int device)</argsstring>
+        <name>cudaDeviceGetPCIBusId</name>
+        <param>
+          <type>char *</type>
+          <declname>pciBusId</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+<para>Returns a PCI Bus Id string for the device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns an ASCII string identifying the device <computeroutput>dev</computeroutput> in the NULL-terminated string pointed to by <computeroutput>pciBusId</computeroutput>. <computeroutput>len</computeroutput> specifies the maximum length of the string that may be returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pciBusId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returned identifier string for the device in the following format</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+where <computeroutput>domain</computeroutput>, <computeroutput>bus</computeroutput>, <computeroutput>device</computeroutput>, and <computeroutput>function</computeroutput> are all hexadecimal values. pciBusId should be large enough to store 13 characters including the NULL-terminator.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Maximum length of string to store in <computeroutput>name</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Device to get identifier string for</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, ::cudaErrorInvalidDevice \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__DEVICE_1ga032ddf668dc3c66b57317c3d80a37b12" kindref="member">cudaDeviceGetByPCIBusId</ref>, ::cuDeviceGetPCIBusId </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="666" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="666" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__DEVICE_1gafff40bb17a5e0a96b513fc2bd60dd4f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaIpcGetEventHandle</definition>
+        <argsstring>(cudaIpcEventHandle_t *handle, cudaEvent_t event)</argsstring>
+        <name>cudaIpcGetEventHandle</name>
+        <param>
+          <type>cudaIpcEventHandle_t *</type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>cudaEvent_t</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>Gets an interprocess handle for a previously allocated event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Takes as input a previously allocated event. This event must have been created with the ::cudaEventInterprocess and ::cudaEventDisableTiming flags set. This opaque handle may be copied into other processes and opened with <ref refid="group__CUDART__DEVICE_1gab225732dcf71a97a1f6ec1b7946a0162" kindref="member">cudaIpcOpenEventHandle</ref> to allow efficient hardware synchronization between GPU work in different processes.</para>
+<para>After the event has been been opened in the importing process, <ref refid="group__CUDART__EVENT_1ga456a07ba2685ccd5ccfc84a5d171ad02" kindref="member">cudaEventRecord</ref>, <ref refid="group__CUDART__EVENT_1ga94b4ebd303bec5ef0b0f2b0235fe0ab1" kindref="member">cudaEventSynchronize</ref>, <ref refid="group__CUDART__STREAM_1gacb8b984b2832fd8c32a7ba0c9fa0a6da" kindref="member">cudaStreamWaitEvent</ref> and <ref refid="group__CUDART__EVENT_1gabff85920872d5ed4aaf7b618e392f514" kindref="member">cudaEventQuery</ref> may be used in either process. Performing operations on the imported event after the exported event has been freed with <ref refid="group__CUDART__EVENT_1gac8f42aa081e464ada1a59cd5e6ae3015" kindref="member">cudaEventDestroy</ref> will result in undefined behavior.</para>
+<para>IPC functionality is restricted to devices with support for unified addressing on Linux operating systems. IPC functionality is not supported on Tegra platforms.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Pointer to a user allocated cudaIpcEventHandle in which to return the opaque event handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Event allocated with ::cudaEventInterprocess and ::cudaEventDisableTiming flags.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidResourceHandle, ::cudaErrorMemoryAllocation, ::cudaErrorMapBufferObjectFailed, ::cudaErrorNotSupported \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__EVENT_1gaf95514807c666994e61b94c93ef10a2b" kindref="member">cudaEventCreate</ref>, <ref refid="group__CUDART__EVENT_1gac8f42aa081e464ada1a59cd5e6ae3015" kindref="member">cudaEventDestroy</ref>, <ref refid="group__CUDART__EVENT_1ga94b4ebd303bec5ef0b0f2b0235fe0ab1" kindref="member">cudaEventSynchronize</ref>, <ref refid="group__CUDART__EVENT_1gabff85920872d5ed4aaf7b618e392f514" kindref="member">cudaEventQuery</ref>, <ref refid="group__CUDART__STREAM_1gacb8b984b2832fd8c32a7ba0c9fa0a6da" kindref="member">cudaStreamWaitEvent</ref>, <ref refid="group__CUDART__DEVICE_1gab225732dcf71a97a1f6ec1b7946a0162" kindref="member">cudaIpcOpenEventHandle</ref>, <ref refid="group__CUDART__DEVICE_1ga13ea0fd02681361d2676bffdce7f48dc" kindref="member">cudaIpcGetMemHandle</ref>, <ref refid="group__CUDART__DEVICE_1gafc8bf2cfd3548ab134d3feb9b9115c63" kindref="member">cudaIpcOpenMemHandle</ref>, <ref refid="group__CUDART__DEVICE_1ga84c9effe2d3832ab38a70b2c9cd5552f" kindref="member">cudaIpcCloseMemHandle</ref>, ::cuIpcGetEventHandle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="713" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="713" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__DEVICE_1gab225732dcf71a97a1f6ec1b7946a0162" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaIpcOpenEventHandle</definition>
+        <argsstring>(cudaEvent_t *event, cudaIpcEventHandle_t handle)</argsstring>
+        <name>cudaIpcOpenEventHandle</name>
+        <param>
+          <type>cudaEvent_t *</type>
+          <declname>event</declname>
+        </param>
+        <param>
+          <type>cudaIpcEventHandle_t</type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+<para>Opens an interprocess event handle for use in the current process. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Opens an interprocess event handle exported from another process with <ref refid="group__CUDART__DEVICE_1gafff40bb17a5e0a96b513fc2bd60dd4f9" kindref="member">cudaIpcGetEventHandle</ref>. This function returns a ::cudaEvent_t that behaves like a locally created event with the ::cudaEventDisableTiming flag specified. This event must be freed with <ref refid="group__CUDART__EVENT_1gac8f42aa081e464ada1a59cd5e6ae3015" kindref="member">cudaEventDestroy</ref>.</para>
+<para>Performing operations on the imported event after the exported event has been freed with <ref refid="group__CUDART__EVENT_1gac8f42aa081e464ada1a59cd5e6ae3015" kindref="member">cudaEventDestroy</ref> will result in undefined behavior.</para>
+<para>IPC functionality is restricted to devices with support for unified addressing on Linux operating systems. IPC functionality is not supported on Tegra platforms.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returns the imported event </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Interprocess handle to open</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorMapBufferObjectFailed, ::cudaErrorInvalidResourceHandle, ::cudaErrorNotSupported \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__EVENT_1gaf95514807c666994e61b94c93ef10a2b" kindref="member">cudaEventCreate</ref>, <ref refid="group__CUDART__EVENT_1gac8f42aa081e464ada1a59cd5e6ae3015" kindref="member">cudaEventDestroy</ref>, <ref refid="group__CUDART__EVENT_1ga94b4ebd303bec5ef0b0f2b0235fe0ab1" kindref="member">cudaEventSynchronize</ref>, <ref refid="group__CUDART__EVENT_1gabff85920872d5ed4aaf7b618e392f514" kindref="member">cudaEventQuery</ref>, <ref refid="group__CUDART__STREAM_1gacb8b984b2832fd8c32a7ba0c9fa0a6da" kindref="member">cudaStreamWaitEvent</ref>, <ref refid="group__CUDART__DEVICE_1gafff40bb17a5e0a96b513fc2bd60dd4f9" kindref="member">cudaIpcGetEventHandle</ref>, <ref refid="group__CUDART__DEVICE_1ga13ea0fd02681361d2676bffdce7f48dc" kindref="member">cudaIpcGetMemHandle</ref>, <ref refid="group__CUDART__DEVICE_1gafc8bf2cfd3548ab134d3feb9b9115c63" kindref="member">cudaIpcOpenMemHandle</ref>, <ref refid="group__CUDART__DEVICE_1ga84c9effe2d3832ab38a70b2c9cd5552f" kindref="member">cudaIpcCloseMemHandle</ref>, ::cuIpcOpenEventHandle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="753" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="753" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__DEVICE_1ga13ea0fd02681361d2676bffdce7f48dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaIpcGetMemHandle</definition>
+        <argsstring>(cudaIpcMemHandle_t *handle, void *devPtr)</argsstring>
+        <name>cudaIpcGetMemHandle</name>
+        <param>
+          <type>cudaIpcMemHandle_t *</type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>devPtr</declname>
+        </param>
+        <briefdescription>
+<para>Gets an interprocess memory handle for an existing device memory allocation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Takes a pointer to the base of an existing device memory allocation created with <ref refid="group__CUDART__MEMORY_1ga2ec57cea7c57e8e3c4beca43dd327134" kindref="member">cudaMalloc</ref> and exports it for use in another process. This is a lightweight operation and may be called multiple times on an allocation without adverse effects.</para>
+<para>If a region of memory is freed with <ref refid="group__CUDART__MEMORY_1ga5635c759c41d1d2ea21fd46bb5744f15" kindref="member">cudaFree</ref> and a subsequent call to <ref refid="group__CUDART__MEMORY_1ga2ec57cea7c57e8e3c4beca43dd327134" kindref="member">cudaMalloc</ref> returns memory with the same device address, <ref refid="group__CUDART__DEVICE_1ga13ea0fd02681361d2676bffdce7f48dc" kindref="member">cudaIpcGetMemHandle</ref> will return a unique handle for the new memory.</para>
+<para>IPC functionality is restricted to devices with support for unified addressing on Linux operating systems. IPC functionality is not supported on Tegra platforms.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Pointer to user allocated ::cudaIpcMemHandle to return the handle in. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>devPtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Base pointer to previously allocated device memory</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidResourceHandle, ::cudaErrorMemoryAllocation, ::cudaErrorMapBufferObjectFailed, ::cudaErrorNotSupported \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__MEMORY_1ga2ec57cea7c57e8e3c4beca43dd327134" kindref="member">cudaMalloc</ref>, <ref refid="group__CUDART__MEMORY_1ga5635c759c41d1d2ea21fd46bb5744f15" kindref="member">cudaFree</ref>, <ref refid="group__CUDART__DEVICE_1gafff40bb17a5e0a96b513fc2bd60dd4f9" kindref="member">cudaIpcGetEventHandle</ref>, <ref refid="group__CUDART__DEVICE_1gab225732dcf71a97a1f6ec1b7946a0162" kindref="member">cudaIpcOpenEventHandle</ref>, <ref refid="group__CUDART__DEVICE_1gafc8bf2cfd3548ab134d3feb9b9115c63" kindref="member">cudaIpcOpenMemHandle</ref>, <ref refid="group__CUDART__DEVICE_1ga84c9effe2d3832ab38a70b2c9cd5552f" kindref="member">cudaIpcCloseMemHandle</ref>, ::cuIpcGetMemHandle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="796" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="796" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__DEVICE_1gafc8bf2cfd3548ab134d3feb9b9115c63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaIpcOpenMemHandle</definition>
+        <argsstring>(void **devPtr, cudaIpcMemHandle_t handle, unsigned int flags)</argsstring>
+        <name>cudaIpcOpenMemHandle</name>
+        <param>
+          <type>void **</type>
+          <declname>devPtr</declname>
+        </param>
+        <param>
+          <type>cudaIpcMemHandle_t</type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Opens an interprocess memory handle exported from another process and returns a device pointer usable in the local process. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Maps memory exported from another process with <ref refid="group__CUDART__DEVICE_1ga13ea0fd02681361d2676bffdce7f48dc" kindref="member">cudaIpcGetMemHandle</ref> into the current device address space. For contexts on different devices <ref refid="group__CUDART__DEVICE_1gafc8bf2cfd3548ab134d3feb9b9115c63" kindref="member">cudaIpcOpenMemHandle</ref> can attempt to enable peer access between the devices as if the user called <ref refid="group__CUDART__PEER_1ga7443ed162ccf7463a7caf15dc799cc6d" kindref="member">cudaDeviceEnablePeerAccess</ref>. This behavior is controlled by the ::cudaIpcMemLazyEnablePeerAccess flag. <ref refid="group__CUDART__PEER_1ga46cf1454e8daa73d9bc17aa5a1589a38" kindref="member">cudaDeviceCanAccessPeer</ref> can determine if a mapping is possible.</para>
+<para><ref refid="group__CUDART__DEVICE_1gafc8bf2cfd3548ab134d3feb9b9115c63" kindref="member">cudaIpcOpenMemHandle</ref> can open handles to devices that may not be visible in the process calling the API.</para>
+<para>Contexts that may open ::cudaIpcMemHandles are restricted in the following way. ::cudaIpcMemHandles from each device in a given process may only be opened by one context per device per other process.</para>
+<para>Memory returned from <ref refid="group__CUDART__DEVICE_1gafc8bf2cfd3548ab134d3feb9b9115c63" kindref="member">cudaIpcOpenMemHandle</ref> must be freed with <ref refid="group__CUDART__DEVICE_1ga84c9effe2d3832ab38a70b2c9cd5552f" kindref="member">cudaIpcCloseMemHandle</ref>.</para>
+<para>Calling <ref refid="group__CUDART__MEMORY_1ga5635c759c41d1d2ea21fd46bb5744f15" kindref="member">cudaFree</ref> on an exported memory region before calling <ref refid="group__CUDART__DEVICE_1ga84c9effe2d3832ab38a70b2c9cd5552f" kindref="member">cudaIpcCloseMemHandle</ref> in the importing context will result in undefined behavior.</para>
+<para>IPC functionality is restricted to devices with support for unified addressing on Linux operating systems. IPC functionality is not supported on Tegra platforms.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>devPtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returned device pointer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- ::cudaIpcMemHandle to open </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Flags for this operation. Must be specified as ::cudaIpcMemLazyEnablePeerAccess</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorMapBufferObjectFailed, ::cudaErrorInvalidResourceHandle, ::cudaErrorTooManyPeers, ::cudaErrorNotSupported \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="note"><para>No guarantees are made about the address returned in <computeroutput>*devPtr</computeroutput>. In particular, multiple processes may not receive the same address for the same <computeroutput>handle</computeroutput>.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__MEMORY_1ga2ec57cea7c57e8e3c4beca43dd327134" kindref="member">cudaMalloc</ref>, <ref refid="group__CUDART__MEMORY_1ga5635c759c41d1d2ea21fd46bb5744f15" kindref="member">cudaFree</ref>, <ref refid="group__CUDART__DEVICE_1gafff40bb17a5e0a96b513fc2bd60dd4f9" kindref="member">cudaIpcGetEventHandle</ref>, <ref refid="group__CUDART__DEVICE_1gab225732dcf71a97a1f6ec1b7946a0162" kindref="member">cudaIpcOpenEventHandle</ref>, <ref refid="group__CUDART__DEVICE_1ga13ea0fd02681361d2676bffdce7f48dc" kindref="member">cudaIpcGetMemHandle</ref>, <ref refid="group__CUDART__DEVICE_1ga84c9effe2d3832ab38a70b2c9cd5552f" kindref="member">cudaIpcCloseMemHandle</ref>, <ref refid="group__CUDART__PEER_1ga7443ed162ccf7463a7caf15dc799cc6d" kindref="member">cudaDeviceEnablePeerAccess</ref>, <ref refid="group__CUDART__PEER_1ga46cf1454e8daa73d9bc17aa5a1589a38" kindref="member">cudaDeviceCanAccessPeer</ref>, ::cuIpcOpenMemHandle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="854" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="854" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__DEVICE_1ga84c9effe2d3832ab38a70b2c9cd5552f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaIpcCloseMemHandle</definition>
+        <argsstring>(void *devPtr)</argsstring>
+        <name>cudaIpcCloseMemHandle</name>
+        <param>
+          <type>void *</type>
+          <declname>devPtr</declname>
+        </param>
+        <briefdescription>
+<para>Close memory mapped with cudaIpcOpenMemHandle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Unmaps memory returnd by <ref refid="group__CUDART__DEVICE_1gafc8bf2cfd3548ab134d3feb9b9115c63" kindref="member">cudaIpcOpenMemHandle</ref>. The original allocation in the exporting process as well as imported mappings in other processes will be unaffected.</para>
+<para>Any resources used to enable peer access will be freed if this is the last mapping using them.</para>
+<para>IPC functionality is restricted to devices with support for unified addressing on Linux operating systems. IPC functionality is not supported on Tegra platforms.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>devPtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Device pointer returned by <ref refid="group__CUDART__DEVICE_1gafc8bf2cfd3548ab134d3feb9b9115c63" kindref="member">cudaIpcOpenMemHandle</ref></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorMapBufferObjectFailed, ::cudaErrorInvalidResourceHandle, ::cudaErrorNotSupported \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__MEMORY_1ga2ec57cea7c57e8e3c4beca43dd327134" kindref="member">cudaMalloc</ref>, <ref refid="group__CUDART__MEMORY_1ga5635c759c41d1d2ea21fd46bb5744f15" kindref="member">cudaFree</ref>, <ref refid="group__CUDART__DEVICE_1gafff40bb17a5e0a96b513fc2bd60dd4f9" kindref="member">cudaIpcGetEventHandle</ref>, <ref refid="group__CUDART__DEVICE_1gab225732dcf71a97a1f6ec1b7946a0162" kindref="member">cudaIpcOpenEventHandle</ref>, <ref refid="group__CUDART__DEVICE_1ga13ea0fd02681361d2676bffdce7f48dc" kindref="member">cudaIpcGetMemHandle</ref>, <ref refid="group__CUDART__DEVICE_1gafc8bf2cfd3548ab134d3feb9b9115c63" kindref="member">cudaIpcOpenMemHandle</ref>, ::cuIpcCloseMemHandle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="889" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="889" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__DEVICE_1ga5b0c57f32cb245582010c07e952753e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ __cudart_builtin__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ __cudart_builtin__ cudaError_t CUDARTAPI cudaGetDeviceCount</definition>
+        <argsstring>(int *count)</argsstring>
+        <name>cudaGetDeviceCount</name>
+        <param>
+          <type>int *</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Returns the number of compute-capable devices. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns in <computeroutput>*count</computeroutput> the number of devices with compute capability greater or equal to 2.0 that are available for execution.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returns the number of devices with compute capability greater or equal to 2.0</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaErrorInvalidValue (if a NULL device pointer is assigned), ::cudaSuccess</para>
+</simplesect>
+\notefnerr \note_init_rt \note_callback</para>
+<para><simplesect kind="see"><para><ref refid="group__CUDART__DEVICE_1ga33e2490308f833d7fc5edc76ad9c4416" kindref="member">cudaGetDevice</ref>, <ref refid="group__CUDART__DEVICE_1ga7b63629909800b614427aae92b22d606" kindref="member">cudaSetDevice</ref>, <ref refid="group__CUDART__DEVICE_1ga3b5b6abf4a8eeabb2e3a4ca60a9d26d3" kindref="member">cudaGetDeviceProperties</ref>, <ref refid="group__CUDART__DEVICE_1gaa6d5ae4a673c833a8d18fdab5dea3e70" kindref="member">cudaChooseDevice</ref>, ::cuDeviceGetCount </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="1288" column="58" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="1288" declcolumn="58"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__DEVICE_1ga3b5b6abf4a8eeabb2e3a4ca60a9d26d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ __cudart_builtin__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ __cudart_builtin__ cudaError_t CUDARTAPI cudaGetDeviceProperties</definition>
+        <argsstring>(struct cudaDeviceProp *prop, int device)</argsstring>
+        <name>cudaGetDeviceProperties</name>
+        <param>
+          <type>struct cudaDeviceProp *</type>
+          <declname>prop</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+<para>Returns information about the compute-device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns in <computeroutput>*prop</computeroutput> the properties of device <computeroutput>dev</computeroutput>. The ::cudaDeviceProp structure is defined as: <programlisting><codeline><highlight class="normal">struct<sp/>cudaDeviceProp<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>char<sp/>name[256];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaUUID_t<sp/>uuid;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>size_t<sp/>totalGlobalMem;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>size_t<sp/>sharedMemPerBlock;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>regsPerBlock;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>warpSize;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>size_t<sp/>memPitch;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>maxThreadsPerBlock;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>maxThreadsDim[3];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>maxGridSize[3];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>clockRate;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>size_t<sp/>totalConstMem;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>major;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>minor;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>size_t<sp/>textureAlignment;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>size_t<sp/>texturePitchAlignment;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>deviceOverlap;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>multiProcessorCount;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>kernelExecTimeoutEnabled;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>integrated;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>canMapHostMemory;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>computeMode;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>maxTexture1D;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>maxTexture1DMipmap;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>maxTexture1DLinear;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>maxTexture2D[2];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>maxTexture2DMipmap[2];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>maxTexture2DLinear[3];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>maxTexture2DGather[2];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>maxTexture3D[3];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>maxTexture3DAlt[3];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>maxTextureCubemap;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>maxTexture1DLayered[2];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>maxTexture2DLayered[3];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>maxTextureCubemapLayered[2];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>maxSurface1D;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>maxSurface2D[2];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>maxSurface3D[3];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>maxSurface1DLayered[2];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>maxSurface2DLayered[3];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>maxSurfaceCubemap;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>maxSurfaceCubemapLayered[2];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>size_t<sp/>surfaceAlignment;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>concurrentKernels;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>ECCEnabled;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>pciBusID;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>pciDeviceID;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>pciDomainID;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>tccDriver;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>asyncEngineCount;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>unifiedAddressing;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>memoryClockRate;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>memoryBusWidth;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>l2CacheSize;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>maxThreadsPerMultiProcessor;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>streamPrioritiesSupported;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>globalL1CacheSupported;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>localL1CacheSupported;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>size_t<sp/>sharedMemPerMultiprocessor;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>regsPerMultiprocessor;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>managedMemory;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>isMultiGpuBoard;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>multiGpuBoardGroupID;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>singleToDoublePrecisionPerfRatio;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>pageableMemoryAccess;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>concurrentManagedAccess;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>computePreemptionSupported;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>canUseHostPointerForRegisteredMem;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>cooperativeLaunch;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>cooperativeMultiDeviceLaunch;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>pageableMemoryAccessUsesHostPageTables;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>directManagedMemAccessFromHost;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> where:<itemizedlist>
+<listitem><para>name[256] is an ASCII string identifying the device;</para>
+</listitem><listitem><para>uuid is a 16-byte unique identifier.</para>
+</listitem><listitem><para>totalGlobalMem is the total amount of global memory available on the device in bytes;</para>
+</listitem><listitem><para>sharedMemPerBlock is the maximum amount of shared memory available to a thread block in bytes;</para>
+</listitem><listitem><para>regsPerBlock is the maximum number of 32-bit registers available to a thread block;</para>
+</listitem><listitem><para>warpSize is the warp size in threads;</para>
+</listitem><listitem><para>memPitch is the maximum pitch in bytes allowed by the memory copy functions that involve memory regions allocated through <ref refid="group__CUDART__MEMORY_1gafba768d1a49ed27c0672832403544252" kindref="member">cudaMallocPitch()</ref>;</para>
+</listitem><listitem><para>maxThreadsPerBlock is the maximum number of threads per block;</para>
+</listitem><listitem><para>maxThreadsDim[3] contains the maximum size of each dimension of a block;</para>
+</listitem><listitem><para>maxGridSize[3] contains the maximum size of each dimension of a grid;</para>
+</listitem><listitem><para>clockRate is the clock frequency in kilohertz;</para>
+</listitem><listitem><para>totalConstMem is the total amount of constant memory available on the device in bytes;</para>
+</listitem><listitem><para>major, minor are the major and minor revision numbers defining the device&apos;s compute capability;</para>
+</listitem><listitem><para>textureAlignment is the alignment requirement; texture base addresses that are aligned to textureAlignment bytes do not need an offset applied to texture fetches;</para>
+</listitem><listitem><para>texturePitchAlignment is the pitch alignment requirement for 2D texture references that are bound to pitched memory;</para>
+</listitem><listitem><para>deviceOverlap is 1 if the device can concurrently copy memory between host and device while executing a kernel, or 0 if not. Deprecated, use instead asyncEngineCount.</para>
+</listitem><listitem><para>multiProcessorCount is the number of multiprocessors on the device;</para>
+</listitem><listitem><para>kernelExecTimeoutEnabled is 1 if there is a run time limit for kernels executed on the device, or 0 if not.</para>
+</listitem><listitem><para>integrated is 1 if the device is an integrated (motherboard) GPU and 0 if it is a discrete (card) component.</para>
+</listitem><listitem><para>canMapHostMemory is 1 if the device can map host memory into the CUDA address space for use with <ref refid="group__CUDART__MEMORY_1ga82f207b7718d36489753c35ad398a41a" kindref="member">cudaHostAlloc()</ref>/<ref refid="group__CUDART__MEMORY_1gac03e953b51e1011847c199286de44ac9" kindref="member">cudaHostGetDevicePointer()</ref>, or 0 if not;</para>
+</listitem><listitem><para>computeMode is the compute mode that the device is currently in. Available modes are as follows:<itemizedlist>
+<listitem><para>cudaComputeModeDefault: Default mode - Device is not restricted and multiple threads can use <ref refid="group__CUDART__DEVICE_1ga7b63629909800b614427aae92b22d606" kindref="member">cudaSetDevice()</ref> with this device.</para>
+</listitem><listitem><para>cudaComputeModeExclusive: Compute-exclusive mode - Only one thread will be able to use <ref refid="group__CUDART__DEVICE_1ga7b63629909800b614427aae92b22d606" kindref="member">cudaSetDevice()</ref> with this device.</para>
+</listitem><listitem><para>cudaComputeModeProhibited: Compute-prohibited mode - No threads can use <ref refid="group__CUDART__DEVICE_1ga7b63629909800b614427aae92b22d606" kindref="member">cudaSetDevice()</ref> with this device.</para>
+</listitem><listitem><para>cudaComputeModeExclusiveProcess: Compute-exclusive-process mode - Many threads in one process will be able to use <ref refid="group__CUDART__DEVICE_1ga7b63629909800b614427aae92b22d606" kindref="member">cudaSetDevice()</ref> with this device. <linebreak/>
+ If <ref refid="group__CUDART__DEVICE_1ga7b63629909800b614427aae92b22d606" kindref="member">cudaSetDevice()</ref> is called on an already occupied <computeroutput>device</computeroutput> with computeMode ::cudaComputeModeExclusive, ::cudaErrorDeviceAlreadyInUse will be immediately returned indicating the device cannot be used. When an occupied exclusive mode device is chosen with <ref refid="group__CUDART__DEVICE_1ga7b63629909800b614427aae92b22d606" kindref="member">cudaSetDevice</ref>, all subsequent non-device management runtime functions will return ::cudaErrorDevicesUnavailable.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>maxTexture1D is the maximum 1D texture size.</para>
+</listitem><listitem><para>maxTexture1DMipmap is the maximum 1D mipmapped texture texture size.</para>
+</listitem><listitem><para>maxTexture1DLinear is the maximum 1D texture size for textures bound to linear memory.</para>
+</listitem><listitem><para>maxTexture2D[2] contains the maximum 2D texture dimensions.</para>
+</listitem><listitem><para>maxTexture2DMipmap[2] contains the maximum 2D mipmapped texture dimensions.</para>
+</listitem><listitem><para>maxTexture2DLinear[3] contains the maximum 2D texture dimensions for 2D textures bound to pitch linear memory.</para>
+</listitem><listitem><para>maxTexture2DGather[2] contains the maximum 2D texture dimensions if texture gather operations have to be performed.</para>
+</listitem><listitem><para>maxTexture3D[3] contains the maximum 3D texture dimensions.</para>
+</listitem><listitem><para>maxTexture3DAlt[3] contains the maximum alternate 3D texture dimensions.</para>
+</listitem><listitem><para>maxTextureCubemap is the maximum cubemap texture width or height.</para>
+</listitem><listitem><para>maxTexture1DLayered[2] contains the maximum 1D layered texture dimensions.</para>
+</listitem><listitem><para>maxTexture2DLayered[3] contains the maximum 2D layered texture dimensions.</para>
+</listitem><listitem><para>maxTextureCubemapLayered[2] contains the maximum cubemap layered texture dimensions.</para>
+</listitem><listitem><para>maxSurface1D is the maximum 1D surface size.</para>
+</listitem><listitem><para>maxSurface2D[2] contains the maximum 2D surface dimensions.</para>
+</listitem><listitem><para>maxSurface3D[3] contains the maximum 3D surface dimensions.</para>
+</listitem><listitem><para>maxSurface1DLayered[2] contains the maximum 1D layered surface dimensions.</para>
+</listitem><listitem><para>maxSurface2DLayered[3] contains the maximum 2D layered surface dimensions.</para>
+</listitem><listitem><para>maxSurfaceCubemap is the maximum cubemap surface width or height.</para>
+</listitem><listitem><para>maxSurfaceCubemapLayered[2] contains the maximum cubemap layered surface dimensions.</para>
+</listitem><listitem><para>surfaceAlignment specifies the alignment requirements for surfaces.</para>
+</listitem><listitem><para>concurrentKernels is 1 if the device supports executing multiple kernels within the same context simultaneously, or 0 if not. It is not guaranteed that multiple kernels will be resident on the device concurrently so this feature should not be relied upon for correctness;</para>
+</listitem><listitem><para>ECCEnabled is 1 if the device has ECC support turned on, or 0 if not.</para>
+</listitem><listitem><para>pciBusID is the PCI bus identifier of the device.</para>
+</listitem><listitem><para>pciDeviceID is the PCI device (sometimes called slot) identifier of the device.</para>
+</listitem><listitem><para>pciDomainID is the PCI domain identifier of the device.</para>
+</listitem><listitem><para>tccDriver is 1 if the device is using a TCC driver or 0 if not.</para>
+</listitem><listitem><para>asyncEngineCount is 1 when the device can concurrently copy memory between host and device while executing a kernel. It is 2 when the device can concurrently copy memory between host and device in both directions and execute a kernel at the same time. It is 0 if neither of these is supported.</para>
+</listitem><listitem><para>unifiedAddressing is 1 if the device shares a unified address space with the host and 0 otherwise.</para>
+</listitem><listitem><para>memoryClockRate is the peak memory clock frequency in kilohertz.</para>
+</listitem><listitem><para>memoryBusWidth is the memory bus width in bits.</para>
+</listitem><listitem><para>l2CacheSize is L2 cache size in bytes.</para>
+</listitem><listitem><para>maxThreadsPerMultiProcessor is the number of maximum resident threads per multiprocessor.</para>
+</listitem><listitem><para>streamPrioritiesSupported is 1 if the device supports stream priorities, or 0 if it is not supported.</para>
+</listitem><listitem><para>globalL1CacheSupported is 1 if the device supports caching of globals in L1 cache, or 0 if it is not supported.</para>
+</listitem><listitem><para>localL1CacheSupported is 1 if the device supports caching of locals in L1 cache, or 0 if it is not supported.</para>
+</listitem><listitem><para>sharedMemPerMultiprocessor is the maximum amount of shared memory available to a multiprocessor in bytes; this amount is shared by all thread blocks simultaneously resident on a multiprocessor;</para>
+</listitem><listitem><para>regsPerMultiprocessor is the maximum number of 32-bit registers available to a multiprocessor; this number is shared by all thread blocks simultaneously resident on a multiprocessor;</para>
+</listitem><listitem><para>managedMemory is 1 if the device supports allocating managed memory on this system, or 0 if it is not supported.</para>
+</listitem><listitem><para>isMultiGpuBoard is 1 if the device is on a multi-GPU board (e.g. Gemini cards), and 0 if not;</para>
+</listitem><listitem><para>multiGpuBoardGroupID is a unique identifier for a group of devices associated with the same board. Devices on the same multi-GPU board will share the same identifier;</para>
+</listitem><listitem><para>singleToDoublePrecisionPerfRatio is the ratio of single precision performance (in floating-point operations per second) to double precision performance.</para>
+</listitem><listitem><para>pageableMemoryAccess is 1 if the device supports coherently accessing pageable memory without calling cudaHostRegister on it, and 0 otherwise.</para>
+</listitem><listitem><para>concurrentManagedAccess is 1 if the device can coherently access managed memory concurrently with the CPU, and 0 otherwise.</para>
+</listitem><listitem><para>computePreemptionSupported is 1 if the device supports Compute Preemption, and 0 otherwise.</para>
+</listitem><listitem><para>canUseHostPointerForRegisteredMem is 1 if the device can access host registered memory at the same virtual address as the CPU, and 0 otherwise.</para>
+</listitem><listitem><para>cooperativeLaunch is 1 if the device supports launching cooperative kernels via <ref refid="group__CUDART__EXECUTION_1ga4c05ee29e2c42af2978bd19e4ab47330" kindref="member">cudaLaunchCooperativeKernel</ref>, and 0 otherwise.</para>
+</listitem><listitem><para>cooperativeMultiDeviceLaunch is 1 if the device supports launching cooperative kernels via <ref refid="group__CUDART__EXECUTION_1ga15ff3a20718c13846bb3b8304bcc7db9" kindref="member">cudaLaunchCooperativeKernelMultiDevice</ref>, and 0 otherwise.</para>
+</listitem><listitem><para>pageableMemoryAccessUsesHostPageTables is 1 if the device accesses pageable memory via the host&apos;s page tables, and 0 otherwise.</para>
+</listitem><listitem><para>directManagedMemAccessFromHost is 1 if the host can directly access managed memory on the device without migration, and 0 otherwise.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>prop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Properties for the specified device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Device number to get properties for</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidDevice \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__DEVICE_1ga5b0c57f32cb245582010c07e952753e6" kindref="member">cudaGetDeviceCount</ref>, <ref refid="group__CUDART__DEVICE_1ga33e2490308f833d7fc5edc76ad9c4416" kindref="member">cudaGetDevice</ref>, <ref refid="group__CUDART__DEVICE_1ga7b63629909800b614427aae92b22d606" kindref="member">cudaSetDevice</ref>, <ref refid="group__CUDART__DEVICE_1gaa6d5ae4a673c833a8d18fdab5dea3e70" kindref="member">cudaChooseDevice</ref>, <ref refid="group__CUDART__DEVICE_1gade765bf7bb5df793bc506f4b8ad97d19" kindref="member">cudaDeviceGetAttribute</ref>, ::cuDeviceGetAttribute, ::cuDeviceGetName </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="1559" column="58" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="1559" declcolumn="58"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__DEVICE_1gade765bf7bb5df793bc506f4b8ad97d19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ __cudart_builtin__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ __cudart_builtin__ cudaError_t CUDARTAPI cudaDeviceGetAttribute</definition>
+        <argsstring>(int *value, enum cudaDeviceAttr attr, int device)</argsstring>
+        <name>cudaDeviceGetAttribute</name>
+        <param>
+          <type>int *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>enum cudaDeviceAttr</type>
+          <declname>attr</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+<para>Returns information about the device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns in <computeroutput>*value</computeroutput> the integer value of the attribute <computeroutput>attr</computeroutput> on device <computeroutput>device</computeroutput>. The supported attributes are:<itemizedlist>
+<listitem><para>::cudaDevAttrMaxThreadsPerBlock: Maximum number of threads per block;</para>
+</listitem><listitem><para>::cudaDevAttrMaxBlockDimX: Maximum x-dimension of a block;</para>
+</listitem><listitem><para>::cudaDevAttrMaxBlockDimY: Maximum y-dimension of a block;</para>
+</listitem><listitem><para>::cudaDevAttrMaxBlockDimZ: Maximum z-dimension of a block;</para>
+</listitem><listitem><para>::cudaDevAttrMaxGridDimX: Maximum x-dimension of a grid;</para>
+</listitem><listitem><para>::cudaDevAttrMaxGridDimY: Maximum y-dimension of a grid;</para>
+</listitem><listitem><para>::cudaDevAttrMaxGridDimZ: Maximum z-dimension of a grid;</para>
+</listitem><listitem><para>::cudaDevAttrMaxSharedMemoryPerBlock: Maximum amount of shared memory available to a thread block in bytes;</para>
+</listitem><listitem><para>::cudaDevAttrTotalConstantMemory: Memory available on device for <bold>constant</bold> variables in a CUDA C kernel in bytes;</para>
+</listitem><listitem><para>::cudaDevAttrWarpSize: Warp size in threads;</para>
+</listitem><listitem><para>::cudaDevAttrMaxPitch: Maximum pitch in bytes allowed by the memory copy functions that involve memory regions allocated through <ref refid="group__CUDART__MEMORY_1gafba768d1a49ed27c0672832403544252" kindref="member">cudaMallocPitch()</ref>;</para>
+</listitem><listitem><para>::cudaDevAttrMaxTexture1DWidth: Maximum 1D texture width;</para>
+</listitem><listitem><para>::cudaDevAttrMaxTexture1DLinearWidth: Maximum width for a 1D texture bound to linear memory;</para>
+</listitem><listitem><para>::cudaDevAttrMaxTexture1DMipmappedWidth: Maximum mipmapped 1D texture width;</para>
+</listitem><listitem><para>::cudaDevAttrMaxTexture2DWidth: Maximum 2D texture width;</para>
+</listitem><listitem><para>::cudaDevAttrMaxTexture2DHeight: Maximum 2D texture height;</para>
+</listitem><listitem><para>::cudaDevAttrMaxTexture2DLinearWidth: Maximum width for a 2D texture bound to linear memory;</para>
+</listitem><listitem><para>::cudaDevAttrMaxTexture2DLinearHeight: Maximum height for a 2D texture bound to linear memory;</para>
+</listitem><listitem><para>::cudaDevAttrMaxTexture2DLinearPitch: Maximum pitch in bytes for a 2D texture bound to linear memory;</para>
+</listitem><listitem><para>::cudaDevAttrMaxTexture2DMipmappedWidth: Maximum mipmapped 2D texture width;</para>
+</listitem><listitem><para>::cudaDevAttrMaxTexture2DMipmappedHeight: Maximum mipmapped 2D texture height;</para>
+</listitem><listitem><para>::cudaDevAttrMaxTexture3DWidth: Maximum 3D texture width;</para>
+</listitem><listitem><para>::cudaDevAttrMaxTexture3DHeight: Maximum 3D texture height;</para>
+</listitem><listitem><para>::cudaDevAttrMaxTexture3DDepth: Maximum 3D texture depth;</para>
+</listitem><listitem><para>::cudaDevAttrMaxTexture3DWidthAlt: Alternate maximum 3D texture width, 0 if no alternate maximum 3D texture size is supported;</para>
+</listitem><listitem><para>::cudaDevAttrMaxTexture3DHeightAlt: Alternate maximum 3D texture height, 0 if no alternate maximum 3D texture size is supported;</para>
+</listitem><listitem><para>::cudaDevAttrMaxTexture3DDepthAlt: Alternate maximum 3D texture depth, 0 if no alternate maximum 3D texture size is supported;</para>
+</listitem><listitem><para>::cudaDevAttrMaxTextureCubemapWidth: Maximum cubemap texture width or height;</para>
+</listitem><listitem><para>::cudaDevAttrMaxTexture1DLayeredWidth: Maximum 1D layered texture width;</para>
+</listitem><listitem><para>::cudaDevAttrMaxTexture1DLayeredLayers: Maximum layers in a 1D layered texture;</para>
+</listitem><listitem><para>::cudaDevAttrMaxTexture2DLayeredWidth: Maximum 2D layered texture width;</para>
+</listitem><listitem><para>::cudaDevAttrMaxTexture2DLayeredHeight: Maximum 2D layered texture height;</para>
+</listitem><listitem><para>::cudaDevAttrMaxTexture2DLayeredLayers: Maximum layers in a 2D layered texture;</para>
+</listitem><listitem><para>::cudaDevAttrMaxTextureCubemapLayeredWidth: Maximum cubemap layered texture width or height;</para>
+</listitem><listitem><para>::cudaDevAttrMaxTextureCubemapLayeredLayers: Maximum layers in a cubemap layered texture;</para>
+</listitem><listitem><para>::cudaDevAttrMaxSurface1DWidth: Maximum 1D surface width;</para>
+</listitem><listitem><para>::cudaDevAttrMaxSurface2DWidth: Maximum 2D surface width;</para>
+</listitem><listitem><para>::cudaDevAttrMaxSurface2DHeight: Maximum 2D surface height;</para>
+</listitem><listitem><para>::cudaDevAttrMaxSurface3DWidth: Maximum 3D surface width;</para>
+</listitem><listitem><para>::cudaDevAttrMaxSurface3DHeight: Maximum 3D surface height;</para>
+</listitem><listitem><para>::cudaDevAttrMaxSurface3DDepth: Maximum 3D surface depth;</para>
+</listitem><listitem><para>::cudaDevAttrMaxSurface1DLayeredWidth: Maximum 1D layered surface width;</para>
+</listitem><listitem><para>::cudaDevAttrMaxSurface1DLayeredLayers: Maximum layers in a 1D layered surface;</para>
+</listitem><listitem><para>::cudaDevAttrMaxSurface2DLayeredWidth: Maximum 2D layered surface width;</para>
+</listitem><listitem><para>::cudaDevAttrMaxSurface2DLayeredHeight: Maximum 2D layered surface height;</para>
+</listitem><listitem><para>::cudaDevAttrMaxSurface2DLayeredLayers: Maximum layers in a 2D layered surface;</para>
+</listitem><listitem><para>::cudaDevAttrMaxSurfaceCubemapWidth: Maximum cubemap surface width;</para>
+</listitem><listitem><para>::cudaDevAttrMaxSurfaceCubemapLayeredWidth: Maximum cubemap layered surface width;</para>
+</listitem><listitem><para>::cudaDevAttrMaxSurfaceCubemapLayeredLayers: Maximum layers in a cubemap layered surface;</para>
+</listitem><listitem><para>::cudaDevAttrMaxRegistersPerBlock: Maximum number of 32-bit registers available to a thread block;</para>
+</listitem><listitem><para>::cudaDevAttrClockRate: Peak clock frequency in kilohertz;</para>
+</listitem><listitem><para>::cudaDevAttrTextureAlignment: <ref refid="structAlignment" kindref="compound">Alignment</ref> requirement; texture base addresses aligned to ::textureAlign bytes do not need an offset applied to texture fetches;</para>
+</listitem><listitem><para>::cudaDevAttrTexturePitchAlignment: Pitch alignment requirement for 2D texture references bound to pitched memory;</para>
+</listitem><listitem><para>::cudaDevAttrGpuOverlap: 1 if the device can concurrently copy memory between host and device while executing a kernel, or 0 if not;</para>
+</listitem><listitem><para>::cudaDevAttrMultiProcessorCount: Number of multiprocessors on the device;</para>
+</listitem><listitem><para>::cudaDevAttrKernelExecTimeout: 1 if there is a run time limit for kernels executed on the device, or 0 if not;</para>
+</listitem><listitem><para>::cudaDevAttrIntegrated: 1 if the device is integrated with the memory subsystem, or 0 if not;</para>
+</listitem><listitem><para>::cudaDevAttrCanMapHostMemory: 1 if the device can map host memory into the CUDA address space, or 0 if not;</para>
+</listitem><listitem><para>::cudaDevAttrComputeMode: Compute mode is the compute mode that the device is currently in. Available modes are as follows:<itemizedlist>
+<listitem><para>::cudaComputeModeDefault: Default mode - Device is not restricted and multiple threads can use <ref refid="group__CUDART__DEVICE_1ga7b63629909800b614427aae92b22d606" kindref="member">cudaSetDevice()</ref> with this device.</para>
+</listitem><listitem><para>::cudaComputeModeExclusive: Compute-exclusive mode - Only one thread will be able to use <ref refid="group__CUDART__DEVICE_1ga7b63629909800b614427aae92b22d606" kindref="member">cudaSetDevice()</ref> with this device.</para>
+</listitem><listitem><para>::cudaComputeModeProhibited: Compute-prohibited mode - No threads can use <ref refid="group__CUDART__DEVICE_1ga7b63629909800b614427aae92b22d606" kindref="member">cudaSetDevice()</ref> with this device.</para>
+</listitem><listitem><para>::cudaComputeModeExclusiveProcess: Compute-exclusive-process mode - Many threads in one process will be able to use <ref refid="group__CUDART__DEVICE_1ga7b63629909800b614427aae92b22d606" kindref="member">cudaSetDevice()</ref> with this device.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>::cudaDevAttrConcurrentKernels: 1 if the device supports executing multiple kernels within the same context simultaneously, or 0 if not. It is not guaranteed that multiple kernels will be resident on the device concurrently so this feature should not be relied upon for correctness;</para>
+</listitem><listitem><para>::cudaDevAttrEccEnabled: 1 if error correction is enabled on the device, 0 if error correction is disabled or not supported by the device;</para>
+</listitem><listitem><para>::cudaDevAttrPciBusId: PCI bus identifier of the device;</para>
+</listitem><listitem><para>::cudaDevAttrPciDeviceId: PCI device (also known as slot) identifier of the device;</para>
+</listitem><listitem><para>::cudaDevAttrTccDriver: 1 if the device is using a TCC driver. TCC is only available on Tesla hardware running Windows Vista or later;</para>
+</listitem><listitem><para>::cudaDevAttrMemoryClockRate: Peak memory clock frequency in kilohertz;</para>
+</listitem><listitem><para>::cudaDevAttrGlobalMemoryBusWidth: Global memory bus width in bits;</para>
+</listitem><listitem><para>::cudaDevAttrL2CacheSize: Size of L2 cache in bytes. 0 if the device doesn&apos;t have L2 cache;</para>
+</listitem><listitem><para>::cudaDevAttrMaxThreadsPerMultiProcessor: Maximum resident threads per multiprocessor;</para>
+</listitem><listitem><para>::cudaDevAttrUnifiedAddressing: 1 if the device shares a unified address space with the host, or 0 if not;</para>
+</listitem><listitem><para>::cudaDevAttrComputeCapabilityMajor: Major compute capability version number;</para>
+</listitem><listitem><para>::cudaDevAttrComputeCapabilityMinor: Minor compute capability version number;</para>
+</listitem><listitem><para>::cudaDevAttrStreamPrioritiesSupported: 1 if the device supports stream priorities, or 0 if not;</para>
+</listitem><listitem><para>::cudaDevAttrGlobalL1CacheSupported: 1 if device supports caching globals in L1 cache, 0 if not;</para>
+</listitem><listitem><para>::cudaDevAttrLocalL1CacheSupported: 1 if device supports caching locals in L1 cache, 0 if not;</para>
+</listitem><listitem><para>::cudaDevAttrMaxSharedMemoryPerMultiprocessor: Maximum amount of shared memory available to a multiprocessor in bytes; this amount is shared by all thread blocks simultaneously resident on a multiprocessor;</para>
+</listitem><listitem><para>::cudaDevAttrMaxRegistersPerMultiprocessor: Maximum number of 32-bit registers available to a multiprocessor; this number is shared by all thread blocks simultaneously resident on a multiprocessor;</para>
+</listitem><listitem><para>::cudaDevAttrManagedMemory: 1 if device supports allocating managed memory, 0 if not;</para>
+</listitem><listitem><para>::cudaDevAttrIsMultiGpuBoard: 1 if device is on a multi-GPU board, 0 if not;</para>
+</listitem><listitem><para>::cudaDevAttrMultiGpuBoardGroupID: Unique identifier for a group of devices on the same multi-GPU board;</para>
+</listitem><listitem><para>::cudaDevAttrHostNativeAtomicSupported: 1 if the link between the device and the host supports native atomic operations;</para>
+</listitem><listitem><para>::cudaDevAttrSingleToDoublePrecisionPerfRatio: Ratio of single precision performance (in floating-point operations per second) to double precision performance;</para>
+</listitem><listitem><para>::cudaDevAttrPageableMemoryAccess: 1 if the device supports coherently accessing pageable memory without calling cudaHostRegister on it, and 0 otherwise.</para>
+</listitem><listitem><para>::cudaDevAttrConcurrentManagedAccess: 1 if the device can coherently access managed memory concurrently with the CPU, and 0 otherwise.</para>
+</listitem><listitem><para>::cudaDevAttrComputePreemptionSupported: 1 if the device supports Compute Preemption, 0 if not.</para>
+</listitem><listitem><para>::cudaDevAttrCanUseHostPointerForRegisteredMem: 1 if the device can access host registered memory at the same virtual address as the CPU, and 0 otherwise.</para>
+</listitem><listitem><para>::cudaDevAttrCooperativeLaunch: 1 if the device supports launching cooperative kernels via <ref refid="group__CUDART__EXECUTION_1ga4c05ee29e2c42af2978bd19e4ab47330" kindref="member">cudaLaunchCooperativeKernel</ref>, and 0 otherwise.</para>
+</listitem><listitem><para>::cudaDevAttrCooperativeMultiDeviceLaunch: 1 if the device supports launching cooperative kernels via <ref refid="group__CUDART__EXECUTION_1ga15ff3a20718c13846bb3b8304bcc7db9" kindref="member">cudaLaunchCooperativeKernelMultiDevice</ref>, and 0 otherwise.</para>
+</listitem><listitem><para>::cudaDevAttrCanFlushRemoteWrites: 1 if the device supports flushing of outstanding remote writes, and 0 otherwise.</para>
+</listitem><listitem><para>::cudaDevAttrHostRegisterSupported: 1 if the device supports host memory registration via <ref refid="group__CUDART__MEMORY_1gab14cbfaca14c4de9d06a5af14c9307f6" kindref="member">cudaHostRegister</ref>, and 0 otherwise.</para>
+</listitem><listitem><para>::cudaDevAttrPageableMemoryAccessUsesHostPageTables: 1 if the device accesses pageable memory via the host&apos;s page tables, and 0 otherwise.</para>
+</listitem><listitem><para>::cudaDevAttrDirectManagedMemAccessFromHost: 1 if the host can directly access managed memory on the device without migration, and 0 otherwise.</para>
+</listitem><listitem><para>::cudaDevAttrMaxSharedMemoryPerBlockOptin: Maximum per block shared memory size on the device. This value can be opted into when using <ref refid="group__CUDART__EXECUTION_1gad30aa7cba71047ca5acf5a89bd9b7013" kindref="member">cudaFuncSetAttribute</ref></para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returned device attribute value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>attr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Device attribute to query </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Device number to query</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidDevice, ::cudaErrorInvalidValue \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__DEVICE_1ga5b0c57f32cb245582010c07e952753e6" kindref="member">cudaGetDeviceCount</ref>, <ref refid="group__CUDART__DEVICE_1ga33e2490308f833d7fc5edc76ad9c4416" kindref="member">cudaGetDevice</ref>, <ref refid="group__CUDART__DEVICE_1ga7b63629909800b614427aae92b22d606" kindref="member">cudaSetDevice</ref>, <ref refid="group__CUDART__DEVICE_1gaa6d5ae4a673c833a8d18fdab5dea3e70" kindref="member">cudaChooseDevice</ref>, <ref refid="group__CUDART__DEVICE_1ga3b5b6abf4a8eeabb2e3a4ca60a9d26d3" kindref="member">cudaGetDeviceProperties</ref>, ::cuDeviceGetAttribute </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="1748" column="58" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="1748" declcolumn="58"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__DEVICE_1gaa235efa0476459d4203fbd5893673372" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaDeviceGetNvSciSyncAttributes</definition>
+        <argsstring>(void *nvSciSyncAttrList, int device, int flags)</argsstring>
+        <name>cudaDeviceGetNvSciSyncAttributes</name>
+        <param>
+          <type>void *</type>
+          <declname>nvSciSyncAttrList</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Return NvSciSync attributes that this device can support. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns in <computeroutput>nvSciSyncAttrList</computeroutput>, the properties of NvSciSync that this CUDA device, <computeroutput>dev</computeroutput> can support. The returned <computeroutput>nvSciSyncAttrList</computeroutput> can be used to create an NvSciSync that matches this device’s capabilities.</para>
+<para>If NvSciSyncAttrKey_RequiredPerm field in <computeroutput>nvSciSyncAttrList</computeroutput> is already set this API will return ::cudaErrorNotSupported.</para>
+<para>The applications should set <computeroutput>nvSciSyncAttrList</computeroutput> to a valid NvSciSyncAttrList failing which this API will return ::cudaErrorInvalidHandle.</para>
+<para>The <computeroutput>flags</computeroutput> controls how applications intends to use the NvSciSync created from the <computeroutput>nvSciSyncAttrList</computeroutput>. The valid flags are:<itemizedlist>
+<listitem><para>::cudaNvSciSyncAttrSignal, specifies that the applications intends to signal an NvSciSync on this CUDA device.</para>
+</listitem><listitem><para>::cudaNvSciSyncAttrWait, specifies that the applications intends to wait on an NvSciSync on this CUDA device.</para>
+</listitem></itemizedlist>
+</para>
+<para>At least one of these flags must be set, failing which the API returns ::cudaErrorInvalidValue. Both the flags are orthogonal to one another: a developer may set both these flags that allows to set both wait and signal specific attributes in the same <computeroutput>nvSciSyncAttrList</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nvSciSyncAttrList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Return NvSciSync attributes supported. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Valid Cuda Device to get NvSciSync attributes for. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- flags describing NvSciSync usage.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+::cudaSuccess, ::cudaErrorDeviceUninitialized, ::cudaErrorInvalidValue, ::cudaErrorInvalidHandle, ::cudaErrorInvalidDevice, ::cudaErrorNotSupported, ::cudaErrorMemoryAllocation</para>
+<para><simplesect kind="see"><para><ref refid="group__CUDART__EXTRES__INTEROP_1gaff0eada47708f3c6f586d53405f9c77c" kindref="member">cudaImportExternalSemaphore</ref>, <ref refid="group__CUDART__EXTRES__INTEROP_1ga958118993f10e0d69b8cdd9282fed137" kindref="member">cudaDestroyExternalSemaphore</ref>, <ref refid="group__CUDART__EXTRES__INTEROP_1ga5f6e5232cf5336717fb7168448193dd5" kindref="member">cudaSignalExternalSemaphoresAsync</ref>, <ref refid="group__CUDART__EXTRES__INTEROP_1gac62c500143c3b2b4abbb4100cb8f0933" kindref="member">cudaWaitExternalSemaphoresAsync</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="1797" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="1797" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__DEVICE_1gaf1d1511f9dbad847493925bc425719c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ __cudart_builtin__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ __cudart_builtin__ cudaError_t CUDARTAPI cudaDeviceGetP2PAttribute</definition>
+        <argsstring>(int *value, enum cudaDeviceP2PAttr attr, int srcDevice, int dstDevice)</argsstring>
+        <name>cudaDeviceGetP2PAttribute</name>
+        <param>
+          <type>int *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>enum cudaDeviceP2PAttr</type>
+          <declname>attr</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>srcDevice</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dstDevice</declname>
+        </param>
+        <briefdescription>
+<para>Queries attributes of the link between two devices. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns in <computeroutput>*value</computeroutput> the value of the requested attribute <computeroutput>attrib</computeroutput> of the link between <computeroutput>srcDevice</computeroutput> and <computeroutput>dstDevice</computeroutput>. The supported attributes are:<itemizedlist>
+<listitem><para>::cudaDevP2PAttrPerformanceRank: A relative value indicating the performance of the link between two devices. Lower value means better performance (0 being the value used for most performant link).</para>
+</listitem><listitem><para>::cudaDevP2PAttrAccessSupported: 1 if peer access is enabled.</para>
+</listitem><listitem><para>::cudaDevP2PAttrNativeAtomicSupported: 1 if native atomic operations over the link are supported.</para>
+</listitem><listitem><para>::cudaDevP2PAttrCudaArrayAccessSupported: 1 if accessing CUDA arrays over the link is supported.</para>
+</listitem></itemizedlist>
+</para>
+<para>Returns ::cudaErrorInvalidDevice if <computeroutput>srcDevice</computeroutput> or <computeroutput>dstDevice</computeroutput> are not valid or if they represent the same device.</para>
+<para>Returns ::cudaErrorInvalidValue if <computeroutput>attrib</computeroutput> is not valid or if <computeroutput>value</computeroutput> is a null pointer.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returned value of the requested attribute </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>attrib</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The requested attribute of the link between <computeroutput>srcDevice</computeroutput> and <computeroutput>dstDevice</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>srcDevice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The source device of the target link. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dstDevice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The destination device of the target link.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidDevice, ::cudaErrorInvalidValue \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para>::cudaCtxEnablePeerAccess, ::cudaCtxDisablePeerAccess, ::cudaCtxCanAccessPeer, ::cuDeviceGetP2PAttribute </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="1837" column="58" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="1837" declcolumn="58"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__DEVICE_1gaa6d5ae4a673c833a8d18fdab5dea3e70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaChooseDevice</definition>
+        <argsstring>(int *device, const struct cudaDeviceProp *prop)</argsstring>
+        <name>cudaChooseDevice</name>
+        <param>
+          <type>int *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>const struct cudaDeviceProp *</type>
+          <declname>prop</declname>
+        </param>
+        <briefdescription>
+<para>Select compute-device which best matches criteria. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns in <computeroutput>*device</computeroutput> the device which has properties that best match <computeroutput>*prop</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Device with best match </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>prop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Desired device properties</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__DEVICE_1ga5b0c57f32cb245582010c07e952753e6" kindref="member">cudaGetDeviceCount</ref>, <ref refid="group__CUDART__DEVICE_1ga33e2490308f833d7fc5edc76ad9c4416" kindref="member">cudaGetDevice</ref>, <ref refid="group__CUDART__DEVICE_1ga7b63629909800b614427aae92b22d606" kindref="member">cudaSetDevice</ref>, <ref refid="group__CUDART__DEVICE_1ga3b5b6abf4a8eeabb2e3a4ca60a9d26d3" kindref="member">cudaGetDeviceProperties</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="1858" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="1858" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__DEVICE_1ga7b63629909800b614427aae92b22d606" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaSetDevice</definition>
+        <argsstring>(int device)</argsstring>
+        <name>cudaSetDevice</name>
+        <param>
+          <type>int</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+<para>Set device to be used for GPU executions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets <computeroutput>device</computeroutput> as the current device for the calling host thread. Valid device id&apos;s are 0 to (<ref refid="group__CUDART__DEVICE_1ga5b0c57f32cb245582010c07e952753e6" kindref="member">cudaGetDeviceCount()</ref> - 1).</para>
+<para>Any device memory subsequently allocated from this host thread using <ref refid="group__CUDART__MEMORY_1ga2ec57cea7c57e8e3c4beca43dd327134" kindref="member">cudaMalloc()</ref>, <ref refid="group__CUDART__MEMORY_1gafba768d1a49ed27c0672832403544252" kindref="member">cudaMallocPitch()</ref> or <ref refid="group__CUDART__MEMORY_1gaae428013daae74529feb93b48a9dc39b" kindref="member">cudaMallocArray()</ref> will be physically resident on <computeroutput>device</computeroutput>. Any host memory allocated from this host thread using <ref refid="group__CUDART__MEMORY_1ga9319967aebbae316ea45f540f27974b7" kindref="member">cudaMallocHost()</ref> or <ref refid="group__CUDART__MEMORY_1ga82f207b7718d36489753c35ad398a41a" kindref="member">cudaHostAlloc()</ref> or <ref refid="group__CUDART__MEMORY_1gab14cbfaca14c4de9d06a5af14c9307f6" kindref="member">cudaHostRegister()</ref> will have its lifetime associated with <computeroutput>device</computeroutput>. Any streams or events created from this host thread will be associated with <computeroutput>device</computeroutput>. Any kernels launched from this host thread using the &lt;&lt;&lt;&gt;&gt;&gt; operator or <ref refid="group__CUDART__EXECUTION_1gaaa780bd93440640cd7de502788ac895e" kindref="member">cudaLaunchKernel()</ref> will be executed on <computeroutput>device</computeroutput>.</para>
+<para>This call may be made from any host thread, to any device, and at any time. This function will do no synchronization with the previous or new device, and should be considered a very low overhead call.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Device on which the active host thread should execute the device code.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidDevice, ::cudaErrorDeviceAlreadyInUse \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__DEVICE_1ga5b0c57f32cb245582010c07e952753e6" kindref="member">cudaGetDeviceCount</ref>, <ref refid="group__CUDART__DEVICE_1ga33e2490308f833d7fc5edc76ad9c4416" kindref="member">cudaGetDevice</ref>, <ref refid="group__CUDART__DEVICE_1ga3b5b6abf4a8eeabb2e3a4ca60a9d26d3" kindref="member">cudaGetDeviceProperties</ref>, <ref refid="group__CUDART__DEVICE_1gaa6d5ae4a673c833a8d18fdab5dea3e70" kindref="member">cudaChooseDevice</ref>, ::cuCtxSetCurrent </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="1895" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="1895" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__DEVICE_1ga33e2490308f833d7fc5edc76ad9c4416" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ __cudart_builtin__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ __cudart_builtin__ cudaError_t CUDARTAPI cudaGetDevice</definition>
+        <argsstring>(int *device)</argsstring>
+        <name>cudaGetDevice</name>
+        <param>
+          <type>int *</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+<para>Returns which device is currently being used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns in <computeroutput>*device</computeroutput> the current device for the calling host thread.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returns the device on which the active host thread executes the device code.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__DEVICE_1ga5b0c57f32cb245582010c07e952753e6" kindref="member">cudaGetDeviceCount</ref>, <ref refid="group__CUDART__DEVICE_1ga7b63629909800b614427aae92b22d606" kindref="member">cudaSetDevice</ref>, <ref refid="group__CUDART__DEVICE_1ga3b5b6abf4a8eeabb2e3a4ca60a9d26d3" kindref="member">cudaGetDeviceProperties</ref>, <ref refid="group__CUDART__DEVICE_1gaa6d5ae4a673c833a8d18fdab5dea3e70" kindref="member">cudaChooseDevice</ref>, ::cuCtxGetCurrent </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="1916" column="58" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="1916" declcolumn="58"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__DEVICE_1ga8aba0c8655982381e2127b419d17fee4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaSetValidDevices</definition>
+        <argsstring>(int *device_arr, int len)</argsstring>
+        <name>cudaSetValidDevices</name>
+        <param>
+          <type>int *</type>
+          <declname>device_arr</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Set a list of devices that can be used for CUDA. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets a list of devices for CUDA execution in priority order using <computeroutput>device_arr</computeroutput>. The parameter <computeroutput>len</computeroutput> specifies the number of elements in the list. CUDA will try devices from the list sequentially until it finds one that works. If this function is not called, or if it is called with a <computeroutput>len</computeroutput> of 0, then CUDA will go back to its default behavior of trying devices sequentially from a default list containing all of the available CUDA devices in the system. If a specified device ID in the list does not exist, this function will return ::cudaErrorInvalidDevice. If <computeroutput>len</computeroutput> is not 0 and <computeroutput>device_arr</computeroutput> is NULL or if <computeroutput>len</computeroutput> exceeds the number of devices in the system, then ::cudaErrorInvalidValue is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device_arr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- List of devices to try </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Number of devices in specified list</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, ::cudaErrorInvalidDevice \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__DEVICE_1ga5b0c57f32cb245582010c07e952753e6" kindref="member">cudaGetDeviceCount</ref>, <ref refid="group__CUDART__DEVICE_1ga7b63629909800b614427aae92b22d606" kindref="member">cudaSetDevice</ref>, <ref refid="group__CUDART__DEVICE_1ga3b5b6abf4a8eeabb2e3a4ca60a9d26d3" kindref="member">cudaGetDeviceProperties</ref>, <ref refid="group__CUDART__DEVICE_1gab07b3a85443eb322b583aa2e79570c28" kindref="member">cudaSetDeviceFlags</ref>, <ref refid="group__CUDART__DEVICE_1gaa6d5ae4a673c833a8d18fdab5dea3e70" kindref="member">cudaChooseDevice</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="1947" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="1947" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__DEVICE_1gab07b3a85443eb322b583aa2e79570c28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaSetDeviceFlags</definition>
+        <argsstring>(unsigned int flags)</argsstring>
+        <name>cudaSetDeviceFlags</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Sets flags to be used for device executions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Records <computeroutput>flags</computeroutput> as the flags to use when initializing the current device. If no device has been made current to the calling thread, then <computeroutput>flags</computeroutput> will be applied to the initialization of any device initialized by the calling host thread, unless that device has had its initialization flags set explicitly by this or any host thread.</para>
+<para>If the current device has been set and that device has already been initialized then this call will fail with the error ::cudaErrorSetOnActiveProcess. In this case it is necessary to reset <computeroutput>device</computeroutput> using <ref refid="group__CUDART__DEVICE_1gadf472c0854e8464c58659e2bde63eee9" kindref="member">cudaDeviceReset()</ref> before the device&apos;s initialization flags may be set.</para>
+<para>The two LSBs of the <computeroutput>flags</computeroutput> parameter can be used to control how the CPU thread interacts with the OS scheduler when waiting for results from the device.</para>
+<para><itemizedlist>
+<listitem><para>::cudaDeviceScheduleAuto: The default value if the <computeroutput>flags</computeroutput> parameter is zero, uses a heuristic based on the number of active CUDA contexts in the process <computeroutput>C</computeroutput> and the number of logical processors in the system <computeroutput>P</computeroutput>. If <computeroutput>C</computeroutput> &gt; <computeroutput>P</computeroutput>, then CUDA will yield to other OS threads when waiting for the device, otherwise CUDA will not yield while waiting for results and actively spin on the processor. Additionally, on Tegra devices, ::cudaDeviceScheduleAuto uses a heuristic based on the power profile of the platform and may choose ::cudaDeviceScheduleBlockingSync for low-powered devices.</para>
+</listitem><listitem><para>::cudaDeviceScheduleSpin: Instruct CUDA to actively spin when waiting for results from the device. This can decrease latency when waiting for the device, but may lower the performance of CPU threads if they are performing work in parallel with the CUDA thread.</para>
+</listitem><listitem><para>::cudaDeviceScheduleYield: Instruct CUDA to yield its thread when waiting for results from the device. This can increase latency when waiting for the device, but can increase the performance of CPU threads performing work in parallel with the device.</para>
+</listitem><listitem><para>::cudaDeviceScheduleBlockingSync: Instruct CUDA to block the CPU thread on a synchronization primitive when waiting for the device to finish work.</para>
+</listitem><listitem><para>::cudaDeviceBlockingSync: Instruct CUDA to block the CPU thread on a synchronization primitive when waiting for the device to finish work. <linebreak/>
+ <ref refid="deprecated" kindref="compound">Deprecated:</ref> This flag was deprecated as of CUDA 4.0 and replaced with ::cudaDeviceScheduleBlockingSync.</para>
+</listitem><listitem><para>::cudaDeviceMapHost: This flag enables allocating pinned host memory that is accessible to the device. It is implicit for the runtime but may be absent if a context is created using the driver API. If this flag is not set, <ref refid="group__CUDART__MEMORY_1gac03e953b51e1011847c199286de44ac9" kindref="member">cudaHostGetDevicePointer()</ref> will always return a failure code.</para>
+</listitem><listitem><para>::cudaDeviceLmemResizeToMax: Instruct CUDA to not reduce local memory after resizing local memory for a kernel. This can prevent thrashing by local memory allocations when launching many kernels with high local memory usage at the cost of potentially increased memory usage.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Parameters for device operation</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, ::cudaErrorSetOnActiveProcess \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__DEVICE_1ga129ea6446f87d512b19990b0fa2f2331" kindref="member">cudaGetDeviceFlags</ref>, <ref refid="group__CUDART__DEVICE_1ga5b0c57f32cb245582010c07e952753e6" kindref="member">cudaGetDeviceCount</ref>, <ref refid="group__CUDART__DEVICE_1ga33e2490308f833d7fc5edc76ad9c4416" kindref="member">cudaGetDevice</ref>, <ref refid="group__CUDART__DEVICE_1ga3b5b6abf4a8eeabb2e3a4ca60a9d26d3" kindref="member">cudaGetDeviceProperties</ref>, <ref refid="group__CUDART__DEVICE_1ga7b63629909800b614427aae92b22d606" kindref="member">cudaSetDevice</ref>, <ref refid="group__CUDART__DEVICE_1ga8aba0c8655982381e2127b419d17fee4" kindref="member">cudaSetValidDevices</ref>, <ref refid="group__CUDART__DEVICE_1gaa6d5ae4a673c833a8d18fdab5dea3e70" kindref="member">cudaChooseDevice</ref>, ::cuDevicePrimaryCtxSetFlags </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="2016" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="2016" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__DEVICE_1ga129ea6446f87d512b19990b0fa2f2331" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGetDeviceFlags</definition>
+        <argsstring>(unsigned int *flags)</argsstring>
+        <name>cudaGetDeviceFlags</name>
+        <param>
+          <type>unsigned int *</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Gets the flags for the current device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns in <computeroutput>flags</computeroutput> the flags for the current device. If there is a current device for the calling thread, and the device has been initialized or flags have been set on that device specifically, the flags for the device are returned. If there is no current device, but flags have been set for the thread with <ref refid="group__CUDART__DEVICE_1gab07b3a85443eb322b583aa2e79570c28" kindref="member">cudaSetDeviceFlags</ref>, the thread flags are returned. Finally, if there is no current device and no thread flags, the flags for the first device are returned, which may be the default flags. Compare to the behavior of <ref refid="group__CUDART__DEVICE_1gab07b3a85443eb322b583aa2e79570c28" kindref="member">cudaSetDeviceFlags</ref>.</para>
+<para>Typically, the flags returned should match the behavior that will be seen if the calling thread uses a device after this call, without any change to the flags or current device inbetween by this or another thread. Note that if the device is not initialized, it is possible for another thread to change the flags for the current device before it is initialized. Additionally, when using exclusive mode, if this thread has not requested a specific device, it may use a device other than the first device, contrary to the assumption made by this function.</para>
+<para>If a context has been created via the driver API and is current to the calling thread, the flags for that context are always returned.</para>
+<para>Flags returned by this function may specifically include ::cudaDeviceMapHost even though it is not accepted by <ref refid="group__CUDART__DEVICE_1gab07b3a85443eb322b583aa2e79570c28" kindref="member">cudaSetDeviceFlags</ref> because it is implicit in runtime API flags. The reason for this is that the current context may have been created via the driver API in which case the flag is not implicit and may be unset.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Pointer to store the device flags</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidDevice, ::cudaErrorInvalidValue</para>
+</simplesect>
+\notefnerr \note_init_rt \note_callback</para>
+<para><simplesect kind="see"><para><ref refid="group__CUDART__DEVICE_1ga33e2490308f833d7fc5edc76ad9c4416" kindref="member">cudaGetDevice</ref>, <ref refid="group__CUDART__DEVICE_1ga3b5b6abf4a8eeabb2e3a4ca60a9d26d3" kindref="member">cudaGetDeviceProperties</ref>, <ref refid="group__CUDART__DEVICE_1ga7b63629909800b614427aae92b22d606" kindref="member">cudaSetDevice</ref>, <ref refid="group__CUDART__DEVICE_1gab07b3a85443eb322b583aa2e79570c28" kindref="member">cudaSetDeviceFlags</ref>, ::cuCtxGetFlags, ::cuDevicePrimaryCtxGetState </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="2062" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="2062" declcolumn="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>impl_private</para>
+<para>___MANBRIEF___ device management functions of the CUDA runtime API (___CURRENT_FILE___) ___ENDMANBRIEF___</para>
+<para>This section describes the device management functions of the CUDA runtime application programming interface. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

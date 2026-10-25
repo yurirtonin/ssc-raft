@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__CUDART__DRIVER" kind="group">
+    <compoundname>CUDART_DRIVER</compoundname>
+    <title>Interactions with the CUDA Driver API</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>___MANBRIEF___ interactions between CUDA Driver API and CUDA Runtime API (___CURRENT_FILE___) ___ENDMANBRIEF___</para>
+<para>This section describes the interactions between the CUDA Driver API and the CUDA Runtime API</para>
+<sect1 id="group__CUDART__DRIVER_1CUDART_CUDA_primary">
+<title>Primary Contexts</title>
+<para>There exists a one to one relationship between CUDA devices in the CUDA Runtime API and ::CUcontext s in the CUDA Driver API within a process. The specific context which the CUDA Runtime API uses for a device is called the device&apos;s primary context. From the perspective of the CUDA Runtime API, a device and its primary context are synonymous.</para>
+</sect1>
+<sect1 id="group__CUDART__DRIVER_1CUDART_CUDA_init">
+<title>Initialization and Tear-Down</title>
+<para>CUDA Runtime API calls operate on the CUDA Driver API ::CUcontext which is current to to the calling host thread.</para>
+<para>The function <ref refid="group__CUDART__DEVICE_1ga7b63629909800b614427aae92b22d606" kindref="member">cudaSetDevice()</ref> makes the primary context for the specified device current to the calling thread by calling ::cuCtxSetCurrent().</para>
+<para>The CUDA Runtime API will automatically initialize the primary context for a device at the first CUDA Runtime API call which requires an active context. If no ::CUcontext is current to the calling thread when a CUDA Runtime API call which requires an active context is made, then the primary context for a device will be selected, made current to the calling thread, and initialized.</para>
+<para>The context which the CUDA Runtime API initializes will be initialized using the parameters specified by the CUDA Runtime API functions <ref refid="group__CUDART__DEVICE_1gab07b3a85443eb322b583aa2e79570c28" kindref="member">cudaSetDeviceFlags()</ref>, ::cudaD3D9SetDirect3DDevice(), ::cudaD3D10SetDirect3DDevice(), ::cudaD3D11SetDirect3DDevice(), ::cudaGLSetGLDevice(), and ::cudaVDPAUSetVDPAUDevice(). Note that these functions will fail with ::cudaErrorSetOnActiveProcess if they are called when the primary context for the specified device has already been initialized. (or if the current device has already been initialized, in the case of <ref refid="group__CUDART__DEVICE_1gab07b3a85443eb322b583aa2e79570c28" kindref="member">cudaSetDeviceFlags()</ref>).</para>
+<para>Primary contexts will remain active until they are explicitly deinitialized using <ref refid="group__CUDART__DEVICE_1gadf472c0854e8464c58659e2bde63eee9" kindref="member">cudaDeviceReset()</ref>. The function <ref refid="group__CUDART__DEVICE_1gadf472c0854e8464c58659e2bde63eee9" kindref="member">cudaDeviceReset()</ref> will deinitialize the primary context for the calling thread&apos;s current device immediately. The context will remain current to all of the threads that it was current to. The next CUDA Runtime API call on any thread which requires an active context will trigger the reinitialization of that device&apos;s primary context.</para>
+<para>Note that there is no reference counting of the primary context&apos;s lifetime. It is recommended that the primary context not be deinitialized except just before exit or to recover from an unspecified launch failure.</para>
+</sect1>
+<sect1 id="group__CUDART__DRIVER_1CUDART_CUDA_context">
+<title>Context Interoperability</title>
+<para>Note that the use of multiple ::CUcontext s per device within a single process will substantially degrade performance and is strongly discouraged. Instead, it is highly recommended that the implicit one-to-one device-to-context mapping for the process provided by the CUDA Runtime API be used.</para>
+<para>If a non-primary ::CUcontext created by the CUDA Driver API is current to a thread then the CUDA Runtime API calls to that thread will operate on that ::CUcontext, with some exceptions listed below. Interoperability between data types is discussed in the following sections.</para>
+<para>The function <ref refid="group__CUDART__UNIFIED_1gafdc25be0be9b7eed05fa659b80bd82e9" kindref="member">cudaPointerGetAttributes()</ref> will return the error ::cudaErrorIncompatibleDriverContext if the pointer being queried was allocated by a non-primary context. The function <ref refid="group__CUDART__PEER_1ga7443ed162ccf7463a7caf15dc799cc6d" kindref="member">cudaDeviceEnablePeerAccess()</ref> and the rest of the peer access API may not be called when a non-primary ::CUcontext is current. To use the pointer query and peer access APIs with a context created using the CUDA Driver API, it is necessary that the CUDA Driver API be used to access these features.</para>
+<para>All CUDA Runtime API state (e.g, global variables&apos; addresses and values) travels with its underlying ::CUcontext. In particular, if a ::CUcontext is moved from one thread to another then all CUDA Runtime API state will move to that thread as well.</para>
+<para>Please note that attaching to legacy contexts (those with a version of 3010 as returned by ::cuCtxGetApiVersion()) is not possible. The CUDA Runtime will return ::cudaErrorIncompatibleDriverContext in such cases.</para>
+</sect1>
+<sect1 id="group__CUDART__DRIVER_1CUDART_CUDA_stream">
+<title>Interactions between CUstream and cudaStream_t</title>
+<para>The types ::CUstream and ::cudaStream_t are identical and may be used interchangeably.</para>
+</sect1>
+<sect1 id="group__CUDART__DRIVER_1CUDART_CUDA_event">
+<title>Interactions between CUevent and cudaEvent_t</title>
+<para>The types ::CUevent and ::cudaEvent_t are identical and may be used interchangeably.</para>
+</sect1>
+<sect1 id="group__CUDART__DRIVER_1CUDART_CUDA_array">
+<title>Interactions between CUarray and cudaArray_t</title>
+<para>The types ::CUarray and struct ::cudaArray * represent the same data type and may be used interchangeably by casting the two types between each other.</para>
+<para>In order to use a ::CUarray in a CUDA Runtime API function which takes a struct ::cudaArray *, it is necessary to explicitly cast the ::CUarray to a struct ::cudaArray *.</para>
+<para>In order to use a struct ::cudaArray * in a CUDA Driver API function which takes a ::CUarray, it is necessary to explicitly cast the struct ::cudaArray * to a ::CUarray .</para>
+</sect1>
+<sect1 id="group__CUDART__DRIVER_1CUDART_CUDA_graphicsResource">
+<title>Interactions between CUgraphicsResource and cudaGraphicsResource_t</title>
+<para>The types ::CUgraphicsResource and ::cudaGraphicsResource_t represent the same data type and may be used interchangeably by casting the two types between each other.</para>
+<para>In order to use a ::CUgraphicsResource in a CUDA Runtime API function which takes a ::cudaGraphicsResource_t, it is necessary to explicitly cast the ::CUgraphicsResource to a ::cudaGraphicsResource_t.</para>
+<para>In order to use a ::cudaGraphicsResource_t in a CUDA Driver API function which takes a ::CUgraphicsResource, it is necessary to explicitly cast the ::cudaGraphicsResource_t to a ::CUgraphicsResource. </para>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

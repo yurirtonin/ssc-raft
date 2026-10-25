@@ -1,0 +1,1295 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="fdk_8hpp" kind="file" language="C++">
+    <compoundname>fdk.hpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">cufft.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">future</includes>
+    <includes local="no">thread</includes>
+    <includes local="no">time.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">iostream</includes>
+    <includes refid="configs_8hpp" local="yes">common/configs.hpp</includes>
+    <includedby refid="fdk_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/fdk.cu</includedby>
+    <includedby refid="fdk__backproj_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_backproj.cu</includedby>
+    <includedby refid="fdk__convolution_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_convolution.cu</includedby>
+    <includedby refid="fdk__filtering_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_filtering.cu</includedby>
+    <includedby refid="fdk__fourier_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu</includedby>
+    <includedby refid="fdk__process_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_process.cu</includedby>
+    <incdepgraph>
+      <node id="16">
+        <label>cuda_runtime_api.h</label>
+        <link refid="cuda__runtime__api_8h_source"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>cuda_device_runtime_api.h</label>
+      </node>
+      <node id="3">
+        <label>cufft.h</label>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="14">
+        <label>vector_types.h</label>
+      </node>
+      <node id="18">
+        <label>builtin_types.h</label>
+      </node>
+      <node id="5">
+        <label>fstream</label>
+      </node>
+      <node id="13">
+        <label>driver_types.h</label>
+      </node>
+      <node id="11">
+        <label>common/configs.hpp</label>
+        <link refid="configs_8hpp_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>future</label>
+      </node>
+      <node id="9">
+        <label>vector</label>
+      </node>
+      <node id="12">
+        <label>complex.h</label>
+      </node>
+      <node id="1">
+        <label>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp</label>
+        <link refid="fdk_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>time.h</label>
+      </node>
+      <node id="10">
+        <label>iostream</label>
+      </node>
+      <node id="15">
+        <label>cstddef</label>
+      </node>
+      <node id="17">
+        <label>crt/host_defines.h</label>
+      </node>
+      <node id="7">
+        <label>thread</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structLab" prot="public">Lab</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="fdk_8hpp_1a7735206bdfad487588bba2126b806ab7" prot="public" static="no">
+        <name>NUM_THREADS</name>
+        <initializer>128</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="4" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fdk_8hpp_1aa5f0ea3b1cebb628e916284fc7524d1b" prot="public" static="no">
+        <name>EPSILON_GX</name>
+        <initializer>1e-8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="5" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="fdk_8hpp_1ab12415c1512651b1660ad5f4d9570966" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gpu_fdk</definition>
+        <argsstring>(Lab lab, float *recon, float *proj, float *angles, int *gpus, int ndev, double *time)</argsstring>
+        <name>gpu_fdk</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>recon</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>proj</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>gpus</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ndev</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="72" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/fdk.cu" bodystart="23" bodyend="62" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="72" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1a3a1f9aff165e4528b611f55230096df6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void set_process</definition>
+        <argsstring>(Lab lab, int i, Process *process, int n_process, int *gpus, int ndevs)</argsstring>
+        <name>set_process</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type><ref refid="structProcess" kindref="compound">Process</ref> *</type>
+          <declname>process</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_process</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>gpus</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ndevs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="73" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_process.cu" bodystart="16" bodyend="126" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="73" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1a67740522f6735f0edc51cbc6f57f3f39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int memory</definition>
+        <argsstring>(Lab lab, int ndev)</argsstring>
+        <name>memory</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ndev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="76" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_process.cu" bodystart="130" bodyend="162" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="76" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1a03b6fe75824577b9ae0a06541dad9c15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void set_filtering_fft</definition>
+        <argsstring>(Lab lab, float *proj, int n_process, int ndevs, Process *process)</argsstring>
+        <name>set_filtering_fft</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>proj</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_process</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ndevs</declname>
+        </param>
+        <param>
+          <type><ref refid="structProcess" kindref="compound">Process</ref> *</type>
+          <declname>process</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="78" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/fdk.cu" bodystart="108" bodyend="143" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="78" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1a173bf3732be0fec5e944fc1160adf9f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void set_backprojection</definition>
+        <argsstring>(Lab lab, float *recon, float *proj, float *angles, int n_process, int ndevs, Process *process)</argsstring>
+        <name>set_backprojection</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>recon</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>proj</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_process</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ndevs</declname>
+        </param>
+        <param>
+          <type><ref refid="structProcess" kindref="compound">Process</ref> *</type>
+          <declname>process</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="80" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/fdk.cu" bodystart="67" bodyend="103" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="80" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1a11ee0f1d1458f186ee8b94d5f4729740" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void copy_to_gpu_back</definition>
+        <argsstring>(Lab lab, float *proj, float *recon, float *angles, float **c_proj, float **c_recon, float **c_beta, Process process)</argsstring>
+        <name>copy_to_gpu_back</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>proj</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>recon</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>float **</type>
+          <declname>c_proj</declname>
+        </param>
+        <param>
+          <type>float **</type>
+          <declname>c_recon</declname>
+        </param>
+        <param>
+          <type>float **</type>
+          <declname>c_beta</declname>
+        </param>
+        <param>
+          <type><ref refid="structProcess" kindref="compound">Process</ref></type>
+          <declname>process</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="82" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_backproj.cu" bodystart="71" bodyend="121" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="82" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1aa3941d15a0f3297c258b947fb7cc656b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void copy_to_cpu_back</definition>
+        <argsstring>(Lab lab, float *recon, float *c_proj, float *c_recon, float *c_beta, Process process)</argsstring>
+        <name>copy_to_cpu_back</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>recon</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>c_proj</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>c_recon</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>c_beta</declname>
+        </param>
+        <param>
+          <type><ref refid="structProcess" kindref="compound">Process</ref></type>
+          <declname>process</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="83" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_backproj.cu" bodystart="124" bodyend="164" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="83" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1aa75e0cbe0a5d0363f02e062ddfab5e8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void copy_gpu_filter_fft</definition>
+        <argsstring>(Lab lab, float *proj, float **c_proj, cufftComplex **c_signal, float **W, Process process)</argsstring>
+        <name>copy_gpu_filter_fft</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>proj</declname>
+        </param>
+        <param>
+          <type>float **</type>
+          <declname>c_proj</declname>
+        </param>
+        <param>
+          <type>cufftComplex **</type>
+          <declname>c_signal</declname>
+        </param>
+        <param>
+          <type>float **</type>
+          <declname>W</declname>
+        </param>
+        <param>
+          <type><ref refid="structProcess" kindref="compound">Process</ref></type>
+          <declname>process</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="84" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_filtering.cu" bodystart="6" bodyend="86" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="84" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1aedeaa55757254e5e966589c572b9231e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void copy_cpu_filter_fft</definition>
+        <argsstring>(Lab lab, float *proj, float *c_proj, cufftComplex *c_signal, float *c_W, Process process)</argsstring>
+        <name>copy_cpu_filter_fft</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>proj</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>c_proj</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>c_signal</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>c_W</declname>
+        </param>
+        <param>
+          <type><ref refid="structProcess" kindref="compound">Process</ref></type>
+          <declname>process</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="85" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_filtering.cu" bodystart="89" bodyend="127" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="85" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1a67431d3f9fda30e5b90b9b328205c4c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void copy_gpu_filter_conv</definition>
+        <argsstring>(Lab lab, float *proj, float **c_proj, float **c_Q, Process process)</argsstring>
+        <name>copy_gpu_filter_conv</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>proj</declname>
+        </param>
+        <param>
+          <type>float **</type>
+          <declname>c_proj</declname>
+        </param>
+        <param>
+          <type>float **</type>
+          <declname>c_Q</declname>
+        </param>
+        <param>
+          <type><ref refid="structProcess" kindref="compound">Process</ref></type>
+          <declname>process</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="86" column="10" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="86" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1a5cd9f04e07d4510d357073b4fcb028e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void copy_cpu_filter_conv</definition>
+        <argsstring>(float *proj, float *c_proj, float *c_Q, Process process)</argsstring>
+        <name>copy_cpu_filter_conv</name>
+        <param>
+          <type>float *</type>
+          <declname>proj</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>c_proj</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>c_Q</declname>
+        </param>
+        <param>
+          <type><ref refid="structProcess" kindref="compound">Process</ref></type>
+          <declname>process</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="87" column="10" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="87" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1a4aba39f7063523945b6cb2169e077380" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void backprojection</definition>
+        <argsstring>(Lab lab, float *recon, float *proj, float *beta, Process process)</argsstring>
+        <name>backprojection</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>recon</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>proj</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>beta</declname>
+        </param>
+        <param>
+          <type><ref refid="structProcess" kindref="compound">Process</ref></type>
+          <declname>process</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="89" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_backproj.cu" bodystart="167" bodyend="192" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="89" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1ae250cf1fe314ac93b0adcfed005dac13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void backproj</definition>
+        <argsstring>(float *recon, float *proj, float *beta, Lab lab, Process process)</argsstring>
+        <name>backproj</name>
+        <param>
+          <type>float *</type>
+          <declname>recon</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>proj</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>beta</declname>
+        </param>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type><ref refid="structProcess" kindref="compound">Process</ref></type>
+          <declname>process</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="90" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_backproj.cu" bodystart="15" bodyend="68" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="90" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1a348402fa64c15877e8241673b0f6110a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void set_beta</definition>
+        <argsstring>(Lab lab, float *dangles, float *beta)</argsstring>
+        <name>set_beta</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dangles</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>beta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="91" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_backproj.cu" bodystart="196" bodyend="202" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="91" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1aff19f6eb8cf6a0681096b5e04d4ee2c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__device__ void</type>
+        <definition>__device__ void set_recon_idxs</definition>
+        <argsstring>(long long int n, int *i, int *j, int *k, Lab lab)</argsstring>
+        <name>set_recon_idxs</name>
+        <param>
+          <type>long long int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="92" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_backproj.cu" bodystart="205" bodyend="212" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="92" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1a887f977c70334f0daadbc4dcf286ea6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ void</type>
+        <definition>__host__ void fft</definition>
+        <argsstring>(Lab lab, float *proj, cufftComplex *signal, float *W, Process process)</argsstring>
+        <name>fft</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>proj</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>signal</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>W</declname>
+        </param>
+        <param>
+          <type><ref refid="structProcess" kindref="compound">Process</ref></type>
+          <declname>process</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="94" column="19" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" bodystart="8" bodyend="34" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="94" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1a91dfe3ca590bcfba2b4c7605e2232bf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void signal_save</definition>
+        <argsstring>(Lab lab, float *proj, cufftComplex *signal, Process process)</argsstring>
+        <name>signal_save</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>proj</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>signal</declname>
+        </param>
+        <param>
+          <type><ref refid="structProcess" kindref="compound">Process</ref></type>
+          <declname>process</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="96" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" bodystart="37" bodyend="52" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="96" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1af7afb0784f8e91253dc6675de52f32f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void signal_filter</definition>
+        <argsstring>(Lab lab, float *W, cufftComplex *signal, Process process)</argsstring>
+        <name>signal_filter</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>W</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>signal</declname>
+        </param>
+        <param>
+          <type><ref refid="structProcess" kindref="compound">Process</ref></type>
+          <declname>process</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="97" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" bodystart="55" bodyend="65" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="97" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1afc9843e24e30d73f6802eeb68150b488" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void filt_W</definition>
+        <argsstring>(Lab lab, float *W)</argsstring>
+        <name>filt_W</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>W</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="98" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" bodystart="110" bodyend="127" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="98" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1a595b5c2a519ec97755a6b5eeb7955fcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void filt_Ramp</definition>
+        <argsstring>(Lab lab, float *W)</argsstring>
+        <name>filt_Ramp</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>W</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="99" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" bodystart="91" bodyend="108" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="99" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1ad33c26eefa8107716b3e71bb28687200" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void filt_Gaussian</definition>
+        <argsstring>(Lab lab, float *W)</argsstring>
+        <name>filt_Gaussian</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>W</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="100" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" bodystart="129" bodyend="147" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="100" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1acb0f5c09ad649263cd85592bcaae0ce5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void filt_Lorentz</definition>
+        <argsstring>(Lab lab, float *W)</argsstring>
+        <name>filt_Lorentz</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>W</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="101" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" bodystart="149" bodyend="167" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="101" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1a9db01179afd09892f3e92286d2ea7e8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void filt_Cosine</definition>
+        <argsstring>(Lab lab, float *W)</argsstring>
+        <name>filt_Cosine</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>W</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="102" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" bodystart="169" bodyend="186" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="102" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1a27780943daadb8bfb073fc0aee8d8006" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void filt_Rectangle</definition>
+        <argsstring>(Lab lab, float *W)</argsstring>
+        <name>filt_Rectangle</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>W</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="103" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" bodystart="188" bodyend="214" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="103" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1aec3a5e7706a538d9355685ff18b6d7a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void filt_Hann</definition>
+        <argsstring>(Lab lab, float *W)</argsstring>
+        <name>filt_Hann</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>W</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="104" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" bodystart="216" bodyend="234" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="104" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1a85b370cdbc11d1c7b355749d587a48e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void filt_Hamming</definition>
+        <argsstring>(Lab lab, float *W)</argsstring>
+        <name>filt_Hamming</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>W</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="105" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" bodystart="236" bodyend="253" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="105" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1a60fd026eadbc582aa6f99330b30f0ed6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void signal_inv</definition>
+        <argsstring>(Lab lab, float *Q, cufftComplex *signal, Process process)</argsstring>
+        <name>signal_inv</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>Q</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>signal</declname>
+        </param>
+        <param>
+          <type><ref refid="structProcess" kindref="compound">Process</ref></type>
+          <declname>process</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="106" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" bodystart="68" bodyend="77" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="106" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1afcf14206274f773aa98cb218306394e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__device__ void</type>
+        <definition>__device__ void set_filter_idxs</definition>
+        <argsstring>(long long int n, int *i, int *j, int *k, Lab lab, Process process)</argsstring>
+        <name>set_filter_idxs</name>
+        <param>
+          <type>long long int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type><ref refid="structProcess" kindref="compound">Process</ref></type>
+          <declname>process</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="108" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" bodystart="80" bodyend="87" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="108" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1a06f109e16acc967c6ea2f5b6952a9cc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void filtering_conv</definition>
+        <argsstring>(Lab lab, float *proj, float *Q, Process process)</argsstring>
+        <name>filtering_conv</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>proj</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>Q</declname>
+        </param>
+        <param>
+          <type><ref refid="structProcess" kindref="compound">Process</ref></type>
+          <declname>process</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="110" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_convolution.cu" bodystart="43" bodyend="64" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="110" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1a577f1d59adcf62cb69987a8ecdc9923a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void calc_Q</definition>
+        <argsstring>(float *Q, float *proj, Lab lab, Process process)</argsstring>
+        <name>calc_Q</name>
+        <param>
+          <type>float *</type>
+          <declname>Q</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>proj</declname>
+        </param>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type><ref refid="structProcess" kindref="compound">Process</ref></type>
+          <declname>process</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="111" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_convolution.cu" bodystart="67" bodyend="79" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="111" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1a0163cbb3eb055b1d059477d9b337a037" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__device__ float</type>
+        <definition>__device__ float calc_convolution</definition>
+        <argsstring>(float *projection, Lab lab, float X, float Z, float w_max)</argsstring>
+        <name>calc_convolution</name>
+        <param>
+          <type>float *</type>
+          <declname>projection</declname>
+        </param>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>X</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>Z</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>w_max</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="112" column="22" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_convolution.cu" bodystart="83" bodyend="94" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="112" declcolumn="22"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1a5bdd7de11f1b531498d1ebd4051369ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__device__ float</type>
+        <definition>__device__ float integral_of_gx</definition>
+        <argsstring>(float a, float b, float w_max)</argsstring>
+        <name>integral_of_gx</name>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>w_max</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="113" column="22" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_convolution.cu" bodystart="106" bodyend="119" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="113" declcolumn="22"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1a775142902a9e40d951f912520108d38d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__forceinline__ __device__ float</type>
+        <definition>__forceinline__ __device__ float gx</definition>
+        <argsstring>(float x, float w_max)</argsstring>
+        <name>gx</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>w_max</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="114" column="38" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_convolution.cu" bodystart="97" bodyend="103" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="114" declcolumn="38"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk_8hpp_1a871a769b679d2518687063270d5a2b3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__device__ void</type>
+        <definition>__device__ void set_filter_idxs_conv</definition>
+        <argsstring>(long long int n, int *i, int *j, int *k, Lab lab, Process process)</argsstring>
+        <name>set_filter_idxs_conv</name>
+        <param>
+          <type>long long int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type><ref refid="structProcess" kindref="compound">Process</ref></type>
+          <declname>process</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="115" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_convolution.cu" bodystart="122" bodyend="129" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" declline="115" declcolumn="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>RAFT_FDK_CONE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RAFT_FDK_CONE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NUM_THREADS<sp/>128</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EPSILON_GX<sp/>1e-8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cufft.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;future&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;thread&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;common/configs.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="structLab" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{<sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x,y,z;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dx,<sp/>dy,<sp/>dz;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nx,<sp/>ny,<sp/>nz;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>h,v;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dh,<sp/>dv;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nh,<sp/>nv;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>D,<sp/>Dsd;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>beta_max;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dbeta;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nbeta;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fourier;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>filter_type;<sp/></highlight><highlight class="comment">//<sp/>Filter<sp/>Types</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>reg;<sp/></highlight><highlight class="comment">//<sp/>Phase<sp/>Filter<sp/>(Paganin)<sp/>regularization</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>is_slice;<sp/></highlight><highlight class="comment">//<sp/>(bool)<sp/>Reconstruct<sp/>a<sp/>block<sp/>of<sp/>slices<sp/>or<sp/>not</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>slice_recon_start,<sp/>slice_recon_end;<sp/></highlight><highlight class="comment">//<sp/>Slices:<sp/>start<sp/>slice<sp/>=<sp/>slice_recon_start,<sp/>end<sp/>slice<sp/>=<sp/>slice_recon_end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>slice_tomo_start,<sp/>slice_tomo_end;<sp/></highlight><highlight class="comment">//<sp/>Slices:<sp/>start<sp/>slice<sp/>=<sp/>slice_tomo_start,<sp/>end<sp/>slice<sp/>=<sp/>slice_tomo_end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nph,<sp/>padh;<sp/></highlight><highlight class="comment">//<sp/>Padding<sp/>for<sp/>backprojection</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>energy;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rotation_axis_offset;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blocksize;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>padmode;<sp/></highlight><highlight class="comment">//<sp/>Padding<sp/>for<sp/>backprojection</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>npfh,<sp/>padfh,<sp/>padfmode;<sp/></highlight><highlight class="comment">//<sp/>Padding<sp/>for<sp/>filter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Filter<sp/>Types<sp/>definitions</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/><sp/><sp/><sp/>enum<sp/>EType</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>none<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gaussian<sp/><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lorentz<sp/><sp/><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cosine<sp/><sp/><sp/><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rectangle<sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hann<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>5,</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hamming<sp/><sp/><sp/>=<sp/>6,</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ramp<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>7</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}<sp/><ref refid="structLab" kindref="compound">Lab</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">//<sp/>typedef<sp/>struct<sp/>{<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>int<sp/>i,<sp/>i_gpu,<sp/>zi,<sp/>z_filter,<sp/>z_filter_pad;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>long<sp/>long<sp/>int<sp/>n_proj,<sp/>n_recon,<sp/>n_filter,<sp/>n_filter_pad;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>long<sp/>long<sp/>int<sp/>idx_proj,<sp/>idx_proj_max,<sp/>idx_recon,<sp/>idx_filter,<sp/>idx_filter_pad;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>float<sp/>z_ph,<sp/>z_det;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">//<sp/>}<sp/>Process;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">//FDK<sp/>Functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>gpu_fdk(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*recon,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*proj,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>gpus,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ndev,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*time);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_process(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/><ref refid="structProcess" kindref="compound">Process</ref>*<sp/>process,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_process,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>gpus,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ndevs);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>void<sp/>set_process_slices(Lab<sp/>lab,<sp/>int<sp/>i,<sp/>Process*<sp/>process,<sp/>int<sp/>n_process,<sp/>int*<sp/>gpus,<sp/>int<sp/>ndevs);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>void<sp/>set_process_slices_2(Lab<sp/>lab,<sp/>int<sp/>i,<sp/>Process*<sp/>process,<sp/>int<sp/>n_process,<sp/>int*<sp/>gpus,<sp/>int<sp/>ndevs);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>memory(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ndev);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_filtering_fft(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>proj,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_process,<sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ndevs,<sp/><ref refid="structProcess" kindref="compound">Process</ref>*<sp/>process);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>void<sp/>set_filtering_conv(Lab<sp/>lab,<sp/>float*<sp/>proj,<sp/>int<sp/>n_process,<sp/><sp/>int<sp/>ndevs,<sp/>Process*<sp/>process);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_backprojection(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>recon,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>proj,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_process,<sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ndevs,<sp/><ref refid="structProcess" kindref="compound">Process</ref>*<sp/>process);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>copy_to_gpu_back(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>proj,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>recon,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">**<sp/>c_proj,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">**<sp/>c_recon,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">**<sp/>c_beta,<sp/><ref refid="structProcess" kindref="compound">Process</ref><sp/>process);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>copy_to_cpu_back(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>recon,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>c_proj,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>c_recon,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>c_beta,<sp/><ref refid="structProcess" kindref="compound">Process</ref><sp/>process);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>copy_gpu_filter_fft(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>proj,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">**<sp/>c_proj,<sp/>cufftComplex**<sp/>c_signal,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">**<sp/>W,<sp/><ref refid="structProcess" kindref="compound">Process</ref><sp/>process);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>copy_cpu_filter_fft(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>proj,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>c_proj,<sp/>cufftComplex*<sp/>c_signal,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>c_W,<sp/><sp/><ref refid="structProcess" kindref="compound">Process</ref><sp/>process);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>copy_gpu_filter_conv(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>proj,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">**<sp/>c_proj,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">**<sp/>c_Q,<sp/><ref refid="structProcess" kindref="compound">Process</ref><sp/>process)<sp/>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>copy_cpu_filter_conv(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>proj,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>c_proj,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>c_Q,<sp/><ref refid="structProcess" kindref="compound">Process</ref><sp/>process);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>backprojection(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>recon,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>proj,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>beta,<sp/><sp/><ref refid="structProcess" kindref="compound">Process</ref><sp/>process);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>backproj(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>recon,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>proj,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>beta,<sp/><ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/><ref refid="structProcess" kindref="compound">Process</ref><sp/>process);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_beta(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*dangles,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>beta);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>__device__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_recon_idxs(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>i,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*j,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>k,<sp/><ref refid="structLab" kindref="compound">Lab</ref><sp/>lab);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>__host__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>fft(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>proj,<sp/>cufftComplex*<sp/>signal,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>W,<sp/><ref refid="structProcess" kindref="compound">Process</ref><sp/>process);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>signal_save(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>proj,<sp/>cufftComplex*<sp/>signal,<sp/><ref refid="structProcess" kindref="compound">Process</ref><sp/>process);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>signal_filter(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>W,<sp/>cufftComplex*<sp/>signal,<sp/><ref refid="structProcess" kindref="compound">Process</ref><sp/>process);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>filt_W(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>W);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>filt_Ramp(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>W);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>filt_Gaussian(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>W);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>filt_Lorentz(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>W);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>filt_Cosine(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>W);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>filt_Rectangle(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>W);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>filt_Hann(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>W);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>filt_Hamming(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>W);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>signal_inv(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>Q,<sp/>cufftComplex*<sp/>signal,<sp/><ref refid="structProcess" kindref="compound">Process</ref><sp/>process);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>__device__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_filter_idxs(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>i,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*j,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>k,<sp/><ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/><ref refid="structProcess" kindref="compound">Process</ref><sp/>process);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>filtering_conv(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>proj,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>Q,<sp/><ref refid="structProcess" kindref="compound">Process</ref><sp/>process);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>calc_Q(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>Q,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>proj,<sp/><ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/><ref refid="structProcess" kindref="compound">Process</ref><sp/>process);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>__device__<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>calc_convolution(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>projection,<sp/><ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>X,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Z,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>w_max);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>__device__<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>integral_of_gx(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>b,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>w_max);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline__<sp/>__device__<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>gx(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>w_max);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>__device__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_filter_idxs_conv(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>i,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*j,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>k,<sp/><ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/><ref refid="structProcess" kindref="compound">Process</ref><sp/>process);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp"/>
+  </compounddef>
+</doxygen>

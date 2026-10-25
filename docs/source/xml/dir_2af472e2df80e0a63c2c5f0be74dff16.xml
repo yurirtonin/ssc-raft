@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_2af472e2df80e0a63c2c5f0be74dff16" kind="dir">
+    <compoundname>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries</compoundname>
+    <innerdir refid="dir_31eb10c1c341c063f0cdbf07e8e7cab8">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam</innerdir>
+    <innerdir refid="dir_cf1df0deb6732595e4129e353f01cb59">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/"/>
+  </compounddef>
+</doxygen>

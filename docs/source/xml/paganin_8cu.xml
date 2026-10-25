@@ -1,0 +1,378 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="paganin_8cu" kind="file" language="C++">
+    <compoundname>paganin.cu</compoundname>
+    <includes refid="filters_8hpp" local="yes">processing/filters.hpp</includes>
+    <includes refid="processing_8hpp" local="yes">processing/processing.hpp</includes>
+    <includes refid="opt_8hpp" local="yes">common/opt.hpp</includes>
+    <incdepgraph>
+      <node id="32">
+        <label>helper_cuda.h</label>
+        <link refid="helper__cuda_8h_source"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>cuda_runtime_api.h</label>
+        <link refid="cuda__runtime__api_8h_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>operations.hpp</label>
+        <link refid="operations_8hpp_source"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>limits</label>
+      </node>
+      <node id="13">
+        <label>cuda_device_runtime_api.h</label>
+      </node>
+      <node id="35">
+        <label>helper_string.h</label>
+        <link refid="helper__string_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>assert.h</label>
+      </node>
+      <node id="21">
+        <label>cstdint</label>
+      </node>
+      <node id="8">
+        <label>cufft.h</label>
+      </node>
+      <node id="33">
+        <label>stdint.h</label>
+      </node>
+      <node id="34">
+        <label>stdlib.h</label>
+      </node>
+      <node id="42">
+        <label>cuda_runtime.h</label>
+      </node>
+      <node id="20">
+        <label>cassert</label>
+      </node>
+      <node id="6">
+        <label>vector_types.h</label>
+      </node>
+      <node id="24">
+        <label>string</label>
+      </node>
+      <node id="12">
+        <label>builtin_types.h</label>
+      </node>
+      <node id="30">
+        <label>common/logerror.hpp</label>
+        <link refid="logerror_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>fstream</label>
+      </node>
+      <node id="3">
+        <label>driver_types.h</label>
+      </node>
+      <node id="4">
+        <label>common/configs.hpp</label>
+        <link refid="configs_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>complex.hpp</label>
+        <link refid="complex_8hpp"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>string.h</label>
+      </node>
+      <node id="18">
+        <label>cstdio</label>
+      </node>
+      <node id="15">
+        <label>future</label>
+      </node>
+      <node id="41">
+        <label>common/opt.hpp</label>
+        <link refid="opt_8hpp"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>cuda_fp16.h</label>
+      </node>
+      <node id="25">
+        <label>vector</label>
+      </node>
+      <node id="5">
+        <label>complex.h</label>
+      </node>
+      <node id="23">
+        <label>sstream</label>
+      </node>
+      <node id="28">
+        <label>cuComplex.h</label>
+      </node>
+      <node id="39">
+        <label>math.h</label>
+      </node>
+      <node id="1">
+        <label>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/phase/kernels/paganin.cu</label>
+        <link refid="paganin_8cu"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>iostream</label>
+      </node>
+      <node id="37">
+        <label>strings.h</label>
+      </node>
+      <node id="7">
+        <label>cstddef</label>
+      </node>
+      <node id="11">
+        <label>crt/host_defines.h</label>
+      </node>
+      <node id="19">
+        <label>cuda.h</label>
+      </node>
+      <node id="17">
+        <label>csignal</label>
+      </node>
+      <node id="16">
+        <label>common/types.hpp</label>
+        <link refid="types_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>processing/processing.hpp</label>
+        <link refid="processing_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>processing/filters.hpp</label>
+        <link refid="filters_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;processing/filters.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;processing/processing.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="opt_8hpp" kindref="compound">common/opt.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>contrast_enhance::multiplication(cufftComplex<sp/>*a,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*b,<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">cufftComplex<sp/>*ans,<sp/>dim3<sp/>size)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/><sp/>=<sp/>threadIdx.x<sp/>+<sp/>blockIdx.x*blockDim.x;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/><sp/>=<sp/>threadIdx.y<sp/>+<sp/>blockIdx.y*blockDim.y;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/><sp/>=<sp/>threadIdx.z<sp/>+<sp/>blockIdx.z*blockDim.z;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ind<sp/><sp/><sp/>=<sp/>size.x<sp/>*<sp/>j<sp/>+<sp/>i;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>size.y<sp/>*<sp/>size.x<sp/>*<sp/>k<sp/>+<sp/>ind;<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>(i<sp/>&gt;=<sp/>size.x)<sp/>||<sp/>(j<sp/>&gt;=<sp/>size.y)<sp/>||<sp/>(k<sp/>&gt;=<sp/>size.z))<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;<sp/><sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>ans[index].x<sp/>=<sp/>a[index].x<sp/>*<sp/>b[ind]<sp/>/<sp/>(<sp/>size.x<sp/>*<sp/>size.y<sp/>);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>ans[index].y<sp/>=<sp/>a[index].y<sp/>*<sp/>b[ind]<sp/>/<sp/>(<sp/>size.x<sp/>*<sp/>size.y<sp/>);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>contrast_enhance::paganinKernel(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*kernel,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>beta_delta,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>wavelength,<sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pixel_objx,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pixel_objy,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z2,<sp/>dim3<sp/>size)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Version<sp/>of<sp/>Paganin<sp/>by<sp/>frames<sp/>published<sp/>by<sp/>Paganin<sp/>et<sp/>al<sp/>(2002)</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/><sp/><sp/><sp/>DOI:10.1046/j.1365-2818.2002.01010.x<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>blockIdx.x*blockDim.x<sp/>+<sp/>threadIdx.x;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>blockIdx.y*blockDim.y<sp/>+<sp/>threadIdx.y;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>blockIdx.z*blockDim.z<sp/>+<sp/>threadIdx.z;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ind<sp/><sp/><sp/>=<sp/>size.x<sp/>*<sp/>j<sp/>+<sp/>i;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>gamma<sp/><sp/>=<sp/>wavelength<sp/>*<sp/>z2<sp/>/<sp/>(<sp/>4.0f<sp/>*<sp/>float(M_PI)<sp/>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(i<sp/>&gt;=<sp/>size.x)<sp/>||<sp/>(j<sp/>&gt;=<sp/>size.y)<sp/>||<sp/>(k<sp/>&gt;=<sp/>1)<sp/>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Reciprocal<sp/>grid<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>wx<sp/>=<sp/>fminf(<sp/>i,<sp/>size.x<sp/>-<sp/>i<sp/>)<sp/>/<sp/>(float)size.x;<sp/><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>wy<sp/>=<sp/>fminf(<sp/>j,<sp/>size.y<sp/>-<sp/>j<sp/>)<sp/>/<sp/>(float)size.y;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>wx<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>wx<sp/>/<sp/>pixel_objx;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>wy<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>wy<sp/>/<sp/>pixel_objy;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>kernel[ind]<sp/><sp/>=<sp/>1.0f<sp/>/<sp/>(<sp/>beta_delta<sp/>+<sp/>gamma<sp/>*<sp/>(wx*wx<sp/>+<sp/>wy*wy)<sp/>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>contrast_enhance::contrast_paganin_based_Kernel(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*kernel,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>regularization,<sp/>dim3<sp/>size)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>blockIdx.x*blockDim.x<sp/>+<sp/>threadIdx.x;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>blockIdx.y*blockDim.y<sp/>+<sp/>threadIdx.y;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>blockIdx.z*blockDim.z<sp/>+<sp/>threadIdx.z;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ind<sp/><sp/><sp/>=<sp/>size.x<sp/>*<sp/>j<sp/>+<sp/>i;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(i<sp/>&gt;=<sp/>size.x)<sp/>||<sp/>(j<sp/>&gt;=<sp/>size.y)<sp/>||<sp/>(k<sp/>&gt;=<sp/>1)<sp/>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>hx<sp/>=<sp/>2.0f<sp/>/<sp/>size.x;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>hy<sp/>=<sp/>2.0f<sp/>/<sp/>size.y;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Reciprocal<sp/>grid<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>wx<sp/>=<sp/>fminf(<sp/>i,<sp/>size.x<sp/>-<sp/>i<sp/>)<sp/>/<sp/>(float)size.x;<sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>wy<sp/>=<sp/>fminf(<sp/>j,<sp/>size.y<sp/>-<sp/>j<sp/>)<sp/>/<sp/>(float)size.y;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>wx<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>wx<sp/>/<sp/>hx;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>wy<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>wy<sp/>/<sp/>hy;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>kernel[ind]<sp/><sp/>=<sp/>1.0f<sp/>/<sp/>(<sp/>1.0f<sp/>+<sp/>regularization<sp/>*<sp/>(wx*wx<sp/>+<sp/>wy*wy)<sp/>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/phase/kernels/paganin.cu"/>
+  </compounddef>
+</doxygen>

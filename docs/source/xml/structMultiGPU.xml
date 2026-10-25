@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structMultiGPU" kind="struct" language="C++" prot="public">
+    <compoundname>MultiGPU</compoundname>
+    <derivedcompoundref refid="structMImage" prot="public" virt="non-virtual">MImage&lt; Type &gt;</derivedcompoundref>
+    <includes refid="types_8hpp" local="no">types.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structMultiGPU_1aecb426981411011716eaf3c12eecaf62" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int MultiGPU::ngpus</definition>
+        <argsstring></argsstring>
+        <name>ngpus</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="814" column="15" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="814" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMultiGPU_1a859094ce85b69e765dcfc5ecfe108ea3" prot="public" static="no" mutable="no">
+        <type>const std::vector&lt; int &gt;</type>
+        <definition>const std::vector&lt;int&gt; MultiGPU::gpuindices</definition>
+        <argsstring></argsstring>
+        <name>gpuindices</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="815" column="23" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="815" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structMultiGPU_1a8791ce9d8df5c43808f5764d2b44ee20" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MultiGPU::MultiGPU</definition>
+        <argsstring>(const std::vector&lt; int &gt; &amp;gpus)</argsstring>
+        <name>MultiGPU</name>
+        <param>
+          <type>const std::vector&lt; int &gt; &amp;</type>
+          <declname>gpus</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="812" column="5" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="812" bodyend="812"/>
+      </memberdef>
+      <memberdef kind="function" id="structMultiGPU_1aa08bf8bdc749d99f1a926dfb7a99a8d8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MultiGPU::Set</definition>
+        <argsstring>(int g)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>int</type>
+          <declname>g</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="817" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="817" bodyend="817"/>
+      </memberdef>
+      <memberdef kind="function" id="structMultiGPU_1af4b1cba87047f5acbabdc59148b18e4f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int MultiGPU::GetN</definition>
+        <argsstring>() const</argsstring>
+        <name>GetN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="818" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="818" bodyend="818"/>
+      </memberdef>
+      <memberdef kind="function" id="structMultiGPU_1ab24c11946b9a61975510052c946ac816" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MultiGPU::SyncDevices</definition>
+        <argsstring>()</argsstring>
+        <name>SyncDevices</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="819" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="819" bodyend="824"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Base class for multigpu arrays. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MultiGPU</label>
+        <link refid="structMultiGPU"/>
+      </node>
+      <node id="2">
+        <label>MImage&lt; Type &gt;</label>
+        <link refid="structMImage"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="811" column="1" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="811" bodyend="825"/>
+    <listofallmembers>
+      <member refid="structMultiGPU_1af4b1cba87047f5acbabdc59148b18e4f" prot="public" virt="non-virtual"><scope>MultiGPU</scope><name>GetN</name></member>
+      <member refid="structMultiGPU_1a859094ce85b69e765dcfc5ecfe108ea3" prot="public" virt="non-virtual"><scope>MultiGPU</scope><name>gpuindices</name></member>
+      <member refid="structMultiGPU_1a8791ce9d8df5c43808f5764d2b44ee20" prot="public" virt="non-virtual"><scope>MultiGPU</scope><name>MultiGPU</name></member>
+      <member refid="structMultiGPU_1aecb426981411011716eaf3c12eecaf62" prot="public" virt="non-virtual"><scope>MultiGPU</scope><name>ngpus</name></member>
+      <member refid="structMultiGPU_1aa08bf8bdc749d99f1a926dfb7a99a8d8" prot="public" virt="non-virtual"><scope>MultiGPU</scope><name>Set</name></member>
+      <member refid="structMultiGPU_1ab24c11946b9a61975510052c946ac816" prot="public" virt="non-virtual"><scope>MultiGPU</scope><name>SyncDevices</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

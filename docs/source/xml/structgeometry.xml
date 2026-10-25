@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structgeometry" kind="struct" language="C++" prot="public">
+    <compoundname>geometry</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgeometry_1ad8334e60935197d1152d3c1422be3142" prot="public" static="no" mutable="no">
+        <type><ref refid="structcoordinates" kindref="compound">coord</ref></type>
+        <definition>coord geometry::detector_pixel</definition>
+        <argsstring></argsstring>
+        <name>detector_pixel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="101" column="11" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgeometry_1a7af688c0133f70572dfe406e780643b9" prot="public" static="no" mutable="no">
+        <type><ref refid="structcoordinates" kindref="compound">coord</ref></type>
+        <definition>coord geometry::obj_pixel</definition>
+        <argsstring></argsstring>
+        <name>obj_pixel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="101" column="26" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgeometry_1a12d117abaedde70b8494965595cf3ca0" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float geometry::z1</definition>
+        <argsstring></argsstring>
+        <name>z1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="102" column="11" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgeometry_1ac93e8f2dc343edca602bf5e311ebc33f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float geometry::z2</definition>
+        <argsstring></argsstring>
+        <name>z2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="102" column="14" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgeometry_1a32e52ebfe3e167cf3d945617ad81c610" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float geometry::magnitude</definition>
+        <argsstring></argsstring>
+        <name>magnitude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="102" column="17" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgeometry_1a3dcf52243730a1d2060bdd315e9b1c7b" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float geometry::energy</definition>
+        <argsstring></argsstring>
+        <name>energy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="102" column="27" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgeometry_1a6d00037074418a7248b732ca9786f0a8" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float geometry::wavelength</definition>
+        <argsstring></argsstring>
+        <name>wavelength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="102" column="34" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>geometry</label>
+        <link refid="structgeometry"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>detector_pixel</edgelabel>
+          <edgelabel>obj_pixel</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>coordinates</label>
+        <link refid="structcoordinates"/>
+      </node>
+    </collaborationgraph>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="98" column="1" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="99" bodyend="103"/>
+    <listofallmembers>
+      <member refid="structgeometry_1ad8334e60935197d1152d3c1422be3142" prot="public" virt="non-virtual"><scope>geometry</scope><name>detector_pixel</name></member>
+      <member refid="structgeometry_1a3dcf52243730a1d2060bdd315e9b1c7b" prot="public" virt="non-virtual"><scope>geometry</scope><name>energy</name></member>
+      <member refid="structgeometry_1a32e52ebfe3e167cf3d945617ad81c610" prot="public" virt="non-virtual"><scope>geometry</scope><name>magnitude</name></member>
+      <member refid="structgeometry_1a7af688c0133f70572dfe406e780643b9" prot="public" virt="non-virtual"><scope>geometry</scope><name>obj_pixel</name></member>
+      <member refid="structgeometry_1a6d00037074418a7248b732ca9786f0a8" prot="public" virt="non-virtual"><scope>geometry</scope><name>wavelength</name></member>
+      <member refid="structgeometry_1a12d117abaedde70b8494965595cf3ca0" prot="public" virt="non-virtual"><scope>geometry</scope><name>z1</name></member>
+      <member refid="structgeometry_1ac93e8f2dc343edca602bf5e311ebc33f" prot="public" virt="non-virtual"><scope>geometry</scope><name>z2</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

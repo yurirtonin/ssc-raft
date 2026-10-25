@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structRingsFilter" kind="struct" language="C++" prot="public">
+    <compoundname>RingsFilter</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structRingsFilter_1acd084d048eb67b3ff2f2f35b2c197841" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RingsFilter::method</definition>
+        <argsstring></argsstring>
+        <name>method</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="133" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structRingsFilter_1ab7d98b67c0502af237c1057e85c3254c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RingsFilter::rings_block</definition>
+        <argsstring></argsstring>
+        <name>rings_block</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="134" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structRingsFilter_1a5d425aa7cad8d1fb136905129b115bba" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float RingsFilter::rings_lambda</definition>
+        <argsstring></argsstring>
+        <name>rings_lambda</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="135" column="11" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="130" column="1" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="131" bodyend="136"/>
+    <listofallmembers>
+      <member refid="structRingsFilter_1acd084d048eb67b3ff2f2f35b2c197841" prot="public" virt="non-virtual"><scope>RingsFilter</scope><name>method</name></member>
+      <member refid="structRingsFilter_1ab7d98b67c0502af237c1057e85c3254c" prot="public" virt="non-virtual"><scope>RingsFilter</scope><name>rings_block</name></member>
+      <member refid="structRingsFilter_1a5d425aa7cad8d1fb136905129b115bba" prot="public" virt="non-virtual"><scope>RingsFilter</scope><name>rings_lambda</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

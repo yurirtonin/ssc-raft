@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__CUDART__THREAD__DEPRECATED" kind="group">
+    <compoundname>CUDART_THREAD_DEPRECATED</compoundname>
+    <title>Thread Management [DEPRECATED]</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__CUDART__THREAD__DEPRECATED_1ga80847bfa8d02fd06ce8321ba64ef7297" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__CUDA_DEPRECATED __host__ cudaError_t CUDARTAPI</type>
+        <definition>__CUDA_DEPRECATED __host__ cudaError_t CUDARTAPI cudaThreadExit</definition>
+        <argsstring>(void)</argsstring>
+        <name>cudaThreadExit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Exit and clean up from CUDA launches. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000001"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para>
+<para>Note that this function is deprecated because its name does not reflect its behavior. Its functionality is identical to the non-deprecated function <ref refid="group__CUDART__DEVICE_1gadf472c0854e8464c58659e2bde63eee9" kindref="member">cudaDeviceReset()</ref>, which should be used instead.</para>
+<para>Explicitly destroys all cleans up all resources associated with the current device in the current process. Any subsequent API call to this device will reinitialize the device.</para>
+<para>Note that this function will reset the device immediately. It is the caller&apos;s responsibility to ensure that the device is not being accessed by any other host threads from the process when this function is called.</para>
+<para><simplesect kind="return"><para>::cudaSuccess \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__DEVICE_1gadf472c0854e8464c58659e2bde63eee9" kindref="member">cudaDeviceReset</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="931" column="57" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="931" declcolumn="57"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__THREAD__DEPRECATED_1ga1e8ddca5abc07d1074bc54a32ef20052" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__CUDA_DEPRECATED __host__ cudaError_t CUDARTAPI</type>
+        <definition>__CUDA_DEPRECATED __host__ cudaError_t CUDARTAPI cudaThreadSynchronize</definition>
+        <argsstring>(void)</argsstring>
+        <name>cudaThreadSynchronize</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Wait for compute device to finish. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000002"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para>
+<para>Note that this function is deprecated because its name does not reflect its behavior. Its functionality is similar to the non-deprecated function <ref refid="group__CUDART__DEVICE_1gabad4c7a01961e63aa4744ce597cfaf1d" kindref="member">cudaDeviceSynchronize()</ref>, which should be used instead.</para>
+<para>Blocks until the device has completed all preceding requested tasks. <ref refid="group__CUDART__THREAD__DEPRECATED_1ga1e8ddca5abc07d1074bc54a32ef20052" kindref="member">cudaThreadSynchronize()</ref> returns an error if one of the preceding tasks has failed. If the ::cudaDeviceScheduleBlockingSync flag was set for this device, the host thread will block until the device has finished its work.</para>
+<para><simplesect kind="return"><para>::cudaSuccess \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__DEVICE_1gabad4c7a01961e63aa4744ce597cfaf1d" kindref="member">cudaDeviceSynchronize</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="957" column="57" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="957" declcolumn="57"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__THREAD__DEPRECATED_1gad2569ce4d18e725e6045025a0c446ca4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__CUDA_DEPRECATED __host__ cudaError_t CUDARTAPI</type>
+        <definition>__CUDA_DEPRECATED __host__ cudaError_t CUDARTAPI cudaThreadSetLimit</definition>
+        <argsstring>(enum cudaLimit limit, size_t value)</argsstring>
+        <name>cudaThreadSetLimit</name>
+        <param>
+          <type>enum cudaLimit</type>
+          <declname>limit</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Set resource limits. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000003"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para>
+<para>Note that this function is deprecated because its name does not reflect its behavior. Its functionality is identical to the non-deprecated function <ref refid="group__CUDART__DEVICE_1ga2f463a1b29df6299944e0c1004a26f89" kindref="member">cudaDeviceSetLimit()</ref>, which should be used instead.</para>
+<para>Setting <computeroutput>limit</computeroutput> to <computeroutput>value</computeroutput> is a request by the application to update the current limit maintained by the device. The driver is free to modify the requested value to meet h/w requirements (this could be clamping to minimum or maximum values, rounding up to nearest element size, etc). The application can use <ref refid="group__CUDART__THREAD__DEPRECATED_1ga78b9a2cfcf2cb0bf84abd5c0c83b8a45" kindref="member">cudaThreadGetLimit()</ref> to find out exactly what the limit has been set to.</para>
+<para>Setting each ::cudaLimit has its own specific restrictions, so each is discussed here.</para>
+<para><itemizedlist>
+<listitem><para>::cudaLimitStackSize controls the stack size of each GPU thread.</para>
+</listitem><listitem><para>::cudaLimitPrintfFifoSize controls the size of the shared FIFO used by the ::printf() device system call. Setting ::cudaLimitPrintfFifoSize must be performed before launching any kernel that uses the ::printf() device system call, otherwise ::cudaErrorInvalidValue will be returned.</para>
+</listitem><listitem><para>::cudaLimitMallocHeapSize controls the size of the heap used by the ::malloc() and ::free() device system calls. Setting ::cudaLimitMallocHeapSize must be performed before launching any kernel that uses the ::malloc() or ::free() device system calls, otherwise ::cudaErrorInvalidValue will be returned.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>limit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Limit to set </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Size in bytes of limit</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorUnsupportedLimit, ::cudaErrorInvalidValue \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__DEVICE_1ga2f463a1b29df6299944e0c1004a26f89" kindref="member">cudaDeviceSetLimit</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="1006" column="57" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="1006" declcolumn="57"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__THREAD__DEPRECATED_1ga78b9a2cfcf2cb0bf84abd5c0c83b8a45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__CUDA_DEPRECATED __host__ cudaError_t CUDARTAPI</type>
+        <definition>__CUDA_DEPRECATED __host__ cudaError_t CUDARTAPI cudaThreadGetLimit</definition>
+        <argsstring>(size_t *pValue, enum cudaLimit limit)</argsstring>
+        <name>cudaThreadGetLimit</name>
+        <param>
+          <type>size_t *</type>
+          <declname>pValue</declname>
+        </param>
+        <param>
+          <type>enum cudaLimit</type>
+          <declname>limit</declname>
+        </param>
+        <briefdescription>
+<para>Returns resource limits. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000004"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para>
+<para>Note that this function is deprecated because its name does not reflect its behavior. Its functionality is identical to the non-deprecated function <ref refid="group__CUDART__DEVICE_1ga2c4a5358355c4bc76824c847d81de8f8" kindref="member">cudaDeviceGetLimit()</ref>, which should be used instead.</para>
+<para>Returns in <computeroutput>*pValue</computeroutput> the current size of <computeroutput>limit</computeroutput>. The supported ::cudaLimit values are:<itemizedlist>
+<listitem><para>::cudaLimitStackSize: stack size of each GPU thread;</para>
+</listitem><listitem><para>::cudaLimitPrintfFifoSize: size of the shared FIFO used by the ::printf() device system call.</para>
+</listitem><listitem><para>::cudaLimitMallocHeapSize: size of the heap used by the ::malloc() and ::free() device system calls;</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>limit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Limit to query </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returned size in bytes of limit</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorUnsupportedLimit, ::cudaErrorInvalidValue \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__DEVICE_1ga2c4a5358355c4bc76824c847d81de8f8" kindref="member">cudaDeviceGetLimit</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="1039" column="57" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="1039" declcolumn="57"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__THREAD__DEPRECATED_1ga58c01c5f234a7de23df1cb4773cc7825" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__CUDA_DEPRECATED __host__ cudaError_t CUDARTAPI</type>
+        <definition>__CUDA_DEPRECATED __host__ cudaError_t CUDARTAPI cudaThreadGetCacheConfig</definition>
+        <argsstring>(enum cudaFuncCache *pCacheConfig)</argsstring>
+        <name>cudaThreadGetCacheConfig</name>
+        <param>
+          <type>enum cudaFuncCache *</type>
+          <declname>pCacheConfig</declname>
+        </param>
+        <briefdescription>
+<para>Returns the preferred cache configuration for the current device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000005"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para>
+<para>Note that this function is deprecated because its name does not reflect its behavior. Its functionality is identical to the non-deprecated function <ref refid="group__CUDART__DEVICE_1gaf4b5597c316c70af59499dde077b9345" kindref="member">cudaDeviceGetCacheConfig()</ref>, which should be used instead.</para>
+<para>On devices where the L1 cache and shared memory use the same hardware resources, this returns through <computeroutput>pCacheConfig</computeroutput> the preferred cache configuration for the current device. This is only a preference. The runtime will use the requested configuration if possible, but it is free to choose a different configuration if required to execute functions.</para>
+<para>This will return a <computeroutput>pCacheConfig</computeroutput> of ::cudaFuncCachePreferNone on devices where the size of the L1 cache and shared memory are fixed.</para>
+<para>The supported cache configurations are:<itemizedlist>
+<listitem><para>::cudaFuncCachePreferNone: no preference for shared memory or L1 (default)</para>
+</listitem><listitem><para>::cudaFuncCachePreferShared: prefer larger shared memory and smaller L1 cache</para>
+</listitem><listitem><para>::cudaFuncCachePreferL1: prefer larger L1 cache and smaller shared memory</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pCacheConfig</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returned cache configuration</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__DEVICE_1gaf4b5597c316c70af59499dde077b9345" kindref="member">cudaDeviceGetCacheConfig</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="1075" column="57" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="1075" declcolumn="57"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__THREAD__DEPRECATED_1ga1614c381e97f6aa29ff5c33d7c5eb5c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__CUDA_DEPRECATED __host__ cudaError_t CUDARTAPI</type>
+        <definition>__CUDA_DEPRECATED __host__ cudaError_t CUDARTAPI cudaThreadSetCacheConfig</definition>
+        <argsstring>(enum cudaFuncCache cacheConfig)</argsstring>
+        <name>cudaThreadSetCacheConfig</name>
+        <param>
+          <type>enum cudaFuncCache</type>
+          <declname>cacheConfig</declname>
+        </param>
+        <briefdescription>
+<para>Sets the preferred cache configuration for the current device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000006"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para>
+<para>Note that this function is deprecated because its name does not reflect its behavior. Its functionality is identical to the non-deprecated function <ref refid="group__CUDART__DEVICE_1ga4749a277602c902676e092c0c446ace4" kindref="member">cudaDeviceSetCacheConfig()</ref>, which should be used instead.</para>
+<para>On devices where the L1 cache and shared memory use the same hardware resources, this sets through <computeroutput>cacheConfig</computeroutput> the preferred cache configuration for the current device. This is only a preference. The runtime will use the requested configuration if possible, but it is free to choose a different configuration if required to execute the function. Any function preference set via <ref refid="group__CUDART__EXECUTION_1ga75ebd65ac35ab892628fbda45bf13372" kindref="member">cudaFuncSetCacheConfig (C API)</ref> or cudaFuncSetCacheConfig (C++ API) will be preferred over this device-wide setting. Setting the device-wide cache configuration to ::cudaFuncCachePreferNone will cause subsequent kernel launches to prefer to not change the cache configuration unless required to launch the kernel.</para>
+<para>This setting does nothing on devices where the size of the L1 cache and shared memory are fixed.</para>
+<para>Launching a kernel with a different preference than the most recent preference setting may insert a device-side synchronization point.</para>
+<para>The supported cache configurations are:<itemizedlist>
+<listitem><para>::cudaFuncCachePreferNone: no preference for shared memory or L1 (default)</para>
+</listitem><listitem><para>::cudaFuncCachePreferShared: prefer larger shared memory and smaller L1 cache</para>
+</listitem><listitem><para>::cudaFuncCachePreferL1: prefer larger L1 cache and smaller shared memory</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cacheConfig</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Requested cache configuration</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__DEVICE_1ga4749a277602c902676e092c0c446ace4" kindref="member">cudaDeviceSetCacheConfig</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="1122" column="57" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="1122" declcolumn="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>___MANBRIEF___ deprecated thread management functions of the CUDA runtime API (___CURRENT_FILE___) ___ENDMANBRIEF___</para>
+<para>This section describes deprecated thread management functions of the CUDA runtime application programming interface. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

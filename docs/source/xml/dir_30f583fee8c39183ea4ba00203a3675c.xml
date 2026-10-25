@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_30f583fee8c39183ea4ba00203a3675c" kind="dir">
+    <compoundname>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels</compoundname>
+    <innerfile refid="em__kernel_8cu">em_kernel.cu</innerfile>
+    <innerfile refid="fdk__backproj_8cu">fdk_backproj.cu</innerfile>
+    <innerfile refid="fdk__convolution_8cu">fdk_convolution.cu</innerfile>
+    <innerfile refid="fdk__filtering_8cu">fdk_filtering.cu</innerfile>
+    <innerfile refid="fdk__fourier_8cu">fdk_fourier.cu</innerfile>
+    <innerfile refid="fdk__process_8cu">fdk_process.cu</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/"/>
+  </compounddef>
+</doxygen>

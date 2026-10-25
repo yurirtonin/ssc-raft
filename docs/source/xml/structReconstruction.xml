@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structReconstruction" kind="struct" language="C++" prot="public">
+    <compoundname>Reconstruction</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structReconstruction_1a96940caafcdce0944014f0c297d315ed" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Reconstruction::method</definition>
+        <argsstring></argsstring>
+        <name>method</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="149" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structReconstruction_1a88c0b8b8dcbdfa3a8a734e16f5b70129" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Reconstruction::filter</definition>
+        <argsstring></argsstring>
+        <name>filter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="150" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structReconstruction_1ad2d6373e11257534b395716f70634fe1" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Reconstruction::filter_reg</definition>
+        <argsstring></argsstring>
+        <name>filter_reg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="151" column="11" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structReconstruction_1adb7eb446c569c02eaa6405b32d14bfbe" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Reconstruction::filter_pad</definition>
+        <argsstring></argsstring>
+        <name>filter_pad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="152" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structReconstruction_1ab92113ef3e31f7016403078e43900d38" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Reconstruction::filter_padMode</definition>
+        <argsstring></argsstring>
+        <name>filter_padMode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="153" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structReconstruction_1ad2b1cc425cc24d4b8f3a4df496a08665" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Reconstruction::paganin_slices</definition>
+        <argsstring></argsstring>
+        <name>paganin_slices</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="154" column="11" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structReconstruction_1a35a7420e449f0a104808a52dfa2324ea" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Reconstruction::iterations</definition>
+        <argsstring></argsstring>
+        <name>iterations</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="155" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structReconstruction_1a018670c204c9d46e87365904918f36b2" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Reconstruction::rotation_axis_offset</definition>
+        <argsstring></argsstring>
+        <name>rotation_axis_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="156" column="11" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structReconstruction_1ae1b87171d1f44d256269b06f77a76289" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Reconstruction::total_variation</definition>
+        <argsstring></argsstring>
+        <name>total_variation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="157" column="11" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structReconstruction_1adda1006a135c8e47bea363b4a6b2b7a0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Reconstruction::interpolation</definition>
+        <argsstring></argsstring>
+        <name>interpolation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="158" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="146" column="1" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="147" bodyend="159"/>
+    <listofallmembers>
+      <member refid="structReconstruction_1a88c0b8b8dcbdfa3a8a734e16f5b70129" prot="public" virt="non-virtual"><scope>Reconstruction</scope><name>filter</name></member>
+      <member refid="structReconstruction_1adb7eb446c569c02eaa6405b32d14bfbe" prot="public" virt="non-virtual"><scope>Reconstruction</scope><name>filter_pad</name></member>
+      <member refid="structReconstruction_1ab92113ef3e31f7016403078e43900d38" prot="public" virt="non-virtual"><scope>Reconstruction</scope><name>filter_padMode</name></member>
+      <member refid="structReconstruction_1ad2d6373e11257534b395716f70634fe1" prot="public" virt="non-virtual"><scope>Reconstruction</scope><name>filter_reg</name></member>
+      <member refid="structReconstruction_1adda1006a135c8e47bea363b4a6b2b7a0" prot="public" virt="non-virtual"><scope>Reconstruction</scope><name>interpolation</name></member>
+      <member refid="structReconstruction_1a35a7420e449f0a104808a52dfa2324ea" prot="public" virt="non-virtual"><scope>Reconstruction</scope><name>iterations</name></member>
+      <member refid="structReconstruction_1a96940caafcdce0944014f0c297d315ed" prot="public" virt="non-virtual"><scope>Reconstruction</scope><name>method</name></member>
+      <member refid="structReconstruction_1ad2b1cc425cc24d4b8f3a4df496a08665" prot="public" virt="non-virtual"><scope>Reconstruction</scope><name>paganin_slices</name></member>
+      <member refid="structReconstruction_1a018670c204c9d46e87365904918f36b2" prot="public" virt="non-virtual"><scope>Reconstruction</scope><name>rotation_axis_offset</name></member>
+      <member refid="structReconstruction_1ae1b87171d1f44d256269b06f77a76289" prot="public" virt="non-virtual"><scope>Reconstruction</scope><name>total_variation</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

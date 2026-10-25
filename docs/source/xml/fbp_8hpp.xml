@@ -1,0 +1,454 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="fbp_8hpp" kind="file" language="C++">
+    <compoundname>fbp.hpp</compoundname>
+    <includes refid="configs_8hpp" local="yes">common/configs.hpp</includes>
+    <includes refid="filters_8hpp" local="yes">processing/filters.hpp</includes>
+    <includedby refid="fbp_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/fbp.cu</includedby>
+    <includedby refid="pipeline_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/pipelines/pipeline.cu</includedby>
+    <includedby refid="low__pass_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/filters/low_pass.cu</includedby>
+    <incdepgraph>
+      <node id="32">
+        <label>helper_cuda.h</label>
+        <link refid="helper__cuda_8h_source"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>cuda_runtime_api.h</label>
+        <link refid="cuda__runtime__api_8h_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>operations.hpp</label>
+        <link refid="operations_8hpp_source"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>limits</label>
+      </node>
+      <node id="12">
+        <label>cuda_device_runtime_api.h</label>
+      </node>
+      <node id="35">
+        <label>helper_string.h</label>
+        <link refid="helper__string_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>assert.h</label>
+      </node>
+      <node id="21">
+        <label>cstdint</label>
+      </node>
+      <node id="7">
+        <label>cufft.h</label>
+      </node>
+      <node id="33">
+        <label>stdint.h</label>
+      </node>
+      <node id="34">
+        <label>stdlib.h</label>
+      </node>
+      <node id="20">
+        <label>cassert</label>
+      </node>
+      <node id="5">
+        <label>vector_types.h</label>
+      </node>
+      <node id="24">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>builtin_types.h</label>
+      </node>
+      <node id="30">
+        <label>common/logerror.hpp</label>
+        <link refid="logerror_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>fstream</label>
+      </node>
+      <node id="4">
+        <label>driver_types.h</label>
+      </node>
+      <node id="2">
+        <label>common/configs.hpp</label>
+        <link refid="configs_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>complex.hpp</label>
+        <link refid="complex_8hpp"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>string.h</label>
+      </node>
+      <node id="18">
+        <label>cstdio</label>
+      </node>
+      <node id="14">
+        <label>future</label>
+      </node>
+      <node id="27">
+        <label>cuda_fp16.h</label>
+      </node>
+      <node id="25">
+        <label>vector</label>
+      </node>
+      <node id="3">
+        <label>complex.h</label>
+      </node>
+      <node id="23">
+        <label>sstream</label>
+      </node>
+      <node id="28">
+        <label>cuComplex.h</label>
+      </node>
+      <node id="39">
+        <label>math.h</label>
+      </node>
+      <node id="13">
+        <label>iostream</label>
+      </node>
+      <node id="37">
+        <label>strings.h</label>
+      </node>
+      <node id="6">
+        <label>cstddef</label>
+      </node>
+      <node id="10">
+        <label>crt/host_defines.h</label>
+      </node>
+      <node id="19">
+        <label>cuda.h</label>
+      </node>
+      <node id="1">
+        <label>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/fbp.hpp</label>
+        <link refid="fbp_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>csignal</label>
+      </node>
+      <node id="16">
+        <label>common/types.hpp</label>
+        <link refid="types_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>processing/filters.hpp</label>
+        <link refid="filters_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="fbp_8hpp_1aed853ada334959cd6f26916593f0ca10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void getFBPMultiGPU</definition>
+        <argsstring>(DIM tomo, DIM obj, GEO geometry, REC ReconParam, int *gpus, int ngpus, float *object, float *tomogram, float *angles)</argsstring>
+        <name>getFBPMultiGPU</name>
+        <param>
+          <type><ref refid="structdimension" kindref="compound">DIM</ref></type>
+          <declname>tomo</declname>
+        </param>
+        <param>
+          <type><ref refid="structdimension" kindref="compound">DIM</ref></type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type><ref refid="structgeometry" kindref="compound">GEO</ref></type>
+          <declname>geometry</declname>
+        </param>
+        <param>
+          <type><ref refid="structReconstruction" kindref="compound">REC</ref></type>
+          <declname>ReconParam</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>gpus</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ngpus</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>object</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>tomogram</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/fbp.hpp" line="8" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/fbp.cu" bodystart="227" bodyend="282" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/fbp.hpp" declline="8" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="fbp_8hpp_1a7c3e44acac3656e3d84f38dbf1a7807c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void getFBPGPU</definition>
+        <argsstring>(DIM tomo, DIM obj, GEO geometry, REC ReconParam, float *object, float *tomogram, float *angles, int sizez, int ngpu)</argsstring>
+        <name>getFBPGPU</name>
+        <param>
+          <type><ref refid="structdimension" kindref="compound">DIM</ref></type>
+          <declname>tomo</declname>
+        </param>
+        <param>
+          <type><ref refid="structdimension" kindref="compound">DIM</ref></type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type><ref refid="structgeometry" kindref="compound">GEO</ref></type>
+          <declname>geometry</declname>
+        </param>
+        <param>
+          <type><ref refid="structReconstruction" kindref="compound">REC</ref></type>
+          <declname>ReconParam</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>object</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>tomogram</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizez</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ngpu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/fbp.hpp" line="11" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/fbp.cu" bodystart="154" bodyend="225" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/fbp.hpp" declline="11" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="fbp_8hpp_1ad179506b6c270283ba5d77d40363c5aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void getFBP</definition>
+        <argsstring>(REC ReconParam, DIM tomo, DIM obj, float *object, float *tomogram, float *angles, float *objPadded, float *tomoPadded, int blocksize, float pixel)</argsstring>
+        <name>getFBP</name>
+        <param>
+          <type><ref refid="structReconstruction" kindref="compound">REC</ref></type>
+          <declname>ReconParam</declname>
+        </param>
+        <param>
+          <type><ref refid="structdimension" kindref="compound">DIM</ref></type>
+          <declname>tomo</declname>
+        </param>
+        <param>
+          <type><ref refid="structdimension" kindref="compound">DIM</ref></type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>object</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>tomogram</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>objPadded</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>tomoPadded</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blocksize</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>pixel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/fbp.hpp" line="15" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/fbp.cu" bodystart="68" bodyend="149" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/fbp.hpp" declline="15" declcolumn="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>RAFT_FBP_PAR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RAFT_FBP_PAR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;common/configs.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;processing/filters.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getFBPMultiGPU(<ref refid="structdimension" kindref="compound">DIM</ref><sp/>tomo,<sp/><ref refid="structdimension" kindref="compound">DIM</ref><sp/>obj,<sp/><ref refid="structgeometry" kindref="compound">GEO</ref><sp/><ref refid="structgeometry" kindref="compound">geometry</ref>,<sp/><ref refid="structReconstruction" kindref="compound">REC</ref><sp/>ReconParam,</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>gpus,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ngpus,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>tomogram,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>angles);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getFBPGPU(<ref refid="structdimension" kindref="compound">DIM</ref><sp/>tomo,<sp/><ref refid="structdimension" kindref="compound">DIM</ref><sp/>obj,<sp/><ref refid="structgeometry" kindref="compound">GEO</ref><sp/><ref refid="structgeometry" kindref="compound">geometry</ref>,<sp/><ref refid="structReconstruction" kindref="compound">REC</ref><sp/>ReconParam,<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*tomogram,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,<sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizez,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ngpu);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getFBP(<ref refid="structReconstruction" kindref="compound">REC</ref><sp/>ReconParam,<sp/><ref refid="structdimension" kindref="compound">DIM</ref><sp/>tomo,<sp/><ref refid="structdimension" kindref="compound">DIM</ref><sp/>obj,<sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*tomogram,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*objPadded,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*tomoPadded,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blocksize,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pixel);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/fbp.hpp"/>
+  </compounddef>
+</doxygen>

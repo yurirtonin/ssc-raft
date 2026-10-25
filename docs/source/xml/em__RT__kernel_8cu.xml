@@ -1,0 +1,855 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="em__RT__kernel_8cu" kind="file" language="C++">
+    <compoundname>em_RT_kernel.cu</compoundname>
+    <includes refid="parallel_2em_8hpp" local="yes">geometries/parallel/em.hpp</includes>
+    <incdepgraph>
+      <node id="10">
+        <label>cuda_runtime_api.h</label>
+        <link refid="cuda__runtime__api_8h_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>geometries/parallel/em.hpp</label>
+        <link refid="parallel_2em_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu</label>
+        <link refid="em__RT__kernel_8cu"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>cuda_device_runtime_api.h</label>
+      </node>
+      <node id="8">
+        <label>cufft.h</label>
+      </node>
+      <node id="6">
+        <label>vector_types.h</label>
+      </node>
+      <node id="12">
+        <label>builtin_types.h</label>
+      </node>
+      <node id="5">
+        <label>driver_types.h</label>
+      </node>
+      <node id="3">
+        <label>common/configs.hpp</label>
+        <link refid="configs_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>future</label>
+      </node>
+      <node id="4">
+        <label>complex.h</label>
+      </node>
+      <node id="14">
+        <label>iostream</label>
+      </node>
+      <node id="7">
+        <label>cstddef</label>
+      </node>
+      <node id="11">
+        <label>crt/host_defines.h</label>
+      </node>
+      <node id="9">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="em__RT__kernel_8cu_1a4a16cb57e0fb8f73d2cd42d982e1d964" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void kernel_ones</definition>
+        <argsstring>(float *output, int sizeImage, int nrays, int nangles, int blockSize)</argsstring>
+        <name>kernel_ones</name>
+        <param>
+          <type>float *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizeImage</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blockSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu" line="4" column="19" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu" bodystart="4" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="em__RT__kernel_8cu_1a157f3e52222eab959f8fd86c352344e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void kernel_flatTimesExp</definition>
+        <argsstring>(float *tmp, float *flat, int sizeImage, int nrays, int nangles, int blockSize)</argsstring>
+        <name>kernel_flatTimesExp</name>
+        <param>
+          <type>float *</type>
+          <declname>tmp</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>flat</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizeImage</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blockSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu" line="20" column="19" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu" bodystart="20" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="em__RT__kernel_8cu_1a6aaa912ae1e2e2f7cae38b27c4f44662" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void kernel_flatTimesExp_3d</definition>
+        <argsstring>(float *tmp, float *flat, int sizeImage, int nrays, int nangles, int blockSize)</argsstring>
+        <name>kernel_flatTimesExp_3d</name>
+        <param>
+          <type>float *</type>
+          <declname>tmp</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>flat</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizeImage</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blockSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu" line="35" column="19" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu" bodystart="35" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="em__RT__kernel_8cu_1a14b9de12ade06436347df36bb6433d3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void kernel_update</definition>
+        <argsstring>(float *output, float *back, float *backcounts, int sizeImage, int nrays, int nangles, int blockSize)</argsstring>
+        <name>kernel_update</name>
+        <param>
+          <type>float *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>back</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>backcounts</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizeImage</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blockSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu" line="52" column="19" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu" bodystart="52" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="em__RT__kernel_8cu_1a8595ab8a9a95b226475315c10e38b094" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void kernel_difference_F</definition>
+        <argsstring>(float *y, float *x, int sizeImage, int blockSize)</argsstring>
+        <name>kernel_difference_F</name>
+        <param>
+          <type>float *</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizeImage</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blockSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu" line="73" column="19" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu" bodystart="73" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="em__RT__kernel_8cu_1adf9c27c8c99a9a23a5ab307380cec234" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void kernel_backprojection</definition>
+        <argsstring>(float *image, float *blocksino, float *angles, int sizeImage, int nrays, int nangles, int blockSize)</argsstring>
+        <name>kernel_backprojection</name>
+        <param>
+          <type>float *</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>blocksino</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizeImage</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blockSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu" line="92" column="19" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu" bodystart="92" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="em__RT__kernel_8cu_1abae4ab3599d0409f2b609e7b625cfa04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void kernel_radon</definition>
+        <argsstring>(float *output, float *input, float *angles, int sizeImage, int nrays, int nangles, int blockSize, float a)</argsstring>
+        <name>kernel_radon</name>
+        <param>
+          <type>float *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizeImage</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blockSize</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu" line="146" column="19" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu" bodystart="146" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="em__RT__kernel_8cu_1a1ae8f7a920270e831d41343d6f4d7c76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void kernel_radonWithDivision</definition>
+        <argsstring>(float *output, float *input, float *sino, float *angles, int sizeImage, int nrays, int nangles, int blockSize, float a)</argsstring>
+        <name>kernel_radonWithDivision</name>
+        <param>
+          <type>float *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>sino</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizeImage</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blockSize</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu" line="195" column="19" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu" bodystart="195" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="em__RT__kernel_8cu_1a3106b6cc24a6e067efe0f62a27d55337" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void kernel_backprojectionWithUpdate</definition>
+        <argsstring>(float *image, float *blocksino, float *backones, float *angles, int sizeImage, int nrays, int nangles, int blockSize)</argsstring>
+        <name>kernel_backprojectionWithUpdate</name>
+        <param>
+          <type>float *</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>blocksino</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>backones</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizeImage</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blockSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu" line="262" column="19" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu" bodystart="262" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="em__RT__kernel_8cu_1ac895abcf242e2744fc5aaf4643076a0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void kernel_backprojectionOfOnes</definition>
+        <argsstring>(float *backones, float *angles, int sizeImage, int nrays, int nangles, int blockSize)</argsstring>
+        <name>kernel_backprojectionOfOnes</name>
+        <param>
+          <type>float *</type>
+          <declname>backones</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizeImage</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blockSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu" line="317" column="19" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu" bodystart="317" bodyend="365"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;geometries/parallel/em.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>kernel_ones(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*output,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeImage,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles,<sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blockSize)</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tx<sp/>=<sp/>threadIdx.x<sp/>+<sp/>blockIdx.x*blockDim.x;<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ty<sp/>=<sp/>threadIdx.y<sp/>+<sp/>blockIdx.y*blockDim.y;<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tz<sp/>=<sp/>threadIdx.z<sp/>+<sp/>blockIdx.z*blockDim.z;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(tx&lt;sizeImage)<sp/>&amp;&amp;<sp/>(ty<sp/>&lt;<sp/>sizeImage)<sp/>&amp;&amp;<sp/>(tz&lt;blockSize)<sp/><sp/>)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>voxel<sp/>=<sp/>tz<sp/>*<sp/>sizeImage<sp/>*<sp/>sizeImage<sp/>+<sp/>ty<sp/>*<sp/>sizeImage<sp/>+<sp/>tx;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output[voxel]<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>kernel_flatTimesExp(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*tmp,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*flat,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeImage,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles,<sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blockSize)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tx<sp/>=<sp/>threadIdx.x<sp/>+<sp/>blockIdx.x*blockDim.x;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ty<sp/>=<sp/>threadIdx.y<sp/>+<sp/>blockIdx.y*blockDim.y;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tz<sp/>=<sp/>threadIdx.z<sp/>+<sp/>blockIdx.z*blockDim.z;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(tx&lt;nrays)<sp/>&amp;&amp;<sp/>(ty<sp/>&lt;<sp/>nangles)<sp/>&amp;&amp;<sp/>(tz&lt;blockSize)<sp/><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>voxel<sp/>=<sp/>tz<sp/>*<sp/>nrays<sp/>*<sp/>nangles<sp/>+<sp/>ty<sp/>*<sp/>nrays<sp/>+<sp/>tx;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp[voxel]<sp/>=<sp/>flat[ty<sp/>*<sp/>nrays<sp/>+<sp/>tx]<sp/>*<sp/>expf(<sp/>-<sp/>tmp[voxel]);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>kernel_flatTimesExp_3d(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*tmp,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*flat,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeImage,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles,<sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blockSize)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tx<sp/>=<sp/>threadIdx.x<sp/>+<sp/>blockIdx.x*blockDim.x;<sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ty<sp/>=<sp/>threadIdx.y<sp/>+<sp/>blockIdx.y*blockDim.y;<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tz<sp/>=<sp/>threadIdx.z<sp/>+<sp/>blockIdx.z*blockDim.z;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(tx&lt;nrays)<sp/>&amp;&amp;<sp/>(ty<sp/>&lt;<sp/>nangles)<sp/>&amp;&amp;<sp/>(tz&lt;blockSize)<sp/><sp/>)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>voxel<sp/>=<sp/>tz<sp/>*<sp/>nrays<sp/>*<sp/>nangles<sp/>+<sp/>ty<sp/>*<sp/>nrays<sp/>+<sp/>tx;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp[voxel]<sp/>=<sp/>flat[voxel]<sp/>*<sp/>expf(<sp/>-<sp/>tmp[voxel]);<sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>kernel_update(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*output,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*back,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*backcounts,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeImage,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles,<sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blockSize)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tx<sp/>=<sp/>threadIdx.x<sp/>+<sp/>blockIdx.x*blockDim.x;<sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ty<sp/>=<sp/>threadIdx.y<sp/>+<sp/>blockIdx.y*blockDim.y;<sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tz<sp/>=<sp/>threadIdx.z<sp/>+<sp/>blockIdx.z*blockDim.z;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(tx&lt;sizeImage)<sp/>&amp;&amp;<sp/>(ty<sp/>&lt;<sp/>sizeImage)<sp/>&amp;&amp;<sp/>(tz&lt;blockSize)<sp/><sp/>)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>voxel<sp/>=<sp/>tz<sp/>*<sp/>sizeImage<sp/>*<sp/>sizeImage<sp/>+<sp/>ty<sp/>*<sp/>sizeImage<sp/>+<sp/>tx;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output[voxel]<sp/>=<sp/>output[voxel]<sp/>*<sp/>back[voxel]<sp/>/<sp/>backcounts[voxel];<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>difference<sp/>in<sp/>the<sp/>Feature<sp/>domain:<sp/>square<sp/>images<sp/>of<sp/>order<sp/>&apos;sizeImage&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>inplace:<sp/>y<sp/>=<sp/>y<sp/>-<sp/>x</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>kernel_difference_F(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*y,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*x,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeImage,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blockSize)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tx<sp/>=<sp/>threadIdx.x<sp/>+<sp/>blockIdx.x*blockDim.x;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ty<sp/>=<sp/>threadIdx.y<sp/>+<sp/>blockIdx.y*blockDim.y;<sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tz<sp/>=<sp/>threadIdx.z<sp/>+<sp/>blockIdx.z*blockDim.z;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(tx&lt;sizeImage)<sp/>&amp;&amp;<sp/>(ty<sp/>&lt;<sp/>sizeImage)<sp/>&amp;&amp;<sp/>(tz&lt;blockSize)<sp/><sp/>)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>voxel<sp/>=<sp/>tz<sp/>*<sp/>sizeImage<sp/>*<sp/>sizeImage<sp/>+<sp/>ty<sp/>*<sp/>sizeImage<sp/>+<sp/>tx;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>inplace!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>y[voxel]<sp/>=<sp/>y[voxel]<sp/>-<sp/>x[voxel];</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>kernel_backprojection(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*image,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*blocksino,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeImage,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blockSize)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/>j,<sp/>k,<sp/>T,<sp/>z;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>t,<sp/>cs,<sp/>x,<sp/>y,<sp/>cosk,<sp/>sink;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>xymin<sp/>=<sp/>-1.0;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dxy<sp/>=<sp/>2.0<sp/>/<sp/>(sizeImage<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt<sp/>=<sp/>2.0<sp/>/<sp/>(nrays<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>float<sp/>dth<sp/>=<sp/>PI<sp/>/<sp/>nangles;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dth;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>tmin<sp/>=<sp/>-1.0;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>i<sp/>=<sp/>(blockDim.x<sp/>*<sp/>blockIdx.x<sp/>+<sp/>threadIdx.x);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>j<sp/>=<sp/>(blockDim.y<sp/>*<sp/>blockIdx.y<sp/>+<sp/>threadIdx.y);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>z<sp/>=<sp/>(blockDim.z<sp/>*<sp/>blockIdx.z<sp/>+<sp/>threadIdx.z);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>printf(&quot;nangles<sp/>=<sp/>%d<sp/>\n&quot;,nangles);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(i&lt;sizeImage)<sp/>&amp;&amp;<sp/>(j<sp/>&lt;<sp/>sizeImage)<sp/>&amp;&amp;<sp/>(z&lt;blockSize)<sp/><sp/>){</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cs<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/>xymin<sp/>+<sp/>i<sp/>*<sp/>dxy;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>y<sp/>=<sp/>xymin<sp/>+<sp/>j<sp/>*<sp/>dxy;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(k=0;<sp/>k<sp/>&lt;<sp/>(nangles);<sp/>k++)</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>__sincosf(k<sp/>*<sp/>dth,<sp/>&amp;sink,<sp/>&amp;cosk);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__sincosf(angles[k],<sp/>&amp;sink,<sp/>&amp;cosk);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>k<sp/>==<sp/>(nangles<sp/>-<sp/>1)<sp/>){</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dth<sp/>=<sp/>fabs(angles[k]<sp/>-<sp/>angles[k-1]);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dth<sp/>=<sp/>fabs(angles[k+1]<sp/>-<sp/>angles[k]);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>printf(&quot;dth[%d]<sp/>=<sp/>%e<sp/>\n&quot;,k,dth);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>t<sp/>=<sp/>x<sp/>*<sp/>cosk<sp/>+<sp/>y<sp/>*<sp/>sink;<sp/>//<sp/>original</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t<sp/>=<sp/>x<sp/>*<sp/>cosk<sp/>-<sp/>y<sp/>*<sp/>sink;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/>=<sp/>(int)<sp/>((t<sp/>-<sp/>tmin)/dt);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(T<sp/>&gt;<sp/>-1)<sp/>&amp;&amp;<sp/>(T&lt;nrays)<sp/>)</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cs<sp/>+=<sp/>blocksino[<sp/>z<sp/>*<sp/>nrays<sp/>*<sp/>nangles<sp/>+<sp/>k<sp/>*<sp/>nrays<sp/>+<sp/>T]<sp/>*<sp/>dth;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>image[z<sp/>*<sp/>sizeImage<sp/>*<sp/>sizeImage<sp/>+<sp/>j<sp/>*<sp/>sizeImage<sp/>+<sp/>i]<sp/><sp/>=<sp/>cs;<sp/></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>kernel_radon(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*output,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*input,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeImage,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles,</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blockSize,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a)</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tx<sp/>=<sp/>threadIdx.x<sp/>+<sp/>blockIdx.x*blockDim.x;<sp/></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ty<sp/>=<sp/>threadIdx.y<sp/>+<sp/>blockIdx.y*blockDim.y;<sp/></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tz<sp/>=<sp/>threadIdx.z<sp/>+<sp/>blockIdx.z*blockDim.z;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(tx&lt;nrays)<sp/>&amp;&amp;<sp/>(ty<sp/>&lt;<sp/>nangles)<sp/>&amp;&amp;<sp/>(tz&lt;blockSize)<sp/><sp/>){</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k,<sp/>X,<sp/>Y;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>s,<sp/>x,<sp/>y,<sp/>linesum,<sp/>ctheta,<sp/>stheta,<sp/>t;<sp/><sp/></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt<sp/>=<sp/>2.0*a/(nrays-1);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>float<sp/>dtheta<sp/>=<sp/>PI/(nangles-1);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>theta<sp/>=<sp/>ty<sp/>*<sp/>dtheta;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ctheta<sp/>=cosf(angles[ty]);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>stheta<sp/>=sinf(angles[ty]);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>t<sp/>=<sp/>-<sp/>a<sp/>+<sp/>tx<sp/>*<sp/>dt;<sp/></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>linesum<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<sp/>k<sp/>=<sp/>0;<sp/>k<sp/>&lt;<sp/>nrays;<sp/>k++<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s<sp/>=<sp/>-<sp/>a<sp/>+<sp/>k<sp/>*<sp/>dt;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/><sp/><sp/>t<sp/>*<sp/>ctheta<sp/>+<sp/>s<sp/>*<sp/>stheta;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>y<sp/>=<sp/>-<sp/>t<sp/>*<sp/>stheta<sp/>+<sp/>s<sp/>*<sp/>ctheta;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>original</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>x<sp/>=<sp/>t<sp/>*<sp/>ctheta<sp/>-<sp/>s<sp/>*<sp/>stheta;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>y<sp/>=<sp/>t<sp/>*<sp/>stheta<sp/>+<sp/>s<sp/>*<sp/>ctheta;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>X<sp/>=<sp/>(int)<sp/>((x<sp/>+<sp/>1)/dt);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Y<sp/>=<sp/>(int)<sp/>((y<sp/>+<sp/>1)/dt);<sp/><sp/></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((X<sp/>&gt;=<sp/>0)<sp/>&amp;<sp/>(X&lt;sizeImage)<sp/>&amp;<sp/>(Y&gt;=0)<sp/>&amp;<sp/>(Y&lt;sizeImage)<sp/>)</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>linesum<sp/>+=<sp/>input[<sp/>tz<sp/>*<sp/>sizeImage<sp/>*<sp/>sizeImage<sp/>+<sp/>Y<sp/>*<sp/>sizeImage<sp/>+<sp/>X<sp/>];</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>output[tz<sp/>*<sp/>nrays<sp/>*<sp/>nangles<sp/>+<sp/>ty<sp/>*<sp/>nrays<sp/>+<sp/>tx]<sp/>=<sp/>linesum<sp/>*<sp/>dt;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>printf(&quot;out[%d]<sp/>=<sp/>%e<sp/>\n&quot;,tz<sp/>*<sp/>nrays<sp/>*<sp/>nangles<sp/>+<sp/>ty<sp/>*<sp/>nrays<sp/>+<sp/>tx,output[tz<sp/>*<sp/>nrays<sp/>*<sp/>nangles<sp/>+<sp/>ty<sp/>*<sp/>nrays<sp/>+<sp/>tx]);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>kernel_radonWithDivision(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*output,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*input,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*sino,<sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeImage,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles,</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blockSize,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a)</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>TOLZERO;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tx<sp/>=<sp/>threadIdx.x<sp/>+<sp/>blockIdx.x*blockDim.x;<sp/></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ty<sp/>=<sp/>threadIdx.y<sp/>+<sp/>blockIdx.y*blockDim.y;<sp/></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tz<sp/>=<sp/>threadIdx.z<sp/>+<sp/>blockIdx.z*blockDim.z;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(tx&lt;nrays)<sp/>&amp;&amp;<sp/>(ty<sp/>&lt;<sp/>nangles)<sp/>&amp;&amp;<sp/>(tz&lt;blockSize)<sp/><sp/>){</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k,<sp/>X,<sp/>Y,<sp/>voxel;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>s,<sp/>x,<sp/>y,<sp/>linesum,<sp/>ctheta,<sp/>stheta,<sp/>t;<sp/><sp/></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt<sp/>=<sp/>2.0*a/(nrays-1);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>float<sp/>dtheta<sp/>=<sp/>PI/(nangles-1);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>theta<sp/>=<sp/>ty<sp/>*<sp/>dtheta;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ctheta<sp/>=cosf(angles[ty]);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>stheta<sp/>=sinf(angles[ty]);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>t<sp/>=<sp/>-<sp/>a<sp/>+<sp/>tx<sp/>*<sp/>dt;<sp/></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>linesum<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<sp/>k<sp/>=<sp/>0;<sp/>k<sp/>&lt;<sp/>nrays;<sp/>k++<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s<sp/>=<sp/>-<sp/>a<sp/>+<sp/>k<sp/>*<sp/>dt;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/><sp/><sp/>t<sp/>*<sp/>ctheta<sp/>+<sp/>s<sp/>*<sp/>stheta;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>y<sp/>=<sp/>-<sp/>t<sp/>*<sp/>stheta<sp/>+<sp/>s<sp/>*<sp/>ctheta;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>original</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>x<sp/>=<sp/>t<sp/>*<sp/>ctheta<sp/>-<sp/>s<sp/>*<sp/>stheta;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>y<sp/>=<sp/>t<sp/>*<sp/>stheta<sp/>+<sp/>s<sp/>*<sp/>ctheta;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>X<sp/>=<sp/>(int)<sp/>((x<sp/>+<sp/>1)/dt);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Y<sp/>=<sp/>(int)<sp/>((y<sp/>+<sp/>1)/dt);<sp/><sp/></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((X<sp/>&gt;=<sp/>0)<sp/>&amp;<sp/>(X&lt;sizeImage)<sp/>&amp;<sp/>(Y&gt;=0)<sp/>&amp;<sp/>(Y&lt;sizeImage)<sp/>)</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>linesum<sp/>+=<sp/>input[<sp/>tz<sp/>*<sp/>sizeImage<sp/>*<sp/>sizeImage<sp/>+<sp/>Y<sp/>*<sp/>sizeImage<sp/>+<sp/>X<sp/>];</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>value<sp/>=<sp/>linesum<sp/>*<sp/>dt;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>voxel<sp/>=<sp/>tz<sp/>*<sp/>nrays<sp/>*<sp/>nangles<sp/>+<sp/>ty<sp/>*<sp/>nrays<sp/>+<sp/>tx;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>TOLZERO<sp/>=<sp/>0.0001;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>output[<sp/>voxel<sp/>]<sp/>=<sp/>sino[<sp/>voxel]<sp/>*<sp/>APPROXINVX(value,<sp/>TOLZERO);<sp/><sp/></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//enforcing<sp/>positivity</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(output[voxel]<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output[voxel]<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="252"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(<sp/>fabs(value)<sp/>&gt;<sp/>TOLZERO<sp/>)<sp/></highlight></codeline>
+<codeline lineno="253"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output[<sp/>voxel<sp/>]<sp/>=<sp/>sino[voxel]<sp/>/<sp/>value;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="254"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>else</highlight></codeline>
+<codeline lineno="255"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output[<sp/>voxel<sp/>]<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="256"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="259"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>kernel_backprojectionWithUpdate(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*image,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*blocksino,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*backones,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeImage,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles,<sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blockSize)</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/>j,<sp/>k,<sp/>T,<sp/>z,<sp/>voxel;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>t,<sp/>cs,<sp/>x,<sp/>y,<sp/>cosk,<sp/>sink;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>xymin<sp/>=<sp/>-1.0;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dxy<sp/>=<sp/>2.0<sp/>/<sp/>(sizeImage<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt<sp/>=<sp/>2.0<sp/>/<sp/>(nrays<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dth;<sp/></highlight><highlight class="comment">//<sp/>=<sp/>PI<sp/>/<sp/>nangles;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>tmin<sp/>=<sp/>-1.0;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value;<sp/></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/>i<sp/>=<sp/>(blockDim.x<sp/>*<sp/>blockIdx.x<sp/>+<sp/>threadIdx.x);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/>j<sp/>=<sp/>(blockDim.y<sp/>*<sp/>blockIdx.y<sp/>+<sp/>threadIdx.y);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/>z<sp/>=<sp/>(blockDim.z<sp/>*<sp/>blockIdx.z<sp/>+<sp/>threadIdx.z);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(i&lt;sizeImage)<sp/>&amp;&amp;<sp/>(j<sp/>&lt;<sp/>sizeImage)<sp/>&amp;&amp;<sp/>(z&lt;blockSize)<sp/><sp/>){</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cs<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/>xymin<sp/>+<sp/>i<sp/>*<sp/>dxy;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>y<sp/>=<sp/>xymin<sp/>+<sp/>j<sp/>*<sp/>dxy;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(k=0;<sp/>k<sp/>&lt;<sp/>(nangles);<sp/>k++)</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>__sincosf(k<sp/>*<sp/>dth,<sp/>&amp;sink,<sp/>&amp;cosk);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__sincosf(angles[k],<sp/>&amp;sink,<sp/>&amp;cosk);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>k<sp/>==<sp/>(nangles<sp/>-<sp/>1)<sp/>){</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dth<sp/>=<sp/>fabs(angles[k]<sp/>-<sp/>angles[k-1]);</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dth<sp/>=<sp/>fabs(angles[k+1]<sp/>-<sp/>angles[k]);</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>t<sp/>=<sp/>x<sp/>*<sp/>cosk<sp/>+<sp/>y<sp/>*<sp/>sink;<sp/>//<sp/>original</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t<sp/>=<sp/>x<sp/>*<sp/>cosk<sp/>-<sp/>y<sp/>*<sp/>sink;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/>=<sp/>(int)((t<sp/>-<sp/>tmin)/dt);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(T<sp/>&gt;<sp/>-1)<sp/>&amp;&amp;<sp/>(T&lt;nrays)<sp/>)</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cs<sp/>+=<sp/>blocksino[<sp/>z<sp/>*<sp/>nrays<sp/>*<sp/>nangles<sp/>+<sp/>k<sp/>*<sp/>nrays<sp/>+<sp/>T]<sp/>*<sp/>dth;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>voxel<sp/>=<sp/>z<sp/>*<sp/>sizeImage<sp/>*<sp/>sizeImage<sp/>+<sp/>j<sp/>*<sp/>sizeImage<sp/>+<sp/>i;</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>value<sp/>=<sp/>cs;</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>image[<sp/>voxel<sp/>]<sp/><sp/>=<sp/>image[<sp/>voxel<sp/>]<sp/>*<sp/>value<sp/>/<sp/>backones[<sp/>voxel<sp/>];<sp/></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="314"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>kernel_backprojectionOfOnes(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*backones,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeImage,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles,<sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blockSize)</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/>j,<sp/>k,<sp/>T,<sp/>z,<sp/>voxel;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>t,<sp/>cs,<sp/>x,<sp/>y,<sp/>cosk,<sp/>sink;</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>xymin<sp/>=<sp/>-1.0;</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dxy<sp/>=<sp/>2.0<sp/>/<sp/>(sizeImage<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt<sp/>=<sp/>2.0<sp/>/<sp/>(nrays<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dth;<sp/></highlight><highlight class="comment">//<sp/>=<sp/>PI<sp/>/<sp/>nangles;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>tmin<sp/>=<sp/>-1.0;</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/>i<sp/>=<sp/>(blockDim.x<sp/>*<sp/>blockIdx.x<sp/>+<sp/>threadIdx.x);</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/>j<sp/>=<sp/>(blockDim.y<sp/>*<sp/>blockIdx.y<sp/>+<sp/>threadIdx.y);</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/>z<sp/>=<sp/>(blockDim.z<sp/>*<sp/>blockIdx.z<sp/>+<sp/>threadIdx.z);</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(i&lt;sizeImage)<sp/>&amp;&amp;<sp/>(j<sp/>&lt;<sp/>sizeImage)<sp/>&amp;&amp;<sp/>(z&lt;blockSize)<sp/><sp/>){</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cs<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/>xymin<sp/>+<sp/>i<sp/>*<sp/>dxy;</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>y<sp/>=<sp/>xymin<sp/>+<sp/>j<sp/>*<sp/>dxy;</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(k=0;<sp/>k<sp/>&lt;<sp/>(nangles);<sp/>k++)</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>__sincosf(k<sp/>*<sp/>dth,<sp/>&amp;sink,<sp/>&amp;cosk);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__sincosf(angles[k],<sp/>&amp;sink,<sp/>&amp;cosk);</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>k<sp/>==<sp/>(nangles<sp/>-<sp/>1)<sp/>){</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dth<sp/>=<sp/>fabs(angles[k]<sp/>-<sp/>angles[k-1]);</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dth<sp/>=<sp/>fabs(angles[k+1]<sp/>-<sp/>angles[k]);</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>t<sp/>=<sp/>x<sp/>*<sp/>cosk<sp/>+<sp/>y<sp/>*<sp/>sink;<sp/>//<sp/>original</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t<sp/>=<sp/>x<sp/>*<sp/>cosk<sp/>-<sp/>y<sp/>*<sp/>sink;</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/>=<sp/>(int)<sp/>((t<sp/>-<sp/>tmin)/dt);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(T<sp/>&gt;<sp/>-1)<sp/>&amp;&amp;<sp/>(T&lt;nrays)<sp/>)</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cs<sp/>+=<sp/>dth;<sp/></highlight><highlight class="comment">//blocksino[<sp/>z<sp/>*<sp/>nrays<sp/>*<sp/>nangles+<sp/>k<sp/>*<sp/>nrays<sp/>+<sp/>T];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>voxel<sp/>=<sp/>z<sp/>*<sp/>sizeImage<sp/>*<sp/>sizeImage<sp/>+<sp/>j<sp/>*<sp/>sizeImage<sp/>+<sp/>i;</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>backones[<sp/>voxel<sp/>]<sp/><sp/>=<sp/>cs;<sp/></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="366"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu"/>
+  </compounddef>
+</doxygen>

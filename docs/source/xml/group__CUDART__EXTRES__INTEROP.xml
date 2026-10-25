@@ -1,0 +1,535 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__CUDART__EXTRES__INTEROP" kind="group">
+    <compoundname>CUDART_EXTRES_INTEROP</compoundname>
+    <title>External Resource Interoperability</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__CUDART__EXTRES__INTEROP_1gace5d0c69d2692274044f1cf965376a0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaImportExternalMemory</definition>
+        <argsstring>(cudaExternalMemory_t *extMem_out, const struct cudaExternalMemoryHandleDesc *memHandleDesc)</argsstring>
+        <name>cudaImportExternalMemory</name>
+        <param>
+          <type>cudaExternalMemory_t *</type>
+          <declname>extMem_out</declname>
+        </param>
+        <param>
+          <type>const struct cudaExternalMemoryHandleDesc *</type>
+          <declname>memHandleDesc</declname>
+        </param>
+        <briefdescription>
+<para>Imports an external memory object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Imports an externally allocated memory object and returns a handle to that in <computeroutput>extMem_out</computeroutput>.</para>
+<para>The properties of the handle being imported must be described in <computeroutput>memHandleDesc</computeroutput>. The ::cudaExternalMemoryHandleDesc structure is defined as follows:</para>
+<para><programlisting><codeline><highlight class="normal">typedef<sp/>struct<sp/>cudaExternalMemoryHandleDesc_st<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaExternalMemoryHandleType<sp/>type;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>union<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>fd;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>struct<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>*handle;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>void<sp/>*name;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>win32;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>void<sp/>*nvSciBufObject;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>handle;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>long<sp/>size;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>unsigned<sp/>int<sp/>flags;</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>cudaExternalMemoryHandleDesc;</highlight></codeline>
+</programlisting></para>
+<para>where ::cudaExternalMemoryHandleDesc::type specifies the type of handle being imported. ::cudaExternalMemoryHandleType is defined as:</para>
+<para><programlisting><codeline><highlight class="normal">typedef<sp/>enum<sp/>cudaExternalMemoryHandleType_enum<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaExternalMemoryHandleTypeOpaqueFd<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaExternalMemoryHandleTypeOpaqueWin32<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>2,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaExternalMemoryHandleTypeOpaqueWin32Kmt<sp/><sp/><sp/>=<sp/>3,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaExternalMemoryHandleTypeD3D12Heap<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>4,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaExternalMemoryHandleTypeD3D12Resource<sp/><sp/><sp/><sp/>=<sp/>5,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaExternalMemoryHandleTypeD3D11Resource<sp/><sp/><sp/><sp/>=<sp/>6,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>cudaExternalMemoryHandleTypeD3D11ResourceKmt<sp/>=<sp/>7,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaExternalMemoryHandleTypeNvSciBuf<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>8</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>cudaExternalMemoryHandleType;</highlight></codeline>
+</programlisting></para>
+<para>If ::cudaExternalMemoryHandleDesc::type is ::cudaExternalMemoryHandleTypeOpaqueFd, then ::cudaExternalMemoryHandleDesc::handle::fd must be a valid file descriptor referencing a memory object. Ownership of the file descriptor is transferred to the CUDA driver when the handle is imported successfully. Performing any operations on the file descriptor after it is imported results in undefined behavior.</para>
+<para>If ::cudaExternalMemoryHandleDesc::type is ::cudaExternalMemoryHandleTypeOpaqueWin32, then exactly one of ::cudaExternalMemoryHandleDesc::handle::win32::handle and ::cudaExternalMemoryHandleDesc::handle::win32::name must not be NULL. If ::cudaExternalMemoryHandleDesc::handle::win32::handle is not NULL, then it must represent a valid shared NT handle that references a memory object. Ownership of this handle is not transferred to CUDA after the import operation, so the application must release the handle using the appropriate system call. If ::cudaExternalMemoryHandleDesc::handle::win32::name is not NULL, then it must point to a NULL-terminated array of UTF-16 characters that refers to a memory object.</para>
+<para>If ::cudaExternalMemoryHandleDesc::type is ::cudaExternalMemoryHandleTypeOpaqueWin32Kmt, then ::cudaExternalMemoryHandleDesc::handle::win32::handle must be non-NULL and ::cudaExternalMemoryHandleDesc::handle::win32::name must be NULL. The handle specified must be a globally shared KMT handle. This handle does not hold a reference to the underlying object, and thus will be invalid when all references to the memory object are destroyed.</para>
+<para>If ::cudaExternalMemoryHandleDesc::type is ::cudaExternalMemoryHandleTypeD3D12Heap, then exactly one of ::cudaExternalMemoryHandleDesc::handle::win32::handle and ::cudaExternalMemoryHandleDesc::handle::win32::name must not be NULL. If ::cudaExternalMemoryHandleDesc::handle::win32::handle is not NULL, then it must represent a valid shared NT handle that is returned by ID3D12Device::CreateSharedHandle when referring to a ID3D12Heap object. This handle holds a reference to the underlying object. If ::cudaExternalMemoryHandleDesc::handle::win32::name is not NULL, then it must point to a NULL-terminated array of UTF-16 characters that refers to a ID3D12Heap object.</para>
+<para>If ::cudaExternalMemoryHandleDesc::type is ::cudaExternalMemoryHandleTypeD3D12Resource, then exactly one of ::cudaExternalMemoryHandleDesc::handle::win32::handle and ::cudaExternalMemoryHandleDesc::handle::win32::name must not be NULL. If ::cudaExternalMemoryHandleDesc::handle::win32::handle is not NULL, then it must represent a valid shared NT handle that is returned by ID3D12Device::CreateSharedHandle when referring to a ID3D12Resource object. This handle holds a reference to the underlying object. If ::cudaExternalMemoryHandleDesc::handle::win32::name is not NULL, then it must point to a NULL-terminated array of UTF-16 characters that refers to a ID3D12Resource object.</para>
+<para>If ::cudaExternalMemoryHandleDesc::type is ::cudaExternalMemoryHandleTypeD3D11Resource,then exactly one of ::cudaExternalMemoryHandleDesc::handle::win32::handle and ::cudaExternalMemoryHandleDesc::handle::win32::name must not be NULL. If ::cudaExternalMemoryHandleDesc::handle::win32::handle is <linebreak/>
+ not NULL, then it must represent a valid shared NT handle that is <linebreak/>
+ returned by IDXGIResource1::CreateSharedHandle when referring to a ID3D11Resource object. If ::cudaExternalMemoryHandleDesc::handle::win32::name is not NULL, then it must point to a NULL-terminated array of UTF-16 characters that refers to a ID3D11Resource object.</para>
+<para>If ::cudaExternalMemoryHandleDesc::type is ::cudaExternalMemoryHandleTypeD3D11ResourceKmt, then ::cudaExternalMemoryHandleDesc::handle::win32::handle must be non-NULL and ::cudaExternalMemoryHandleDesc::handle::win32::name must be NULL. The handle specified must be a valid shared KMT handle that is returned by IDXGIResource::GetSharedHandle when referring to a ID3D11Resource object.</para>
+<para>If ::cudaExternalMemoryHandleDesc::type is ::cudaExternalMemoryHandleTypeNvSciBuf, then ::cudaExternalMemoryHandleDesc::handle::nvSciBufObject must be NON-NULL and reference a valid NvSciBuf object. If the NvSciBuf object imported into CUDA is also mapped by other drivers, then the application must use <ref refid="group__CUDART__EXTRES__INTEROP_1gac62c500143c3b2b4abbb4100cb8f0933" kindref="member">cudaWaitExternalSemaphoresAsync</ref> or <ref refid="group__CUDART__EXTRES__INTEROP_1ga5f6e5232cf5336717fb7168448193dd5" kindref="member">cudaSignalExternalSemaphoresAsync</ref> as approprriate barriers to maintain coherence between CUDA and the other drivers.</para>
+<para>The size of the memory object must be specified in ::cudaExternalMemoryHandleDesc::size.</para>
+<para>Specifying the flag ::cudaExternalMemoryDedicated in ::cudaExternalMemoryHandleDesc::flags indicates that the resource is a dedicated resource. The definition of what a dedicated resource is outside the scope of this extension. This flag must be set if ::cudaExternalMemoryHandleDesc::type is one of the following: ::cudaExternalMemoryHandleTypeD3D12Resource ::cudaExternalMemoryHandleTypeD3D11Resource ::cudaExternalMemoryHandleTypeD3D11ResourceKmt</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>extMem_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returned handle to an external memory object </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>memHandleDesc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Memory import handle descriptor</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidResourceHandle \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="note"><para>If the Vulkan memory imported into CUDA is mapped on the CPU then the application must use vkInvalidateMappedMemoryRanges/vkFlushMappedMemoryRanges as well as appropriate Vulkan pipeline barriers to maintain coherence between CPU and GPU. For more information on these APIs, please refer to &quot;Synchronization
+and Cache Control&quot; chapter from Vulkan specification.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__EXTRES__INTEROP_1ga34a8bbbc04feef0ffc6bab0ef3a5dbca" kindref="member">cudaDestroyExternalMemory</ref>, <ref refid="group__CUDART__EXTRES__INTEROP_1ga2a8b40d61b234035c5d56c69878b454c" kindref="member">cudaExternalMemoryGetMappedBuffer</ref>, <ref refid="group__CUDART__EXTRES__INTEROP_1ga5b6443166a34916b05eda98286ac9787" kindref="member">cudaExternalMemoryGetMappedMipmappedArray</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="3098" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="3098" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__EXTRES__INTEROP_1ga2a8b40d61b234035c5d56c69878b454c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaExternalMemoryGetMappedBuffer</definition>
+        <argsstring>(void **devPtr, cudaExternalMemory_t extMem, const struct cudaExternalMemoryBufferDesc *bufferDesc)</argsstring>
+        <name>cudaExternalMemoryGetMappedBuffer</name>
+        <param>
+          <type>void **</type>
+          <declname>devPtr</declname>
+        </param>
+        <param>
+          <type>cudaExternalMemory_t</type>
+          <declname>extMem</declname>
+        </param>
+        <param>
+          <type>const struct cudaExternalMemoryBufferDesc *</type>
+          <declname>bufferDesc</declname>
+        </param>
+        <briefdescription>
+<para>Maps a buffer onto an imported memory object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Maps a buffer onto an imported memory object and returns a device pointer in <computeroutput>devPtr</computeroutput>.</para>
+<para>The properties of the buffer being mapped must be described in <computeroutput>bufferDesc</computeroutput>. The ::cudaExternalMemoryBufferDesc structure is defined as follows:</para>
+<para><programlisting><codeline><highlight class="normal">typedef<sp/>struct<sp/>cudaExternalMemoryBufferDesc_st<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>long<sp/>offset;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>long<sp/>size;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>unsigned<sp/>int<sp/>flags;</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>cudaExternalMemoryBufferDesc;</highlight></codeline>
+</programlisting></para>
+<para>where ::cudaExternalMemoryBufferDesc::offset is the offset in the memory object where the buffer&apos;s base address is. ::cudaExternalMemoryBufferDesc::size is the size of the buffer. ::cudaExternalMemoryBufferDesc::flags must be zero.</para>
+<para>The offset and size have to be suitably aligned to match the requirements of the external API. Mapping two buffers whose ranges overlap may or may not result in the same virtual address being returned for the overlapped portion. In such cases, the application must ensure that all accesses to that region from the GPU are volatile. Otherwise writes made via one address are not guaranteed to be visible via the other address, even if they&apos;re issued by the same thread. It is recommended that applications map the combined range instead of mapping separate buffers and then apply the appropriate offsets to the returned pointer to derive the individual buffers.</para>
+<para>The returned pointer <computeroutput>devPtr</computeroutput> must be freed using <ref refid="group__CUDART__MEMORY_1ga5635c759c41d1d2ea21fd46bb5744f15" kindref="member">cudaFree</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>devPtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returned device pointer to buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>extMem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Handle to external memory object </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bufferDesc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Buffer descriptor</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidResourceHandle \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__EXTRES__INTEROP_1gace5d0c69d2692274044f1cf965376a0d" kindref="member">cudaImportExternalMemory</ref> <ref refid="group__CUDART__EXTRES__INTEROP_1ga34a8bbbc04feef0ffc6bab0ef3a5dbca" kindref="member">cudaDestroyExternalMemory</ref>, <ref refid="group__CUDART__EXTRES__INTEROP_1ga5b6443166a34916b05eda98286ac9787" kindref="member">cudaExternalMemoryGetMappedMipmappedArray</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="3152" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="3152" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__EXTRES__INTEROP_1ga5b6443166a34916b05eda98286ac9787" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaExternalMemoryGetMappedMipmappedArray</definition>
+        <argsstring>(cudaMipmappedArray_t *mipmap, cudaExternalMemory_t extMem, const struct cudaExternalMemoryMipmappedArrayDesc *mipmapDesc)</argsstring>
+        <name>cudaExternalMemoryGetMappedMipmappedArray</name>
+        <param>
+          <type>cudaMipmappedArray_t *</type>
+          <declname>mipmap</declname>
+        </param>
+        <param>
+          <type>cudaExternalMemory_t</type>
+          <declname>extMem</declname>
+        </param>
+        <param>
+          <type>const struct cudaExternalMemoryMipmappedArrayDesc *</type>
+          <declname>mipmapDesc</declname>
+        </param>
+        <briefdescription>
+<para>Maps a CUDA mipmapped array onto an external memory object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Maps a CUDA mipmapped array onto an external object and returns a handle to it in <computeroutput>mipmap</computeroutput>.</para>
+<para>The properties of the CUDA mipmapped array being mapped must be described in <computeroutput>mipmapDesc</computeroutput>. The structure ::cudaExternalMemoryMipmappedArrayDesc is defined as follows:</para>
+<para><programlisting><codeline><highlight class="normal">typedef<sp/>struct<sp/>cudaExternalMemoryMipmappedArrayDesc_st<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>long<sp/>offset;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaChannelFormatDesc<sp/>formatDesc;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaExtent<sp/>extent;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>unsigned<sp/>int<sp/>flags;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>unsigned<sp/>int<sp/>numLevels;</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>cudaExternalMemoryMipmappedArrayDesc;</highlight></codeline>
+</programlisting></para>
+<para>where ::cudaExternalMemoryMipmappedArrayDesc::offset is the offset in the memory object where the base level of the mipmap chain is. ::cudaExternalMemoryMipmappedArrayDesc::formatDesc describes the format of the data. ::cudaExternalMemoryMipmappedArrayDesc::extent specifies the dimensions of the base level of the mipmap chain. ::cudaExternalMemoryMipmappedArrayDesc::flags are flags associated with CUDA mipmapped arrays. For further details, please refer to the documentation for <ref refid="group__CUDART__MEMORY_1gaf3a3790459bdc37339fff10927ef8214" kindref="member">cudaMalloc3DArray</ref>. Note that if the mipmapped array is bound as a color target in the graphics API, then the flag ::cudaArrayColorAttachment must be specified in ::cudaExternalMemoryMipmappedArrayDesc::flags. ::cudaExternalMemoryMipmappedArrayDesc::numLevels specifies the total number of levels in the mipmap chain.</para>
+<para>The returned CUDA mipmapped array must be freed using <ref refid="group__CUDART__MEMORY_1gada499a91a83d82f0b15e2b635125c132" kindref="member">cudaFreeMipmappedArray</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mipmap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returned CUDA mipmapped array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>extMem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Handle to external memory object </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mipmapDesc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- CUDA array descriptor</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidResourceHandle \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__EXTRES__INTEROP_1gace5d0c69d2692274044f1cf965376a0d" kindref="member">cudaImportExternalMemory</ref> <ref refid="group__CUDART__EXTRES__INTEROP_1ga34a8bbbc04feef0ffc6bab0ef3a5dbca" kindref="member">cudaDestroyExternalMemory</ref>, <ref refid="group__CUDART__EXTRES__INTEROP_1ga2a8b40d61b234035c5d56c69878b454c" kindref="member">cudaExternalMemoryGetMappedBuffer</ref></para>
+</simplesect>
+<simplesect kind="note"><para>If ::cudaExternalMemoryHandleDesc::type is ::cudaExternalMemoryHandleTypeNvSciBuf, then ::cudaExternalMemoryMipmappedArrayDesc::numLevels must not be greater than 1. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="3211" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="3211" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__EXTRES__INTEROP_1ga34a8bbbc04feef0ffc6bab0ef3a5dbca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaDestroyExternalMemory</definition>
+        <argsstring>(cudaExternalMemory_t extMem)</argsstring>
+        <name>cudaDestroyExternalMemory</name>
+        <param>
+          <type>cudaExternalMemory_t</type>
+          <declname>extMem</declname>
+        </param>
+        <briefdescription>
+<para>Destroys an external memory object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Destroys the specified external memory object. Any existing buffers and CUDA mipmapped arrays mapped onto this object must no longer be used and must be explicitly freed using <ref refid="group__CUDART__MEMORY_1ga5635c759c41d1d2ea21fd46bb5744f15" kindref="member">cudaFree</ref> and <ref refid="group__CUDART__MEMORY_1gada499a91a83d82f0b15e2b635125c132" kindref="member">cudaFreeMipmappedArray</ref> respectively.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>extMem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- External memory object to be destroyed</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidResourceHandle \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__EXTRES__INTEROP_1gace5d0c69d2692274044f1cf965376a0d" kindref="member">cudaImportExternalMemory</ref> <ref refid="group__CUDART__EXTRES__INTEROP_1ga2a8b40d61b234035c5d56c69878b454c" kindref="member">cudaExternalMemoryGetMappedBuffer</ref>, <ref refid="group__CUDART__EXTRES__INTEROP_1ga5b6443166a34916b05eda98286ac9787" kindref="member">cudaExternalMemoryGetMappedMipmappedArray</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="3234" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="3234" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__EXTRES__INTEROP_1gaff0eada47708f3c6f586d53405f9c77c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaImportExternalSemaphore</definition>
+        <argsstring>(cudaExternalSemaphore_t *extSem_out, const struct cudaExternalSemaphoreHandleDesc *semHandleDesc)</argsstring>
+        <name>cudaImportExternalSemaphore</name>
+        <param>
+          <type>cudaExternalSemaphore_t *</type>
+          <declname>extSem_out</declname>
+        </param>
+        <param>
+          <type>const struct cudaExternalSemaphoreHandleDesc *</type>
+          <declname>semHandleDesc</declname>
+        </param>
+        <briefdescription>
+<para>Imports an external semaphore. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Imports an externally allocated synchronization object and returns a handle to that in <computeroutput>extSem_out</computeroutput>.</para>
+<para>The properties of the handle being imported must be described in <computeroutput>semHandleDesc</computeroutput>. The ::cudaExternalSemaphoreHandleDesc is defined as follows:</para>
+<para><programlisting><codeline><highlight class="normal">typedef<sp/>struct<sp/>cudaExternalSemaphoreHandleDesc_st<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaExternalSemaphoreHandleType<sp/>type;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>union<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>fd;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>struct<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>*handle;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>void<sp/>*name;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>win32;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>void*<sp/>NvSciSyncObj;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>handle;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>unsigned<sp/>int<sp/>flags;</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>cudaExternalSemaphoreHandleDesc;</highlight></codeline>
+</programlisting></para>
+<para>where ::cudaExternalSemaphoreHandleDesc::type specifies the type of handle being imported. ::cudaExternalSemaphoreHandleType is defined as:</para>
+<para><programlisting><codeline><highlight class="normal">typedef<sp/>enum<sp/>cudaExternalSemaphoreHandleType_enum<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaExternalSemaphoreHandleTypeOpaqueFd<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaExternalSemaphoreHandleTypeOpaqueWin32<sp/><sp/><sp/><sp/>=<sp/>2,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaExternalSemaphoreHandleTypeOpaqueWin32Kmt<sp/>=<sp/>3,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaExternalSemaphoreHandleTypeD3D12Fence<sp/><sp/><sp/><sp/><sp/>=<sp/>4,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>cudaExternalSemaphoreHandleTypeD3D11Fence<sp/><sp/><sp/><sp/><sp/>=<sp/>5,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaExternalSemaphoreHandleTypeNvSciSync<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>6,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaExternalSemaphoreHandleTypeKeyedMutex<sp/><sp/><sp/><sp/><sp/>=<sp/>7,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaExternalSemaphoreHandleTypeKeyedMutexKmt<sp/><sp/>=<sp/>8</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>cudaExternalSemaphoreHandleType;</highlight></codeline>
+</programlisting></para>
+<para>If ::cudaExternalSemaphoreHandleDesc::type is ::cudaExternalSemaphoreHandleTypeOpaqueFd, then ::cudaExternalSemaphoreHandleDesc::handle::fd must be a valid file descriptor referencing a synchronization object. Ownership of the file descriptor is transferred to the CUDA driver when the handle is imported successfully. Performing any operations on the file descriptor after it is imported results in undefined behavior.</para>
+<para>If ::cudaExternalSemaphoreHandleDesc::type is ::cudaExternalSemaphoreHandleTypeOpaqueWin32, then exactly one of ::cudaExternalSemaphoreHandleDesc::handle::win32::handle and ::cudaExternalSemaphoreHandleDesc::handle::win32::name must not be NULL. If ::cudaExternalSemaphoreHandleDesc::handle::win32::handle is not NULL, then it must represent a valid shared NT handle that references a synchronization object. Ownership of this handle is not transferred to CUDA after the import operation, so the application must release the handle using the appropriate system call. If ::cudaExternalSemaphoreHandleDesc::handle::win32::name is not NULL, then it must name a valid synchronization object.</para>
+<para>If ::cudaExternalSemaphoreHandleDesc::type is ::cudaExternalSemaphoreHandleTypeOpaqueWin32Kmt, then ::cudaExternalSemaphoreHandleDesc::handle::win32::handle must be non-NULL and ::cudaExternalSemaphoreHandleDesc::handle::win32::name must be NULL. The handle specified must be a globally shared KMT handle. This handle does not hold a reference to the underlying object, and thus will be invalid when all references to the synchronization object are destroyed.</para>
+<para>If ::cudaExternalSemaphoreHandleDesc::type is ::cudaExternalSemaphoreHandleTypeD3D12Fence, then exactly one of ::cudaExternalSemaphoreHandleDesc::handle::win32::handle and ::cudaExternalSemaphoreHandleDesc::handle::win32::name must not be NULL. If ::cudaExternalSemaphoreHandleDesc::handle::win32::handle is not NULL, then it must represent a valid shared NT handle that is returned by ID3D12Device::CreateSharedHandle when referring to a ID3D12Fence object. This handle holds a reference to the underlying object. If ::cudaExternalSemaphoreHandleDesc::handle::win32::name is not NULL, then it must name a valid synchronization object that refers to a valid ID3D12Fence object.</para>
+<para>If ::cudaExternalSemaphoreHandleDesc::type is ::cudaExternalSemaphoreHandleTypeD3D11Fence, then exactly one of ::cudaExternalSemaphoreHandleDesc::handle::win32::handle and ::cudaExternalSemaphoreHandleDesc::handle::win32::name must not be NULL. If ::cudaExternalSemaphoreHandleDesc::handle::win32::handle is not NULL, then it must represent a valid shared NT handle that is returned by ID3D11Fence::CreateSharedHandle. If ::cudaExternalSemaphoreHandleDesc::handle::win32::name is not NULL, then it must name a valid synchronization object that refers to a valid ID3D11Fence object.</para>
+<para>If ::cudaExternalSemaphoreHandleDesc::type is ::cudaExternalSemaphoreHandleTypeNvSciSync, then ::cudaExternalSemaphoreHandleDesc::handle::nvSciSyncObj represents a valid NvSciSyncObj.</para>
+<para>::cudaExternalSemaphoreHandleTypeKeyedMutex, then exactly one of ::cudaExternalSemaphoreHandleDesc::handle::win32::handle and ::cudaExternalSemaphoreHandleDesc::handle::win32::name must not be NULL. If ::cudaExternalSemaphoreHandleDesc::handle::win32::handle is not NULL, then it represent a valid shared NT handle that is returned by IDXGIResource1::CreateSharedHandle when referring to <linebreak/>
+ a IDXGIKeyedMutex object.</para>
+<para>If ::cudaExternalSemaphoreHandleDesc::type is ::cudaExternalSemaphoreHandleTypeKeyedMutexKmt, then ::cudaExternalSemaphoreHandleDesc::handle::win32::handle must be non-NULL and ::cudaExternalSemaphoreHandleDesc::handle::win32::name must be NULL. The handle specified must represent a valid KMT handle that is returned by IDXGIResource::GetSharedHandle when referring to a IDXGIKeyedMutex object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>extSem_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returned handle to an external semaphore </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>semHandleDesc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Semaphore import handle descriptor</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidResourceHandle \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__EXTRES__INTEROP_1ga958118993f10e0d69b8cdd9282fed137" kindref="member">cudaDestroyExternalSemaphore</ref>, <ref refid="group__CUDART__EXTRES__INTEROP_1ga5f6e5232cf5336717fb7168448193dd5" kindref="member">cudaSignalExternalSemaphoresAsync</ref>, <ref refid="group__CUDART__EXTRES__INTEROP_1gac62c500143c3b2b4abbb4100cb8f0933" kindref="member">cudaWaitExternalSemaphoresAsync</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="3365" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="3365" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__EXTRES__INTEROP_1ga5f6e5232cf5336717fb7168448193dd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaSignalExternalSemaphoresAsync</definition>
+        <argsstring>(const cudaExternalSemaphore_t *extSemArray, const struct cudaExternalSemaphoreSignalParams *paramsArray, unsigned int numExtSems, cudaStream_t stream __dv(0))</argsstring>
+        <name>cudaSignalExternalSemaphoresAsync</name>
+        <param>
+          <type>const cudaExternalSemaphore_t *</type>
+          <declname>extSemArray</declname>
+        </param>
+        <param>
+          <type>const struct cudaExternalSemaphoreSignalParams *</type>
+          <declname>paramsArray</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numExtSems</declname>
+        </param>
+        <param>
+          <type>cudaStream_t stream </type>
+          <declname>__dv</declname>
+          <array>0</array>
+        </param>
+        <briefdescription>
+<para>Signals a set of external semaphore objects. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Enqueues a signal operation on a set of externally allocated semaphore object in the specified stream. The operations will be executed when all prior operations in the stream complete.</para>
+<para>The exact semantics of signaling a semaphore depends on the type of the object.</para>
+<para>If the semaphore object is any one of the following types: ::cudaExternalSemaphoreHandleTypeOpaqueFd, ::cudaExternalSemaphoreHandleTypeOpaqueWin32, ::cudaExternalSemaphoreHandleTypeOpaqueWin32Kmt then signaling the semaphore will set it to the signaled state.</para>
+<para>If the semaphore object is any one of the following types: ::cudaExternalSemaphoreHandleTypeD3D12Fence, ::cudaExternalSemaphoreHandleTypeD3D11Fence then the semaphore will be set to the value specified in ::cudaExternalSemaphoreSignalParams::params::fence::value.</para>
+<para>If the semaphore object is of the type ::cudaExternalSemaphoreHandleTypeNvSciSync this API sets ::cudaExternalSemaphoreSignalParams::params::nvSciSync::fence to a value that can be used by subsequent waiters of the same NvSciSync object to order operations with those currently submitted in <computeroutput>stream</computeroutput>. Such an update will overwrite previous contents of ::cudaExternalSemaphoreSignalParams::params::nvSciSync::fence. By deefault, signaling such an external semaphore object causes appropriate memory synchronization operations to be performed over all the external memory objects that are imported as ::cudaExternalMemoryHandleTypeNvSciBuf. This ensures that any subsequent accesses made by other importers of the same set of NvSciBuf memory object(s) are coherent. These operations can be skipped by specifying the flag ::cudaExternalSemaphoreSignalSkipNvSciBufMemSync, which can be used as a performance optimization when data coherency is not required. But specifying this flag in scenarios where data coherency is required results in undefined behavior. Also, for semaphore object of the type ::cudaExternalSemaphoreHandleTypeNvSciSync, if the NvSciSyncAttrList used to create the NvSciSyncObj had not set the flags in <ref refid="group__CUDART__DEVICE_1gaa235efa0476459d4203fbd5893673372" kindref="member">cudaDeviceGetNvSciSyncAttributes</ref> to cudaNvSciSyncAttrSignal, this API will return cudaErrorNotSupported.</para>
+<para>If the semaphore object is any one of the following types: ::cudaExternalSemaphoreHandleTypeKeyedMutex, ::cudaExternalSemaphoreHandleTypeKeyedMutexKmt, then the keyed mutex will be released with the key specified in ::cudaExternalSemaphoreSignalParams::params::keyedmutex::key.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>extSemArray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Set of external semaphores to be signaled </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>paramsArray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Array of semaphore parameters </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numExtSems</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Number of semaphores to signal </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Stream to enqueue the signal operations in</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidResourceHandle \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__EXTRES__INTEROP_1gaff0eada47708f3c6f586d53405f9c77c" kindref="member">cudaImportExternalSemaphore</ref>, <ref refid="group__CUDART__EXTRES__INTEROP_1ga958118993f10e0d69b8cdd9282fed137" kindref="member">cudaDestroyExternalSemaphore</ref>, <ref refid="group__CUDART__EXTRES__INTEROP_1gac62c500143c3b2b4abbb4100cb8f0933" kindref="member">cudaWaitExternalSemaphoresAsync</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="3430" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="3430" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__EXTRES__INTEROP_1gac62c500143c3b2b4abbb4100cb8f0933" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaWaitExternalSemaphoresAsync</definition>
+        <argsstring>(const cudaExternalSemaphore_t *extSemArray, const struct cudaExternalSemaphoreWaitParams *paramsArray, unsigned int numExtSems, cudaStream_t stream __dv(0))</argsstring>
+        <name>cudaWaitExternalSemaphoresAsync</name>
+        <param>
+          <type>const cudaExternalSemaphore_t *</type>
+          <declname>extSemArray</declname>
+        </param>
+        <param>
+          <type>const struct cudaExternalSemaphoreWaitParams *</type>
+          <declname>paramsArray</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numExtSems</declname>
+        </param>
+        <param>
+          <type>cudaStream_t stream </type>
+          <declname>__dv</declname>
+          <array>0</array>
+        </param>
+        <briefdescription>
+<para>Waits on a set of external semaphore objects. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Enqueues a wait operation on a set of externally allocated semaphore object in the specified stream. The operations will be executed when all prior operations in the stream complete.</para>
+<para>The exact semantics of waiting on a semaphore depends on the type of the object.</para>
+<para>If the semaphore object is any one of the following types: ::cudaExternalSemaphoreHandleTypeOpaqueFd, ::cudaExternalSemaphoreHandleTypeOpaqueWin32, ::cudaExternalSemaphoreHandleTypeOpaqueWin32Kmt then waiting on the semaphore will wait until the semaphore reaches the signaled state. The semaphore will then be reset to the unsignaled state. Therefore for every signal operation, there can only be one wait operation.</para>
+<para>If the semaphore object is any one of the following types: ::cudaExternalSemaphoreHandleTypeD3D12Fence, ::cudaExternalSemaphoreHandleTypeD3D11Fence then waiting on the semaphore will wait until the value of the semaphore is greater than or equal to ::cudaExternalSemaphoreWaitParams::params::fence::value.</para>
+<para>If the semaphore object is of the type ::cudaExternalSemaphoreHandleTypeNvSciSync then, waiting on the semaphore will wait until the ::cudaExternalSemaphoreSignalParams::params::nvSciSync::fence is signaled by the signaler of the NvSciSyncObj that was associated with this semaphore object. By default, waiting on such an external semaphore object causes appropriate memory synchronization operations to be performed over all external memory objects that are imported as ::cudaExternalMemoryHandleTypeNvSciBuf. This ensures that any subsequent accesses made by other importers of the same set of NvSciBuf memory object(s) are coherent. These operations can be skipped by specifying the flag ::cudaExternalSemaphoreWaitSkipNvSciBufMemSync, which can be used as a performance optimization when data coherency is not required. But specifying this flag in scenarios where data coherency is required results in undefined behavior. Also, for semaphore object of the type ::cudaExternalSemaphoreHandleTypeNvSciSync, if the NvSciSyncAttrList used to create the NvSciSyncObj had not set the flags in <ref refid="group__CUDART__DEVICE_1gaa235efa0476459d4203fbd5893673372" kindref="member">cudaDeviceGetNvSciSyncAttributes</ref> to cudaNvSciSyncAttrWait, this API will return cudaErrorNotSupported.</para>
+<para>If the semaphore object is any one of the following types: ::cudaExternalSemaphoreHandleTypeKeyedMutex, ::cudaExternalSemaphoreHandleTypeKeyedMutexKmt, then the keyed mutex will be acquired when it is released with the key specified in ::cudaExternalSemaphoreSignalParams::params::keyedmutex::key or until the timeout specified by ::cudaExternalSemaphoreSignalParams::params::keyedmutex::timeoutMs has lapsed. The timeout interval can either be a finite value specified in milliseconds or an infinite value. In case an infinite value is specified the timeout never elapses. The windows INFINITE macro must be used to specify infinite timeout</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>extSemArray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- External semaphores to be waited on </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>paramsArray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Array of semaphore parameters </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numExtSems</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Number of semaphores to wait on </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Stream to enqueue the wait operations in</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidResourceHandle ::cudaErrorTimeout \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__EXTRES__INTEROP_1gaff0eada47708f3c6f586d53405f9c77c" kindref="member">cudaImportExternalSemaphore</ref>, <ref refid="group__CUDART__EXTRES__INTEROP_1ga958118993f10e0d69b8cdd9282fed137" kindref="member">cudaDestroyExternalSemaphore</ref>, <ref refid="group__CUDART__EXTRES__INTEROP_1ga5f6e5232cf5336717fb7168448193dd5" kindref="member">cudaSignalExternalSemaphoresAsync</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="3504" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="3504" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__EXTRES__INTEROP_1ga958118993f10e0d69b8cdd9282fed137" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaDestroyExternalSemaphore</definition>
+        <argsstring>(cudaExternalSemaphore_t extSem)</argsstring>
+        <name>cudaDestroyExternalSemaphore</name>
+        <param>
+          <type>cudaExternalSemaphore_t</type>
+          <declname>extSem</declname>
+        </param>
+        <briefdescription>
+<para>Destroys an external semaphore. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Destroys an external semaphore object and releases any references to the underlying resource. Any outstanding signals or waits must have completed before the semaphore is destroyed.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>extSem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- External semaphore to be destroyed</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidResourceHandle \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__EXTRES__INTEROP_1gaff0eada47708f3c6f586d53405f9c77c" kindref="member">cudaImportExternalSemaphore</ref>, <ref refid="group__CUDART__EXTRES__INTEROP_1ga5f6e5232cf5336717fb7168448193dd5" kindref="member">cudaSignalExternalSemaphoresAsync</ref>, <ref refid="group__CUDART__EXTRES__INTEROP_1gac62c500143c3b2b4abbb4100cb8f0933" kindref="member">cudaWaitExternalSemaphoresAsync</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="3526" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="3526" declcolumn="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>___MANBRIEF___ External resource interoperability functions of the CUDA runtime API (___CURRENT_FILE___) ___ENDMANBRIEF___</para>
+<para>This section describes the external resource interoperability functions of the CUDA runtime application programming interface. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__CUDART____VERSION" kind="group">
+    <compoundname>CUDART__VERSION</compoundname>
+    <title>Version Management</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__CUDART____VERSION_1ga3adb7d2756db33bd8e5bfafe794874f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaDriverGetVersion</definition>
+        <argsstring>(int *driverVersion)</argsstring>
+        <name>cudaDriverGetVersion</name>
+        <param>
+          <type>int *</type>
+          <declname>driverVersion</declname>
+        </param>
+        <briefdescription>
+<para>Returns the latest version of CUDA supported by the driver. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns in <computeroutput>*driverVersion</computeroutput> the latest version of CUDA supported by the driver. The version is returned as (1000 <times/> major + 10 <times/> minor). For example, CUDA 9.2 would be represented by 9020. If no driver is installed, then 0 is returned as the driver version.</para>
+<para>This function automatically returns ::cudaErrorInvalidValue if <computeroutput>driverVersion</computeroutput> is NULL.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>driverVersion</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returns the CUDA driver version.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART____VERSION_1ga7aa68c528a22917b05dc6b526258e968" kindref="member">cudaRuntimeGetVersion</ref>, ::cuDriverGetVersion </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="8350" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="8350" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART____VERSION_1ga7aa68c528a22917b05dc6b526258e968" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ __cudart_builtin__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ __cudart_builtin__ cudaError_t CUDARTAPI cudaRuntimeGetVersion</definition>
+        <argsstring>(int *runtimeVersion)</argsstring>
+        <name>cudaRuntimeGetVersion</name>
+        <param>
+          <type>int *</type>
+          <declname>runtimeVersion</declname>
+        </param>
+        <briefdescription>
+<para>Returns the CUDA Runtime version. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns in <computeroutput>*runtimeVersion</computeroutput> the version number of the current CUDA Runtime instance. The version is returned as (1000 <times/> major + 10 <times/> minor). For example, CUDA 9.2 would be represented by 9020.</para>
+<para>This function automatically returns ::cudaErrorInvalidValue if the <computeroutput>runtimeVersion</computeroutput> argument is NULL.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>runtimeVersion</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returns the CUDA Runtime version.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART____VERSION_1ga3adb7d2756db33bd8e5bfafe794874f4" kindref="member">cudaDriverGetVersion</ref>, ::cuDriverGetVersion </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="8375" column="58" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="8375" declcolumn="58"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

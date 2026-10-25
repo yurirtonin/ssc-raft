@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structcoordinates" kind="struct" language="C++" prot="public">
+    <compoundname>coordinates</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcoordinates_1a20cdb6923ef5a76f9f1e40d3daf4766c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float coordinates::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="67" column="11" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcoordinates_1a4c7c875da61b6278182ae9a53365dc60" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float coordinates::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="68" column="11" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcoordinates_1acb06669c53b98ad4167187a2fb2b07ed" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float coordinates::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="69" column="11" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="65" column="1" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="66" bodyend="70"/>
+    <listofallmembers>
+      <member refid="structcoordinates_1a20cdb6923ef5a76f9f1e40d3daf4766c" prot="public" virt="non-virtual"><scope>coordinates</scope><name>x</name></member>
+      <member refid="structcoordinates_1a4c7c875da61b6278182ae9a53365dc60" prot="public" virt="non-virtual"><scope>coordinates</scope><name>y</name></member>
+      <member refid="structcoordinates_1acb06669c53b98ad4167187a2fb2b07ed" prot="public" virt="non-virtual"><scope>coordinates</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

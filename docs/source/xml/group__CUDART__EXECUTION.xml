@@ -1,0 +1,657 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__CUDART__EXECUTION" kind="group">
+    <compoundname>CUDART_EXECUTION</compoundname>
+    <title>Execution Control</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__CUDART__EXECUTION_1gaaa780bd93440640cd7de502788ac895e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaLaunchKernel</definition>
+        <argsstring>(const void *func, dim3 gridDim, dim3 blockDim, void **args, size_t sharedMem, cudaStream_t stream)</argsstring>
+        <name>cudaLaunchKernel</name>
+        <param>
+          <type>const void *</type>
+          <declname>func</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>gridDim</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>blockDim</declname>
+        </param>
+        <param>
+          <type>void **</type>
+          <declname>args</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sharedMem</declname>
+        </param>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+<para>Launches a device function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The function invokes kernel <computeroutput>func</computeroutput> on <computeroutput>gridDim</computeroutput> (<computeroutput>gridDim.x</computeroutput> × <computeroutput>gridDim.y</computeroutput> × <computeroutput>gridDim.z</computeroutput>) grid of blocks. Each block contains <computeroutput>blockDim</computeroutput> (<computeroutput>blockDim.x</computeroutput> × <computeroutput>blockDim.y</computeroutput> × <computeroutput>blockDim.z</computeroutput>) threads.</para>
+<para>If the kernel has N parameters the <computeroutput>args</computeroutput> should point to array of N pointers. Each pointer, from <computeroutput>args[0]</computeroutput> to <computeroutput>args[N - 1]</computeroutput>, point to the region of memory from which the actual parameter will be copied.</para>
+<para>For templated functions, pass the function symbol as follows: func_name&lt;template_arg_0,...,template_arg_N&gt;</para>
+<para><computeroutput>sharedMem</computeroutput> sets the amount of dynamic shared memory that will be available to each thread block.</para>
+<para><computeroutput>stream</computeroutput> specifies a stream the invocation is associated to.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Device function symbol </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gridDim</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Grid dimentions </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>blockDim</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Block dimentions </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Arguments </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sharedMem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Shared memory </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Stream identifier</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidDeviceFunction, ::cudaErrorInvalidConfiguration, ::cudaErrorLaunchFailure, ::cudaErrorLaunchTimeout, ::cudaErrorLaunchOutOfResources, ::cudaErrorSharedObjectInitFailed, ::cudaErrorInvalidPtx, ::cudaErrorNoKernelImageForDevice, ::cudaErrorJitCompilerNotFound \note_null_stream \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para>cudaLaunchKernel (C++ API), ::cuLaunchKernel </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="3591" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="3591" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__EXECUTION_1ga4c05ee29e2c42af2978bd19e4ab47330" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaLaunchCooperativeKernel</definition>
+        <argsstring>(const void *func, dim3 gridDim, dim3 blockDim, void **args, size_t sharedMem, cudaStream_t stream)</argsstring>
+        <name>cudaLaunchCooperativeKernel</name>
+        <param>
+          <type>const void *</type>
+          <declname>func</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>gridDim</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>blockDim</declname>
+        </param>
+        <param>
+          <type>void **</type>
+          <declname>args</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sharedMem</declname>
+        </param>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+<para>Launches a device function where thread blocks can cooperate and synchronize as they execute. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The function invokes kernel <computeroutput>func</computeroutput> on <computeroutput>gridDim</computeroutput> (<computeroutput>gridDim.x</computeroutput> × <computeroutput>gridDim.y</computeroutput> × <computeroutput>gridDim.z</computeroutput>) grid of blocks. Each block contains <computeroutput>blockDim</computeroutput> (<computeroutput>blockDim.x</computeroutput> × <computeroutput>blockDim.y</computeroutput> × <computeroutput>blockDim.z</computeroutput>) threads.</para>
+<para>The device on which this kernel is invoked must have a non-zero value for the device attribute ::cudaDevAttrCooperativeLaunch.</para>
+<para>The total number of blocks launched cannot exceed the maximum number of blocks per multiprocessor as returned by <ref refid="group__CUDART__OCCUPANCY_1gae162c2e0a6864271d20cc60bb107abc1" kindref="member">cudaOccupancyMaxActiveBlocksPerMultiprocessor</ref> (or <ref refid="group__CUDART__OCCUPANCY_1gafd44b9bd208a9d8bb3fefb9a7a65d425" kindref="member">cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFlags</ref>) times the number of multiprocessors as specified by the device attribute ::cudaDevAttrMultiProcessorCount.</para>
+<para>The kernel cannot make use of CUDA dynamic parallelism.</para>
+<para>If the kernel has N parameters the <computeroutput>args</computeroutput> should point to array of N pointers. Each pointer, from <computeroutput>args[0]</computeroutput> to <computeroutput>args[N - 1]</computeroutput>, point to the region of memory from which the actual parameter will be copied.</para>
+<para>For templated functions, pass the function symbol as follows: func_name&lt;template_arg_0,...,template_arg_N&gt;</para>
+<para><computeroutput>sharedMem</computeroutput> sets the amount of dynamic shared memory that will be available to each thread block.</para>
+<para><computeroutput>stream</computeroutput> specifies a stream the invocation is associated to.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Device function symbol </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gridDim</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Grid dimentions </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>blockDim</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Block dimentions </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Arguments </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sharedMem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Shared memory </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Stream identifier</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidDeviceFunction, ::cudaErrorInvalidConfiguration, ::cudaErrorLaunchFailure, ::cudaErrorLaunchTimeout, ::cudaErrorLaunchOutOfResources, ::cudaErrorCooperativeLaunchTooLarge, ::cudaErrorSharedObjectInitFailed \note_null_stream \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para>cudaLaunchCooperativeKernel (C++ API), <ref refid="group__CUDART__EXECUTION_1ga15ff3a20718c13846bb3b8304bcc7db9" kindref="member">cudaLaunchCooperativeKernelMultiDevice</ref>, ::cuLaunchCooperativeKernel </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="3648" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="3648" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__EXECUTION_1ga15ff3a20718c13846bb3b8304bcc7db9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaLaunchCooperativeKernelMultiDevice</definition>
+        <argsstring>(struct cudaLaunchParams *launchParamsList, unsigned int numDevices, unsigned int flags __dv(0))</argsstring>
+        <name>cudaLaunchCooperativeKernelMultiDevice</name>
+        <param>
+          <type>struct cudaLaunchParams *</type>
+          <declname>launchParamsList</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numDevices</declname>
+        </param>
+        <param>
+          <type>unsigned int <ref refid="structflags" kindref="compound">flags</ref> </type>
+          <declname>__dv</declname>
+          <array>0</array>
+        </param>
+        <briefdescription>
+<para>Launches device functions on multiple devices where thread blocks can cooperate and synchronize as they execute. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Invokes kernels as specified in the <computeroutput>launchParamsList</computeroutput> array where each element of the array specifies all the parameters required to perform a single kernel launch. These kernels can cooperate and synchronize as they execute. The size of the array is specified by <computeroutput>numDevices</computeroutput>.</para>
+<para>No two kernels can be launched on the same device. All the devices targeted by this multi-device launch must be identical. All devices must have a non-zero value for the device attribute ::cudaDevAttrCooperativeMultiDeviceLaunch.</para>
+<para>The same kernel must be launched on all devices. Note that any <bold>device</bold> or <bold>constant</bold> variables are independently instantiated on every device. It is the application&apos;s responsiblity to ensure these variables are initialized and used appropriately.</para>
+<para>The size of the grids as specified in blocks, the size of the blocks themselves and the amount of shared memory used by each thread block must also match across all launched kernels.</para>
+<para>The streams used to launch these kernels must have been created via either <ref refid="group__CUDART__STREAM_1ga11a80128d72f5ecf20072976122c7cd4" kindref="member">cudaStreamCreate</ref> or <ref refid="group__CUDART__STREAM_1gaa028ceaec5dc941c48c49678915126bc" kindref="member">cudaStreamCreateWithPriority</ref> or <ref refid="group__CUDART__STREAM_1gaa028ceaec5dc941c48c49678915126bc" kindref="member">cudaStreamCreateWithPriority</ref>. The NULL stream or ::cudaStreamLegacy or ::cudaStreamPerThread cannot be used.</para>
+<para>The total number of blocks launched per kernel cannot exceed the maximum number of blocks per multiprocessor as returned by <ref refid="group__CUDART__OCCUPANCY_1gae162c2e0a6864271d20cc60bb107abc1" kindref="member">cudaOccupancyMaxActiveBlocksPerMultiprocessor</ref> (or <ref refid="group__CUDART__OCCUPANCY_1gafd44b9bd208a9d8bb3fefb9a7a65d425" kindref="member">cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFlags</ref>) times the number of multiprocessors as specified by the device attribute ::cudaDevAttrMultiProcessorCount. Since the total number of blocks launched per device has to match across all devices, the maximum number of blocks that can be launched per device will be limited by the device with the least number of multiprocessors.</para>
+<para>The kernel cannot make use of CUDA dynamic parallelism.</para>
+<para>The ::cudaLaunchParams structure is defined as: <programlisting><codeline><highlight class="normal">struct<sp/>cudaLaunchParams</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>*func;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>dim3<sp/>gridDim;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>dim3<sp/>blockDim;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>**args;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>size_t<sp/>sharedMem;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaStream_t<sp/>stream;</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+</programlisting> where:<itemizedlist>
+<listitem><para>::cudaLaunchParams::func specifies the kernel to be launched. This same functions must be launched on all devices. For templated functions, pass the function symbol as follows: func_name&lt;template_arg_0,...,template_arg_N&gt;</para>
+</listitem><listitem><para>::cudaLaunchParams::gridDim specifies the width, height and depth of the grid in blocks. This must match across all kernels launched.</para>
+</listitem><listitem><para>::cudaLaunchParams::blockDim is the width, height and depth of each thread block. This must match across all kernels launched.</para>
+</listitem><listitem><para>::cudaLaunchParams::args specifies the arguments to the kernel. If the kernel has N parameters then ::cudaLaunchParams::args should point to array of N pointers. Each pointer, from <computeroutput>::cudaLaunchParams::args[0]</computeroutput> to <computeroutput>::cudaLaunchParams::args[N - 1]</computeroutput>, point to the region of memory from which the actual parameter will be copied.</para>
+</listitem><listitem><para>::cudaLaunchParams::sharedMem is the dynamic shared-memory size per thread block in bytes. This must match across all kernels launched.</para>
+</listitem><listitem><para>::cudaLaunchParams::stream is the handle to the stream to perform the launch in. This cannot be the NULL stream or ::cudaStreamLegacy or ::cudaStreamPerThread.</para>
+</listitem></itemizedlist>
+</para>
+<para>By default, the kernel won&apos;t begin execution on any GPU until all prior work in all the specified streams has completed. This behavior can be overridden by specifying the flag ::cudaCooperativeLaunchMultiDeviceNoPreSync. When this flag is specified, each kernel will only wait for prior work in the stream corresponding to that GPU to complete before it begins execution.</para>
+<para>Similarly, by default, any subsequent work pushed in any of the specified streams will not begin execution until the kernels on all GPUs have completed. This behavior can be overridden by specifying the flag ::cudaCooperativeLaunchMultiDeviceNoPostSync. When this flag is specified, any subsequent work pushed in any of the specified streams will only wait for the kernel launched on the GPU corresponding to that stream to complete before it begins execution.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>launchParamsList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- List of launch parameters, one per device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numDevices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Size of the <computeroutput>launchParamsList</computeroutput> array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Flags to control launch behavior</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidDeviceFunction, ::cudaErrorInvalidConfiguration, ::cudaErrorLaunchFailure, ::cudaErrorLaunchTimeout, ::cudaErrorLaunchOutOfResources, ::cudaErrorCooperativeLaunchTooLarge, ::cudaErrorSharedObjectInitFailed \note_null_stream \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para>cudaLaunchCooperativeKernel (C++ API), <ref refid="group__CUDART__EXECUTION_1ga4c05ee29e2c42af2978bd19e4ab47330" kindref="member">cudaLaunchCooperativeKernel</ref>, ::cuLaunchCooperativeKernelMultiDevice </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="3747" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="3747" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__EXECUTION_1ga75ebd65ac35ab892628fbda45bf13372" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaFuncSetCacheConfig</definition>
+        <argsstring>(const void *func, enum cudaFuncCache cacheConfig)</argsstring>
+        <name>cudaFuncSetCacheConfig</name>
+        <param>
+          <type>const void *</type>
+          <declname>func</declname>
+        </param>
+        <param>
+          <type>enum cudaFuncCache</type>
+          <declname>cacheConfig</declname>
+        </param>
+        <briefdescription>
+<para>Sets the preferred cache configuration for a device function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>On devices where the L1 cache and shared memory use the same hardware resources, this sets through <computeroutput>cacheConfig</computeroutput> the preferred cache configuration for the function specified via <computeroutput>func</computeroutput>. This is only a preference. The runtime will use the requested configuration if possible, but it is free to choose a different configuration if required to execute <computeroutput>func</computeroutput>.</para>
+<para><computeroutput>func</computeroutput> is a device function symbol and must be declared as a <computeroutput><bold>global</bold></computeroutput> function. If the specified function does not exist, then ::cudaErrorInvalidDeviceFunction is returned. For templated functions, pass the function symbol as follows: func_name&lt;template_arg_0,...,template_arg_N&gt;</para>
+<para>This setting does nothing on devices where the size of the L1 cache and shared memory are fixed.</para>
+<para>Launching a kernel with a different preference than the most recent preference setting may insert a device-side synchronization point.</para>
+<para>The supported cache configurations are:<itemizedlist>
+<listitem><para>::cudaFuncCachePreferNone: no preference for shared memory or L1 (default)</para>
+</listitem><listitem><para>::cudaFuncCachePreferShared: prefer larger shared memory and smaller L1 cache</para>
+</listitem><listitem><para>::cudaFuncCachePreferL1: prefer larger L1 cache and smaller shared memory</para>
+</listitem><listitem><para>::cudaFuncCachePreferEqual: prefer equal size L1 cache and shared memory</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Device function symbol </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cacheConfig</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Requested cache configuration</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidDeviceFunction \notefnerr \note_string_api_deprecation2 \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para>cudaFuncSetCacheConfig (C++ API), <ref refid="group__CUDART__EXECUTION_1gacb1e747670f88e607ea43ffec783e0fd" kindref="member">cudaFuncGetAttributes (C API)</ref>, <ref refid="group__CUDART__EXECUTION_1gaaa780bd93440640cd7de502788ac895e" kindref="member">cudaLaunchKernel (C API)</ref>, <ref refid="group__CUDART__EXECUTION_1gaf9853147ef293745512f281046a787b5" kindref="member">cudaSetDoubleForDevice</ref>, <ref refid="group__CUDART__EXECUTION_1ga53032015714acb4b6443bba227ca39f5" kindref="member">cudaSetDoubleForHost</ref>, <ref refid="group__CUDART__THREAD__DEPRECATED_1ga58c01c5f234a7de23df1cb4773cc7825" kindref="member">cudaThreadGetCacheConfig</ref>, <ref refid="group__CUDART__THREAD__DEPRECATED_1ga1614c381e97f6aa29ff5c33d7c5eb5c3" kindref="member">cudaThreadSetCacheConfig</ref>, ::cuFuncSetCacheConfig </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="3796" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="3796" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__EXECUTION_1gabe77ac48ebbd881d815ae541116596a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaFuncSetSharedMemConfig</definition>
+        <argsstring>(const void *func, enum cudaSharedMemConfig config)</argsstring>
+        <name>cudaFuncSetSharedMemConfig</name>
+        <param>
+          <type>const void *</type>
+          <declname>func</declname>
+        </param>
+        <param>
+          <type>enum cudaSharedMemConfig</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>Sets the shared memory configuration for a device function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>On devices with configurable shared memory banks, this function will force all subsequent launches of the specified device function to have the given shared memory bank size configuration. On any given launch of the function, the shared memory configuration of the device will be temporarily changed if needed to suit the function&apos;s preferred configuration. Changes in shared memory configuration between subsequent launches of functions, may introduce a device side synchronization point.</para>
+<para>Any per-function setting of shared memory bank size set via <ref refid="group__CUDART__EXECUTION_1gabe77ac48ebbd881d815ae541116596a9" kindref="member">cudaFuncSetSharedMemConfig</ref> will override the device wide setting set by <ref refid="group__CUDART__DEVICE_1ga49193b2fb2ca48691d46fdf1941f44b1" kindref="member">cudaDeviceSetSharedMemConfig</ref>.</para>
+<para>Changing the shared memory bank size will not increase shared memory usage or affect occupancy of kernels, but may have major effects on performance. Larger bank sizes will allow for greater potential bandwidth to shared memory, but will change what kinds of accesses to shared memory will result in bank conflicts.</para>
+<para>This function will do nothing on devices with fixed shared memory bank size.</para>
+<para>For templated functions, pass the function symbol as follows: func_name&lt;template_arg_0,...,template_arg_N&gt;</para>
+<para>The supported bank configurations are:<itemizedlist>
+<listitem><para>::cudaSharedMemBankSizeDefault: use the device&apos;s shared memory configuration when launching this function.</para>
+</listitem><listitem><para>::cudaSharedMemBankSizeFourByte: set shared memory bank width to be four bytes natively when launching this function.</para>
+</listitem><listitem><para>::cudaSharedMemBankSizeEightByte: set shared memory bank width to be eight bytes natively when launching this function.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Device function symbol </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Requested shared memory configuration</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidDeviceFunction, ::cudaErrorInvalidValue, \notefnerr \note_string_api_deprecation2 \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__DEVICE_1ga49193b2fb2ca48691d46fdf1941f44b1" kindref="member">cudaDeviceSetSharedMemConfig</ref>, <ref refid="group__CUDART__DEVICE_1ga17312cb2ff90cc2ece48f81243ac7003" kindref="member">cudaDeviceGetSharedMemConfig</ref>, <ref refid="group__CUDART__DEVICE_1ga4749a277602c902676e092c0c446ace4" kindref="member">cudaDeviceSetCacheConfig</ref>, <ref refid="group__CUDART__DEVICE_1gaf4b5597c316c70af59499dde077b9345" kindref="member">cudaDeviceGetCacheConfig</ref>, <ref refid="group__CUDART__EXECUTION_1ga75ebd65ac35ab892628fbda45bf13372" kindref="member">cudaFuncSetCacheConfig</ref>, ::cuFuncSetSharedMemConfig </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="3851" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="3851" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__EXECUTION_1gacb1e747670f88e607ea43ffec783e0fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ __cudart_builtin__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ __cudart_builtin__ cudaError_t CUDARTAPI cudaFuncGetAttributes</definition>
+        <argsstring>(struct cudaFuncAttributes *attr, const void *func)</argsstring>
+        <name>cudaFuncGetAttributes</name>
+        <param>
+          <type>struct cudaFuncAttributes *</type>
+          <declname>attr</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>func</declname>
+        </param>
+        <briefdescription>
+<para>Find out attributes for a given function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function obtains the attributes of a function specified via <computeroutput>func</computeroutput>. <computeroutput>func</computeroutput> is a device function symbol and must be declared as a <computeroutput><bold>global</bold></computeroutput> function. The fetched attributes are placed in <computeroutput>attr</computeroutput>. If the specified function does not exist, then ::cudaErrorInvalidDeviceFunction is returned. For templated functions, pass the function symbol as follows: func_name&lt;template_arg_0,...,template_arg_N&gt;</para>
+<para>Note that some function attributes such as maxThreadsPerBlock may vary based on the device that is currently being used.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>attr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Return pointer to function&apos;s attributes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Device function symbol</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidDeviceFunction \notefnerr \note_string_api_deprecation2 \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__EXECUTION_1ga75ebd65ac35ab892628fbda45bf13372" kindref="member">cudaFuncSetCacheConfig (C API)</ref>, cudaFuncGetAttributes (C++ API), <ref refid="group__CUDART__EXECUTION_1gaaa780bd93440640cd7de502788ac895e" kindref="member">cudaLaunchKernel (C API)</ref>, <ref refid="group__CUDART__EXECUTION_1gaf9853147ef293745512f281046a787b5" kindref="member">cudaSetDoubleForDevice</ref>, <ref refid="group__CUDART__EXECUTION_1ga53032015714acb4b6443bba227ca39f5" kindref="member">cudaSetDoubleForHost</ref>, ::cuFuncGetAttribute </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="3886" column="58" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="3886" declcolumn="58"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__EXECUTION_1gad30aa7cba71047ca5acf5a89bd9b7013" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ __cudart_builtin__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ __cudart_builtin__ cudaError_t CUDARTAPI cudaFuncSetAttribute</definition>
+        <argsstring>(const void *func, enum cudaFuncAttribute attr, int value)</argsstring>
+        <name>cudaFuncSetAttribute</name>
+        <param>
+          <type>const void *</type>
+          <declname>func</declname>
+        </param>
+        <param>
+          <type>enum cudaFuncAttribute</type>
+          <declname>attr</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Set attributes for a given function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function sets the attributes of a function specified via <computeroutput>func</computeroutput>. The parameter <computeroutput>func</computeroutput> must be a pointer to a function that executes on the device. The parameter specified by <computeroutput>func</computeroutput> must be declared as a <computeroutput><bold>global</bold></computeroutput> function. The enumeration defined by <computeroutput>attr</computeroutput> is set to the value defined by <computeroutput>value</computeroutput>. If the specified function does not exist, then ::cudaErrorInvalidDeviceFunction is returned. If the specified attribute cannot be written, or if the value is incorrect, then ::cudaErrorInvalidValue is returned.</para>
+<para>Valid values for <computeroutput>attr</computeroutput> are:<itemizedlist>
+<listitem><para>::cudaFuncAttributeMaxDynamicSharedMemorySize - The requested maximum size in bytes of dynamically-allocated shared memory. The sum of this value and the function attribute ::sharedSizeBytes cannot exceed the device attribute ::cudaDevAttrMaxSharedMemoryPerBlockOptin. The maximal size of requestable dynamic shared memory may differ by GPU architecture.</para>
+</listitem><listitem><para>::cudaFuncAttributePreferredSharedMemoryCarveout - On devices where the L1 cache and shared memory use the same hardware resources, this sets the shared memory carveout preference, in percent of the total shared memory. See ::cudaDevAttrMaxSharedMemoryPerMultiprocessor. This is only a hint, and the driver can choose a different ratio if required to execute the function.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Function to get attributes of </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>attr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Attribute to set </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Value to set</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidDeviceFunction, ::cudaErrorInvalidValue \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+cudaLaunchKernel (C++ API), cudaFuncSetCacheConfig (C++ API), <ref refid="group__CUDART__EXECUTION_1gacb1e747670f88e607ea43ffec783e0fd" kindref="member">cudaFuncGetAttributes (C API)</ref>, <ref refid="group__CUDART__EXECUTION_1gaf9853147ef293745512f281046a787b5" kindref="member">cudaSetDoubleForDevice</ref>, <ref refid="group__CUDART__EXECUTION_1ga53032015714acb4b6443bba227ca39f5" kindref="member">cudaSetDoubleForHost</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="3925" column="58" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="3925" declcolumn="58"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__EXECUTION_1gaf9853147ef293745512f281046a787b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__CUDA_DEPRECATED __host__ cudaError_t CUDARTAPI</type>
+        <definition>__CUDA_DEPRECATED __host__ cudaError_t CUDARTAPI cudaSetDoubleForDevice</definition>
+        <argsstring>(double *d)</argsstring>
+        <name>cudaSetDoubleForDevice</name>
+        <param>
+          <type>double *</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Converts a double argument to be executed on a device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Double to convert</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="deprecated_1_deprecated000007"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated as of CUDA 7.5</para>
+</xrefdescription></xrefsect></para>
+<para>Converts the double value of <computeroutput>d</computeroutput> to an internal float representation if the device does not support double arithmetic. If the device does natively support doubles, then this function does nothing.</para>
+<para><simplesect kind="return"><para>::cudaSuccess \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__EXECUTION_1ga75ebd65ac35ab892628fbda45bf13372" kindref="member">cudaFuncSetCacheConfig (C API)</ref>, <ref refid="group__CUDART__EXECUTION_1gacb1e747670f88e607ea43ffec783e0fd" kindref="member">cudaFuncGetAttributes (C API)</ref>, <ref refid="group__CUDART__EXECUTION_1ga53032015714acb4b6443bba227ca39f5" kindref="member">cudaSetDoubleForHost</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="3949" column="57" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="3949" declcolumn="57"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__EXECUTION_1ga53032015714acb4b6443bba227ca39f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__CUDA_DEPRECATED __host__ cudaError_t CUDARTAPI</type>
+        <definition>__CUDA_DEPRECATED __host__ cudaError_t CUDARTAPI cudaSetDoubleForHost</definition>
+        <argsstring>(double *d)</argsstring>
+        <name>cudaSetDoubleForHost</name>
+        <param>
+          <type>double *</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Converts a double argument after execution on a device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000008"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated as of CUDA 7.5</para>
+</xrefdescription></xrefsect></para>
+<para>Converts the double value of <computeroutput>d</computeroutput> from a potentially internal float representation if the device does not support double arithmetic. If the device does natively support doubles, then this function does nothing.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Double to convert</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__EXECUTION_1ga75ebd65ac35ab892628fbda45bf13372" kindref="member">cudaFuncSetCacheConfig (C API)</ref>, <ref refid="group__CUDART__EXECUTION_1gacb1e747670f88e607ea43ffec783e0fd" kindref="member">cudaFuncGetAttributes (C API)</ref>, <ref refid="group__CUDART__EXECUTION_1gaf9853147ef293745512f281046a787b5" kindref="member">cudaSetDoubleForDevice</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="3973" column="58" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="3973" declcolumn="58"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__EXECUTION_1gacdeaa185a76c5cbfd737519261c992a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaLaunchHostFunc</definition>
+        <argsstring>(cudaStream_t stream, cudaHostFn_t fn, void *userData)</argsstring>
+        <name>cudaLaunchHostFunc</name>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>cudaHostFn_t</type>
+          <declname>fn</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>userData</declname>
+        </param>
+        <briefdescription>
+<para>Enqueues a host function call in a stream. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Enqueues a host function to run in a stream. The function will be called after currently enqueued work and will block work added after it.</para>
+<para>The host function must not make any CUDA API calls. Attempting to use a CUDA API may result in ::cudaErrorNotPermitted, but this is not required. The host function must not perform any synchronization that may depend on outstanding CUDA work not mandated to run earlier. Host functions without a mandated order (such as in independent streams) execute in undefined order and may be serialized.</para>
+<para>For the purposes of Unified Memory, execution makes a number of guarantees: <itemizedlist>
+<listitem>
+<para>The stream is considered idle for the duration of the function&apos;s execution. Thus, for example, the function may always use memory attached to the stream it was enqueued in. </para>
+</listitem>
+<listitem>
+<para>The start of execution of the function has the same effect as synchronizing an event recorded in the same stream immediately prior to the function. It thus synchronizes streams which have been &quot;joined&quot; prior to the function. </para>
+</listitem>
+<listitem>
+<para>Adding device work to any stream does not have the effect of making the stream active until all preceding host functions and stream callbacks have executed. Thus, for example, a function might use global attached memory even if work has been added to another stream, if the work has been ordered behind the function call with an event. </para>
+</listitem>
+<listitem>
+<para>Completion of the function does not cause a stream to become active except as described above. The stream will remain idle if no device work follows the function, and will remain idle across consecutive host functions or stream callbacks without device work in between. Thus, for example, stream synchronization can be done by signaling from a host function at the end of the stream. </para>
+</listitem>
+</itemizedlist>
+</para>
+<para>Note that, in constrast to ::cuStreamAddCallback, the function will not be called in the event of an error in the CUDA context.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Stream to enqueue function call in </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The function to call once preceding stream operations are complete </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- User-specified data to be passed to the function</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidResourceHandle, ::cudaErrorInvalidValue, ::cudaErrorNotSupported \note_null_stream \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__STREAM_1ga11a80128d72f5ecf20072976122c7cd4" kindref="member">cudaStreamCreate</ref>, <ref refid="group__CUDART__STREAM_1ga3b673df9fdd757737710fb1054da0306" kindref="member">cudaStreamQuery</ref>, <ref refid="group__CUDART__STREAM_1ga13ddca855befb29078fd09e8aa484ebe" kindref="member">cudaStreamSynchronize</ref>, <ref refid="group__CUDART__STREAM_1gacb8b984b2832fd8c32a7ba0c9fa0a6da" kindref="member">cudaStreamWaitEvent</ref>, <ref refid="group__CUDART__STREAM_1ga4c18d38dadccdc2ce1e3d3a2698c6e54" kindref="member">cudaStreamDestroy</ref>, <ref refid="group__CUDART__MEMORY_1ga2e5168df1a659890a77c2f3ed861a21d" kindref="member">cudaMallocManaged</ref>, <ref refid="group__CUDART__STREAM_1gadaaf39129ca19aa42619a48e93eaa20c" kindref="member">cudaStreamAttachMemAsync</ref>, <ref refid="group__CUDART__STREAM_1ga68ab47f776bc6b9316f5e1d358fa8ec1" kindref="member">cudaStreamAddCallback</ref>, ::cuLaunchHostFunc </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="4039" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="4039" declcolumn="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>___MANBRIEF___ execution control functions of the CUDA runtime API (___CURRENT_FILE___) ___ENDMANBRIEF___</para>
+<para>This section describes the execution control functions of the CUDA runtime application programming interface.</para>
+<para>Some functions have overloaded C++ API template versions documented separately in the <ref refid="group__CUDART__HIGHLEVEL" kindref="compound">C++ API Routines</ref> module. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1735 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="radon_8hpp" kind="file" language="C++">
+    <compoundname>radon.hpp</compoundname>
+    <includes local="no">cuda.h</includes>
+    <includes local="no">cuda_runtime.h</includes>
+    <includes local="no">cufftXt.h</includes>
+    <includes local="no">complex.h</includes>
+    <includedby refid="radon__fst__kernel_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/kernels/radon_fst_kernel.cu</includedby>
+    <includedby refid="radon__fst_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/radon_fst.cu</includedby>
+    <includedby refid="radon__rt_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/radon_rt.cu</includedby>
+    <includedby refid="em__frequency_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/em_frequency.cu</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>cuda_runtime.h</label>
+      </node>
+      <node id="4">
+        <label>cufftXt.h</label>
+      </node>
+      <node id="1">
+        <label>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp</label>
+        <link refid="radon_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>complex.h</label>
+      </node>
+      <node id="2">
+        <label>cuda.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="radon_8hpp_1a3d3c5ea01d34b9aee30c068b466acd80" prot="public" static="no">
+        <name>FT_PST_RANK_FORWARD</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="9" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="radon_8hpp_1a5679960ca6253567e1256ef449ae54e3" prot="public" static="no">
+        <name>FT_PST_RANK_INVERSE</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="10" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="radon_8hpp_1a7735206bdfad487588bba2126b806ab7" prot="public" static="no">
+        <name>NUM_THREADS</name>
+        <initializer>1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="12" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="radon_8hpp_1a846a8d3ccdb9513c6a3b92a492ae7db6" prot="public" static="no">
+        <name>BYTES_TO_GB</name>
+        <initializer>(1.0/(1024.0*1024.0*1024.0))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="17" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="radon_8hpp_1ac222c063be6ee13e9bf5280e7c7340cc" prot="public" static="no">
+        <name>A100_MEM</name>
+        <initializer>39.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="18" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="radon_8hpp_1a40e74b3b7e22d9f079fbf98b6885ed25" prot="public" static="no">
+        <type>std::complex&lt; float &gt;</type>
+        <definition>typedef std::complex&lt;float&gt; data_type</definition>
+        <argsstring></argsstring>
+        <name>data_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="14" column="22" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="radon_8hpp_1a680fbb37c4df9924ade3a3c194822b80" prot="public" static="no">
+        <type>float</type>
+        <definition>typedef float real_data_type</definition>
+        <argsstring></argsstring>
+        <name>real_data_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="15" column="15" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="radon_8hpp_1a02643202782f5ac8623299901595fafa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void getRadonRT</definition>
+        <argsstring>(float *obj, float *projection, float *angles, dim3 obj_size, dim3 tomo_size, float ax, float ay)</argsstring>
+        <name>getRadonRT</name>
+        <param>
+          <type>float *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>projection</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>obj_size</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>tomo_size</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ax</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ay</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="24" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/radon_rt.cu" bodystart="179" bodyend="192" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="24" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1a6a34157ba04d488268ace7aeb7904cf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void Radon_RT_version_sscRadon</definition>
+        <argsstring>(float *projections, float *phantom, float *angles, dim3 proj_size, dim3 phantom_size, float ax, float ay)</argsstring>
+        <name>Radon_RT_version_sscRadon</name>
+        <param>
+          <type>float *</type>
+          <declname>projections</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>phantom</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>proj_size</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>phantom_size</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ax</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ay</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="27" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/radon_rt.cu" bodystart="130" bodyend="175" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="27" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1a3a0d3f208fc2fe06fde31bc7afeb87c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fst_gpu</definition>
+        <argsstring>(float *sino, float *recon, float *angles, int nrays, int nangles, int blocksize, int zpad, int interpolation, float dx, float *debug)</argsstring>
+        <name>fst_gpu</name>
+        <param>
+          <type>float *</type>
+          <declname>sino</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>recon</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blocksize</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>zpad</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>interpolation</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dx</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>debug</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="37" column="5" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/radon_fst.cu" bodystart="20" bodyend="147" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="37" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1a502460ec9b49884d1324ae8b826096b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int real_fst_gpu</definition>
+        <argsstring>(float *sino, float *recon, float *angles, int nrays, int nangles, int nslices, int zpad, int interpolation, float dx, float *debug)</argsstring>
+        <name>real_fst_gpu</name>
+        <param>
+          <type>float *</type>
+          <declname>sino</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>recon</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nslices</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>zpad</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>interpolation</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dx</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>debug</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="43" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/radon_fst.cu" bodystart="153" bodyend="248" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="43" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1af26adede5449685209d552225da63b2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int counts_real_fst_gpu</definition>
+        <argsstring>(float *sino, float *recon, float *angles, float *flat, int nrays, int nangles, int nslices, int zpad, int interpolation, float dx, float *debug)</argsstring>
+        <name>counts_real_fst_gpu</name>
+        <param>
+          <type>float *</type>
+          <declname>sino</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>recon</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>flat</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nslices</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>zpad</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>interpolation</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dx</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>debug</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="49" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/radon_fst.cu" bodystart="254" bodyend="371" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="49" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1ae645341d6b9656cc8999265b58b00d72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pst</definition>
+        <argsstring>(cufftComplex *ft_sino_cu, cufftComplex *ft_recon_cu, cufftComplex *sino_cu, cufftComplex *recon_cu, float *angles_cu, cufftHandle plan_2D_forward, cufftHandle plan_1D_inverse, int nrays, int nangles, int nslices, int zpad, int interpolation, float scale, cudaStream_t stream)</argsstring>
+        <name>pst</name>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>ft_sino_cu</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>ft_recon_cu</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>sino_cu</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>recon_cu</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles_cu</declname>
+        </param>
+        <param>
+          <type>cufftHandle</type>
+          <declname>plan_2D_forward</declname>
+        </param>
+        <param>
+          <type>cufftHandle</type>
+          <declname>plan_1D_inverse</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nslices</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>zpad</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>interpolation</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>scale</declname>
+        </param>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="55" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/radon_fst.cu" bodystart="375" bodyend="456" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="55" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1a46bfb5fb634ba46c1ea443257e0bea4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pst_real</definition>
+        <argsstring>(cufftComplex *ft_sino_cu, cufftComplex *ft_recon_cu, float *sino_cu, float *recon_cu, float *angles_cu, cufftHandle plan_2D_forward, cufftHandle plan_1D_inverse, int nrays, int nangles, int nslices, int zpad, int interpolation, float scale, cudaStream_t stream)</argsstring>
+        <name>pst_real</name>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>ft_sino_cu</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>ft_recon_cu</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>sino_cu</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>recon_cu</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles_cu</declname>
+        </param>
+        <param>
+          <type>cufftHandle</type>
+          <declname>plan_2D_forward</declname>
+        </param>
+        <param>
+          <type>cufftHandle</type>
+          <declname>plan_1D_inverse</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nslices</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>zpad</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>interpolation</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>scale</declname>
+        </param>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="63" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/radon_fst.cu" bodystart="459" bodyend="540" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="63" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1a6d35bf9498df1df9f97599970d55a260" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pst_counts_real</definition>
+        <argsstring>(cufftComplex *ft_sino_cu, cufftComplex *ft_recon_cu, float *sino_cu, float *recon_cu, float *angles_cu, float *flat_cu, cufftHandle plan_2D_forward, cufftHandle plan_1D_inverse, int nrays, int nangles, int nslices, int zpad, int interpolation, float scale, cudaStream_t stream)</argsstring>
+        <name>pst_counts_real</name>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>ft_sino_cu</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>ft_recon_cu</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>sino_cu</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>recon_cu</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles_cu</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>flat_cu</declname>
+        </param>
+        <param>
+          <type>cufftHandle</type>
+          <declname>plan_2D_forward</declname>
+        </param>
+        <param>
+          <type>cufftHandle</type>
+          <declname>plan_1D_inverse</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nslices</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>zpad</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>interpolation</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>scale</declname>
+        </param>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="71" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/radon_fst.cu" bodystart="544" bodyend="637" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="71" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1a08c0b8f3a91194b00abcc32176b1c4a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void free_cuda</definition>
+        <argsstring>(float *angles_cu, cufftComplex *recon_cu, cufftComplex *sino_cu, cufftComplex *ft_recon_cu, cufftComplex *ft_sino_cu, cufftHandle plan_2D_forward, cufftHandle plan_1D_inverse, cudaStream_t stream, cudaStream_t stream_H2D, cudaStream_t stream_D2H)</argsstring>
+        <name>free_cuda</name>
+        <param>
+          <type>float *</type>
+          <declname>angles_cu</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>recon_cu</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>sino_cu</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>ft_recon_cu</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>ft_sino_cu</declname>
+        </param>
+        <param>
+          <type>cufftHandle</type>
+          <declname>plan_2D_forward</declname>
+        </param>
+        <param>
+          <type>cufftHandle</type>
+          <declname>plan_1D_inverse</declname>
+        </param>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream_H2D</declname>
+        </param>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream_D2H</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="78" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/radon_fst.cu" bodystart="648" bodyend="665" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="78" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1acf69e0aa6cc3001737b3ac1e7d8298b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void free_cuda_real</definition>
+        <argsstring>(float *angles_cu, float *recon_cu, float *sino_cu, cufftComplex *ft_recon_cu, cufftComplex *ft_sino_cu, cufftHandle plan_2D_forward, cufftHandle plan_1D_inverse, cudaStream_t stream, cudaStream_t stream_H2D, cudaStream_t stream_D2H)</argsstring>
+        <name>free_cuda_real</name>
+        <param>
+          <type>float *</type>
+          <declname>angles_cu</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>recon_cu</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>sino_cu</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>ft_recon_cu</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>ft_sino_cu</declname>
+        </param>
+        <param>
+          <type>cufftHandle</type>
+          <declname>plan_2D_forward</declname>
+        </param>
+        <param>
+          <type>cufftHandle</type>
+          <declname>plan_1D_inverse</declname>
+        </param>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream_H2D</declname>
+        </param>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream_D2H</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="85" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/radon_fst.cu" bodystart="668" bodyend="685" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="85" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1ad06321fd24f468f2ec9d23790ceafef8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void free_cuda_counts_real</definition>
+        <argsstring>(float *angles_cu, float *flat_cu, float *recon_cu, float *sino_cu, cufftComplex *ft_recon_cu, cufftComplex *ft_sino_cu, cufftHandle plan_2D_forward, cufftHandle plan_1D_inverse, cudaStream_t stream, cudaStream_t stream_H2D, cudaStream_t stream_D2H)</argsstring>
+        <name>free_cuda_counts_real</name>
+        <param>
+          <type>float *</type>
+          <declname>angles_cu</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>flat_cu</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>recon_cu</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>sino_cu</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>ft_recon_cu</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>ft_sino_cu</declname>
+        </param>
+        <param>
+          <type>cufftHandle</type>
+          <declname>plan_2D_forward</declname>
+        </param>
+        <param>
+          <type>cufftHandle</type>
+          <declname>plan_1D_inverse</declname>
+        </param>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream_H2D</declname>
+        </param>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream_D2H</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="91" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/radon_fst.cu" bodystart="688" bodyend="706" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="91" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1a18c0a8601ef9713ae02bad3d112c9ede" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int calc_blocksize</definition>
+        <argsstring>(float nslices, float nangles, float nrays, float zpad, bool complex_data)</argsstring>
+        <name>calc_blocksize</name>
+        <param>
+          <type>float</type>
+          <declname>nslices</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>zpad</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>complex_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="97" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/radon_fst.cu" bodystart="709" bodyend="749" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="97" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1ae06a5717c62a92e532748dc43201ccb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int el_wise_mult</definition>
+        <argsstring>(float *arr1, float *arr2, int n1, int n2, int n3)</argsstring>
+        <name>el_wise_mult</name>
+        <param>
+          <type>float *</type>
+          <declname>arr1</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>arr2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n3</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="99" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/radon_fst.cu" bodystart="753" bodyend="782" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="99" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1aea5ea94cc022fd226b85f178b3a0cfd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void calc_counts</definition>
+        <argsstring>(float *sino, float *flat, int nrays, int nangles, int nslices)</argsstring>
+        <name>calc_counts</name>
+        <param>
+          <type>float *</type>
+          <declname>sino</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>flat</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nslices</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="103" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/kernels/radon_fst_kernel.cu" bodystart="27" bodyend="43" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="103" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1a123ac930162ab1b5c1f1e6b3be0f25d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void set_value</definition>
+        <argsstring>(float *arr, float val, size_t size)</argsstring>
+        <name>set_value</name>
+        <param>
+          <type>float *</type>
+          <declname>arr</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="106" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/kernels/radon_fst_kernel.cu" bodystart="46" bodyend="55" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="106" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1a5b0870a8587b33eb05bdae4745839e3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void multiply_element_wise</definition>
+        <argsstring>(float *arr1, float *arr2, size_t size)</argsstring>
+        <name>multiply_element_wise</name>
+        <param>
+          <type>float *</type>
+          <declname>arr1</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>arr2</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="110" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/kernels/radon_fst_kernel.cu" bodystart="79" bodyend="88" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="110" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1a2c0cd7039ad0eb12a15a4eced67bda2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void calc_reciprocal_element_wise</definition>
+        <argsstring>(float *arr, size_t size)</argsstring>
+        <name>calc_reciprocal_element_wise</name>
+        <param>
+          <type>float *</type>
+          <declname>arr</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="114" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/kernels/radon_fst_kernel.cu" bodystart="58" bodyend="66" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="114" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1a280c3d5d2b16158f3e7dcf8a5b09d5f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void total_variation_2d</definition>
+        <argsstring>(float *back, float *recon, float *backcounts, size_t size, int nx, int ny, int nz, float tv_param)</argsstring>
+        <name>total_variation_2d</name>
+        <param>
+          <type>float *</type>
+          <declname>back</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>recon</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>backcounts</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ny</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nz</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>tv_param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="117" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/kernels/radon_fst_kernel.cu" bodystart="90" bodyend="144" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="117" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1a5ab4affb43af787824cde7b94c2e1f42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void scale_data</definition>
+        <argsstring>(float *data, size_t size, float scale)</argsstring>
+        <name>scale_data</name>
+        <param>
+          <type>float *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="124" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/kernels/radon_fst_kernel.cu" bodystart="147" bodyend="156" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="124" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1a5dab7b3684491aa81fdb5ba983c066f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void scale_data_complex</definition>
+        <argsstring>(cufftComplex *data, size_t size, float scale)</argsstring>
+        <name>scale_data_complex</name>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="128" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/kernels/radon_fst_kernel.cu" bodystart="159" bodyend="169" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="128" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1a0262b61d17d2e40dde6b3528d7d2ba20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void scale_data_real_only</definition>
+        <argsstring>(cufftComplex *data, size_t size, float scale)</argsstring>
+        <name>scale_data_real_only</name>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="132" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/kernels/radon_fst_kernel.cu" bodystart="171" bodyend="180" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="132" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1a87cec63922251841b400916549d4794b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void scale_data_imag_only</definition>
+        <argsstring>(cufftComplex *data, size_t size, float scale)</argsstring>
+        <name>scale_data_imag_only</name>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="136" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/kernels/radon_fst_kernel.cu" bodystart="182" bodyend="191" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="136" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1ac0cbd6a177b47c81d6a46e3c81d39bd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void copy_to_fft_workspace</definition>
+        <argsstring>(cufftComplex *workspace, cufftComplex *src, int n1, int n2, int n1_src, int n2_src, int blocksize)</argsstring>
+        <name>copy_to_fft_workspace</name>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>workspace</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n1_src</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n2_src</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blocksize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="141" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/kernels/radon_fst_kernel.cu" bodystart="194" bodyend="225" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="141" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1a5d96db03febe2f8421b45495846cc6e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void copy_to_fft_workspace_R2C</definition>
+        <argsstring>(cufftComplex *workspace, float *src, int n1, int n2, int n1_src, int n2_src, int blocksize)</argsstring>
+        <name>copy_to_fft_workspace_R2C</name>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>workspace</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n1_src</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n2_src</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blocksize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="145" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/kernels/radon_fst_kernel.cu" bodystart="228" bodyend="259" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="145" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1a4020beed6140b96443bc30db27ec8f64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void copy_from_fft_workspace</definition>
+        <argsstring>(cufftComplex *workspace, cufftComplex *dst, int n1, int n2, int n1_dst, int n2_dst, int blocksize)</argsstring>
+        <name>copy_from_fft_workspace</name>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>workspace</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n1_dst</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n2_dst</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blocksize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="149" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/kernels/radon_fst_kernel.cu" bodystart="262" bodyend="277" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="149" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1a7ffd5b11172b5beb4b2ea3127bb30fbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void copy_from_fft_workspace_C2R</definition>
+        <argsstring>(cufftComplex *workspace, float *dst, int n1, int n2, int n1_dst, int n2_dst, int blocksize)</argsstring>
+        <name>copy_from_fft_workspace_C2R</name>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>workspace</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n1_dst</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n2_dst</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blocksize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="153" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/kernels/radon_fst_kernel.cu" bodystart="280" bodyend="295" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="153" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1a752a90bac8b09590f14fcf4f20703068" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void shift_1d</definition>
+        <argsstring>(cufftComplex *c, size_t sizex, size_t sizey, size_t sizez)</argsstring>
+        <name>shift_1d</name>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizex</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizey</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizez</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="157" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/kernels/radon_fst_kernel.cu" bodystart="299" bodyend="319" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="157" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1ab7b48be9108d371a5a325fc678be2e36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void shift_1d_real</definition>
+        <argsstring>(float *data, size_t sizex, size_t sizey, size_t sizez)</argsstring>
+        <name>shift_1d_real</name>
+        <param>
+          <type>float *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizex</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizey</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizez</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="161" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/kernels/radon_fst_kernel.cu" bodystart="322" bodyend="342" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="161" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1a2c142a99e98b595213a909320e8e7a77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void fftshift2d</definition>
+        <argsstring>(cufftComplex *c, size_t sizex, size_t sizey, size_t sizez)</argsstring>
+        <name>fftshift2d</name>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizex</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizey</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizez</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="166" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/kernels/radon_fst_kernel.cu" bodystart="346" bodyend="376" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="166" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1ae0c3b2125ebfca16b8b099ec40ed546e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void fftshift2d_real</definition>
+        <argsstring>(float *data, size_t sizex, size_t sizey, size_t sizez)</argsstring>
+        <name>fftshift2d_real</name>
+        <param>
+          <type>float *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizex</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizey</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizez</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="169" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/kernels/radon_fst_kernel.cu" bodystart="379" bodyend="409" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="169" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1a4479fdfc34c44f40884a292927440462" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void fftshift2d_v2</definition>
+        <argsstring>(cufftComplex *c, size_t sizex, size_t sizey, size_t sizez)</argsstring>
+        <name>fftshift2d_v2</name>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizex</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizey</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizez</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="172" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/kernels/radon_fst_kernel.cu" bodystart="412" bodyend="453" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="172" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1a125e4e706553816791857855413e92d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void cartesian2polar_nn</definition>
+        <argsstring>(cufftComplex *ft_recon, cufftComplex *ft_sino, float *angles, size_t nrays, size_t nangles, size_t blocksize)</argsstring>
+        <name>cartesian2polar_nn</name>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>ft_recon</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>ft_sino</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>blocksize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="175" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/kernels/radon_fst_kernel.cu" bodystart="455" bodyend="476" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="175" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1a49bc587ed2acb055caa10523986691fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void cartesian2polar_bi_v0</definition>
+        <argsstring>(cufftComplex *ft_recon, cufftComplex *ft_sino, float *angles, size_t nrays, size_t nangles, size_t blocksize)</argsstring>
+        <name>cartesian2polar_bi_v0</name>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>ft_recon</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>ft_sino</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>blocksize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="184" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/kernels/radon_fst_kernel.cu" bodystart="480" bodyend="517" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="184" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1a53bdab1a7745b413376edf386e68001c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void cartesian2polar_bi_v1</definition>
+        <argsstring>(cufftComplex *ft_recon, cufftComplex *ft_sino, float *angles, size_t nrays, size_t nangles, size_t blocksize)</argsstring>
+        <name>cartesian2polar_bi_v1</name>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>ft_recon</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>ft_sino</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>blocksize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="192" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/kernels/radon_fst_kernel.cu" bodystart="520" bodyend="580" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="192" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="radon_8hpp_1a29a944e78673233e11dabca8d21bdca0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void cartesian2polar_bi_v2</definition>
+        <argsstring>(cufftComplex *ft_recon, cufftComplex *ft_sino, float *angles, size_t nrays, size_t nangles, size_t blocksize)</argsstring>
+        <name>cartesian2polar_bi_v2</name>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>ft_recon</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>ft_sino</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>blocksize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" line="201" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/kernels/radon_fst_kernel.cu" bodystart="584" bodyend="634" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp" declline="201" declcolumn="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>RAFT_RADON_PAR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RAFT_RADON_PAR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cuda.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cuda_runtime.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cufftXt.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;complex.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FT_PST_RANK_FORWARD<sp/>2<sp/></highlight><highlight class="comment">//<sp/>Forward<sp/>Fourier<sp/>Transform<sp/>rank<sp/>for<sp/>Fourier/projection<sp/>slice<sp/>theorem<sp/>(F/PST).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FT_PST_RANK_INVERSE<sp/>1<sp/></highlight><highlight class="comment">//<sp/>Inverse<sp/>Fourier<sp/>Transform<sp/>rank<sp/>for<sp/>Fourier/projection<sp/>slice<sp/>theorem<sp/>(F/PST).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NUM_THREADS<sp/>1024</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::complex&lt;float&gt;<sp/>data_type;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>real_data_type;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BYTES_TO_GB<sp/>(1.0/(1024.0*1024.0*1024.0))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>A100_MEM<sp/>39.5<sp/></highlight><highlight class="comment">//<sp/>A100<sp/>40GB<sp/>device<sp/>RAM<sp/>memory,<sp/>in<sp/>GB.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Radon<sp/>Ray<sp/>Tracing<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getRadonRT(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>obj,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>projection,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>dim3<sp/>obj_size,<sp/>dim3<sp/>tomo_size,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ax,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ay);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Radon_RT_version_sscRadon(</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*projections,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*phantom,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dim3<sp/>proj_size,<sp/>dim3<sp/>phantom_size,<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ax,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ay);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Radon<sp/>Fourier<sp/>Slice<sp/>Theorem<sp/>(FST)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fst_gpu(</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*sino,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*recon,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blocksize,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>zpad,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>interpolation,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dx,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*debug);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>real_fst_gpu(</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*sino,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*recon,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,<sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nslices,<sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>zpad,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>interpolation,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dx,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*debug);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>counts_real_fst_gpu(</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*sino,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*recon,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*flat,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nslices,<sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>zpad,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>interpolation,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dx,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*debug);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>pst(</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>cufftComplex<sp/>*ft_sino_cu,<sp/>cufftComplex<sp/>*ft_recon_cu,<sp/>cufftComplex<sp/>*sino_cu,<sp/>cufftComplex<sp/>*recon_cu,<sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles_cu,<sp/>cufftHandle<sp/>plan_2D_forward,<sp/>cufftHandle<sp/>plan_1D_inverse,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nslices,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>zpad,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>interpolation,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>scale,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>cudaStream_t<sp/>stream);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Same<sp/>as<sp/>pst<sp/>but<sp/>for<sp/>real<sp/>valued<sp/>sample<sp/>only:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>pst_real(</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cufftComplex<sp/>*ft_sino_cu,<sp/>cufftComplex<sp/>*ft_recon_cu,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*sino_cu,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*recon_cu,<sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles_cu,<sp/>cufftHandle<sp/>plan_2D_forward,<sp/>cufftHandle<sp/>plan_1D_inverse,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nslices,<sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>zpad,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>interpolation,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>scale,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cudaStream_t<sp/>stream);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Same<sp/>as<sp/>pst<sp/>but<sp/>for<sp/>counts<sp/>=<sp/>flat*exp(-tomo)<sp/>instead<sp/>of<sp/>tomo.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>pst_counts_real(</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cufftComplex<sp/>*ft_sino_cu,<sp/>cufftComplex<sp/>*ft_recon_cu,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*sino_cu,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*recon_cu,<sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles_cu,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*flat_cu,<sp/>cufftHandle<sp/>plan_2D_forward,<sp/>cufftHandle<sp/>plan_1D_inverse,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nslices,<sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>zpad,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>interpolation,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>scale,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cudaStream_t<sp/>stream);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>free_cuda(</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles_cu,<sp/>cufftComplex<sp/>*recon_cu,<sp/>cufftComplex<sp/>*sino_cu,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cufftComplex<sp/>*ft_recon_cu,<sp/>cufftComplex<sp/>*ft_sino_cu,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cufftHandle<sp/>plan_2D_forward,<sp/>cufftHandle<sp/>plan_1D_inverse,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cudaStream_t<sp/>stream,<sp/>cudaStream_t<sp/>stream_H2D,<sp/>cudaStream_t<sp/>stream_D2H);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Same<sp/>as<sp/>above<sp/>but<sp/>for<sp/>real<sp/>valued<sp/>sinogram<sp/>and<sp/>recon.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>free_cuda_real(</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles_cu,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*recon_cu,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*sino_cu,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cufftComplex<sp/>*ft_recon_cu,<sp/>cufftComplex<sp/>*ft_sino_cu,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cufftHandle<sp/>plan_2D_forward,<sp/>cufftHandle<sp/>plan_1D_inverse,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cudaStream_t<sp/>stream,<sp/>cudaStream_t<sp/>stream_H2D,<sp/>cudaStream_t<sp/>stream_D2H);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>free_cuda_counts_real(</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles_cu,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*flat_cu,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*recon_cu,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*sino_cu,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cufftComplex<sp/>*ft_recon_cu,<sp/>cufftComplex<sp/>*ft_sino_cu,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cufftHandle<sp/>plan_2D_forward,<sp/>cufftHandle<sp/>plan_1D_inverse,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cudaStream_t<sp/>stream,<sp/>cudaStream_t<sp/>stream_H2D,<sp/>cudaStream_t<sp/>stream_D2H);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>calc_blocksize(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>nslices,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>nangles,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>zpad,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>complex_data);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>el_wise_mult(</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*arr1,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*arr2,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n3);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>calc_counts(</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*sino,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*flat,</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nslices);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_value(</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*arr,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>val,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>multiply_element_wise(</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*arr1,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*arr2,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>calc_reciprocal_element_wise(</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*arr,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>total_variation_2d(</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*back,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*recon,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*backcounts,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ny,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nz,</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>tv_param);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>scale_data(</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*data,</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>scale);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>scale_data_complex(</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cufftComplex<sp/>*data,</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>scale);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>scale_data_real_only(</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cufftComplex<sp/>*data,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>scale);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>scale_data_imag_only(</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cufftComplex<sp/>*data,</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>scale);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>copy_to_fft_workspace(</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cufftComplex<sp/>*<ref refid="structworkspace" kindref="compound">workspace</ref>,<sp/>cufftComplex<sp/>*src,</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n1_src,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n2_src,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blocksize);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>copy_to_fft_workspace_R2C(</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cufftComplex<sp/>*<ref refid="structworkspace" kindref="compound">workspace</ref>,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*src,</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n1_src,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n2_src,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blocksize);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>copy_from_fft_workspace(</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cufftComplex<sp/>*<ref refid="structworkspace" kindref="compound">workspace</ref>,<sp/>cufftComplex<sp/>*dst,</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n1_dst,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n2_dst,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blocksize);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>copy_from_fft_workspace_C2R(</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cufftComplex<sp/>*<ref refid="structworkspace" kindref="compound">workspace</ref>,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*dst,</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n1_dst,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n2_dst,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blocksize);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>shift_1d(</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cufftComplex<sp/>*c,</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sizex,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sizey,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sizez);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>shift_1d_real(</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*data,</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sizex,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sizey,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sizez);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Payola&apos;s<sp/>shift<sp/>kernel:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>fftshift2d(cufftComplex<sp/>*c,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sizex,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sizey,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sizez);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Payola&apos;s<sp/>2<sp/>dimensional<sp/>fft<sp/>shift<sp/>kernel<sp/>for<sp/>real/non-complex<sp/>float<sp/>data:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>fftshift2d_real(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sizex,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sizey,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sizez);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Payola&apos;s<sp/>-MODIFIED<sp/>FOR<sp/>BETTER<sp/>PERFORMANCE-<sp/>2<sp/>dimensional<sp/>fft<sp/>shift<sp/>kernel:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>fftshift2d_v2(cufftComplex<sp/>*c,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sizex,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sizey,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sizez);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Kernel<sp/>for<sp/>nearest<sp/>neighbor<sp/>interpolation<sp/>from<sp/>2DFT<sp/>of<sp/>recon<sp/>to<sp/>1DFT<sp/>of<sp/>projections<sp/>at<sp/>the<sp/>sinogram.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cartesian2polar_nn(</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cufftComplex<sp/>*ft_recon,</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cufftComplex<sp/>*ft_sino,</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nangles,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>blocksize);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Kernel<sp/>for<sp/>bilinear<sp/>interpolation<sp/>from<sp/>2DFT<sp/>of<sp/>recon<sp/>to<sp/>1DFT<sp/>of<sp/>projections<sp/>at<sp/>the<sp/>sinogram.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>DON&apos;T<sp/>USE:<sp/>Bilinear<sp/>interpolation<sp/>fails<sp/>when<sp/>xd<sp/>=<sp/>xu<sp/>(e.g.,<sp/>ang<sp/>=<sp/>pi/2)<sp/>or<sp/>when<sp/>yd<sp/>=<sp/>yu<sp/>(e.g.,<sp/>ang<sp/>=<sp/>0).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Use,<sp/>instead,<sp/>&apos;cartesian2polar_bi_v1&apos;<sp/>or<sp/>&apos;cartesian2polar_bi_v2&apos;<sp/>bellow.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cartesian2polar_bi_v0(</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cufftComplex<sp/>*ft_recon,</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cufftComplex<sp/>*ft_sino,</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nangles,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>blocksize);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Kernel<sp/>for<sp/>bilinear<sp/>interpolation<sp/>from<sp/>2DFT<sp/>of<sp/>recon<sp/>to<sp/>1DFT<sp/>of<sp/>projections<sp/>at<sp/>the<sp/>sinogram.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Same<sp/>kernel<sp/>as<sp/>as<sp/>above<sp/>but<sp/>with<sp/>a<sp/>correction<sp/>for<sp/>when<sp/>xd<sp/>=<sp/>xu<sp/>and<sp/>yd<sp/>=<sp/>u.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cartesian2polar_bi_v1(</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cufftComplex<sp/>*ft_recon,</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cufftComplex<sp/>*ft_sino,</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nangles,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>blocksize);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Kernel<sp/>for<sp/>bilinear<sp/>interpolation<sp/>from<sp/>2DFT<sp/>of<sp/>recon<sp/>to<sp/>1DFT<sp/>of<sp/>projections<sp/>at<sp/>the<sp/>sinogram.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Same<sp/>as<sp/>&apos;cartesian2polar_bi_v1&apos;<sp/>but<sp/>using<sp/>another<sp/>aproach<sp/>for<sp/>the<sp/>correction:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>Here<sp/>we<sp/>don&apos;t<sp/>use<sp/>&apos;if&apos;s<sp/>to<sp/>avoid<sp/>branch<sp/>divergence.<sp/>Instead,<sp/>the<sp/>ajustments<sp/>are<sp/>performed<sp/>on<sp/>the<sp/>data.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cartesian2polar_bi_v2(</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cufftComplex<sp/>*ft_recon,</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cufftComplex<sp/>*ft_sino,</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nangles,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>blocksize);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/radon.hpp"/>
+  </compounddef>
+</doxygen>

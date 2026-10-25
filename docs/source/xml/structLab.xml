@@ -1,0 +1,533 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structLab" kind="struct" language="C++" prot="public">
+    <compoundname>Lab</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structLab_1a83b4d39d46815ca91ca75a6dcd0587b4" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Lab::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="20" column="11" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1a0235dd620b93bf5f0aef54a3300c696b" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Lab::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="20" column="12" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1a65b907896b84c042da76226442ab1c62" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Lab::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="20" column="13" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1a835812e9c96d564e62831b69b17dfc88" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Lab::dx</definition>
+        <argsstring></argsstring>
+        <name>dx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="21" column="11" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1a6cc25981c75d515b090d0ba7d9c321d7" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Lab::dy</definition>
+        <argsstring></argsstring>
+        <name>dy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="21" column="14" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1acc14a90f49ed75a6c2f236e9a5bbec3d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Lab::dz</definition>
+        <argsstring></argsstring>
+        <name>dz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="21" column="17" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1a4d2250e5423ddf6f9ea7e2bb5972bb1a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Lab::nx</definition>
+        <argsstring></argsstring>
+        <name>nx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="22" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1a7079d5e65010eb41ed7e5fde6d7c902e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Lab::ny</definition>
+        <argsstring></argsstring>
+        <name>ny</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="22" column="12" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1ad829bef794962c47873b312713f90642" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Lab::nz</definition>
+        <argsstring></argsstring>
+        <name>nz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="22" column="15" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1ab3c8904cf106fcbfb9a5ad1516603b63" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Lab::h</definition>
+        <argsstring></argsstring>
+        <name>h</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="23" column="11" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1a282e285986aff004a5c1a2caa1984fc2" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Lab::v</definition>
+        <argsstring></argsstring>
+        <name>v</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="23" column="12" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1a5d37b31f58f63a87148880001d631fe3" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Lab::dh</definition>
+        <argsstring></argsstring>
+        <name>dh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="24" column="11" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1ac94f519823f40f17a7b995faf360ef75" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Lab::dv</definition>
+        <argsstring></argsstring>
+        <name>dv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="24" column="14" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1a176860730d5196b730ca89af865ccf6f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Lab::nh</definition>
+        <argsstring></argsstring>
+        <name>nh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="25" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1a9fe66b30a912ca39651be5382ee9e6c9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Lab::nv</definition>
+        <argsstring></argsstring>
+        <name>nv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="25" column="12" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1a854fe28356f9234fbd826a80a342a231" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Lab::D</definition>
+        <argsstring></argsstring>
+        <name>D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="26" column="11" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1a90c72bd1df2ed183ef6d8496b44c0626" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Lab::Dsd</definition>
+        <argsstring></argsstring>
+        <name>Dsd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="26" column="13" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1a632c2c8f106f4245e0771e21eedc96a3" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Lab::beta_max</definition>
+        <argsstring></argsstring>
+        <name>beta_max</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="27" column="11" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1a785bb63cbebaa1e8a47b9939dffe0e23" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Lab::dbeta</definition>
+        <argsstring></argsstring>
+        <name>dbeta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="28" column="11" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1a65093df757645776fdb12e76a866948c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Lab::nbeta</definition>
+        <argsstring></argsstring>
+        <name>nbeta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="29" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1a07dc52eae77fb9869accbb0789addffd" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Lab::fourier</definition>
+        <argsstring></argsstring>
+        <name>fourier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="30" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1ad73f5c6f6df3b15ab0d249be546d30ef" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Lab::filter_type</definition>
+        <argsstring></argsstring>
+        <name>filter_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="31" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1ad81b004a16aa58d839c7d757fff7e882" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Lab::reg</definition>
+        <argsstring></argsstring>
+        <name>reg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="32" column="11" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1abf0f0ede69b951c9777dca188be4dda2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Lab::is_slice</definition>
+        <argsstring></argsstring>
+        <name>is_slice</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="33" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1a38d5183504028111d7f0fb3b1c1aba1b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Lab::slice_recon_start</definition>
+        <argsstring></argsstring>
+        <name>slice_recon_start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="34" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1a9366219a1808930cfa06f07a46214b92" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Lab::slice_recon_end</definition>
+        <argsstring></argsstring>
+        <name>slice_recon_end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="34" column="27" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1a270e538aec1b641e7ac40847cd6932b5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Lab::slice_tomo_start</definition>
+        <argsstring></argsstring>
+        <name>slice_tomo_start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="35" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1a24c5c1a923a54f18547cfb620b084ac6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Lab::slice_tomo_end</definition>
+        <argsstring></argsstring>
+        <name>slice_tomo_end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="35" column="26" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1a2501b42dc4ea4b4bf02313d1756dfada" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Lab::nph</definition>
+        <argsstring></argsstring>
+        <name>nph</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="36" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1a4acbb26a62912f14e31a8fb4af6301a6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Lab::padh</definition>
+        <argsstring></argsstring>
+        <name>padh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="36" column="13" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1a384542a8dee6f22bdf5d31f056713e9a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Lab::energy</definition>
+        <argsstring></argsstring>
+        <name>energy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="37" column="11" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1a467de1876be2a43e52431ff9381d4a27" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Lab::rotation_axis_offset</definition>
+        <argsstring></argsstring>
+        <name>rotation_axis_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="38" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1a4f69b6c964920d90e198a088a6ed3c11" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Lab::blocksize</definition>
+        <argsstring></argsstring>
+        <name>blocksize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="39" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1ab80a630b632663153259d03f374b8e0a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Lab::padmode</definition>
+        <argsstring></argsstring>
+        <name>padmode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="40" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1a254b049c9ea5926c16479803b169f11a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Lab::npfh</definition>
+        <argsstring></argsstring>
+        <name>npfh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="41" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1afa545cb9281573e0660190855e8ae9a7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Lab::padfh</definition>
+        <argsstring></argsstring>
+        <name>padfh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="41" column="14" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structLab_1adbaf6e6c65fa05cd274651a67aeec91e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Lab::padfmode</definition>
+        <argsstring></argsstring>
+        <name>padfmode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="41" column="20" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" line="19" column="1" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp" bodystart="19" bodyend="58"/>
+    <listofallmembers>
+      <member refid="structLab_1a632c2c8f106f4245e0771e21eedc96a3" prot="public" virt="non-virtual"><scope>Lab</scope><name>beta_max</name></member>
+      <member refid="structLab_1a4f69b6c964920d90e198a088a6ed3c11" prot="public" virt="non-virtual"><scope>Lab</scope><name>blocksize</name></member>
+      <member refid="structLab_1a854fe28356f9234fbd826a80a342a231" prot="public" virt="non-virtual"><scope>Lab</scope><name>D</name></member>
+      <member refid="structLab_1a785bb63cbebaa1e8a47b9939dffe0e23" prot="public" virt="non-virtual"><scope>Lab</scope><name>dbeta</name></member>
+      <member refid="structLab_1a5d37b31f58f63a87148880001d631fe3" prot="public" virt="non-virtual"><scope>Lab</scope><name>dh</name></member>
+      <member refid="structLab_1a90c72bd1df2ed183ef6d8496b44c0626" prot="public" virt="non-virtual"><scope>Lab</scope><name>Dsd</name></member>
+      <member refid="structLab_1ac94f519823f40f17a7b995faf360ef75" prot="public" virt="non-virtual"><scope>Lab</scope><name>dv</name></member>
+      <member refid="structLab_1a835812e9c96d564e62831b69b17dfc88" prot="public" virt="non-virtual"><scope>Lab</scope><name>dx</name></member>
+      <member refid="structLab_1a6cc25981c75d515b090d0ba7d9c321d7" prot="public" virt="non-virtual"><scope>Lab</scope><name>dy</name></member>
+      <member refid="structLab_1acc14a90f49ed75a6c2f236e9a5bbec3d" prot="public" virt="non-virtual"><scope>Lab</scope><name>dz</name></member>
+      <member refid="structLab_1a384542a8dee6f22bdf5d31f056713e9a" prot="public" virt="non-virtual"><scope>Lab</scope><name>energy</name></member>
+      <member refid="structLab_1ad73f5c6f6df3b15ab0d249be546d30ef" prot="public" virt="non-virtual"><scope>Lab</scope><name>filter_type</name></member>
+      <member refid="structLab_1a07dc52eae77fb9869accbb0789addffd" prot="public" virt="non-virtual"><scope>Lab</scope><name>fourier</name></member>
+      <member refid="structLab_1ab3c8904cf106fcbfb9a5ad1516603b63" prot="public" virt="non-virtual"><scope>Lab</scope><name>h</name></member>
+      <member refid="structLab_1abf0f0ede69b951c9777dca188be4dda2" prot="public" virt="non-virtual"><scope>Lab</scope><name>is_slice</name></member>
+      <member refid="structLab_1a65093df757645776fdb12e76a866948c" prot="public" virt="non-virtual"><scope>Lab</scope><name>nbeta</name></member>
+      <member refid="structLab_1a176860730d5196b730ca89af865ccf6f" prot="public" virt="non-virtual"><scope>Lab</scope><name>nh</name></member>
+      <member refid="structLab_1a254b049c9ea5926c16479803b169f11a" prot="public" virt="non-virtual"><scope>Lab</scope><name>npfh</name></member>
+      <member refid="structLab_1a2501b42dc4ea4b4bf02313d1756dfada" prot="public" virt="non-virtual"><scope>Lab</scope><name>nph</name></member>
+      <member refid="structLab_1a9fe66b30a912ca39651be5382ee9e6c9" prot="public" virt="non-virtual"><scope>Lab</scope><name>nv</name></member>
+      <member refid="structLab_1a4d2250e5423ddf6f9ea7e2bb5972bb1a" prot="public" virt="non-virtual"><scope>Lab</scope><name>nx</name></member>
+      <member refid="structLab_1a7079d5e65010eb41ed7e5fde6d7c902e" prot="public" virt="non-virtual"><scope>Lab</scope><name>ny</name></member>
+      <member refid="structLab_1ad829bef794962c47873b312713f90642" prot="public" virt="non-virtual"><scope>Lab</scope><name>nz</name></member>
+      <member refid="structLab_1afa545cb9281573e0660190855e8ae9a7" prot="public" virt="non-virtual"><scope>Lab</scope><name>padfh</name></member>
+      <member refid="structLab_1adbaf6e6c65fa05cd274651a67aeec91e" prot="public" virt="non-virtual"><scope>Lab</scope><name>padfmode</name></member>
+      <member refid="structLab_1a4acbb26a62912f14e31a8fb4af6301a6" prot="public" virt="non-virtual"><scope>Lab</scope><name>padh</name></member>
+      <member refid="structLab_1ab80a630b632663153259d03f374b8e0a" prot="public" virt="non-virtual"><scope>Lab</scope><name>padmode</name></member>
+      <member refid="structLab_1ad81b004a16aa58d839c7d757fff7e882" prot="public" virt="non-virtual"><scope>Lab</scope><name>reg</name></member>
+      <member refid="structLab_1a467de1876be2a43e52431ff9381d4a27" prot="public" virt="non-virtual"><scope>Lab</scope><name>rotation_axis_offset</name></member>
+      <member refid="structLab_1a9366219a1808930cfa06f07a46214b92" prot="public" virt="non-virtual"><scope>Lab</scope><name>slice_recon_end</name></member>
+      <member refid="structLab_1a38d5183504028111d7f0fb3b1c1aba1b" prot="public" virt="non-virtual"><scope>Lab</scope><name>slice_recon_start</name></member>
+      <member refid="structLab_1a24c5c1a923a54f18547cfb620b084ac6" prot="public" virt="non-virtual"><scope>Lab</scope><name>slice_tomo_end</name></member>
+      <member refid="structLab_1a270e538aec1b641e7ac40847cd6932b5" prot="public" virt="non-virtual"><scope>Lab</scope><name>slice_tomo_start</name></member>
+      <member refid="structLab_1a282e285986aff004a5c1a2caa1984fc2" prot="public" virt="non-virtual"><scope>Lab</scope><name>v</name></member>
+      <member refid="structLab_1a83b4d39d46815ca91ca75a6dcd0587b4" prot="public" virt="non-virtual"><scope>Lab</scope><name>x</name></member>
+      <member refid="structLab_1a0235dd620b93bf5f0aef54a3300c696b" prot="public" virt="non-virtual"><scope>Lab</scope><name>y</name></member>
+      <member refid="structLab_1a65b907896b84c042da76226442ab1c62" prot="public" virt="non-virtual"><scope>Lab</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

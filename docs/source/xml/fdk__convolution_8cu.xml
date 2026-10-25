@@ -1,0 +1,443 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="fdk__convolution_8cu" kind="file" language="C++">
+    <compoundname>fdk_convolution.cu</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">math.h</includes>
+    <includes local="no">cufft.h</includes>
+    <includes refid="fdk_8hpp" local="yes">geometries/conebeam/fdk.hpp</includes>
+    <incdepgraph>
+      <node id="18">
+        <label>cuda_runtime_api.h</label>
+        <link refid="cuda__runtime__api_8h_source"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>cuda_device_runtime_api.h</label>
+      </node>
+      <node id="4">
+        <label>cufft.h</label>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="16">
+        <label>vector_types.h</label>
+      </node>
+      <node id="20">
+        <label>builtin_types.h</label>
+      </node>
+      <node id="7">
+        <label>fstream</label>
+      </node>
+      <node id="15">
+        <label>driver_types.h</label>
+      </node>
+      <node id="13">
+        <label>common/configs.hpp</label>
+        <link refid="configs_8hpp_source"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>future</label>
+      </node>
+      <node id="1">
+        <label>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_convolution.cu</label>
+        <link refid="fdk__convolution_8cu"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>vector</label>
+      </node>
+      <node id="14">
+        <label>complex.h</label>
+      </node>
+      <node id="5">
+        <label>geometries/conebeam/fdk.hpp</label>
+        <link refid="fdk_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>time.h</label>
+      </node>
+      <node id="3">
+        <label>math.h</label>
+      </node>
+      <node id="12">
+        <label>iostream</label>
+      </node>
+      <node id="17">
+        <label>cstddef</label>
+      </node>
+      <node id="19">
+        <label>crt/host_defines.h</label>
+      </node>
+      <node id="9">
+        <label>thread</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="fdk__convolution_8cu_1a06f109e16acc967c6ea2f5b6952a9cc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void filtering_conv</definition>
+        <argsstring>(Lab lab, float *proj, float *Q, Process process)</argsstring>
+        <name>filtering_conv</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>proj</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>Q</declname>
+        </param>
+        <param>
+          <type><ref refid="structProcess" kindref="compound">Process</ref></type>
+          <declname>process</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_convolution.cu" line="43" column="6" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_convolution.cu" bodystart="43" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk__convolution_8cu_1a577f1d59adcf62cb69987a8ecdc9923a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void calc_Q</definition>
+        <argsstring>(float *Q, float *proj, Lab lab, Process process)</argsstring>
+        <name>calc_Q</name>
+        <param>
+          <type>float *</type>
+          <declname>Q</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>proj</declname>
+        </param>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type><ref refid="structProcess" kindref="compound">Process</ref></type>
+          <declname>process</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_convolution.cu" line="67" column="17" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_convolution.cu" bodystart="67" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk__convolution_8cu_1a0163cbb3eb055b1d059477d9b337a037" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__device__ float</type>
+        <definition>__device__ float calc_convolution</definition>
+        <argsstring>(float *projection, Lab lab, float X, float Z, float w_max)</argsstring>
+        <name>calc_convolution</name>
+        <param>
+          <type>float *</type>
+          <declname>projection</declname>
+        </param>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>X</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>Z</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>w_max</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_convolution.cu" line="83" column="18" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_convolution.cu" bodystart="83" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk__convolution_8cu_1a775142902a9e40d951f912520108d38d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__forceinline__ __device__ float</type>
+        <definition>__forceinline__ __device__ float gx</definition>
+        <argsstring>(float x, float w_max)</argsstring>
+        <name>gx</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>w_max</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_convolution.cu" line="97" column="34" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_convolution.cu" bodystart="97" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk__convolution_8cu_1a5bdd7de11f1b531498d1ebd4051369ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__device__ float</type>
+        <definition>__device__ float integral_of_gx</definition>
+        <argsstring>(float a, float b, float w_max)</argsstring>
+        <name>integral_of_gx</name>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>w_max</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_convolution.cu" line="106" column="18" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_convolution.cu" bodystart="106" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk__convolution_8cu_1a871a769b679d2518687063270d5a2b3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__device__ void</type>
+        <definition>__device__ void set_filter_idxs_conv</definition>
+        <argsstring>(long long int n, int *i, int *j, int *k, Lab lab, Process process)</argsstring>
+        <name>set_filter_idxs_conv</name>
+        <param>
+          <type>long long int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type><ref refid="structProcess" kindref="compound">Process</ref></type>
+          <declname>process</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_convolution.cu" line="122" column="17" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_convolution.cu" bodystart="122" bodyend="129"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cufft.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;geometries/conebeam/fdk.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>fazer<sp/>funções<sp/>para<sp/>malloc<sp/>e<sp/>copia<sp/>para<sp/>não<sp/>poluir<sp/>os<sp/>códigos.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MUDA<sp/>O<sp/>NOME<sp/>DA<sp/>CALC_CONV<sp/>PARA<sp/>FILTER_BY_CONV</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TROCAR<sp/>FUNCOES<sp/>MATEMATICAS<sp/>POR<sp/>SUAS<sp/>RESPECTIVAS<sp/>FLOATS!!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>__host__<sp/>void<sp/>calc_conv(Lab<sp/>lab,<sp/>float*<sp/>proj,<sp/>Process<sp/>process){<sp/>//<sp/>CRIAR<sp/>NOVO<sp/>TIPO<sp/>Process<sp/>SÓ<sp/>COM<sp/>O<sp/>NECESSARIO<sp/>(as<sp/>variaveis<sp/>que<sp/>for<sp/>usar).<sp/>quando<sp/>for<sp/>usar,<sp/>criar<sp/>Process<sp/>process_filter<sp/>e<sp/>process_backproj.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>long<sp/>long<sp/>int<sp/>N<sp/>=<sp/>process.n_filter;<sp/>//<sp/>trocar<sp/>por<sp/>process.n_filter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>float*<sp/>Q;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>float*<sp/>c_proj;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>int<sp/>n_threads<sp/>=<sp/>NUM_THREADS;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>long<sp/>int<sp/>n_blocks<sp/><sp/>=<sp/>N/n_threads<sp/>+<sp/>(N<sp/>%<sp/>n_threads<sp/>==<sp/>0<sp/>?<sp/>0:1);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>cudaMalloc(&amp;Q,<sp/>N<sp/>*<sp/>sizeof(float));<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>cudaDeviceSynchronize();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>cudaMalloc(&amp;c_proj,<sp/>N<sp/>*<sp/>sizeof(float));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>cudaDeviceSynchronize();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>cudaDeviceSynchronize();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>cudaMemcpy(c_proj,<sp/>proj<sp/>+<sp/>(process.i*process.n_filter),<sp/>N<sp/>*<sp/>sizeof(float),<sp/>cudaMemcpyHostToDevice);<sp/>//<sp/>trocar<sp/>proj<sp/>por<sp/>proj<sp/>+<sp/>process.i*process.n_filter;<sp/>trocar<sp/>cuda_proj<sp/>por<sp/>cuda_proj<sp/>+<sp/>process.i*process.n_filter.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>calc_Q&lt;&lt;&lt;n_blocks,<sp/>n_threads&gt;&gt;&gt;(Q,<sp/>c_proj,<sp/>lab,<sp/>process);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>cudaDeviceSynchronize();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>cudaMemcpy(proj<sp/>+<sp/>(process.i*process.n_filter),<sp/>Q,<sp/>N<sp/>*<sp/>sizeof(float),<sp/>cudaMemcpyDeviceToHost);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>cudaDeviceSynchronize();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>printf(cudaGetErrorString(cudaGetLastError()));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>printf(&quot;\n&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>cudaFree(c_proj);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>cudaFree(Q);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>filtering_conv(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>proj,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>Q,<sp/><ref refid="structProcess" kindref="compound">Process</ref><sp/>process)<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N<sp/>=<sp/>process.n_filter;<sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_threads<sp/>=<sp/>NUM_THREADS;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_blocks<sp/><sp/>=<sp/>N/n_threads<sp/>+<sp/>(N<sp/>%<sp/>n_threads<sp/>==<sp/>0<sp/>?<sp/>0:1);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n<sp/>Filtering<sp/>Convolution:<sp/>Process<sp/>=<sp/>%d<sp/>\n&quot;</highlight><highlight class="normal">,<sp/>process.i_gpu);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__CUDART__DEVICE_1ga7b63629909800b614427aae92b22d606" kindref="member">cudaSetDevice</ref>(process.i_gpu);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>clock_t<sp/>b_begin<sp/>=<sp/>clock();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>calc_Q&lt;&lt;&lt;n_blocks,<sp/>n_threads&gt;&gt;&gt;(Q,<sp/>proj,<sp/>lab,<sp/>process);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__CUDART__DEVICE_1gabad4c7a01961e63aa4744ce597cfaf1d" kindref="member">cudaDeviceSynchronize</ref>();<sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>printf(cudaGetErrorString(cudaGetLastError()));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>printf(&quot;\n&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>clock_t<sp/>b_end<sp/>=<sp/>clock();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Time<sp/>filtering_conv:<sp/>Gpu<sp/>%d<sp/>----<sp/>%f<sp/>\n&quot;</highlight><highlight class="normal">,process.i_gpu,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">(b_end<sp/>-<sp/>b_begin)/CLOCKS_PER_SEC);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>calc_Q(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>Q,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>proj,<sp/><ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/><ref refid="structProcess" kindref="compound">Process</ref><sp/>process)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n<sp/>=<sp/>blockDim.x<sp/>*<sp/>blockIdx.x<sp/>+<sp/>threadIdx.x;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,j,k;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>X,<sp/>Z;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>w_max<sp/>=<sp/>1<sp/>/<sp/>(2*lab.dh);<sp/></highlight><highlight class="comment">//<sp/>conferir!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>set_filter_idxs_conv(n,<sp/>&amp;k,<sp/>&amp;j,<sp/>&amp;i,<sp/>lab,<sp/>process);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>Z<sp/>=<sp/>(i<sp/>+<sp/>process.i*process.z_filter)*lab.dv<sp/>-<sp/>lab.v;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>X<sp/>=<sp/>k*lab.dh<sp/>-<sp/>lab.h;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>Q[n]<sp/>=<sp/>calc_convolution(&amp;proj[i*lab.nbeta*lab.nh<sp/>+<sp/>j*lab.nh],<sp/>lab,<sp/>X,<sp/>Z,<sp/>w_max);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">__device__<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>calc_convolution(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>projection,<sp/><ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>X,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Z,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>w_max)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>conv<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>xi,<sp/>cos_thetai;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>D2<sp/>=<sp/>lab.Dsd*lab.Dsd;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>lab.nh;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xi<sp/>=<sp/>i*lab.dh<sp/>-<sp/>lab.h;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cos_thetai<sp/>=<sp/>lab.D/sqrt(D2<sp/>+<sp/>xi*xi<sp/>+<sp/>Z*Z);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>conv<sp/>+=<sp/>projection[i]<sp/>*<sp/>cos_thetai<sp/>*<sp/>gx(X<sp/>-<sp/>xi,<sp/>w_max);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>conv*lab.dx;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">__forceinline__<sp/>__device__<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>gx(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>w_max)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>2*M_PI*w_max*x;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(fabs(x)<sp/>&lt;<sp/>EPSILON_GX)<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>w_max*w_max;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>2<sp/>*w_max*w_max*<sp/>(k*sin(k)+cos(k)-1)<sp/>/<sp/>(k*k);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">__device__<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>integral_of_gx(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>b,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>w_max)<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>int_gx_ka,<sp/>int_gx_kb;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ka<sp/>=<sp/>2*M_PI*w_max*a;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>kb<sp/>=<sp/>2*M_PI*w_max*b;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>int_gx_ka<sp/>=<sp/>(1-cos(ka))<sp/>/<sp/>ka;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>int_gx_kb<sp/>=<sp/>(1-cos(kb))<sp/>/<sp/>kb;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(fabs(a)<sp/>&lt;<sp/>EPSILON_GX)<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int_gx_ka<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(fabs(b)<sp/>&lt;<sp/>EPSILON_GX)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int_gx_kb<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>w_max*(int_gx_kb<sp/>-<sp/>int_gx_ka)<sp/>/<sp/>M_PI;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">__device__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_filter_idxs_conv(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>i,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*j,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>k,<sp/><ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/><ref refid="structProcess" kindref="compound">Process</ref><sp/>process)<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nij,<sp/>rem_ij;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>nij<sp/>=<sp/>lab.nh*lab.nbeta;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>*k<sp/>=<sp/>(n)<sp/>/<sp/>nij;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>rem_ij<sp/>=<sp/>(n)<sp/>%<sp/>nij;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>*j<sp/>=<sp/>rem_ij<sp/>/<sp/>lab.nh;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>*i<sp/>=<sp/>rem_ij<sp/>%<sp/>lab.nh;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">}}</highlight></codeline>
+    </programlisting>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_convolution.cu"/>
+  </compounddef>
+</doxygen>

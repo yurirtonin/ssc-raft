@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespaceSync" kind="namespace" language="C++">
+    <compoundname>Sync</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="operations_8hpp_1a0f33fa5734b0d59b3ce8365a1d5267b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void Sync::KWeightedLerp</definition>
+        <argsstring>(Type *val, const Type *acc, const float *div, Type *velocity, size_t size, float stepsize, float momentum)</argsstring>
+        <name>KWeightedLerp</name>
+        <param>
+          <type>Type *</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>const Type *</type>
+          <declname>acc</declname>
+        </param>
+        <param>
+          <type>const float *</type>
+          <declname>div</declname>
+        </param>
+        <param>
+          <type>Type *</type>
+          <declname>velocity</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>stepsize</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>momentum</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="317" column="17" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="317" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1ae9a2ea306754ee2b81125bb120afa8c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void Sync::KMaskedSum</definition>
+        <argsstring>(Type *cval, const Type *acc, size_t size, const uint32_t *mask2)</argsstring>
+        <name>KMaskedSum</name>
+        <param>
+          <type>Type *</type>
+          <declname>cval</declname>
+        </param>
+        <param>
+          <type>const Type *</type>
+          <declname>acc</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const uint32_t *</type>
+          <declname>mask2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="321" column="17" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="321" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1a55a329aeb83a6142573bac53ea15e1e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void Sync::KMaskedBroadcast</definition>
+        <argsstring>(Type *cval, const Type *acc, size_t size, const uint32_t *mask2)</argsstring>
+        <name>KMaskedBroadcast</name>
+        <param>
+          <type>Type *</type>
+          <declname>cval</declname>
+        </param>
+        <param>
+          <type>const Type *</type>
+          <declname>acc</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const uint32_t *</type>
+          <declname>mask2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="324" column="17" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="324" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1ad7e62d7a4cd2bdafcf77c2c7adfaf485" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void Sync::KSetMask</definition>
+        <argsstring>(uint32_t *mask, const Type *value, size_t size, float thresh)</argsstring>
+        <name>KSetMask</name>
+        <param>
+          <type>uint32_t *</type>
+          <declname>mask</declname>
+        </param>
+        <param>
+          <type>const Type *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>thresh</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="327" column="17" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="327" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1acf529b4151d956a159cf669ffcdca8a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void Sync::KSetMask&lt; float &gt;</definition>
+        <argsstring>(uint32_t *mask, const float *fval, size_t size, float thresh)</argsstring>
+        <name>KSetMask&lt; float &gt;</name>
+        <param>
+          <type>uint32_t *</type>
+          <declname>mask</declname>
+        </param>
+        <param>
+          <type>const float *</type>
+          <declname>fval</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>thresh</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="330" column="19" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="330" declcolumn="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="315" column="1"/>
+  </compounddef>
+</doxygen>

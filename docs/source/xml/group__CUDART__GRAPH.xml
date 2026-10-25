@@ -1,0 +1,2133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__CUDART__GRAPH" kind="group">
+    <compoundname>CUDART_GRAPH</compoundname>
+    <title>Graph Management</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__CUDART__GRAPH_1ga23d0a2360b0aefbbf94c171eb52d6e98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphCreate</definition>
+        <argsstring>(cudaGraph_t *pGraph, unsigned int flags)</argsstring>
+        <name>cudaGraphCreate</name>
+        <param>
+          <type>cudaGraph_t *</type>
+          <declname>pGraph</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Creates a graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates an empty graph, which is returned via <computeroutput>pGraph</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pGraph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returns newly created graph </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Graph creation flags, must be 0</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, ::cudaErrorMemoryAllocation \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__GRAPH_1ga5bccc598cd12d3c2b5c511d0042e0e0d" kindref="member">cudaGraphAddChildGraphNode</ref>, <ref refid="group__CUDART__GRAPH_1ga442961e7e08bb4059a9ee82cfe767d66" kindref="member">cudaGraphAddEmptyNode</ref>, <ref refid="group__CUDART__GRAPH_1ga61c72f5e9943403fb59e43e2cc909b9d" kindref="member">cudaGraphAddKernelNode</ref>, <ref refid="group__CUDART__GRAPH_1ga55fbcfa1464bce9b30bd27a673b52cde" kindref="member">cudaGraphAddHostNode</ref>, <ref refid="group__CUDART__GRAPH_1ga4d75b0bad907683050de466363bd4349" kindref="member">cudaGraphAddMemcpyNode</ref>, <ref refid="group__CUDART__GRAPH_1ga830ecc3451705075606a697cd1c77caf" kindref="member">cudaGraphAddMemsetNode</ref>, <ref refid="group__CUDART__GRAPH_1gacc9e30e048b87b6c8bf2addf32a738c6" kindref="member">cudaGraphInstantiate</ref>, <ref refid="group__CUDART__GRAPH_1gab2f38a71b41401ef0010dbd2351a606e" kindref="member">cudaGraphDestroy</ref>, <ref refid="group__CUDART__GRAPH_1ga7e453f49f453c753a48e385dd9236f90" kindref="member">cudaGraphGetNodes</ref>, <ref refid="group__CUDART__GRAPH_1gaf1e15955e635c5e5c95e4bf3ca63526f" kindref="member">cudaGraphGetRootNodes</ref>, <ref refid="group__CUDART__GRAPH_1gaedbc8808fa1886c66060bffd461f454c" kindref="member">cudaGraphGetEdges</ref>, <ref refid="group__CUDART__GRAPH_1gab67dc1ab9d77726017a6aa4c63686a6d" kindref="member">cudaGraphClone</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="8422" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="8422" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1ga61c72f5e9943403fb59e43e2cc909b9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphAddKernelNode</definition>
+        <argsstring>(cudaGraphNode_t *pGraphNode, cudaGraph_t graph, const cudaGraphNode_t *pDependencies, size_t numDependencies, const struct cudaKernelNodeParams *pNodeParams)</argsstring>
+        <name>cudaGraphAddKernelNode</name>
+        <param>
+          <type>cudaGraphNode_t *</type>
+          <declname>pGraphNode</declname>
+        </param>
+        <param>
+          <type>cudaGraph_t</type>
+          <declname>graph</declname>
+        </param>
+        <param>
+          <type>const cudaGraphNode_t *</type>
+          <declname>pDependencies</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>numDependencies</declname>
+        </param>
+        <param>
+          <type>const struct cudaKernelNodeParams *</type>
+          <declname>pNodeParams</declname>
+        </param>
+        <briefdescription>
+<para>Creates a kernel execution node and adds it to a graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a new kernel execution node and adds it to <computeroutput>graph</computeroutput> with <computeroutput>numDependencies</computeroutput> dependencies specified via <computeroutput>pDependencies</computeroutput> and arguments specified in <computeroutput>pNodeParams</computeroutput>. It is possible for <computeroutput>numDependencies</computeroutput> to be 0, in which case the node will be placed at the root of the graph. <computeroutput>pDependencies</computeroutput> may not have any duplicate entries. A handle to the new node will be returned in <computeroutput>pGraphNode</computeroutput>.</para>
+<para>The cudaKernelNodeParams structure is defined as:</para>
+<para><programlisting><codeline><highlight class="normal">struct<sp/>cudaKernelNodeParams</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>void*<sp/>func;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>dim3<sp/>gridDim;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>dim3<sp/>blockDim;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>unsigned<sp/>int<sp/>sharedMemBytes;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>**kernelParams;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>**extra;</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+</programlisting></para>
+<para>When the graph is launched, the node will invoke kernel <computeroutput>func</computeroutput> on a (<computeroutput>gridDim.x</computeroutput> x <computeroutput>gridDim.y</computeroutput> x <computeroutput>gridDim.z</computeroutput>) grid of blocks. Each block contains (<computeroutput>blockDim.x</computeroutput> x <computeroutput>blockDim.y</computeroutput> x <computeroutput>blockDim.z</computeroutput>) threads.</para>
+<para><computeroutput>sharedMem</computeroutput> sets the amount of dynamic shared memory that will be available to each thread block.</para>
+<para>Kernel parameters to <computeroutput>func</computeroutput> can be specified in one of two ways:</para>
+<para>1) Kernel parameters can be specified via <computeroutput>kernelParams</computeroutput>. If the kernel has N parameters, then <computeroutput>kernelParams</computeroutput> needs to be an array of N pointers. Each pointer, from <computeroutput>kernelParams</computeroutput>[0] to <computeroutput>kernelParams</computeroutput>[N-1], points to the region of memory from which the actual parameter will be copied. The number of kernel parameters and their offsets and sizes do not need to be specified as that information is retrieved directly from the kernel&apos;s image.</para>
+<para>2) Kernel parameters can also be packaged by the application into a single buffer that is passed in via <computeroutput>extra</computeroutput>. This places the burden on the application of knowing each kernel parameter&apos;s size and alignment/padding within the buffer. The <computeroutput>extra</computeroutput> parameter exists to allow this function to take additional less commonly used arguments. <computeroutput>extra</computeroutput> specifies a list of names of extra settings and their corresponding values. Each extra setting name is immediately followed by the corresponding value. The list must be terminated with either NULL or CU_LAUNCH_PARAM_END.</para>
+<para><itemizedlist>
+<listitem><para>::CU_LAUNCH_PARAM_END, which indicates the end of the <computeroutput>extra</computeroutput> array;</para>
+</listitem><listitem><para>::CU_LAUNCH_PARAM_BUFFER_POINTER, which specifies that the next value in <computeroutput>extra</computeroutput> will be a pointer to a buffer containing all the kernel parameters for launching kernel <computeroutput>func</computeroutput>;</para>
+</listitem><listitem><para>::CU_LAUNCH_PARAM_BUFFER_SIZE, which specifies that the next value in <computeroutput>extra</computeroutput> will be a pointer to a size_t containing the size of the buffer specified with ::CU_LAUNCH_PARAM_BUFFER_POINTER;</para>
+</listitem></itemizedlist>
+</para>
+<para>The error ::cudaErrorInvalidValue will be returned if kernel parameters are specified with both <computeroutput>kernelParams</computeroutput> and <computeroutput>extra</computeroutput> (i.e. both <computeroutput>kernelParams</computeroutput> and <computeroutput>extra</computeroutput> are non-NULL).</para>
+<para>The <computeroutput>kernelParams</computeroutput> or <computeroutput>extra</computeroutput> array, as well as the argument values it points to, are copied during this call.</para>
+<para><simplesect kind="note"><para>Kernels launched using graphs must not use texture and surface references. Reading or writing through any texture or surface reference is undefined behavior. This restriction does not apply to texture and surface objects.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pGraphNode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returns newly created node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>graph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Graph to which to add the node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pDependencies</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Dependencies of the node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numDependencies</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Number of dependencies </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pNodeParams</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Parameters for the GPU execution node</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, ::cudaErrorInvalidDeviceFunction \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__EXECUTION_1gaaa780bd93440640cd7de502788ac895e" kindref="member">cudaLaunchKernel</ref>, <ref refid="group__CUDART__GRAPH_1gaeadf72982d5fb09f2a7119e80cde84b7" kindref="member">cudaGraphKernelNodeGetParams</ref>, <ref refid="group__CUDART__GRAPH_1gae9f5733288ed5046f782b994c16b4d5e" kindref="member">cudaGraphKernelNodeSetParams</ref>, <ref refid="group__CUDART__GRAPH_1ga23d0a2360b0aefbbf94c171eb52d6e98" kindref="member">cudaGraphCreate</ref>, <ref refid="group__CUDART__GRAPH_1gab8855ed7af56998de96805cc5f85d198" kindref="member">cudaGraphDestroyNode</ref>, <ref refid="group__CUDART__GRAPH_1ga5bccc598cd12d3c2b5c511d0042e0e0d" kindref="member">cudaGraphAddChildGraphNode</ref>, <ref refid="group__CUDART__GRAPH_1ga442961e7e08bb4059a9ee82cfe767d66" kindref="member">cudaGraphAddEmptyNode</ref>, <ref refid="group__CUDART__GRAPH_1ga55fbcfa1464bce9b30bd27a673b52cde" kindref="member">cudaGraphAddHostNode</ref>, <ref refid="group__CUDART__GRAPH_1ga4d75b0bad907683050de466363bd4349" kindref="member">cudaGraphAddMemcpyNode</ref>, <ref refid="group__CUDART__GRAPH_1ga830ecc3451705075606a697cd1c77caf" kindref="member">cudaGraphAddMemsetNode</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="8519" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="8519" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1gaeadf72982d5fb09f2a7119e80cde84b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphKernelNodeGetParams</definition>
+        <argsstring>(cudaGraphNode_t node, struct cudaKernelNodeParams *pNodeParams)</argsstring>
+        <name>cudaGraphKernelNodeGetParams</name>
+        <param>
+          <type>cudaGraphNode_t</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>struct cudaKernelNodeParams *</type>
+          <declname>pNodeParams</declname>
+        </param>
+        <briefdescription>
+<para>Returns a kernel node&apos;s parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the parameters of kernel node <computeroutput>node</computeroutput> in <computeroutput>pNodeParams</computeroutput>. The <computeroutput>kernelParams</computeroutput> or <computeroutput>extra</computeroutput> array returned in <computeroutput>pNodeParams</computeroutput>, as well as the argument values it points to, are owned by the node. This memory remains valid until the node is destroyed or its parameters are modified, and should not be modified directly. Use <ref refid="group__CUDART__GRAPH_1gae9f5733288ed5046f782b994c16b4d5e" kindref="member">cudaGraphKernelNodeSetParams</ref> to update the parameters of this node.</para>
+<para>The params will contain either <computeroutput>kernelParams</computeroutput> or <computeroutput>extra</computeroutput>, according to which of these was most recently set on the node.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Node to get the parameters for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pNodeParams</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Pointer to return the parameters</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, ::cudaErrorInvalidDeviceFunction \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__EXECUTION_1gaaa780bd93440640cd7de502788ac895e" kindref="member">cudaLaunchKernel</ref>, <ref refid="group__CUDART__GRAPH_1ga61c72f5e9943403fb59e43e2cc909b9d" kindref="member">cudaGraphAddKernelNode</ref>, <ref refid="group__CUDART__GRAPH_1gae9f5733288ed5046f782b994c16b4d5e" kindref="member">cudaGraphKernelNodeSetParams</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="8552" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="8552" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1gae9f5733288ed5046f782b994c16b4d5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphKernelNodeSetParams</definition>
+        <argsstring>(cudaGraphNode_t node, const struct cudaKernelNodeParams *pNodeParams)</argsstring>
+        <name>cudaGraphKernelNodeSetParams</name>
+        <param>
+          <type>cudaGraphNode_t</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const struct cudaKernelNodeParams *</type>
+          <declname>pNodeParams</declname>
+        </param>
+        <briefdescription>
+<para>Sets a kernel node&apos;s parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the parameters of kernel node <computeroutput>node</computeroutput> to <computeroutput>pNodeParams</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Node to set the parameters for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pNodeParams</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Parameters to copy</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, ::cudaErrorInvalidResourceHandle, ::cudaErrorMemoryAllocation \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__EXECUTION_1gaaa780bd93440640cd7de502788ac895e" kindref="member">cudaLaunchKernel</ref>, <ref refid="group__CUDART__GRAPH_1ga61c72f5e9943403fb59e43e2cc909b9d" kindref="member">cudaGraphAddKernelNode</ref>, <ref refid="group__CUDART__GRAPH_1gaeadf72982d5fb09f2a7119e80cde84b7" kindref="member">cudaGraphKernelNodeGetParams</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="8577" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="8577" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1ga4d75b0bad907683050de466363bd4349" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphAddMemcpyNode</definition>
+        <argsstring>(cudaGraphNode_t *pGraphNode, cudaGraph_t graph, const cudaGraphNode_t *pDependencies, size_t numDependencies, const struct cudaMemcpy3DParms *pCopyParams)</argsstring>
+        <name>cudaGraphAddMemcpyNode</name>
+        <param>
+          <type>cudaGraphNode_t *</type>
+          <declname>pGraphNode</declname>
+        </param>
+        <param>
+          <type>cudaGraph_t</type>
+          <declname>graph</declname>
+        </param>
+        <param>
+          <type>const cudaGraphNode_t *</type>
+          <declname>pDependencies</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>numDependencies</declname>
+        </param>
+        <param>
+          <type>const struct cudaMemcpy3DParms *</type>
+          <declname>pCopyParams</declname>
+        </param>
+        <briefdescription>
+<para>Creates a memcpy node and adds it to a graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a new memcpy node and adds it to <computeroutput>graph</computeroutput> with <computeroutput>numDependencies</computeroutput> dependencies specified via <computeroutput>pDependencies</computeroutput>. It is possible for <computeroutput>numDependencies</computeroutput> to be 0, in which case the node will be placed at the root of the graph. <computeroutput>pDependencies</computeroutput> may not have any duplicate entries. A handle to the new node will be returned in <computeroutput>pGraphNode</computeroutput>.</para>
+<para>When the graph is launched, the node will perform the memcpy described by <computeroutput>pCopyParams</computeroutput>. See <ref refid="group__CUDART__MEMORY_1ga60a55856b9b01a0620ca1c657debed53" kindref="member">cudaMemcpy3D()</ref> for a description of the structure and its restrictions.</para>
+<para>Memcpy nodes have some additional restrictions with regards to managed memory, if the system contains at least one device which has a zero value for the device attribute ::cudaDevAttrConcurrentManagedAccess.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pGraphNode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returns newly created node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>graph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Graph to which to add the node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pDependencies</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Dependencies of the node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numDependencies</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Number of dependencies </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pCopyParams</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Parameters for the memory copy</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__MEMORY_1ga60a55856b9b01a0620ca1c657debed53" kindref="member">cudaMemcpy3D</ref>, <ref refid="group__CUDART__GRAPH_1gacaba6da67566938c73cd0a7bcec19a21" kindref="member">cudaGraphMemcpyNodeGetParams</ref>, <ref refid="group__CUDART__GRAPH_1gae7aba1cdb8135219a97eed2c9c2844b1" kindref="member">cudaGraphMemcpyNodeSetParams</ref>, <ref refid="group__CUDART__GRAPH_1ga23d0a2360b0aefbbf94c171eb52d6e98" kindref="member">cudaGraphCreate</ref>, <ref refid="group__CUDART__GRAPH_1gab8855ed7af56998de96805cc5f85d198" kindref="member">cudaGraphDestroyNode</ref>, <ref refid="group__CUDART__GRAPH_1ga5bccc598cd12d3c2b5c511d0042e0e0d" kindref="member">cudaGraphAddChildGraphNode</ref>, <ref refid="group__CUDART__GRAPH_1ga442961e7e08bb4059a9ee82cfe767d66" kindref="member">cudaGraphAddEmptyNode</ref>, <ref refid="group__CUDART__GRAPH_1ga61c72f5e9943403fb59e43e2cc909b9d" kindref="member">cudaGraphAddKernelNode</ref>, <ref refid="group__CUDART__GRAPH_1ga55fbcfa1464bce9b30bd27a673b52cde" kindref="member">cudaGraphAddHostNode</ref>, <ref refid="group__CUDART__GRAPH_1ga830ecc3451705075606a697cd1c77caf" kindref="member">cudaGraphAddMemsetNode</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="8621" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="8621" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1gacaba6da67566938c73cd0a7bcec19a21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphMemcpyNodeGetParams</definition>
+        <argsstring>(cudaGraphNode_t node, struct cudaMemcpy3DParms *pNodeParams)</argsstring>
+        <name>cudaGraphMemcpyNodeGetParams</name>
+        <param>
+          <type>cudaGraphNode_t</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>struct cudaMemcpy3DParms *</type>
+          <declname>pNodeParams</declname>
+        </param>
+        <briefdescription>
+<para>Returns a memcpy node&apos;s parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the parameters of memcpy node <computeroutput>node</computeroutput> in <computeroutput>pNodeParams</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Node to get the parameters for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pNodeParams</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Pointer to return the parameters</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__MEMORY_1ga60a55856b9b01a0620ca1c657debed53" kindref="member">cudaMemcpy3D</ref>, <ref refid="group__CUDART__GRAPH_1ga4d75b0bad907683050de466363bd4349" kindref="member">cudaGraphAddMemcpyNode</ref>, <ref refid="group__CUDART__GRAPH_1gae7aba1cdb8135219a97eed2c9c2844b1" kindref="member">cudaGraphMemcpyNodeSetParams</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="8644" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="8644" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1gae7aba1cdb8135219a97eed2c9c2844b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphMemcpyNodeSetParams</definition>
+        <argsstring>(cudaGraphNode_t node, const struct cudaMemcpy3DParms *pNodeParams)</argsstring>
+        <name>cudaGraphMemcpyNodeSetParams</name>
+        <param>
+          <type>cudaGraphNode_t</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const struct cudaMemcpy3DParms *</type>
+          <declname>pNodeParams</declname>
+        </param>
+        <briefdescription>
+<para>Sets a memcpy node&apos;s parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the parameters of memcpy node <computeroutput>node</computeroutput> to <computeroutput>pNodeParams</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Node to set the parameters for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pNodeParams</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Parameters to copy</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__MEMORY_1ga60a55856b9b01a0620ca1c657debed53" kindref="member">cudaMemcpy3D</ref>, <ref refid="group__CUDART__GRAPH_1ga4d75b0bad907683050de466363bd4349" kindref="member">cudaGraphAddMemcpyNode</ref>, <ref refid="group__CUDART__GRAPH_1gacaba6da67566938c73cd0a7bcec19a21" kindref="member">cudaGraphMemcpyNodeGetParams</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="8667" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="8667" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1ga830ecc3451705075606a697cd1c77caf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphAddMemsetNode</definition>
+        <argsstring>(cudaGraphNode_t *pGraphNode, cudaGraph_t graph, const cudaGraphNode_t *pDependencies, size_t numDependencies, const struct cudaMemsetParams *pMemsetParams)</argsstring>
+        <name>cudaGraphAddMemsetNode</name>
+        <param>
+          <type>cudaGraphNode_t *</type>
+          <declname>pGraphNode</declname>
+        </param>
+        <param>
+          <type>cudaGraph_t</type>
+          <declname>graph</declname>
+        </param>
+        <param>
+          <type>const cudaGraphNode_t *</type>
+          <declname>pDependencies</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>numDependencies</declname>
+        </param>
+        <param>
+          <type>const struct cudaMemsetParams *</type>
+          <declname>pMemsetParams</declname>
+        </param>
+        <briefdescription>
+<para>Creates a memset node and adds it to a graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a new memset node and adds it to <computeroutput>graph</computeroutput> with <computeroutput>numDependencies</computeroutput> dependencies specified via <computeroutput>pDependencies</computeroutput>. It is possible for <computeroutput>numDependencies</computeroutput> to be 0, in which case the node will be placed at the root of the graph. <computeroutput>pDependencies</computeroutput> may not have any duplicate entries. A handle to the new node will be returned in <computeroutput>pGraphNode</computeroutput>.</para>
+<para>The element size must be 1, 2, or 4 bytes. When the graph is launched, the node will perform the memset described by <computeroutput>pMemsetParams</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pGraphNode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returns newly created node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>graph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Graph to which to add the node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pDependencies</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Dependencies of the node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numDependencies</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Number of dependencies </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pMemsetParams</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Parameters for the memory set</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, ::cudaErrorInvalidDevice \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__MEMORY_1gab185debb6f49388d0557f8f34e7a6143" kindref="member">cudaMemset2D</ref>, <ref refid="group__CUDART__GRAPH_1ga559b162efca5101cf8b1e8e73f8de5c9" kindref="member">cudaGraphMemsetNodeGetParams</ref>, <ref refid="group__CUDART__GRAPH_1ga583135d732b2142b8552e3d2ed32707b" kindref="member">cudaGraphMemsetNodeSetParams</ref>, <ref refid="group__CUDART__GRAPH_1ga23d0a2360b0aefbbf94c171eb52d6e98" kindref="member">cudaGraphCreate</ref>, <ref refid="group__CUDART__GRAPH_1gab8855ed7af56998de96805cc5f85d198" kindref="member">cudaGraphDestroyNode</ref>, <ref refid="group__CUDART__GRAPH_1ga5bccc598cd12d3c2b5c511d0042e0e0d" kindref="member">cudaGraphAddChildGraphNode</ref>, <ref refid="group__CUDART__GRAPH_1ga442961e7e08bb4059a9ee82cfe767d66" kindref="member">cudaGraphAddEmptyNode</ref>, <ref refid="group__CUDART__GRAPH_1ga61c72f5e9943403fb59e43e2cc909b9d" kindref="member">cudaGraphAddKernelNode</ref>, <ref refid="group__CUDART__GRAPH_1ga55fbcfa1464bce9b30bd27a673b52cde" kindref="member">cudaGraphAddHostNode</ref>, <ref refid="group__CUDART__GRAPH_1ga4d75b0bad907683050de466363bd4349" kindref="member">cudaGraphAddMemcpyNode</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="8709" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="8709" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1ga559b162efca5101cf8b1e8e73f8de5c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphMemsetNodeGetParams</definition>
+        <argsstring>(cudaGraphNode_t node, struct cudaMemsetParams *pNodeParams)</argsstring>
+        <name>cudaGraphMemsetNodeGetParams</name>
+        <param>
+          <type>cudaGraphNode_t</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>struct cudaMemsetParams *</type>
+          <declname>pNodeParams</declname>
+        </param>
+        <briefdescription>
+<para>Returns a memset node&apos;s parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the parameters of memset node <computeroutput>node</computeroutput> in <computeroutput>pNodeParams</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Node to get the parameters for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pNodeParams</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Pointer to return the parameters</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__MEMORY_1gab185debb6f49388d0557f8f34e7a6143" kindref="member">cudaMemset2D</ref>, <ref refid="group__CUDART__GRAPH_1ga830ecc3451705075606a697cd1c77caf" kindref="member">cudaGraphAddMemsetNode</ref>, <ref refid="group__CUDART__GRAPH_1ga583135d732b2142b8552e3d2ed32707b" kindref="member">cudaGraphMemsetNodeSetParams</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="8732" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="8732" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1ga583135d732b2142b8552e3d2ed32707b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphMemsetNodeSetParams</definition>
+        <argsstring>(cudaGraphNode_t node, const struct cudaMemsetParams *pNodeParams)</argsstring>
+        <name>cudaGraphMemsetNodeSetParams</name>
+        <param>
+          <type>cudaGraphNode_t</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const struct cudaMemsetParams *</type>
+          <declname>pNodeParams</declname>
+        </param>
+        <briefdescription>
+<para>Sets a memset node&apos;s parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the parameters of memset node <computeroutput>node</computeroutput> to <computeroutput>pNodeParams</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Node to set the parameters for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pNodeParams</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Parameters to copy</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__MEMORY_1gab185debb6f49388d0557f8f34e7a6143" kindref="member">cudaMemset2D</ref>, <ref refid="group__CUDART__GRAPH_1ga830ecc3451705075606a697cd1c77caf" kindref="member">cudaGraphAddMemsetNode</ref>, <ref refid="group__CUDART__GRAPH_1ga559b162efca5101cf8b1e8e73f8de5c9" kindref="member">cudaGraphMemsetNodeGetParams</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="8755" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="8755" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1ga55fbcfa1464bce9b30bd27a673b52cde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphAddHostNode</definition>
+        <argsstring>(cudaGraphNode_t *pGraphNode, cudaGraph_t graph, const cudaGraphNode_t *pDependencies, size_t numDependencies, const struct cudaHostNodeParams *pNodeParams)</argsstring>
+        <name>cudaGraphAddHostNode</name>
+        <param>
+          <type>cudaGraphNode_t *</type>
+          <declname>pGraphNode</declname>
+        </param>
+        <param>
+          <type>cudaGraph_t</type>
+          <declname>graph</declname>
+        </param>
+        <param>
+          <type>const cudaGraphNode_t *</type>
+          <declname>pDependencies</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>numDependencies</declname>
+        </param>
+        <param>
+          <type>const struct cudaHostNodeParams *</type>
+          <declname>pNodeParams</declname>
+        </param>
+        <briefdescription>
+<para>Creates a host execution node and adds it to a graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a new CPU execution node and adds it to <computeroutput>graph</computeroutput> with <computeroutput>numDependencies</computeroutput> dependencies specified via <computeroutput>pDependencies</computeroutput> and arguments specified in <computeroutput>pNodeParams</computeroutput>. It is possible for <computeroutput>numDependencies</computeroutput> to be 0, in which case the node will be placed at the root of the graph. <computeroutput>pDependencies</computeroutput> may not have any duplicate entries. A handle to the new node will be returned in <computeroutput>pGraphNode</computeroutput>.</para>
+<para>When the graph is launched, the node will invoke the specified CPU function. Host nodes are not supported under MPS with pre-Volta GPUs.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pGraphNode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returns newly created node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>graph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Graph to which to add the node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pDependencies</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Dependencies of the node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numDependencies</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Number of dependencies </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pNodeParams</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Parameters for the host node</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorNotSupported, ::cudaErrorInvalidValue \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__EXECUTION_1gacdeaa185a76c5cbfd737519261c992a0" kindref="member">cudaLaunchHostFunc</ref>, <ref refid="group__CUDART__GRAPH_1gafb141fb4648dc711c5a8d8d616327f65" kindref="member">cudaGraphHostNodeGetParams</ref>, <ref refid="group__CUDART__GRAPH_1ga45d61d130cca0c9bd4f31a025b43de09" kindref="member">cudaGraphHostNodeSetParams</ref>, <ref refid="group__CUDART__GRAPH_1ga23d0a2360b0aefbbf94c171eb52d6e98" kindref="member">cudaGraphCreate</ref>, <ref refid="group__CUDART__GRAPH_1gab8855ed7af56998de96805cc5f85d198" kindref="member">cudaGraphDestroyNode</ref>, <ref refid="group__CUDART__GRAPH_1ga5bccc598cd12d3c2b5c511d0042e0e0d" kindref="member">cudaGraphAddChildGraphNode</ref>, <ref refid="group__CUDART__GRAPH_1ga442961e7e08bb4059a9ee82cfe767d66" kindref="member">cudaGraphAddEmptyNode</ref>, <ref refid="group__CUDART__GRAPH_1ga61c72f5e9943403fb59e43e2cc909b9d" kindref="member">cudaGraphAddKernelNode</ref>, <ref refid="group__CUDART__GRAPH_1ga4d75b0bad907683050de466363bd4349" kindref="member">cudaGraphAddMemcpyNode</ref>, <ref refid="group__CUDART__GRAPH_1ga830ecc3451705075606a697cd1c77caf" kindref="member">cudaGraphAddMemsetNode</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="8796" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="8796" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1gafb141fb4648dc711c5a8d8d616327f65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphHostNodeGetParams</definition>
+        <argsstring>(cudaGraphNode_t node, struct cudaHostNodeParams *pNodeParams)</argsstring>
+        <name>cudaGraphHostNodeGetParams</name>
+        <param>
+          <type>cudaGraphNode_t</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>struct cudaHostNodeParams *</type>
+          <declname>pNodeParams</declname>
+        </param>
+        <briefdescription>
+<para>Returns a host node&apos;s parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the parameters of host node <computeroutput>node</computeroutput> in <computeroutput>pNodeParams</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Node to get the parameters for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pNodeParams</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Pointer to return the parameters</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__EXECUTION_1gacdeaa185a76c5cbfd737519261c992a0" kindref="member">cudaLaunchHostFunc</ref>, <ref refid="group__CUDART__GRAPH_1ga55fbcfa1464bce9b30bd27a673b52cde" kindref="member">cudaGraphAddHostNode</ref>, <ref refid="group__CUDART__GRAPH_1ga45d61d130cca0c9bd4f31a025b43de09" kindref="member">cudaGraphHostNodeSetParams</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="8819" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="8819" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1ga45d61d130cca0c9bd4f31a025b43de09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphHostNodeSetParams</definition>
+        <argsstring>(cudaGraphNode_t node, const struct cudaHostNodeParams *pNodeParams)</argsstring>
+        <name>cudaGraphHostNodeSetParams</name>
+        <param>
+          <type>cudaGraphNode_t</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const struct cudaHostNodeParams *</type>
+          <declname>pNodeParams</declname>
+        </param>
+        <briefdescription>
+<para>Sets a host node&apos;s parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the parameters of host node <computeroutput>node</computeroutput> to <computeroutput>nodeParams</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Node to set the parameters for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pNodeParams</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Parameters to copy</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__EXECUTION_1gacdeaa185a76c5cbfd737519261c992a0" kindref="member">cudaLaunchHostFunc</ref>, <ref refid="group__CUDART__GRAPH_1ga55fbcfa1464bce9b30bd27a673b52cde" kindref="member">cudaGraphAddHostNode</ref>, <ref refid="group__CUDART__GRAPH_1gafb141fb4648dc711c5a8d8d616327f65" kindref="member">cudaGraphHostNodeGetParams</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="8842" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="8842" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1ga5bccc598cd12d3c2b5c511d0042e0e0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphAddChildGraphNode</definition>
+        <argsstring>(cudaGraphNode_t *pGraphNode, cudaGraph_t graph, const cudaGraphNode_t *pDependencies, size_t numDependencies, cudaGraph_t childGraph)</argsstring>
+        <name>cudaGraphAddChildGraphNode</name>
+        <param>
+          <type>cudaGraphNode_t *</type>
+          <declname>pGraphNode</declname>
+        </param>
+        <param>
+          <type>cudaGraph_t</type>
+          <declname>graph</declname>
+        </param>
+        <param>
+          <type>const cudaGraphNode_t *</type>
+          <declname>pDependencies</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>numDependencies</declname>
+        </param>
+        <param>
+          <type>cudaGraph_t</type>
+          <declname>childGraph</declname>
+        </param>
+        <briefdescription>
+<para>Creates a child graph node and adds it to a graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a new node which executes an embedded graph, and adds it to <computeroutput>graph</computeroutput> with <computeroutput>numDependencies</computeroutput> dependencies specified via <computeroutput>pDependencies</computeroutput>. It is possible for <computeroutput>numDependencies</computeroutput> to be 0, in which case the node will be placed at the root of the graph. <computeroutput>pDependencies</computeroutput> may not have any duplicate entries. A handle to the new node will be returned in <computeroutput>pGraphNode</computeroutput>.</para>
+<para>The node executes an embedded child graph. The child graph is cloned in this call.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pGraphNode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returns newly created node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>graph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Graph to which to add the node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pDependencies</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Dependencies of the node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numDependencies</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Number of dependencies </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>childGraph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The graph to clone into this node</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__GRAPH_1ga9ef89b576d1fcfb7f9c5dc5a2e9ef67c" kindref="member">cudaGraphChildGraphNodeGetGraph</ref>, <ref refid="group__CUDART__GRAPH_1ga23d0a2360b0aefbbf94c171eb52d6e98" kindref="member">cudaGraphCreate</ref>, <ref refid="group__CUDART__GRAPH_1gab8855ed7af56998de96805cc5f85d198" kindref="member">cudaGraphDestroyNode</ref>, <ref refid="group__CUDART__GRAPH_1ga442961e7e08bb4059a9ee82cfe767d66" kindref="member">cudaGraphAddEmptyNode</ref>, <ref refid="group__CUDART__GRAPH_1ga61c72f5e9943403fb59e43e2cc909b9d" kindref="member">cudaGraphAddKernelNode</ref>, <ref refid="group__CUDART__GRAPH_1ga55fbcfa1464bce9b30bd27a673b52cde" kindref="member">cudaGraphAddHostNode</ref>, <ref refid="group__CUDART__GRAPH_1ga4d75b0bad907683050de466363bd4349" kindref="member">cudaGraphAddMemcpyNode</ref>, <ref refid="group__CUDART__GRAPH_1ga830ecc3451705075606a697cd1c77caf" kindref="member">cudaGraphAddMemsetNode</ref>, <ref refid="group__CUDART__GRAPH_1gab67dc1ab9d77726017a6aa4c63686a6d" kindref="member">cudaGraphClone</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="8880" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="8880" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1ga9ef89b576d1fcfb7f9c5dc5a2e9ef67c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphChildGraphNodeGetGraph</definition>
+        <argsstring>(cudaGraphNode_t node, cudaGraph_t *pGraph)</argsstring>
+        <name>cudaGraphChildGraphNodeGetGraph</name>
+        <param>
+          <type>cudaGraphNode_t</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>cudaGraph_t *</type>
+          <declname>pGraph</declname>
+        </param>
+        <briefdescription>
+<para>Gets a handle to the embedded graph of a child graph node. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets a handle to the embedded graph in a child graph node. This call does not clone the graph. Changes to the graph will be reflected in the node, and the node retains ownership of the graph.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Node to get the embedded graph for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pGraph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Location to store a handle to the graph</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__GRAPH_1ga5bccc598cd12d3c2b5c511d0042e0e0d" kindref="member">cudaGraphAddChildGraphNode</ref>, <ref refid="group__CUDART__GRAPH_1ga26b5a375db4e7a1c43888196a277bf4b" kindref="member">cudaGraphNodeFindInClone</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="8904" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="8904" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1ga442961e7e08bb4059a9ee82cfe767d66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphAddEmptyNode</definition>
+        <argsstring>(cudaGraphNode_t *pGraphNode, cudaGraph_t graph, const cudaGraphNode_t *pDependencies, size_t numDependencies)</argsstring>
+        <name>cudaGraphAddEmptyNode</name>
+        <param>
+          <type>cudaGraphNode_t *</type>
+          <declname>pGraphNode</declname>
+        </param>
+        <param>
+          <type>cudaGraph_t</type>
+          <declname>graph</declname>
+        </param>
+        <param>
+          <type>const cudaGraphNode_t *</type>
+          <declname>pDependencies</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>numDependencies</declname>
+        </param>
+        <briefdescription>
+<para>Creates an empty node and adds it to a graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a new node which performs no operation, and adds it to <computeroutput>graph</computeroutput> with <computeroutput>numDependencies</computeroutput> dependencies specified via <computeroutput>pDependencies</computeroutput>. It is possible for <computeroutput>numDependencies</computeroutput> to be 0, in which case the node will be placed at the root of the graph. <computeroutput>pDependencies</computeroutput> may not have any duplicate entries. A handle to the new node will be returned in <computeroutput>pGraphNode</computeroutput>.</para>
+<para>An empty node performs no operation during execution, but can be used for transitive ordering. For example, a phased execution graph with 2 groups of n nodes with a barrier between them can be represented using an empty node and 2*n dependency edges, rather than no empty node and n^2 dependency edges.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pGraphNode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returns newly created node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>graph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Graph to which to add the node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pDependencies</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Dependencies of the node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numDependencies</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Number of dependencies</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \note_graph_thread_safety \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__GRAPH_1ga23d0a2360b0aefbbf94c171eb52d6e98" kindref="member">cudaGraphCreate</ref>, <ref refid="group__CUDART__GRAPH_1gab8855ed7af56998de96805cc5f85d198" kindref="member">cudaGraphDestroyNode</ref>, <ref refid="group__CUDART__GRAPH_1ga5bccc598cd12d3c2b5c511d0042e0e0d" kindref="member">cudaGraphAddChildGraphNode</ref>, <ref refid="group__CUDART__GRAPH_1ga61c72f5e9943403fb59e43e2cc909b9d" kindref="member">cudaGraphAddKernelNode</ref>, <ref refid="group__CUDART__GRAPH_1ga55fbcfa1464bce9b30bd27a673b52cde" kindref="member">cudaGraphAddHostNode</ref>, <ref refid="group__CUDART__GRAPH_1ga4d75b0bad907683050de466363bd4349" kindref="member">cudaGraphAddMemcpyNode</ref>, <ref refid="group__CUDART__GRAPH_1ga830ecc3451705075606a697cd1c77caf" kindref="member">cudaGraphAddMemsetNode</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="8941" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="8941" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1gab67dc1ab9d77726017a6aa4c63686a6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphClone</definition>
+        <argsstring>(cudaGraph_t *pGraphClone, cudaGraph_t originalGraph)</argsstring>
+        <name>cudaGraphClone</name>
+        <param>
+          <type>cudaGraph_t *</type>
+          <declname>pGraphClone</declname>
+        </param>
+        <param>
+          <type>cudaGraph_t</type>
+          <declname>originalGraph</declname>
+        </param>
+        <briefdescription>
+<para>Clones a graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function creates a copy of <computeroutput>originalGraph</computeroutput> and returns it in <computeroutput>pGraphClone</computeroutput>. All parameters are copied into the cloned graph. The original graph may be modified after this call without affecting the clone.</para>
+<para>Child graph nodes in the original graph are recursively copied into the clone.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pGraphClone</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returns newly created cloned graph </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>originalGraph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Graph to clone</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, ::cudaErrorMemoryAllocation \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__GRAPH_1ga23d0a2360b0aefbbf94c171eb52d6e98" kindref="member">cudaGraphCreate</ref>, <ref refid="group__CUDART__GRAPH_1ga26b5a375db4e7a1c43888196a277bf4b" kindref="member">cudaGraphNodeFindInClone</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="8968" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="8968" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1ga26b5a375db4e7a1c43888196a277bf4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphNodeFindInClone</definition>
+        <argsstring>(cudaGraphNode_t *pNode, cudaGraphNode_t originalNode, cudaGraph_t clonedGraph)</argsstring>
+        <name>cudaGraphNodeFindInClone</name>
+        <param>
+          <type>cudaGraphNode_t *</type>
+          <declname>pNode</declname>
+        </param>
+        <param>
+          <type>cudaGraphNode_t</type>
+          <declname>originalNode</declname>
+        </param>
+        <param>
+          <type>cudaGraph_t</type>
+          <declname>clonedGraph</declname>
+        </param>
+        <briefdescription>
+<para>Finds a cloned version of a node. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function returns the node in <computeroutput>clonedGraph</computeroutput> corresponding to <computeroutput>originalNode</computeroutput> in the original graph.</para>
+<para><computeroutput>clonedGraph</computeroutput> must have been cloned from <computeroutput>originalGraph</computeroutput> via <ref refid="group__CUDART__GRAPH_1gab67dc1ab9d77726017a6aa4c63686a6d" kindref="member">cudaGraphClone</ref>. <computeroutput>originalNode</computeroutput> must have been in <computeroutput>originalGraph</computeroutput> at the time of the call to <ref refid="group__CUDART__GRAPH_1gab67dc1ab9d77726017a6aa4c63686a6d" kindref="member">cudaGraphClone</ref>, and the corresponding cloned node in <computeroutput>clonedGraph</computeroutput> must not have been removed. The cloned node is then returned via <computeroutput>pClonedNode</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pNode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returns handle to the cloned node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>originalNode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Handle to the original node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clonedGraph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Cloned graph to query</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__GRAPH_1gab67dc1ab9d77726017a6aa4c63686a6d" kindref="member">cudaGraphClone</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="8996" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="8996" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1ga7db0767f8dec4c3fabf316294985b416" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphNodeGetType</definition>
+        <argsstring>(cudaGraphNode_t node, enum cudaGraphNodeType *pType)</argsstring>
+        <name>cudaGraphNodeGetType</name>
+        <param>
+          <type>cudaGraphNode_t</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>enum cudaGraphNodeType *</type>
+          <declname>pType</declname>
+        </param>
+        <briefdescription>
+<para>Returns a node&apos;s type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the node type of <computeroutput>node</computeroutput> in <computeroutput>pType</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Node to query </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Pointer to return the node type</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__GRAPH_1ga7e453f49f453c753a48e385dd9236f90" kindref="member">cudaGraphGetNodes</ref>, <ref refid="group__CUDART__GRAPH_1gaf1e15955e635c5e5c95e4bf3ca63526f" kindref="member">cudaGraphGetRootNodes</ref>, <ref refid="group__CUDART__GRAPH_1ga9ef89b576d1fcfb7f9c5dc5a2e9ef67c" kindref="member">cudaGraphChildGraphNodeGetGraph</ref>, <ref refid="group__CUDART__GRAPH_1gaeadf72982d5fb09f2a7119e80cde84b7" kindref="member">cudaGraphKernelNodeGetParams</ref>, <ref refid="group__CUDART__GRAPH_1gae9f5733288ed5046f782b994c16b4d5e" kindref="member">cudaGraphKernelNodeSetParams</ref>, <ref refid="group__CUDART__GRAPH_1gafb141fb4648dc711c5a8d8d616327f65" kindref="member">cudaGraphHostNodeGetParams</ref>, <ref refid="group__CUDART__GRAPH_1ga45d61d130cca0c9bd4f31a025b43de09" kindref="member">cudaGraphHostNodeSetParams</ref>, <ref refid="group__CUDART__GRAPH_1gacaba6da67566938c73cd0a7bcec19a21" kindref="member">cudaGraphMemcpyNodeGetParams</ref>, <ref refid="group__CUDART__GRAPH_1gae7aba1cdb8135219a97eed2c9c2844b1" kindref="member">cudaGraphMemcpyNodeSetParams</ref>, <ref refid="group__CUDART__GRAPH_1ga559b162efca5101cf8b1e8e73f8de5c9" kindref="member">cudaGraphMemsetNodeGetParams</ref>, <ref refid="group__CUDART__GRAPH_1ga583135d732b2142b8552e3d2ed32707b" kindref="member">cudaGraphMemsetNodeSetParams</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="9027" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="9027" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1ga7e453f49f453c753a48e385dd9236f90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphGetNodes</definition>
+        <argsstring>(cudaGraph_t graph, cudaGraphNode_t *nodes, size_t *numNodes)</argsstring>
+        <name>cudaGraphGetNodes</name>
+        <param>
+          <type>cudaGraph_t</type>
+          <declname>graph</declname>
+        </param>
+        <param>
+          <type>cudaGraphNode_t *</type>
+          <declname>nodes</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>numNodes</declname>
+        </param>
+        <briefdescription>
+<para>Returns a graph&apos;s nodes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a list of <computeroutput>graph&apos;s</computeroutput> nodes. <computeroutput>nodes</computeroutput> may be NULL, in which case this function will return the number of nodes in <computeroutput>numNodes</computeroutput>. Otherwise, <computeroutput>numNodes</computeroutput> entries will be filled in. If <computeroutput>numNodes</computeroutput> is higher than the actual number of nodes, the remaining entries in <computeroutput>nodes</computeroutput> will be set to NULL, and the number of nodes actually obtained will be returned in <computeroutput>numNodes</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>graph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Graph to query </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nodes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Pointer to return the nodes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numNodes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- See description</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__GRAPH_1ga23d0a2360b0aefbbf94c171eb52d6e98" kindref="member">cudaGraphCreate</ref>, <ref refid="group__CUDART__GRAPH_1gaf1e15955e635c5e5c95e4bf3ca63526f" kindref="member">cudaGraphGetRootNodes</ref>, <ref refid="group__CUDART__GRAPH_1gaedbc8808fa1886c66060bffd461f454c" kindref="member">cudaGraphGetEdges</ref>, <ref refid="group__CUDART__GRAPH_1ga7db0767f8dec4c3fabf316294985b416" kindref="member">cudaGraphNodeGetType</ref>, <ref refid="group__CUDART__GRAPH_1gac761cdccaa6a3321af5efb5a4654ebbe" kindref="member">cudaGraphNodeGetDependencies</ref>, <ref refid="group__CUDART__GRAPH_1gaa24376848612f32c20ae6472d18edc27" kindref="member">cudaGraphNodeGetDependentNodes</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="9058" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="9058" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1gaf1e15955e635c5e5c95e4bf3ca63526f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphGetRootNodes</definition>
+        <argsstring>(cudaGraph_t graph, cudaGraphNode_t *pRootNodes, size_t *pNumRootNodes)</argsstring>
+        <name>cudaGraphGetRootNodes</name>
+        <param>
+          <type>cudaGraph_t</type>
+          <declname>graph</declname>
+        </param>
+        <param>
+          <type>cudaGraphNode_t *</type>
+          <declname>pRootNodes</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>pNumRootNodes</declname>
+        </param>
+        <briefdescription>
+<para>Returns a graph&apos;s root nodes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a list of <computeroutput>graph&apos;s</computeroutput> root nodes. <computeroutput>pRootNodes</computeroutput> may be NULL, in which case this function will return the number of root nodes in <computeroutput>pNumRootNodes</computeroutput>. Otherwise, <computeroutput>pNumRootNodes</computeroutput> entries will be filled in. If <computeroutput>pNumRootNodes</computeroutput> is higher than the actual number of root nodes, the remaining entries in <computeroutput>pRootNodes</computeroutput> will be set to NULL, and the number of nodes actually obtained will be returned in <computeroutput>pNumRootNodes</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>graph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Graph to query </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pRootNodes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Pointer to return the root nodes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pNumRootNodes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- See description</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__GRAPH_1ga23d0a2360b0aefbbf94c171eb52d6e98" kindref="member">cudaGraphCreate</ref>, <ref refid="group__CUDART__GRAPH_1ga7e453f49f453c753a48e385dd9236f90" kindref="member">cudaGraphGetNodes</ref>, <ref refid="group__CUDART__GRAPH_1gaedbc8808fa1886c66060bffd461f454c" kindref="member">cudaGraphGetEdges</ref>, <ref refid="group__CUDART__GRAPH_1ga7db0767f8dec4c3fabf316294985b416" kindref="member">cudaGraphNodeGetType</ref>, <ref refid="group__CUDART__GRAPH_1gac761cdccaa6a3321af5efb5a4654ebbe" kindref="member">cudaGraphNodeGetDependencies</ref>, <ref refid="group__CUDART__GRAPH_1gaa24376848612f32c20ae6472d18edc27" kindref="member">cudaGraphNodeGetDependentNodes</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="9089" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="9089" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1gaedbc8808fa1886c66060bffd461f454c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphGetEdges</definition>
+        <argsstring>(cudaGraph_t graph, cudaGraphNode_t *from, cudaGraphNode_t *to, size_t *numEdges)</argsstring>
+        <name>cudaGraphGetEdges</name>
+        <param>
+          <type>cudaGraph_t</type>
+          <declname>graph</declname>
+        </param>
+        <param>
+          <type>cudaGraphNode_t *</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>cudaGraphNode_t *</type>
+          <declname>to</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>numEdges</declname>
+        </param>
+        <briefdescription>
+<para>Returns a graph&apos;s dependency edges. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a list of <computeroutput>graph&apos;s</computeroutput> dependency edges. Edges are returned via corresponding indices in <computeroutput>from</computeroutput> and <computeroutput>to</computeroutput>; that is, the node in <computeroutput>to</computeroutput>[i] has a dependency on the node in <computeroutput>from</computeroutput>[i]. <computeroutput>from</computeroutput> and <computeroutput>to</computeroutput> may both be NULL, in which case this function only returns the number of edges in <computeroutput>numEdges</computeroutput>. Otherwise, <computeroutput>numEdges</computeroutput> entries will be filled in. If <computeroutput>numEdges</computeroutput> is higher than the actual number of edges, the remaining entries in <computeroutput>from</computeroutput> and <computeroutput>to</computeroutput> will be set to NULL, and the number of edges actually returned will be written to <computeroutput>numEdges</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>graph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Graph to get the edges from </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Location to return edge endpoints </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>to</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Location to return edge endpoints </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numEdges</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- See description</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__GRAPH_1ga7e453f49f453c753a48e385dd9236f90" kindref="member">cudaGraphGetNodes</ref>, <ref refid="group__CUDART__GRAPH_1gaf1e15955e635c5e5c95e4bf3ca63526f" kindref="member">cudaGraphGetRootNodes</ref>, <ref refid="group__CUDART__GRAPH_1ga8f685f45aea50b17a026713be0e741e4" kindref="member">cudaGraphAddDependencies</ref>, <ref refid="group__CUDART__GRAPH_1ga09c0d35b3fa40d629291e5dc91f33f35" kindref="member">cudaGraphRemoveDependencies</ref>, <ref refid="group__CUDART__GRAPH_1gac761cdccaa6a3321af5efb5a4654ebbe" kindref="member">cudaGraphNodeGetDependencies</ref>, <ref refid="group__CUDART__GRAPH_1gaa24376848612f32c20ae6472d18edc27" kindref="member">cudaGraphNodeGetDependentNodes</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="9123" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="9123" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1gac761cdccaa6a3321af5efb5a4654ebbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphNodeGetDependencies</definition>
+        <argsstring>(cudaGraphNode_t node, cudaGraphNode_t *pDependencies, size_t *pNumDependencies)</argsstring>
+        <name>cudaGraphNodeGetDependencies</name>
+        <param>
+          <type>cudaGraphNode_t</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>cudaGraphNode_t *</type>
+          <declname>pDependencies</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>pNumDependencies</declname>
+        </param>
+        <briefdescription>
+<para>Returns a node&apos;s dependencies. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a list of <computeroutput>node&apos;s</computeroutput> dependencies. <computeroutput>pDependencies</computeroutput> may be NULL, in which case this function will return the number of dependencies in <computeroutput>pNumDependencies</computeroutput>. Otherwise, <computeroutput>pNumDependencies</computeroutput> entries will be filled in. If <computeroutput>pNumDependencies</computeroutput> is higher than the actual number of dependencies, the remaining entries in <computeroutput>pDependencies</computeroutput> will be set to NULL, and the number of nodes actually obtained will be returned in <computeroutput>pNumDependencies</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Node to query </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pDependencies</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Pointer to return the dependencies </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pNumDependencies</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- See description</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__GRAPH_1gaa24376848612f32c20ae6472d18edc27" kindref="member">cudaGraphNodeGetDependentNodes</ref>, <ref refid="group__CUDART__GRAPH_1ga7e453f49f453c753a48e385dd9236f90" kindref="member">cudaGraphGetNodes</ref>, <ref refid="group__CUDART__GRAPH_1gaf1e15955e635c5e5c95e4bf3ca63526f" kindref="member">cudaGraphGetRootNodes</ref>, <ref refid="group__CUDART__GRAPH_1gaedbc8808fa1886c66060bffd461f454c" kindref="member">cudaGraphGetEdges</ref>, <ref refid="group__CUDART__GRAPH_1ga8f685f45aea50b17a026713be0e741e4" kindref="member">cudaGraphAddDependencies</ref>, <ref refid="group__CUDART__GRAPH_1ga09c0d35b3fa40d629291e5dc91f33f35" kindref="member">cudaGraphRemoveDependencies</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="9154" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="9154" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1gaa24376848612f32c20ae6472d18edc27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphNodeGetDependentNodes</definition>
+        <argsstring>(cudaGraphNode_t node, cudaGraphNode_t *pDependentNodes, size_t *pNumDependentNodes)</argsstring>
+        <name>cudaGraphNodeGetDependentNodes</name>
+        <param>
+          <type>cudaGraphNode_t</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>cudaGraphNode_t *</type>
+          <declname>pDependentNodes</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>pNumDependentNodes</declname>
+        </param>
+        <briefdescription>
+<para>Returns a node&apos;s dependent nodes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a list of <computeroutput>node&apos;s</computeroutput> dependent nodes. <computeroutput>pDependentNodes</computeroutput> may be NULL, in which case this function will return the number of dependent nodes in <computeroutput>pNumDependentNodes</computeroutput>. Otherwise, <computeroutput>pNumDependentNodes</computeroutput> entries will be filled in. If <computeroutput>pNumDependentNodes</computeroutput> is higher than the actual number of dependent nodes, the remaining entries in <computeroutput>pDependentNodes</computeroutput> will be set to NULL, and the number of nodes actually obtained will be returned in <computeroutput>pNumDependentNodes</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Node to query </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pDependentNodes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Pointer to return the dependent nodes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pNumDependentNodes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- See description</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__GRAPH_1gac761cdccaa6a3321af5efb5a4654ebbe" kindref="member">cudaGraphNodeGetDependencies</ref>, <ref refid="group__CUDART__GRAPH_1ga7e453f49f453c753a48e385dd9236f90" kindref="member">cudaGraphGetNodes</ref>, <ref refid="group__CUDART__GRAPH_1gaf1e15955e635c5e5c95e4bf3ca63526f" kindref="member">cudaGraphGetRootNodes</ref>, <ref refid="group__CUDART__GRAPH_1gaedbc8808fa1886c66060bffd461f454c" kindref="member">cudaGraphGetEdges</ref>, <ref refid="group__CUDART__GRAPH_1ga8f685f45aea50b17a026713be0e741e4" kindref="member">cudaGraphAddDependencies</ref>, <ref refid="group__CUDART__GRAPH_1ga09c0d35b3fa40d629291e5dc91f33f35" kindref="member">cudaGraphRemoveDependencies</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="9186" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="9186" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1ga8f685f45aea50b17a026713be0e741e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphAddDependencies</definition>
+        <argsstring>(cudaGraph_t graph, const cudaGraphNode_t *from, const cudaGraphNode_t *to, size_t numDependencies)</argsstring>
+        <name>cudaGraphAddDependencies</name>
+        <param>
+          <type>cudaGraph_t</type>
+          <declname>graph</declname>
+        </param>
+        <param>
+          <type>const cudaGraphNode_t *</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>const cudaGraphNode_t *</type>
+          <declname>to</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>numDependencies</declname>
+        </param>
+        <briefdescription>
+<para>Adds dependency edges to a graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The number of dependencies to be added is defined by <computeroutput>numDependencies</computeroutput> Elements in <computeroutput>pFrom</computeroutput> and <computeroutput>pTo</computeroutput> at corresponding indices define a dependency. Each node in <computeroutput>pFrom</computeroutput> and <computeroutput>pTo</computeroutput> must belong to <computeroutput>graph</computeroutput>.</para>
+<para>If <computeroutput>numDependencies</computeroutput> is 0, elements in <computeroutput>pFrom</computeroutput> and <computeroutput>pTo</computeroutput> will be ignored. Specifying an existing dependency will return an error.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>graph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Graph to which dependencies are added </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Array of nodes that provide the dependencies </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>to</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Array of dependent nodes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numDependencies</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Number of dependencies to be added</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__GRAPH_1ga09c0d35b3fa40d629291e5dc91f33f35" kindref="member">cudaGraphRemoveDependencies</ref>, <ref refid="group__CUDART__GRAPH_1gaedbc8808fa1886c66060bffd461f454c" kindref="member">cudaGraphGetEdges</ref>, <ref refid="group__CUDART__GRAPH_1gac761cdccaa6a3321af5efb5a4654ebbe" kindref="member">cudaGraphNodeGetDependencies</ref>, <ref refid="group__CUDART__GRAPH_1gaa24376848612f32c20ae6472d18edc27" kindref="member">cudaGraphNodeGetDependentNodes</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="9217" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="9217" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1ga09c0d35b3fa40d629291e5dc91f33f35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphRemoveDependencies</definition>
+        <argsstring>(cudaGraph_t graph, const cudaGraphNode_t *from, const cudaGraphNode_t *to, size_t numDependencies)</argsstring>
+        <name>cudaGraphRemoveDependencies</name>
+        <param>
+          <type>cudaGraph_t</type>
+          <declname>graph</declname>
+        </param>
+        <param>
+          <type>const cudaGraphNode_t *</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>const cudaGraphNode_t *</type>
+          <declname>to</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>numDependencies</declname>
+        </param>
+        <briefdescription>
+<para>Removes dependency edges from a graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The number of <computeroutput>pDependencies</computeroutput> to be removed is defined by <computeroutput>numDependencies</computeroutput>. Elements in <computeroutput>pFrom</computeroutput> and <computeroutput>pTo</computeroutput> at corresponding indices define a dependency. Each node in <computeroutput>pFrom</computeroutput> and <computeroutput>pTo</computeroutput> must belong to <computeroutput>graph</computeroutput>.</para>
+<para>If <computeroutput>numDependencies</computeroutput> is 0, elements in <computeroutput>pFrom</computeroutput> and <computeroutput>pTo</computeroutput> will be ignored. Specifying a non-existing dependency will return an error.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>graph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Graph from which to remove dependencies </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Array of nodes that provide the dependencies </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>to</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Array of dependent nodes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numDependencies</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Number of dependencies to be removed</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__GRAPH_1ga8f685f45aea50b17a026713be0e741e4" kindref="member">cudaGraphAddDependencies</ref>, <ref refid="group__CUDART__GRAPH_1gaedbc8808fa1886c66060bffd461f454c" kindref="member">cudaGraphGetEdges</ref>, <ref refid="group__CUDART__GRAPH_1gac761cdccaa6a3321af5efb5a4654ebbe" kindref="member">cudaGraphNodeGetDependencies</ref>, <ref refid="group__CUDART__GRAPH_1gaa24376848612f32c20ae6472d18edc27" kindref="member">cudaGraphNodeGetDependentNodes</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="9248" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="9248" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1gab8855ed7af56998de96805cc5f85d198" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphDestroyNode</definition>
+        <argsstring>(cudaGraphNode_t node)</argsstring>
+        <name>cudaGraphDestroyNode</name>
+        <param>
+          <type>cudaGraphNode_t</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+<para>Remove a node from the graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes <computeroutput>node</computeroutput> from its graph. This operation also severs any dependencies of other nodes on <computeroutput>node</computeroutput> and vice versa.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Node to remove</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__GRAPH_1ga5bccc598cd12d3c2b5c511d0042e0e0d" kindref="member">cudaGraphAddChildGraphNode</ref>, <ref refid="group__CUDART__GRAPH_1ga442961e7e08bb4059a9ee82cfe767d66" kindref="member">cudaGraphAddEmptyNode</ref>, <ref refid="group__CUDART__GRAPH_1ga61c72f5e9943403fb59e43e2cc909b9d" kindref="member">cudaGraphAddKernelNode</ref>, <ref refid="group__CUDART__GRAPH_1ga55fbcfa1464bce9b30bd27a673b52cde" kindref="member">cudaGraphAddHostNode</ref>, <ref refid="group__CUDART__GRAPH_1ga4d75b0bad907683050de466363bd4349" kindref="member">cudaGraphAddMemcpyNode</ref>, <ref refid="group__CUDART__GRAPH_1ga830ecc3451705075606a697cd1c77caf" kindref="member">cudaGraphAddMemsetNode</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="9274" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="9274" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1gacc9e30e048b87b6c8bf2addf32a738c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphInstantiate</definition>
+        <argsstring>(cudaGraphExec_t *pGraphExec, cudaGraph_t graph, cudaGraphNode_t *pErrorNode, char *pLogBuffer, size_t bufferSize)</argsstring>
+        <name>cudaGraphInstantiate</name>
+        <param>
+          <type>cudaGraphExec_t *</type>
+          <declname>pGraphExec</declname>
+        </param>
+        <param>
+          <type>cudaGraph_t</type>
+          <declname>graph</declname>
+        </param>
+        <param>
+          <type>cudaGraphNode_t *</type>
+          <declname>pErrorNode</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>pLogBuffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>bufferSize</declname>
+        </param>
+        <briefdescription>
+<para>Creates an executable graph from a graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Instantiates <computeroutput>graph</computeroutput> as an executable graph. The graph is validated for any structural constraints or intra-node constraints which were not previously validated. If instantiation is successful, a handle to the instantiated graph is returned in <computeroutput>pGraphExec</computeroutput>.</para>
+<para>If there are any errors, diagnostic information may be returned in <computeroutput>pErrorNode</computeroutput> and <computeroutput>pLogBuffer</computeroutput>. This is the primary way to inspect instantiation errors. The output will be null terminated unless the diagnostics overflow the buffer. In this case, they will be truncated, and the last byte can be inspected to determine if truncation occurred.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pGraphExec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returns instantiated graph </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>graph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Graph to instantiate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pErrorNode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- In case of an instantiation error, this may be modified to indicate a node contributing to the error </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pLogBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- A character buffer to store diagnostic messages </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bufferSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Size of the log buffer in bytes</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__GRAPH_1ga23d0a2360b0aefbbf94c171eb52d6e98" kindref="member">cudaGraphCreate</ref>, <ref refid="group__CUDART__GRAPH_1ga855bce7da372ff5f2ab8c839503e2ed3" kindref="member">cudaGraphLaunch</ref>, <ref refid="group__CUDART__GRAPH_1ga681bde989cc3ec1a68d788f3a237ef2b" kindref="member">cudaGraphExecDestroy</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="9310" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="9310" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1ga4039169f9f0a54c3e7d1b309830da845" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphExecKernelNodeSetParams</definition>
+        <argsstring>(cudaGraphExec_t hGraphExec, cudaGraphNode_t node, const struct cudaKernelNodeParams *pNodeParams)</argsstring>
+        <name>cudaGraphExecKernelNodeSetParams</name>
+        <param>
+          <type>cudaGraphExec_t</type>
+          <declname>hGraphExec</declname>
+        </param>
+        <param>
+          <type>cudaGraphNode_t</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const struct cudaKernelNodeParams *</type>
+          <declname>pNodeParams</declname>
+        </param>
+        <briefdescription>
+<para>Sets the parameters for a kernel node in the given graphExec. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the parameters of a kernel node in an executable graph <computeroutput>hGraphExec</computeroutput>. The node is identified by the corresponding node <computeroutput>node</computeroutput> in the non-executable graph, from which the executable graph was instantiated.</para>
+<para><computeroutput>node</computeroutput> must not have been removed from the original graph. The <computeroutput>func</computeroutput> field of <computeroutput>nodeParams</computeroutput> cannot be modified and must match the original value. All other values can be modified.</para>
+<para>The modifications only affect future launches of <computeroutput>hGraphExec</computeroutput>. Already enqueued or running launches of <computeroutput>hGraphExec</computeroutput> are not affected by this call. <computeroutput>node</computeroutput> is also not modified by this call.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hGraphExec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The executable graph in which to set the specified node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- kernel node from the graph from which graphExec was instantiated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pNodeParams</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Updated Parameters to set</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__GRAPH_1ga61c72f5e9943403fb59e43e2cc909b9d" kindref="member">cudaGraphAddKernelNode</ref>, <ref refid="group__CUDART__GRAPH_1gae9f5733288ed5046f782b994c16b4d5e" kindref="member">cudaGraphKernelNodeSetParams</ref>, <ref refid="group__CUDART__GRAPH_1gacc9e30e048b87b6c8bf2addf32a738c6" kindref="member">cudaGraphInstantiate</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="9344" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="9344" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1gaba064514d82bcc8058e3ffa13143709d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphExecMemcpyNodeSetParams</definition>
+        <argsstring>(cudaGraphExec_t hGraphExec, cudaGraphNode_t node, const struct cudaMemcpy3DParms *pNodeParams)</argsstring>
+        <name>cudaGraphExecMemcpyNodeSetParams</name>
+        <param>
+          <type>cudaGraphExec_t</type>
+          <declname>hGraphExec</declname>
+        </param>
+        <param>
+          <type>cudaGraphNode_t</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const struct cudaMemcpy3DParms *</type>
+          <declname>pNodeParams</declname>
+        </param>
+        <briefdescription>
+<para>Sets the parameters for a memcpy node in the given graphExec. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the work represented by <computeroutput>node</computeroutput> in <computeroutput>hGraphExec</computeroutput> as though <computeroutput>node</computeroutput> had contained <computeroutput>pNodeParams</computeroutput> at instantiation. <computeroutput>node</computeroutput> must remain in the graph which was used to instantiate <computeroutput>hGraphExec</computeroutput>. Changed edges to and from <computeroutput>node</computeroutput> are ignored.</para>
+<para>The source and destination memory in <computeroutput>pNodeParams</computeroutput> must be allocated from the same contexts as the original source and destination memory. Both the instantiation-time memory operands and the memory operands in <computeroutput>pNodeParams</computeroutput> must be 1-dimensional. Zero-length operations are not supported.</para>
+<para>The modifications only affect future launches of <computeroutput>hGraphExec</computeroutput>. Already enqueued or running launches of <computeroutput>hGraphExec</computeroutput> are not affected by this call. <computeroutput>node</computeroutput> is also not modified by this call.</para>
+<para>Returns cudaErrorInvalidValue if the memory operands’ mappings changed or either the original or new memory operands are multidimensional.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hGraphExec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The executable graph in which to set the specified node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nodei</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Memcpy node from the graph which was used to instantiate graphExec </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pNodeParams</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Updated Parameters to set</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__GRAPH_1ga4d75b0bad907683050de466363bd4349" kindref="member">cudaGraphAddMemcpyNode</ref>, <ref refid="group__CUDART__GRAPH_1gae7aba1cdb8135219a97eed2c9c2844b1" kindref="member">cudaGraphMemcpyNodeSetParams</ref> <ref refid="group__CUDART__GRAPH_1gacc9e30e048b87b6c8bf2addf32a738c6" kindref="member">cudaGraphInstantiate</ref> <ref refid="group__CUDART__GRAPH_1ga4039169f9f0a54c3e7d1b309830da845" kindref="member">cudaGraphExecKernelNodeSetParams</ref> <ref refid="group__CUDART__GRAPH_1gafbf8dbc62ba5eeede5d202a8c3b754ee" kindref="member">cudaGraphExecMemsetNodeSetParams</ref> <ref refid="group__CUDART__GRAPH_1ga05bbfb9335898238fd60ecf871e459bb" kindref="member">cudaGraphExecHostNodeSetParams</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="9385" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="9385" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1gafbf8dbc62ba5eeede5d202a8c3b754ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphExecMemsetNodeSetParams</definition>
+        <argsstring>(cudaGraphExec_t hGraphExec, cudaGraphNode_t node, const struct cudaMemsetParams *pNodeParams)</argsstring>
+        <name>cudaGraphExecMemsetNodeSetParams</name>
+        <param>
+          <type>cudaGraphExec_t</type>
+          <declname>hGraphExec</declname>
+        </param>
+        <param>
+          <type>cudaGraphNode_t</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const struct cudaMemsetParams *</type>
+          <declname>pNodeParams</declname>
+        </param>
+        <briefdescription>
+<para>Sets the parameters for a memset node in the given graphExec. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the work represented by <computeroutput>node</computeroutput> in <computeroutput>hGraphExec</computeroutput> as though <computeroutput>node</computeroutput> had contained <computeroutput>pNodeParams</computeroutput> at instantiation. <computeroutput>node</computeroutput> must remain in the graph which was used to instantiate <computeroutput>hGraphExec</computeroutput>. Changed edges to and from <computeroutput>node</computeroutput> are ignored.</para>
+<para>The destination memory in <computeroutput>pNodeParams</computeroutput> must be allocated from the same context as the original destination memory. Both the instantiation-time memory operand and the memory operand in <computeroutput>pNodeParams</computeroutput> must be 1-dimensional. Zero-length operations are not supported.</para>
+<para>The modifications only affect future launches of <computeroutput>hGraphExec</computeroutput>. Already enqueued or running launches of <computeroutput>hGraphExec</computeroutput> are not affected by this call. <computeroutput>node</computeroutput> is also not modified by this call.</para>
+<para>Returns cudaErrorInvalidValue if the memory operand’s mappings changed or either the original or new memory operand are multidimensional.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hGraphExec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The executable graph in which to set the specified node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Memset node from the graph which was used to instantiate graphExec </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pNodeParams</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Updated Parameters to set</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__GRAPH_1ga830ecc3451705075606a697cd1c77caf" kindref="member">cudaGraphAddMemsetNode</ref>, <ref refid="group__CUDART__GRAPH_1ga583135d732b2142b8552e3d2ed32707b" kindref="member">cudaGraphMemsetNodeSetParams</ref> <ref refid="group__CUDART__GRAPH_1gacc9e30e048b87b6c8bf2addf32a738c6" kindref="member">cudaGraphInstantiate</ref> <ref refid="group__CUDART__GRAPH_1ga4039169f9f0a54c3e7d1b309830da845" kindref="member">cudaGraphExecKernelNodeSetParams</ref> <ref refid="group__CUDART__GRAPH_1gaba064514d82bcc8058e3ffa13143709d" kindref="member">cudaGraphExecMemcpyNodeSetParams</ref> <ref refid="group__CUDART__GRAPH_1ga05bbfb9335898238fd60ecf871e459bb" kindref="member">cudaGraphExecHostNodeSetParams</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="9426" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="9426" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1ga05bbfb9335898238fd60ecf871e459bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphExecHostNodeSetParams</definition>
+        <argsstring>(cudaGraphExec_t hGraphExec, cudaGraphNode_t node, const struct cudaHostNodeParams *pNodeParams)</argsstring>
+        <name>cudaGraphExecHostNodeSetParams</name>
+        <param>
+          <type>cudaGraphExec_t</type>
+          <declname>hGraphExec</declname>
+        </param>
+        <param>
+          <type>cudaGraphNode_t</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const struct cudaHostNodeParams *</type>
+          <declname>pNodeParams</declname>
+        </param>
+        <briefdescription>
+<para>Sets the parameters for a host node in the given graphExec. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the work represented by <computeroutput>node</computeroutput> in <computeroutput>hGraphExec</computeroutput> as though <computeroutput>node</computeroutput> had contained <computeroutput>pNodeParams</computeroutput> at instantiation. <computeroutput>node</computeroutput> must remain in the graph which was used to instantiate <computeroutput>hGraphExec</computeroutput>. Changed edges to and from <computeroutput>node</computeroutput> are ignored.</para>
+<para>The modifications only affect future launches of <computeroutput>hGraphExec</computeroutput>. Already enqueued or running launches of <computeroutput>hGraphExec</computeroutput> are not affected by this call. <computeroutput>node</computeroutput> is also not modified by this call.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hGraphExec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- The executable graph in which to set the specified node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Host node from the graph which was used to instantiate graphExec </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pNodeParams</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Updated Parameters to set</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__GRAPH_1ga55fbcfa1464bce9b30bd27a673b52cde" kindref="member">cudaGraphAddHostNode</ref>, <ref refid="group__CUDART__GRAPH_1ga45d61d130cca0c9bd4f31a025b43de09" kindref="member">cudaGraphHostNodeSetParams</ref> <ref refid="group__CUDART__GRAPH_1gacc9e30e048b87b6c8bf2addf32a738c6" kindref="member">cudaGraphInstantiate</ref> <ref refid="group__CUDART__GRAPH_1ga4039169f9f0a54c3e7d1b309830da845" kindref="member">cudaGraphExecKernelNodeSetParams</ref> <ref refid="group__CUDART__GRAPH_1gaba064514d82bcc8058e3ffa13143709d" kindref="member">cudaGraphExecMemcpyNodeSetParams</ref> <ref refid="group__CUDART__GRAPH_1gafbf8dbc62ba5eeede5d202a8c3b754ee" kindref="member">cudaGraphExecMemsetNodeSetParams</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="9459" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="9459" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1gabdd97d722209896183499dab6c66554a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphExecUpdate</definition>
+        <argsstring>(cudaGraphExec_t hGraphExec, cudaGraph_t hGraph, cudaGraphNode_t *hErrorNode_out, enum cudaGraphExecUpdateResult *updateResult_out)</argsstring>
+        <name>cudaGraphExecUpdate</name>
+        <param>
+          <type>cudaGraphExec_t</type>
+          <declname>hGraphExec</declname>
+        </param>
+        <param>
+          <type>cudaGraph_t</type>
+          <declname>hGraph</declname>
+        </param>
+        <param>
+          <type>cudaGraphNode_t *</type>
+          <declname>hErrorNode_out</declname>
+        </param>
+        <param>
+          <type>enum cudaGraphExecUpdateResult *</type>
+          <declname>updateResult_out</declname>
+        </param>
+        <briefdescription>
+<para>Check whether an executable graph can be updated with a graph and perform the update if possible. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the node parameters in the instantiated graph specified by <computeroutput>hGraphExec</computeroutput> with the node parameters in a topologically identical graph specified by <computeroutput>hGraph</computeroutput>.</para>
+<para>Limitations:</para>
+<para><itemizedlist>
+<listitem><para>Kernel nodes:<itemizedlist>
+<listitem><para>The function must not change (same restriction as <ref refid="group__CUDART__GRAPH_1ga4039169f9f0a54c3e7d1b309830da845" kindref="member">cudaGraphExecKernelNodeSetParams()</ref>)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Memset and memcpy nodes:<itemizedlist>
+<listitem><para>The CUDA device(s) to which the operand(s) was allocated/mapped cannot change.</para>
+</listitem><listitem><para>The source/destination memory must be allocated from the same contexts as the original source/destination memory.</para>
+</listitem><listitem><para>Only 1D memsets can be changed.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Additional memcpy node restrictions:<itemizedlist>
+<listitem><para>Changing either the source or destination memory type(i.e. CU_MEMORYTYPE_DEVICE, CU_MEMORYTYPE_ARRAY, etc.) is not supported.</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para>Note: The API may add further restrictions in future releases. The return code should always be checked.</para>
+<para>Some node types are not currently supported:<itemizedlist>
+<listitem><para>Empty graph nodes(cudaGraphNodeTypeEmpty)</para>
+</listitem><listitem><para>Child graphs(cudaGraphNodeTypeGraph).</para>
+</listitem></itemizedlist>
+</para>
+<para>cudaGraphExecUpdate sets <computeroutput>updateResult_out</computeroutput> to cudaGraphExecUpdateErrorTopologyChanged under the following conditions:</para>
+<para><itemizedlist>
+<listitem><para>The count of nodes directly in <computeroutput>hGraphExec</computeroutput> and <computeroutput>hGraph</computeroutput> differ, in which case <computeroutput>hErrorNode_out</computeroutput> is NULL.</para>
+</listitem><listitem><para>A node is deleted in <computeroutput>hGraph</computeroutput> but not not its pair from <computeroutput>hGraphExec</computeroutput>, in which case <computeroutput>hErrorNode_out</computeroutput> is NULL.</para>
+</listitem><listitem><para>A node is deleted in <computeroutput>hGraphExec</computeroutput> but not its pair from <computeroutput>hGraph</computeroutput>, in which case <computeroutput>hErrorNode_out</computeroutput> is the pairless node from <computeroutput>hGraph</computeroutput>.</para>
+</listitem><listitem><para>The dependent nodes of a pair differ, in which case <computeroutput>hErrorNode_out</computeroutput> is the node from <computeroutput>hGraph</computeroutput>.</para>
+</listitem></itemizedlist>
+</para>
+<para>cudaGraphExecUpdate sets <computeroutput>updateResult_out</computeroutput> to:<itemizedlist>
+<listitem><para>cudaGraphExecUpdateError if passed an invalid value.</para>
+</listitem><listitem><para>cudaGraphExecUpdateErrorTopologyChanged if the graph topology changed</para>
+</listitem><listitem><para>cudaGraphExecUpdateErrorNodeTypeChanged if the type of a node changed, in which case <computeroutput>hErrorNode_out</computeroutput> is set to the node from <computeroutput>hGraph</computeroutput>.</para>
+</listitem><listitem><para>cudaGraphExecUpdateErrorFunctionChanged if the func field of a kernel changed, in which case <computeroutput>hErrorNode_out</computeroutput> is set to the node from <computeroutput>hGraph</computeroutput> </para>
+</listitem><listitem><para>cudaGraphExecUpdateErrorParametersChanged if any parameters to a node changed in a way that is not supported, in which case <computeroutput>hErrorNode_out</computeroutput> is set to the node from <computeroutput>hGraph</computeroutput> </para>
+</listitem><listitem><para>cudaGraphExecUpdateErrorNotSupported if something about a node is unsupported, like the node’s type or configuration, in which case <computeroutput>hErrorNode_out</computeroutput> is set to the node from <computeroutput>hGraph</computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+<para>If <computeroutput>updateResult_out</computeroutput> isn’t set in one of the situations described above, the update check passes and cudaGraphExecUpdate updates <computeroutput>hGraphExec</computeroutput> to match the contents of <computeroutput>hGraph</computeroutput>. If an error happens during the update, <computeroutput>updateResult_out</computeroutput> will be set to cudaGraphExecUpdateError; otherwise, <computeroutput>updateResult_out</computeroutput> is set to cudaGraphExecUpdateSuccess.</para>
+<para>cudaGraphExecUpdate returns cudaSuccess when the updated was performed successfully. It returns cudaErrorGraphExecUpdateFailure if the graph update was not performed because it included changes which violated constraints specific to instantiated graph update.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hGraphExec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The instantiated graph to be updated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hGraph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The graph containing the updated parameters </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hErrorNode_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The node which caused the permissibility check to forbid the update, if any </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>updateResult_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether the graph update was permitted. If was forbidden, the reason why</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorGraphExecUpdateFailure, \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__GRAPH_1gacc9e30e048b87b6c8bf2addf32a738c6" kindref="member">cudaGraphInstantiate</ref>, </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="9534" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="9534" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1ga855bce7da372ff5f2ab8c839503e2ed3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphLaunch</definition>
+        <argsstring>(cudaGraphExec_t graphExec, cudaStream_t stream)</argsstring>
+        <name>cudaGraphLaunch</name>
+        <param>
+          <type>cudaGraphExec_t</type>
+          <declname>graphExec</declname>
+        </param>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+<para>Launches an executable graph in a stream. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Executes <computeroutput>graphExec</computeroutput> in <computeroutput>stream</computeroutput>. Only one instance of <computeroutput>graphExec</computeroutput> may be executing at a time. Each launch is ordered behind both any previous work in <computeroutput>stream</computeroutput> and any previous launches of <computeroutput>graphExec</computeroutput>. To execute a graph concurrently, it must be instantiated multiple times into multiple executable graphs.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>graphExec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Executable graph to launch </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Stream in which to launch the graph</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__GRAPH_1gacc9e30e048b87b6c8bf2addf32a738c6" kindref="member">cudaGraphInstantiate</ref>, <ref refid="group__CUDART__GRAPH_1ga681bde989cc3ec1a68d788f3a237ef2b" kindref="member">cudaGraphExecDestroy</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="9559" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="9559" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1ga681bde989cc3ec1a68d788f3a237ef2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphExecDestroy</definition>
+        <argsstring>(cudaGraphExec_t graphExec)</argsstring>
+        <name>cudaGraphExecDestroy</name>
+        <param>
+          <type>cudaGraphExec_t</type>
+          <declname>graphExec</declname>
+        </param>
+        <briefdescription>
+<para>Destroys an executable graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Destroys the executable graph specified by <computeroutput>graphExec</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>graphExec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Executable graph to destroy</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__GRAPH_1gacc9e30e048b87b6c8bf2addf32a738c6" kindref="member">cudaGraphInstantiate</ref>, <ref refid="group__CUDART__GRAPH_1ga855bce7da372ff5f2ab8c839503e2ed3" kindref="member">cudaGraphLaunch</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="9580" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="9580" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__GRAPH_1gab2f38a71b41401ef0010dbd2351a606e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGraphDestroy</definition>
+        <argsstring>(cudaGraph_t graph)</argsstring>
+        <name>cudaGraphDestroy</name>
+        <param>
+          <type>cudaGraph_t</type>
+          <declname>graph</declname>
+        </param>
+        <briefdescription>
+<para>Destroys a graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Destroys the graph specified by <computeroutput>graph</computeroutput>, as well as all of its nodes.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>graph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Graph to destroy</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \note_graph_thread_safety \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__GRAPH_1ga23d0a2360b0aefbbf94c171eb52d6e98" kindref="member">cudaGraphCreate</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="9600" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="9600" declcolumn="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>___MANBRIEF___ graph management functions of the CUDA runtime API (___CURRENT_FILE___) ___ENDMANBRIEF___</para>
+<para>This section describes the graph management functions of CUDA runtime application programming interface. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

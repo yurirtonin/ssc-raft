@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="deprecated" kind="page">
+    <compoundname>deprecated</compoundname>
+    <title>Deprecated List</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><variablelist>
+<varlistentry><term>Member <ref refid="group__CUDART__SURFACE_1ga12d6b8861b95f3c581d2182752b3b89d" kindref="member">cudaBindSurfaceToArray</ref>  (const struct surfaceReference *surfref, cudaArray_const_t array, const struct cudaChannelFormatDesc *desc)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000021"/> </para>
+</listitem>
+<varlistentry><term>Member <ref refid="group__CUDART__TEXTURE_1ga0866e5f26fb19d71fecb42f506a8414b" kindref="member">cudaBindTexture</ref>  (size_t *offset, const struct textureReference *texref, const void *devPtr, const struct cudaChannelFormatDesc *desc, size_t size __dv(UINT_MAX))</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000014"/> </para>
+</listitem>
+<varlistentry><term>Member <ref refid="group__CUDART__TEXTURE_1ga6809c52dd5e0f10c4c103fdede3d66fd" kindref="member">cudaBindTexture2D</ref>  (size_t *offset, const struct textureReference *texref, const void *devPtr, const struct cudaChannelFormatDesc *desc, size_t width, size_t height, size_t pitch)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000015"/> </para>
+</listitem>
+<varlistentry><term>Member <ref refid="group__CUDART__TEXTURE_1ga15ca067716b65a496ff594e63e624a8d" kindref="member">cudaBindTextureToArray</ref>  (const struct textureReference *texref, cudaArray_const_t array, const struct cudaChannelFormatDesc *desc)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000016"/> </para>
+</listitem>
+<varlistentry><term>Member <ref refid="group__CUDART__TEXTURE_1ga892eec199cd61ebf84070523f03388c4" kindref="member">cudaBindTextureToMipmappedArray</ref>  (const struct textureReference *texref, cudaMipmappedArray_const_t mipmappedArray, const struct cudaChannelFormatDesc *desc)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000017"/> </para>
+</listitem>
+<varlistentry><term>Member <ref refid="group__CUDART__SURFACE_1ga61c4fc9cbea3426309cf0720f521eb25" kindref="member">cudaGetSurfaceReference</ref>  (const struct surfaceReference **surfref, const void *symbol)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000022"/> </para>
+</listitem>
+<varlistentry><term>Member <ref refid="group__CUDART__TEXTURE_1ga2e264a1004bc3bcd994df1ab0a331d92" kindref="member">cudaGetTextureAlignmentOffset</ref>  (size_t *offset, const struct textureReference *texref)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000019"/> </para>
+</listitem>
+<varlistentry><term>Member <ref refid="group__CUDART__TEXTURE_1ga5992b95d35aabdd05d34a81bd48aa8fd" kindref="member">cudaGetTextureReference</ref>  (const struct textureReference **texref, const void *symbol)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000020"/> </para>
+</listitem>
+<varlistentry><term>Member <ref refid="group__CUDART__MEMORY__DEPRECATED_1ga0e68b84a77d35d320fa33b963b7770aa" kindref="member">cudaMemcpyArrayToArray</ref>  (cudaArray_t dst, size_t wOffsetDst, size_t hOffsetDst, cudaArray_const_t src, size_t wOffsetSrc, size_t hOffsetSrc, size_t count, enum cudaMemcpyKind kind __dv(cudaMemcpyDeviceToDevice))</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000011"/> </para>
+</listitem>
+<varlistentry><term>Member <ref refid="group__CUDART__MEMORY__DEPRECATED_1ga29798beaebc6adb7997469208b855206" kindref="member">cudaMemcpyFromArray</ref>  (void *dst, cudaArray_const_t src, size_t wOffset, size_t hOffset, size_t count, enum cudaMemcpyKind kind)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000010"/> </para>
+</listitem>
+<varlistentry><term>Member <ref refid="group__CUDART__MEMORY__DEPRECATED_1ga34390303a1a78d9969e608168b180e26" kindref="member">cudaMemcpyFromArrayAsync</ref>  (void *dst, cudaArray_const_t src, size_t wOffset, size_t hOffset, size_t count, enum cudaMemcpyKind kind, cudaStream_t stream __dv(0))</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000013"/> </para>
+</listitem>
+<varlistentry><term>Member <ref refid="group__CUDART__MEMORY__DEPRECATED_1ga31922de556f15c30839047528f79d520" kindref="member">cudaMemcpyToArray</ref>  (cudaArray_t dst, size_t wOffset, size_t hOffset, const void *src, size_t count, enum cudaMemcpyKind kind)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000009"/> </para>
+</listitem>
+<varlistentry><term>Member <ref refid="group__CUDART__MEMORY__DEPRECATED_1gaeb0fbece86bf4174085142b1f87f4710" kindref="member">cudaMemcpyToArrayAsync</ref>  (cudaArray_t dst, size_t wOffset, size_t hOffset, const void *src, size_t count, enum cudaMemcpyKind kind, cudaStream_t stream __dv(0))</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000012"/> </para>
+</listitem>
+<varlistentry><term>Member <ref refid="group__CUDART__EXECUTION_1gaf9853147ef293745512f281046a787b5" kindref="member">cudaSetDoubleForDevice</ref>  (double *d)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000007"/>This function is deprecated as of CUDA 7.5 </para>
+</listitem>
+<varlistentry><term>Member <ref refid="group__CUDART__EXECUTION_1ga53032015714acb4b6443bba227ca39f5" kindref="member">cudaSetDoubleForHost</ref>  (double *d)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000008"/>This function is deprecated as of CUDA 7.5 </para>
+</listitem>
+<varlistentry><term>Member <ref refid="group__CUDART__THREAD__DEPRECATED_1ga80847bfa8d02fd06ce8321ba64ef7297" kindref="member">cudaThreadExit</ref>  (void)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000001"/> </para>
+</listitem>
+<varlistentry><term>Member <ref refid="group__CUDART__THREAD__DEPRECATED_1ga58c01c5f234a7de23df1cb4773cc7825" kindref="member">cudaThreadGetCacheConfig</ref>  (enum cudaFuncCache *pCacheConfig)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000005"/> </para>
+</listitem>
+<varlistentry><term>Member <ref refid="group__CUDART__THREAD__DEPRECATED_1ga78b9a2cfcf2cb0bf84abd5c0c83b8a45" kindref="member">cudaThreadGetLimit</ref>  (size_t *pValue, enum cudaLimit limit)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000004"/> </para>
+</listitem>
+<varlistentry><term>Member <ref refid="group__CUDART__THREAD__DEPRECATED_1ga1614c381e97f6aa29ff5c33d7c5eb5c3" kindref="member">cudaThreadSetCacheConfig</ref>  (enum cudaFuncCache cacheConfig)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000006"/> </para>
+</listitem>
+<varlistentry><term>Member <ref refid="group__CUDART__THREAD__DEPRECATED_1gad2569ce4d18e725e6045025a0c446ca4" kindref="member">cudaThreadSetLimit</ref>  (enum cudaLimit limit, size_t value)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000003"/> </para>
+</listitem>
+<varlistentry><term>Member <ref refid="group__CUDART__THREAD__DEPRECATED_1ga1e8ddca5abc07d1074bc54a32ef20052" kindref="member">cudaThreadSynchronize</ref>  (void)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000002"/> </para>
+</listitem>
+<varlistentry><term>Member <ref refid="group__CUDART__TEXTURE_1ga81912a5f11bf5286d1ff0baff679335b" kindref="member">cudaUnbindTexture</ref>  (const struct textureReference *texref)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000018"/></para>
+</listitem>
+</variablelist>
+</para>
+    </detaileddescription>
+    <location file="deprecated"/>
+  </compounddef>
+</doxygen>

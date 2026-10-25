@@ -163,8 +163,16 @@ extern "C" {
             // x = t * ctheta - s * stheta;
             // y = t * stheta + s * ctheta;
             
-            indx = (int) ((x + 1)/dx);
-            indy = (int) ((y + 1)/dy);	 
+            /* Round to the nearest sample instead of truncating towards zero.
+               Truncating shifts every sample by half a voxel in both x and y, i.e. a
+               rigid (-0.5,-0.5) translation of the phantom, which the projections
+               report as a spurious 0.5*sqrt(2) = 0.707 px sinusoid in theta. That is
+               the systematic "wave" of cnpem/ssc-raft#3: it does not depend on the
+               data, so an iterative reprojection alignment re-measures and re-applies
+               it at every pass and never converges.
+               The half detector width is ax/ay, not the hard-coded 1 used before. */
+            indx = (int) ((x + ax)/dx + 0.5f);
+            indy = (int) ((y + ay)/dy + 0.5f);
 
             if ((indx >= 0) & (indx < phantom_size.x) & (indy >= 0) & (indy < phantom_size.y) ){
             

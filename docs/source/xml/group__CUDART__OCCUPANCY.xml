@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__CUDART__OCCUPANCY" kind="group">
+    <compoundname>CUDART_OCCUPANCY</compoundname>
+    <title>Occupancy</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__CUDART__OCCUPANCY_1gae162c2e0a6864271d20cc60bb107abc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ __cudart_builtin__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ __cudart_builtin__ cudaError_t CUDARTAPI cudaOccupancyMaxActiveBlocksPerMultiprocessor</definition>
+        <argsstring>(int *numBlocks, const void *func, int blockSize, size_t dynamicSMemSize)</argsstring>
+        <name>cudaOccupancyMaxActiveBlocksPerMultiprocessor</name>
+        <param>
+          <type>int *</type>
+          <declname>numBlocks</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>func</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blockSize</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dynamicSMemSize</declname>
+        </param>
+        <briefdescription>
+<para>Returns occupancy for a device function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns in <computeroutput>*numBlocks</computeroutput> the maximum number of active blocks per streaming multiprocessor for the device function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>numBlocks</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returned occupancy </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Kernel function for which occupancy is calculated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>blockSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Block size the kernel is intended to be launched with </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dynamicSMemSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Per-block dynamic shared memory usage intended, in bytes</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidDevice, ::cudaErrorInvalidDeviceFunction, ::cudaErrorInvalidValue, ::cudaErrorUnknown, \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__OCCUPANCY_1gafd44b9bd208a9d8bb3fefb9a7a65d425" kindref="member">cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFlags</ref>, cudaOccupancyMaxPotentialBlockSize (C++ API), cudaOccupancyMaxPotentialBlockSizeWithFlags (C++ API), cudaOccupancyMaxPotentialBlockSizeVariableSMem (C++ API), cudaOccupancyMaxPotentialBlockSizeVariableSMemWithFlags (C++ API), ::cuOccupancyMaxActiveBlocksPerMultiprocessor </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="4094" column="58" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="4094" declcolumn="58"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__OCCUPANCY_1gafd44b9bd208a9d8bb3fefb9a7a65d425" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ __cudart_builtin__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ __cudart_builtin__ cudaError_t CUDARTAPI cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFlags</definition>
+        <argsstring>(int *numBlocks, const void *func, int blockSize, size_t dynamicSMemSize, unsigned int flags)</argsstring>
+        <name>cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFlags</name>
+        <param>
+          <type>int *</type>
+          <declname>numBlocks</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>func</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blockSize</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dynamicSMemSize</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Returns occupancy for a device function with the specified flags. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns in <computeroutput>*numBlocks</computeroutput> the maximum number of active blocks per streaming multiprocessor for the device function.</para>
+<para>The <computeroutput>flags</computeroutput> parameter controls how special cases are handled. Valid flags include:</para>
+<para><itemizedlist>
+<listitem><para>::cudaOccupancyDefault: keeps the default behavior as <ref refid="group__CUDART__OCCUPANCY_1gae162c2e0a6864271d20cc60bb107abc1" kindref="member">cudaOccupancyMaxActiveBlocksPerMultiprocessor</ref></para>
+</listitem><listitem><para>::cudaOccupancyDisableCachingOverride: This flag suppresses the default behavior on platform where global caching affects occupancy. On such platforms, if caching is enabled, but per-block SM resource usage would result in zero occupancy, the occupancy calculator will calculate the occupancy as if caching is disabled. Setting this flag makes the occupancy calculator to return 0 in such cases. More information can be found about this feature in the &quot;Unified L1/Texture Cache&quot; section of the Maxwell tuning guide.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>numBlocks</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returned occupancy </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Kernel function for which occupancy is calculated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>blockSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Block size the kernel is intended to be launched with </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dynamicSMemSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Per-block dynamic shared memory usage intended, in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Requested behavior for the occupancy calculator</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidDevice, ::cudaErrorInvalidDeviceFunction, ::cudaErrorInvalidValue, ::cudaErrorUnknown, \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__OCCUPANCY_1gae162c2e0a6864271d20cc60bb107abc1" kindref="member">cudaOccupancyMaxActiveBlocksPerMultiprocessor</ref>, cudaOccupancyMaxPotentialBlockSize (C++ API), cudaOccupancyMaxPotentialBlockSizeWithFlags (C++ API), cudaOccupancyMaxPotentialBlockSizeVariableSMem (C++ API), cudaOccupancyMaxPotentialBlockSizeVariableSMemWithFlags (C++ API), ::cuOccupancyMaxActiveBlocksPerMultiprocessorWithFlags </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="4138" column="58" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="4138" declcolumn="58"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>___MANBRIEF___ occupancy calculation functions of the CUDA runtime API (___CURRENT_FILE___) ___ENDMANBRIEF___</para>
+<para>This section describes the occupancy calculation functions of the CUDA runtime application programming interface.</para>
+<para>Besides the occupancy calculator functions (<ref refid="group__CUDART__OCCUPANCY_1gae162c2e0a6864271d20cc60bb107abc1" kindref="member">cudaOccupancyMaxActiveBlocksPerMultiprocessor</ref> and <ref refid="group__CUDART__OCCUPANCY_1gafd44b9bd208a9d8bb3fefb9a7a65d425" kindref="member">cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFlags</ref>), there are also C++ only occupancy-based launch configuration functions documented in <ref refid="group__CUDART__HIGHLEVEL" kindref="compound">C++ API Routines</ref> module.</para>
+<para>See cudaOccupancyMaxPotentialBlockSize (C++ API), cudaOccupancyMaxPotentialBlockSize (C++ API), cudaOccupancyMaxPotentialBlockSizeVariableSMem (C++ API), cudaOccupancyMaxPotentialBlockSizeVariableSMem (C++ API) </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

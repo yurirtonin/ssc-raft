@@ -1,5 +1,14 @@
 #include "geometries/parallel/em.hpp"
 
+/* Sample indices below are rounded, (int)(v + 0.5f), rather than truncated towards
+   zero. Truncating biases every lookup by half a sample: half a voxel in x and y in
+   the forward kernels, half a detector pixel in the backprojections. The object-space
+   half voxel is a rigid (0.5,0.5) px translation of the volume, which a reprojection
+   reports as a spurious 0.5*sqrt(2) = 0.707 px sinusoid in theta -- the systematic
+   shift of cnpem/ssc-raft#3. It does not depend on the data, so an iterative
+   reprojection alignment re-measures and re-applies it on every pass and never
+   converges. The half detector width is the kernel argument `a`, not a hard-coded 1. */
+
 extern "C" {
   __global__ void kernel_ones(float *output, int sizeImage, int nrays, int nangles,  int blockSize)
   {
@@ -130,7 +139,7 @@ extern "C" {
         // t = x * cosk + y * sink; // original
         t = x * cosk - y * sink;
       
-        T = (int) ((t - tmin)/dt);	     
+        T = (int) ((t - tmin)/dt + 0.5f);	     
 
         if ( (T > -1) && (T<nrays) )
           {
@@ -178,8 +187,8 @@ extern "C" {
         // x = t * ctheta - s * stheta;
         // y = t * stheta + s * ctheta;
 
-        X = (int) ((x + 1)/dt);
-        Y = (int) ((y + 1)/dt);	 
+        X = (int) ((x + a)/dt + 0.5f);
+        Y = (int) ((y + a)/dt + 0.5f);	 
 
         if ((X >= 0) & (X<sizeImage) & (Y>=0) & (Y<sizeImage) )
 	        linesum += input[ tz * sizeImage * sizeImage + Y * sizeImage + X ];
@@ -229,8 +238,8 @@ extern "C" {
         // x = t * ctheta - s * stheta;
         // y = t * stheta + s * ctheta;
 
-        X = (int) ((x + 1)/dt);
-        Y = (int) ((y + 1)/dt);	 
+        X = (int) ((x + a)/dt + 0.5f);
+        Y = (int) ((y + a)/dt + 0.5f);	 
 
         if ((X >= 0) & (X<sizeImage) & (Y>=0) & (Y<sizeImage) )
           linesum += input[ tz * sizeImage * sizeImage + Y * sizeImage + X ];
@@ -296,7 +305,7 @@ extern "C" {
         // t = x * cosk + y * sink; // original
         t = x * cosk - y * sink;
       
-        T = (int)((t - tmin)/dt);	     
+        T = (int)((t - tmin)/dt + 0.5f);	     
          
         if ( (T > -1) && (T<nrays) )
         {
@@ -350,7 +359,7 @@ extern "C" {
         // t = x * cosk + y * sink; // original
         t = x * cosk - y * sink;
       
-        T = (int) ((t - tmin)/dt);	     
+        T = (int) ((t - tmin)/dt + 0.5f);	     
 
         if ( (T > -1) && (T<nrays) )
           {

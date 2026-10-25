@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct__AuxReduction_1_1productstruct_3_01T1_00_01complex_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>_AuxReduction::productstruct&lt; T1, complex &gt;</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename T1</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct__AuxReduction_1_1productstruct_3_01T1_00_01complex_01_4_1aa1485b213f1ed90b221cae2e019f4d80" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>__hevice <ref refid="structcomplex" kindref="compound">complex</ref></type>
+        <definition>__hevice complex _AuxReduction::productstruct&lt; T1, complex &gt;::operator()</definition>
+        <argsstring>(const T1 &amp;x1, const complex &amp;c) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const T1 &amp;</type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structcomplex" kindref="compound">complex</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="146" column="22" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="146" bodyend="146"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="145" column="1" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="145" bodyend="147"/>
+    <listofallmembers>
+      <member refid="struct__AuxReduction_1_1productstruct_3_01T1_00_01complex_01_4_1aa1485b213f1ed90b221cae2e019f4d80" prot="public" virt="non-virtual"><scope>_AuxReduction::productstruct&lt; T1, complex &gt;</scope><name>operator()</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

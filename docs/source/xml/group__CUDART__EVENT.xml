@@ -1,0 +1,308 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__CUDART__EVENT" kind="group">
+    <compoundname>CUDART_EVENT</compoundname>
+    <title>Event Management</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__CUDART__EVENT_1gaf95514807c666994e61b94c93ef10a2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaEventCreate</definition>
+        <argsstring>(cudaEvent_t *event)</argsstring>
+        <name>cudaEventCreate</name>
+        <param>
+          <type>cudaEvent_t *</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>Creates an event object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates an event object for the current device using ::cudaEventDefault.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Newly created event</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, ::cudaErrorLaunchFailure, ::cudaErrorMemoryAllocation \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para>cudaEventCreate (C++ API), <ref refid="group__CUDART__EVENT_1ga80341dd18a63acb6be0d8afa874821ed" kindref="member">cudaEventCreateWithFlags</ref>, <ref refid="group__CUDART__EVENT_1ga456a07ba2685ccd5ccfc84a5d171ad02" kindref="member">cudaEventRecord</ref>, <ref refid="group__CUDART__EVENT_1gabff85920872d5ed4aaf7b618e392f514" kindref="member">cudaEventQuery</ref>, <ref refid="group__CUDART__EVENT_1ga94b4ebd303bec5ef0b0f2b0235fe0ab1" kindref="member">cudaEventSynchronize</ref>, <ref refid="group__CUDART__EVENT_1gac8f42aa081e464ada1a59cd5e6ae3015" kindref="member">cudaEventDestroy</ref>, <ref refid="group__CUDART__EVENT_1gabb6db9fb36a249aec6cee068fadf7943" kindref="member">cudaEventElapsedTime</ref>, <ref refid="group__CUDART__STREAM_1gacb8b984b2832fd8c32a7ba0c9fa0a6da" kindref="member">cudaStreamWaitEvent</ref>, ::cuEventCreate </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="2714" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="2714" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__EVENT_1ga80341dd18a63acb6be0d8afa874821ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ __cudart_builtin__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ __cudart_builtin__ cudaError_t CUDARTAPI cudaEventCreateWithFlags</definition>
+        <argsstring>(cudaEvent_t *event, unsigned int flags)</argsstring>
+        <name>cudaEventCreateWithFlags</name>
+        <param>
+          <type>cudaEvent_t *</type>
+          <declname>event</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Creates an event object with the specified flags. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates an event object for the current device with the specified flags. Valid flags include:<itemizedlist>
+<listitem><para>::cudaEventDefault: Default event creation flag.</para>
+</listitem><listitem><para>::cudaEventBlockingSync: Specifies that event should use blocking synchronization. A host thread that uses <ref refid="group__CUDART__EVENT_1ga94b4ebd303bec5ef0b0f2b0235fe0ab1" kindref="member">cudaEventSynchronize()</ref> to wait on an event created with this flag will block until the event actually completes.</para>
+</listitem><listitem><para>::cudaEventDisableTiming: Specifies that the created event does not need to record timing data. Events created with this flag specified and the ::cudaEventBlockingSync flag not specified will provide the best performance when used with <ref refid="group__CUDART__STREAM_1gacb8b984b2832fd8c32a7ba0c9fa0a6da" kindref="member">cudaStreamWaitEvent()</ref> and <ref refid="group__CUDART__EVENT_1gabff85920872d5ed4aaf7b618e392f514" kindref="member">cudaEventQuery()</ref>.</para>
+</listitem><listitem><para>::cudaEventInterprocess: Specifies that the created event may be used as an interprocess event by <ref refid="group__CUDART__DEVICE_1gafff40bb17a5e0a96b513fc2bd60dd4f9" kindref="member">cudaIpcGetEventHandle()</ref>. ::cudaEventInterprocess must be specified along with ::cudaEventDisableTiming.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Newly created event </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Flags for new event</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, ::cudaErrorLaunchFailure, ::cudaErrorMemoryAllocation \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__EVENT_1gaf95514807c666994e61b94c93ef10a2b" kindref="member">cudaEventCreate (C API)</ref>, <ref refid="group__CUDART__EVENT_1ga94b4ebd303bec5ef0b0f2b0235fe0ab1" kindref="member">cudaEventSynchronize</ref>, <ref refid="group__CUDART__EVENT_1gac8f42aa081e464ada1a59cd5e6ae3015" kindref="member">cudaEventDestroy</ref>, <ref refid="group__CUDART__EVENT_1gabb6db9fb36a249aec6cee068fadf7943" kindref="member">cudaEventElapsedTime</ref>, <ref refid="group__CUDART__STREAM_1gacb8b984b2832fd8c32a7ba0c9fa0a6da" kindref="member">cudaStreamWaitEvent</ref>, ::cuEventCreate </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="2751" column="58" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="2751" declcolumn="58"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__EVENT_1ga456a07ba2685ccd5ccfc84a5d171ad02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ __cudart_builtin__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ __cudart_builtin__ cudaError_t CUDARTAPI cudaEventRecord</definition>
+        <argsstring>(cudaEvent_t event, cudaStream_t stream __dv(0))</argsstring>
+        <name>cudaEventRecord</name>
+        <param>
+          <type>cudaEvent_t</type>
+          <declname>event</declname>
+        </param>
+        <param>
+          <type>cudaStream_t stream </type>
+          <declname>__dv</declname>
+          <array>0</array>
+        </param>
+        <briefdescription>
+<para>Records an event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Captures in <computeroutput>event</computeroutput> the contents of <computeroutput>stream</computeroutput> at the time of this call. <computeroutput>event</computeroutput> and <computeroutput>stream</computeroutput> must be on the same device. Calls such as <ref refid="group__CUDART__EVENT_1gabff85920872d5ed4aaf7b618e392f514" kindref="member">cudaEventQuery()</ref> or <ref refid="group__CUDART__STREAM_1gacb8b984b2832fd8c32a7ba0c9fa0a6da" kindref="member">cudaStreamWaitEvent()</ref> will then examine or wait for completion of the work that was captured. Uses of <computeroutput>stream</computeroutput> after this call do not modify <computeroutput>event</computeroutput>. See note on default stream behavior for what is captured in the default case.</para>
+<para><ref refid="group__CUDART__EVENT_1ga456a07ba2685ccd5ccfc84a5d171ad02" kindref="member">cudaEventRecord()</ref> can be called multiple times on the same event and will overwrite the previously captured state. Other APIs such as <ref refid="group__CUDART__STREAM_1gacb8b984b2832fd8c32a7ba0c9fa0a6da" kindref="member">cudaStreamWaitEvent()</ref> use the most recently captured state at the time of the API call, and are not affected by later calls to <ref refid="group__CUDART__EVENT_1ga456a07ba2685ccd5ccfc84a5d171ad02" kindref="member">cudaEventRecord()</ref>. Before the first call to <ref refid="group__CUDART__EVENT_1ga456a07ba2685ccd5ccfc84a5d171ad02" kindref="member">cudaEventRecord()</ref>, an event represents an empty set of work, so for example <ref refid="group__CUDART__EVENT_1gabff85920872d5ed4aaf7b618e392f514" kindref="member">cudaEventQuery()</ref> would return ::cudaSuccess.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Event to record </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Stream in which to record event</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, ::cudaErrorInvalidResourceHandle, ::cudaErrorLaunchFailure \note_null_stream \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__EVENT_1gaf95514807c666994e61b94c93ef10a2b" kindref="member">cudaEventCreate (C API)</ref>, <ref refid="group__CUDART__EVENT_1ga80341dd18a63acb6be0d8afa874821ed" kindref="member">cudaEventCreateWithFlags</ref>, <ref refid="group__CUDART__EVENT_1gabff85920872d5ed4aaf7b618e392f514" kindref="member">cudaEventQuery</ref>, <ref refid="group__CUDART__EVENT_1ga94b4ebd303bec5ef0b0f2b0235fe0ab1" kindref="member">cudaEventSynchronize</ref>, <ref refid="group__CUDART__EVENT_1gac8f42aa081e464ada1a59cd5e6ae3015" kindref="member">cudaEventDestroy</ref>, <ref refid="group__CUDART__EVENT_1gabb6db9fb36a249aec6cee068fadf7943" kindref="member">cudaEventElapsedTime</ref>, <ref refid="group__CUDART__STREAM_1gacb8b984b2832fd8c32a7ba0c9fa0a6da" kindref="member">cudaStreamWaitEvent</ref>, ::cuEventRecord </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="2790" column="58" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="2790" declcolumn="58"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__EVENT_1gabff85920872d5ed4aaf7b618e392f514" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaEventQuery</definition>
+        <argsstring>(cudaEvent_t event)</argsstring>
+        <name>cudaEventQuery</name>
+        <param>
+          <type>cudaEvent_t</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>Queries an event&apos;s status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Queries the status of all work currently captured by <computeroutput>event</computeroutput>. See <ref refid="group__CUDART__EVENT_1ga456a07ba2685ccd5ccfc84a5d171ad02" kindref="member">cudaEventRecord()</ref> for details on what is captured by an event.</para>
+<para>Returns ::cudaSuccess if all captured work has been completed, or ::cudaErrorNotReady if any captured work is incomplete.</para>
+<para>For the purposes of Unified Memory, a return value of ::cudaSuccess is equivalent to having called <ref refid="group__CUDART__EVENT_1ga94b4ebd303bec5ef0b0f2b0235fe0ab1" kindref="member">cudaEventSynchronize()</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Event to query</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorNotReady, ::cudaErrorInvalidValue, ::cudaErrorInvalidResourceHandle, ::cudaErrorLaunchFailure \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__EVENT_1gaf95514807c666994e61b94c93ef10a2b" kindref="member">cudaEventCreate (C API)</ref>, <ref refid="group__CUDART__EVENT_1ga80341dd18a63acb6be0d8afa874821ed" kindref="member">cudaEventCreateWithFlags</ref>, <ref refid="group__CUDART__EVENT_1ga456a07ba2685ccd5ccfc84a5d171ad02" kindref="member">cudaEventRecord</ref>, <ref refid="group__CUDART__EVENT_1ga94b4ebd303bec5ef0b0f2b0235fe0ab1" kindref="member">cudaEventSynchronize</ref>, <ref refid="group__CUDART__EVENT_1gac8f42aa081e464ada1a59cd5e6ae3015" kindref="member">cudaEventDestroy</ref>, <ref refid="group__CUDART__EVENT_1gabb6db9fb36a249aec6cee068fadf7943" kindref="member">cudaEventElapsedTime</ref>, ::cuEventQuery </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="2821" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="2821" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__EVENT_1ga94b4ebd303bec5ef0b0f2b0235fe0ab1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaEventSynchronize</definition>
+        <argsstring>(cudaEvent_t event)</argsstring>
+        <name>cudaEventSynchronize</name>
+        <param>
+          <type>cudaEvent_t</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>Waits for an event to complete. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Waits until the completion of all work currently captured in <computeroutput>event</computeroutput>. See <ref refid="group__CUDART__EVENT_1ga456a07ba2685ccd5ccfc84a5d171ad02" kindref="member">cudaEventRecord()</ref> for details on what is captured by an event.</para>
+<para>Waiting for an event that was created with the ::cudaEventBlockingSync flag will cause the calling CPU thread to block until the event has been completed by the device. If the ::cudaEventBlockingSync flag has not been set, then the CPU thread will busy-wait until the event has been completed by the device.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Event to wait for</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, ::cudaErrorInvalidResourceHandle, ::cudaErrorLaunchFailure \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__EVENT_1gaf95514807c666994e61b94c93ef10a2b" kindref="member">cudaEventCreate (C API)</ref>, <ref refid="group__CUDART__EVENT_1ga80341dd18a63acb6be0d8afa874821ed" kindref="member">cudaEventCreateWithFlags</ref>, <ref refid="group__CUDART__EVENT_1ga456a07ba2685ccd5ccfc84a5d171ad02" kindref="member">cudaEventRecord</ref>, <ref refid="group__CUDART__EVENT_1gabff85920872d5ed4aaf7b618e392f514" kindref="member">cudaEventQuery</ref>, <ref refid="group__CUDART__EVENT_1gac8f42aa081e464ada1a59cd5e6ae3015" kindref="member">cudaEventDestroy</ref>, <ref refid="group__CUDART__EVENT_1gabb6db9fb36a249aec6cee068fadf7943" kindref="member">cudaEventElapsedTime</ref>, ::cuEventSynchronize </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="2851" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="2851" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__EVENT_1gac8f42aa081e464ada1a59cd5e6ae3015" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ __cudart_builtin__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ __cudart_builtin__ cudaError_t CUDARTAPI cudaEventDestroy</definition>
+        <argsstring>(cudaEvent_t event)</argsstring>
+        <name>cudaEventDestroy</name>
+        <param>
+          <type>cudaEvent_t</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>Destroys an event object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Destroys the event specified by <computeroutput>event</computeroutput>.</para>
+<para>An event may be destroyed before it is complete (i.e., while <ref refid="group__CUDART__EVENT_1gabff85920872d5ed4aaf7b618e392f514" kindref="member">cudaEventQuery()</ref> would return ::cudaErrorNotReady). In this case, the call does not block on completion of the event, and any associated resources will automatically be released asynchronously at completion.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Event to destroy</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, ::cudaErrorLaunchFailure \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__EVENT_1gaf95514807c666994e61b94c93ef10a2b" kindref="member">cudaEventCreate (C API)</ref>, <ref refid="group__CUDART__EVENT_1ga80341dd18a63acb6be0d8afa874821ed" kindref="member">cudaEventCreateWithFlags</ref>, <ref refid="group__CUDART__EVENT_1gabff85920872d5ed4aaf7b618e392f514" kindref="member">cudaEventQuery</ref>, <ref refid="group__CUDART__EVENT_1ga94b4ebd303bec5ef0b0f2b0235fe0ab1" kindref="member">cudaEventSynchronize</ref>, <ref refid="group__CUDART__EVENT_1ga456a07ba2685ccd5ccfc84a5d171ad02" kindref="member">cudaEventRecord</ref>, <ref refid="group__CUDART__EVENT_1gabb6db9fb36a249aec6cee068fadf7943" kindref="member">cudaEventElapsedTime</ref>, ::cuEventDestroy </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="2878" column="58" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="2878" declcolumn="58"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__EVENT_1gabb6db9fb36a249aec6cee068fadf7943" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaEventElapsedTime</definition>
+        <argsstring>(float *ms, cudaEvent_t start, cudaEvent_t end)</argsstring>
+        <name>cudaEventElapsedTime</name>
+        <param>
+          <type>float *</type>
+          <declname>ms</declname>
+        </param>
+        <param>
+          <type>cudaEvent_t</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>cudaEvent_t</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+<para>Computes the elapsed time between events. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Computes the elapsed time between two events (in milliseconds with a resolution of around 0.5 microseconds).</para>
+<para>If either event was last recorded in a non-NULL stream, the resulting time may be greater than expected (even if both used the same stream handle). This happens because the <ref refid="group__CUDART__EVENT_1ga456a07ba2685ccd5ccfc84a5d171ad02" kindref="member">cudaEventRecord()</ref> operation takes place asynchronously and there is no guarantee that the measured latency is actually just between the two events. Any number of other different stream operations could execute in between the two measured events, thus altering the timing in a significant way.</para>
+<para>If <ref refid="group__CUDART__EVENT_1ga456a07ba2685ccd5ccfc84a5d171ad02" kindref="member">cudaEventRecord()</ref> has not been called on either event, then ::cudaErrorInvalidResourceHandle is returned. If <ref refid="group__CUDART__EVENT_1ga456a07ba2685ccd5ccfc84a5d171ad02" kindref="member">cudaEventRecord()</ref> has been called on both events but one or both of them has not yet been completed (that is, <ref refid="group__CUDART__EVENT_1gabff85920872d5ed4aaf7b618e392f514" kindref="member">cudaEventQuery()</ref> would return ::cudaErrorNotReady on at least one of the events), ::cudaErrorNotReady is returned. If either event was created with the ::cudaEventDisableTiming flag, then this function will return ::cudaErrorInvalidResourceHandle.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Time between <computeroutput>start</computeroutput> and <computeroutput>end</computeroutput> in ms </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Starting event </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Ending event</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorNotReady, ::cudaErrorInvalidValue, ::cudaErrorInvalidResourceHandle, ::cudaErrorLaunchFailure \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__EVENT_1gaf95514807c666994e61b94c93ef10a2b" kindref="member">cudaEventCreate (C API)</ref>, <ref refid="group__CUDART__EVENT_1ga80341dd18a63acb6be0d8afa874821ed" kindref="member">cudaEventCreateWithFlags</ref>, <ref refid="group__CUDART__EVENT_1gabff85920872d5ed4aaf7b618e392f514" kindref="member">cudaEventQuery</ref>, <ref refid="group__CUDART__EVENT_1ga94b4ebd303bec5ef0b0f2b0235fe0ab1" kindref="member">cudaEventSynchronize</ref>, <ref refid="group__CUDART__EVENT_1gac8f42aa081e464ada1a59cd5e6ae3015" kindref="member">cudaEventDestroy</ref>, <ref refid="group__CUDART__EVENT_1ga456a07ba2685ccd5ccfc84a5d171ad02" kindref="member">cudaEventRecord</ref>, ::cuEventElapsedTime </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="2921" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="2921" declcolumn="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>___MANBRIEF___ event management functions of the CUDA runtime API (___CURRENT_FILE___) ___ENDMANBRIEF___</para>
+<para>This section describes the event management functions of the CUDA runtime application programming interface. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

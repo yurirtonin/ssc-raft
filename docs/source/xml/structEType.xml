@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structEType" kind="struct" language="C++" prot="public">
+    <compoundname>EType</compoundname>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="structEType_1a055df1486bac3c6d4a4ba4ef87453293" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>TypeEnum</name>
+        <enumvalue id="structEType_1a055df1486bac3c6d4a4ba4ef87453293accc0377a8afbf50e7094f5c23a8af223" prot="public">
+          <name>INVALID</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structEType_1a055df1486bac3c6d4a4ba4ef87453293aecfc091ed2a607335524c8389cfa41b5" prot="public">
+          <name>UINT8</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structEType_1a055df1486bac3c6d4a4ba4ef87453293a48d8f1a723d44ff4a87db1bb6c551c62" prot="public">
+          <name>UINT16</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structEType_1a055df1486bac3c6d4a4ba4ef87453293a6495adba09844fac8eeb0aba86e6f1bf" prot="public">
+          <name>INT32</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structEType_1a055df1486bac3c6d4a4ba4ef87453293a87e955627b59c274ec4cbdd3a130f9bb" prot="public">
+          <name>HALF</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structEType_1a055df1486bac3c6d4a4ba4ef87453293a967d280b5c16d95f2947647dd2ca6cc2" prot="public">
+          <name>FLOAT32</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structEType_1a055df1486bac3c6d4a4ba4ef87453293afd3e4ece78a7d422280d5ed379482229" prot="public">
+          <name>DOUBLE</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structEType_1a055df1486bac3c6d4a4ba4ef87453293ae7f24a03b86769a2656fafca83c7bb49" prot="public">
+          <name>NUM_ENUMS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="56" column="1" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" bodystart="57" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structEType_1ab4a7307a213853047cf109b4fd2c2db9" prot="public" static="no" mutable="no">
+        <type>TypeEnum</type>
+        <definition>TypeEnum EType::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <initializer>= TypeEnum::INVALID</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="81" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structEType_1aa84a3b7c0a8c54742391d3dba22a177e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EType::EType</definition>
+        <argsstring>()=default</argsstring>
+        <name>EType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="68" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structEType_1a7497574047b8e89c39a8015105db8303" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>EType::EType</definition>
+        <argsstring>(TypeEnum etype)</argsstring>
+        <name>EType</name>
+        <param>
+          <type>TypeEnum</type>
+          <declname>etype</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="69" column="1" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="structEType_1ac325ff7ecf77fb44fa50c61d0c552840" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t EType::Size</definition>
+        <argsstring>() const</argsstring>
+        <name>Size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="73" column="8" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="structEType_1abcb0402883c5f4aad9b6644875dc8974" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string EType::String</definition>
+        <argsstring>()</argsstring>
+        <name>String</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="77" column="13" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" bodystart="77" bodyend="77"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structEType_1a64365b9517797926121da43876c987a7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>static size_t EType::Size</definition>
+        <argsstring>(TypeEnum datatype)</argsstring>
+        <name>Size</name>
+        <param>
+          <type>TypeEnum</type>
+          <declname>datatype</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="71" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="structEType_1a3bec604704258ded06209d204c16f4ad" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string EType::String</definition>
+        <argsstring>(TypeEnum type)</argsstring>
+        <name>String</name>
+        <param>
+          <type>TypeEnum</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="75" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="structEType_1a12e882b8b92efc47dd07892941874aff" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structEType" kindref="compound">EType</ref></type>
+        <definition>static EType EType::Type</definition>
+        <argsstring>(const std::string &amp;nametype)</argsstring>
+        <name>Type</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>nametype</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="79" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="54" column="1" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" bodystart="54" bodyend="82"/>
+    <listofallmembers>
+      <member refid="structEType_1aa84a3b7c0a8c54742391d3dba22a177e" prot="public" virt="non-virtual"><scope>EType</scope><name>EType</name></member>
+      <member refid="structEType_1a7497574047b8e89c39a8015105db8303" prot="public" virt="non-virtual"><scope>EType</scope><name>EType</name></member>
+      <member refid="structEType_1a64365b9517797926121da43876c987a7" prot="public" virt="non-virtual"><scope>EType</scope><name>Size</name></member>
+      <member refid="structEType_1ac325ff7ecf77fb44fa50c61d0c552840" prot="public" virt="non-virtual"><scope>EType</scope><name>Size</name></member>
+      <member refid="structEType_1a3bec604704258ded06209d204c16f4ad" prot="public" virt="non-virtual"><scope>EType</scope><name>String</name></member>
+      <member refid="structEType_1abcb0402883c5f4aad9b6644875dc8974" prot="public" virt="non-virtual"><scope>EType</scope><name>String</name></member>
+      <member refid="structEType_1ab4a7307a213853047cf109b4fd2c2db9" prot="public" virt="non-virtual"><scope>EType</scope><name>type</name></member>
+      <member refid="structEType_1a12e882b8b92efc47dd07892941874aff" prot="public" virt="non-virtual"><scope>EType</scope><name>Type</name></member>
+      <member refid="structEType_1a055df1486bac3c6d4a4ba4ef87453293" prot="public" virt="non-virtual"><scope>EType</scope><name>TypeEnum</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

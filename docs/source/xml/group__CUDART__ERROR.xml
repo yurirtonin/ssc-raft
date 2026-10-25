@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__CUDART__ERROR" kind="group">
+    <compoundname>CUDART_ERROR</compoundname>
+    <title>Error Handling</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__CUDART__ERROR_1ga63b4ef56febc6ec907b3d7ae1708f201" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ __cudart_builtin__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ __cudart_builtin__ cudaError_t CUDARTAPI cudaGetLastError</definition>
+        <argsstring>(void)</argsstring>
+        <name>cudaGetLastError</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the last error from a runtime call. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the last error that has been produced by any of the runtime calls in the same host thread and resets it to ::cudaSuccess.</para>
+<para><simplesect kind="return"><para>::cudaSuccess, ::cudaErrorMissingConfiguration, ::cudaErrorMemoryAllocation, ::cudaErrorInitializationError, ::cudaErrorLaunchFailure, ::cudaErrorLaunchTimeout, ::cudaErrorLaunchOutOfResources, ::cudaErrorInvalidDeviceFunction, ::cudaErrorInvalidConfiguration, ::cudaErrorInvalidDevice, ::cudaErrorInvalidValue, ::cudaErrorInvalidPitchValue, ::cudaErrorInvalidSymbol, ::cudaErrorUnmapBufferObjectFailed, ::cudaErrorInvalidDevicePointer, ::cudaErrorInvalidTexture, ::cudaErrorInvalidTextureBinding, ::cudaErrorInvalidChannelDescriptor, ::cudaErrorInvalidMemcpyDirection, ::cudaErrorInvalidFilterSetting, ::cudaErrorInvalidNormSetting, ::cudaErrorUnknown, ::cudaErrorInvalidResourceHandle, ::cudaErrorInsufficientDriver, ::cudaErrorNoDevice, ::cudaErrorSetOnActiveProcess, ::cudaErrorStartupFailure, ::cudaErrorInvalidPtx, ::cudaErrorNoKernelImageForDevice, ::cudaErrorJitCompilerNotFound \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__ERROR_1gae4a63d8d66089be26858fc8344d9f52e" kindref="member">cudaPeekAtLastError</ref>, <ref refid="group__CUDART__ERROR_1ga6e7215f71fda07290eda316159acd020" kindref="member">cudaGetErrorName</ref>, <ref refid="group__CUDART__ERROR_1ga56c463546abbd711ad96efed479a1da8" kindref="member">cudaGetErrorString</ref>, ::cudaError </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="1181" column="58" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="1181" declcolumn="58"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__ERROR_1gae4a63d8d66089be26858fc8344d9f52e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ __cudart_builtin__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ __cudart_builtin__ cudaError_t CUDARTAPI cudaPeekAtLastError</definition>
+        <argsstring>(void)</argsstring>
+        <name>cudaPeekAtLastError</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the last error from a runtime call. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the last error that has been produced by any of the runtime calls in the same host thread. Note that this call does not reset the error to ::cudaSuccess like <ref refid="group__CUDART__ERROR_1ga63b4ef56febc6ec907b3d7ae1708f201" kindref="member">cudaGetLastError()</ref>.</para>
+<para><simplesect kind="return"><para>::cudaSuccess, ::cudaErrorMissingConfiguration, ::cudaErrorMemoryAllocation, ::cudaErrorInitializationError, ::cudaErrorLaunchFailure, ::cudaErrorLaunchTimeout, ::cudaErrorLaunchOutOfResources, ::cudaErrorInvalidDeviceFunction, ::cudaErrorInvalidConfiguration, ::cudaErrorInvalidDevice, ::cudaErrorInvalidValue, ::cudaErrorInvalidPitchValue, ::cudaErrorInvalidSymbol, ::cudaErrorUnmapBufferObjectFailed, ::cudaErrorInvalidDevicePointer, ::cudaErrorInvalidTexture, ::cudaErrorInvalidTextureBinding, ::cudaErrorInvalidChannelDescriptor, ::cudaErrorInvalidMemcpyDirection, ::cudaErrorInvalidFilterSetting, ::cudaErrorInvalidNormSetting, ::cudaErrorUnknown, ::cudaErrorInvalidResourceHandle, ::cudaErrorInsufficientDriver, ::cudaErrorNoDevice, ::cudaErrorSetOnActiveProcess, ::cudaErrorStartupFailure, ::cudaErrorInvalidPtx, ::cudaErrorNoKernelImageForDevice, ::cudaErrorJitCompilerNotFound \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__ERROR_1ga63b4ef56febc6ec907b3d7ae1708f201" kindref="member">cudaGetLastError</ref>, <ref refid="group__CUDART__ERROR_1ga6e7215f71fda07290eda316159acd020" kindref="member">cudaGetErrorName</ref>, <ref refid="group__CUDART__ERROR_1ga56c463546abbd711ad96efed479a1da8" kindref="member">cudaGetErrorString</ref>, ::cudaError </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="1227" column="58" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="1227" declcolumn="58"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__ERROR_1ga6e7215f71fda07290eda316159acd020" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ __cudart_builtin__ const char *CUDARTAPI</type>
+        <definition>__host__ __cudart_builtin__ const char* CUDARTAPI cudaGetErrorName</definition>
+        <argsstring>(cudaError_t error)</argsstring>
+        <name>cudaGetErrorName</name>
+        <param>
+          <type>cudaError_t</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+<para>Returns the string representation of an error code enum name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a string containing the name of an error code in the enum. If the error code is not recognized, &quot;unrecognized error code&quot; is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Error code to convert to string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>char*</computeroutput> pointer to a NULL-terminated string</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__ERROR_1ga56c463546abbd711ad96efed479a1da8" kindref="member">cudaGetErrorString</ref>, <ref refid="group__CUDART__ERROR_1ga63b4ef56febc6ec907b3d7ae1708f201" kindref="member">cudaGetLastError</ref>, <ref refid="group__CUDART__ERROR_1gae4a63d8d66089be26858fc8344d9f52e" kindref="member">cudaPeekAtLastError</ref>, ::cudaError, ::cuGetErrorName </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="1243" column="57" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="1243" declcolumn="57"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__ERROR_1ga56c463546abbd711ad96efed479a1da8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ __cudart_builtin__ const char *CUDARTAPI</type>
+        <definition>__host__ __cudart_builtin__ const char* CUDARTAPI cudaGetErrorString</definition>
+        <argsstring>(cudaError_t error)</argsstring>
+        <name>cudaGetErrorString</name>
+        <param>
+          <type>cudaError_t</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+<para>Returns the description string for an error code. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the description string for an error code. If the error code is not recognized, &quot;unrecognized error code&quot; is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Error code to convert to string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>char*</computeroutput> pointer to a NULL-terminated string</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__ERROR_1ga6e7215f71fda07290eda316159acd020" kindref="member">cudaGetErrorName</ref>, <ref refid="group__CUDART__ERROR_1ga63b4ef56febc6ec907b3d7ae1708f201" kindref="member">cudaGetLastError</ref>, <ref refid="group__CUDART__ERROR_1gae4a63d8d66089be26858fc8344d9f52e" kindref="member">cudaPeekAtLastError</ref>, ::cudaError, ::cuGetErrorString </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="1259" column="57" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="1259" declcolumn="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>___MANBRIEF___ error handling functions of the CUDA runtime API (___CURRENT_FILE___) ___ENDMANBRIEF___</para>
+<para>This section describes the error handling functions of the CUDA runtime application programming interface. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

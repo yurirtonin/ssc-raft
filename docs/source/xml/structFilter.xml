@@ -1,0 +1,304 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structFilter" kind="struct" language="C++" prot="public">
+    <compoundname>Filter</compoundname>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="structFilter_1ac3f01edba67bc80f0a5af373347e6a6c" prot="public" static="no" strong="no">
+        <type></type>
+        <name>EType</name>
+        <enumvalue id="structFilter_1ac3f01edba67bc80f0a5af373347e6a6cae6e303ddb4b9092543178146dfe3c9dd" prot="public">
+          <name>none</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structFilter_1ac3f01edba67bc80f0a5af373347e6a6cad386e1f72373d65fb6486368d9c86fd1" prot="public">
+          <name>gaussian</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structFilter_1ac3f01edba67bc80f0a5af373347e6a6caf488571f49523f6f78a9bf02f8468796" prot="public">
+          <name>lorentz</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structFilter_1ac3f01edba67bc80f0a5af373347e6a6ca85524d9f95ef431d06d273d518458fb7" prot="public">
+          <name>cosine</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structFilter_1ac3f01edba67bc80f0a5af373347e6a6ca4fe7389922429ce40e3c5c8d970eb557" prot="public">
+          <name>rectangle</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structFilter_1ac3f01edba67bc80f0a5af373347e6a6cabd78ba3987f5b3043b3fdb5019abcfc6" prot="public">
+          <name>hann</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structFilter_1ac3f01edba67bc80f0a5af373347e6a6cace9eca0d9d37b12fddb1902d951f48ee" prot="public">
+          <name>hamming</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structFilter_1ac3f01edba67bc80f0a5af373347e6a6ca967590ddf99c0f0b0a14d6315eabfa7d" prot="public">
+          <name>ramp</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structFilter_1ac3f01edba67bc80f0a5af373347e6a6ca0b6587f34995bf9c1b347346e27846eb" prot="public">
+          <name>differential</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/filters.hpp" line="20" column="1" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/filters.hpp" bodystart="21" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structFilter_1a1e30571c493b025b2d9f50d56ee92913" prot="public" static="no" mutable="no">
+        <type><ref refid="structEType" kindref="compound">EType</ref></type>
+        <definition>EType Filter::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <initializer>= EType::none</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/filters.hpp" line="33" column="7" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/filters.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFilter_1a2782421bd82a5977ed0c256a5c4b916c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Filter::reg</definition>
+        <argsstring></argsstring>
+        <name>reg</name>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/filters.hpp" line="35" column="7" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/filters.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFilter_1ab2fddcb059cb2bdd655a3a139240efce" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Filter::paganin</definition>
+        <argsstring></argsstring>
+        <name>paganin</name>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/filters.hpp" line="36" column="7" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/filters.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFilter_1a57663bc852c595cf6f381c65442f0dd3" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Filter::axis_offset</definition>
+        <argsstring></argsstring>
+        <name>axis_offset</name>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/filters.hpp" line="37" column="7" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/filters.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFilter_1ae8086c20f877a89fdae89dadfd720a4f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Filter::pixel</definition>
+        <argsstring></argsstring>
+        <name>pixel</name>
+        <initializer>= 1.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/filters.hpp" line="38" column="11" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/filters.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFilter_1a3c8ab52725d4b8f1c4b0d67767517a4b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Filter::pad</definition>
+        <argsstring></argsstring>
+        <name>pad</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/filters.hpp" line="39" column="5" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/filters.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFilter_1a3bfbcea15cc17e785f149319b3379ee6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Filter::paddMode</definition>
+        <argsstring></argsstring>
+        <name>paddMode</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/filters.hpp" line="40" column="5" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/filters.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structFilter_1a21d031447164641fb8c91939994b10f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Filter::Filter</definition>
+        <argsstring>()=default</argsstring>
+        <name>Filter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/filters.hpp" line="15" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structFilter_1a5d5861b4c99f7b42fbacaa873271d9f0" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Filter::Filter</definition>
+        <argsstring>(int _type, float _paganin, float _reg, float _axis_offset, float _pixel, int _pad, int _paddMode)</argsstring>
+        <name>Filter</name>
+        <param>
+          <type>int</type>
+          <declname>_type</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>_paganin</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>_reg</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>_axis_offset</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>_pixel</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_pad</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_paddMode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/filters.hpp" line="16" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/filters.hpp" bodystart="16" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="structFilter_1a184fd84b0c0d567f6958add3ccc2a435" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__host__ __device__ float</type>
+        <definition>__host__ __device__ float Filter::apply</definition>
+        <argsstring>(float input)</argsstring>
+        <name>apply</name>
+        <param>
+          <type>float</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/filters.hpp" line="42" column="34" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/filters/filters.cu" bodystart="398" bodyend="441"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Filter</label>
+        <link refid="structFilter"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>EType</label>
+        <link refid="structEType"/>
+      </node>
+    </collaborationgraph>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/filters.hpp" line="13" column="1" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/filters.hpp" bodystart="13" bodyend="43"/>
+    <listofallmembers>
+      <member refid="structFilter_1a184fd84b0c0d567f6958add3ccc2a435" prot="public" virt="non-virtual"><scope>Filter</scope><name>apply</name></member>
+      <member refid="structFilter_1a57663bc852c595cf6f381c65442f0dd3" prot="public" virt="non-virtual"><scope>Filter</scope><name>axis_offset</name></member>
+      <member refid="structFilter_1ac3f01edba67bc80f0a5af373347e6a6ca85524d9f95ef431d06d273d518458fb7" prot="public" virt="non-virtual"><scope>Filter</scope><name>cosine</name></member>
+      <member refid="structFilter_1ac3f01edba67bc80f0a5af373347e6a6ca0b6587f34995bf9c1b347346e27846eb" prot="public" virt="non-virtual"><scope>Filter</scope><name>differential</name></member>
+      <member refid="structFilter_1ac3f01edba67bc80f0a5af373347e6a6c" prot="public" virt="non-virtual"><scope>Filter</scope><name>EType</name></member>
+      <member refid="structFilter_1a21d031447164641fb8c91939994b10f4" prot="public" virt="non-virtual"><scope>Filter</scope><name>Filter</name></member>
+      <member refid="structFilter_1a5d5861b4c99f7b42fbacaa873271d9f0" prot="public" virt="non-virtual"><scope>Filter</scope><name>Filter</name></member>
+      <member refid="structFilter_1ac3f01edba67bc80f0a5af373347e6a6cad386e1f72373d65fb6486368d9c86fd1" prot="public" virt="non-virtual"><scope>Filter</scope><name>gaussian</name></member>
+      <member refid="structFilter_1ac3f01edba67bc80f0a5af373347e6a6cace9eca0d9d37b12fddb1902d951f48ee" prot="public" virt="non-virtual"><scope>Filter</scope><name>hamming</name></member>
+      <member refid="structFilter_1ac3f01edba67bc80f0a5af373347e6a6cabd78ba3987f5b3043b3fdb5019abcfc6" prot="public" virt="non-virtual"><scope>Filter</scope><name>hann</name></member>
+      <member refid="structFilter_1ac3f01edba67bc80f0a5af373347e6a6caf488571f49523f6f78a9bf02f8468796" prot="public" virt="non-virtual"><scope>Filter</scope><name>lorentz</name></member>
+      <member refid="structFilter_1ac3f01edba67bc80f0a5af373347e6a6cae6e303ddb4b9092543178146dfe3c9dd" prot="public" virt="non-virtual"><scope>Filter</scope><name>none</name></member>
+      <member refid="structFilter_1a3c8ab52725d4b8f1c4b0d67767517a4b" prot="public" virt="non-virtual"><scope>Filter</scope><name>pad</name></member>
+      <member refid="structFilter_1a3bfbcea15cc17e785f149319b3379ee6" prot="public" virt="non-virtual"><scope>Filter</scope><name>paddMode</name></member>
+      <member refid="structFilter_1ab2fddcb059cb2bdd655a3a139240efce" prot="public" virt="non-virtual"><scope>Filter</scope><name>paganin</name></member>
+      <member refid="structFilter_1ae8086c20f877a89fdae89dadfd720a4f" prot="public" virt="non-virtual"><scope>Filter</scope><name>pixel</name></member>
+      <member refid="structFilter_1ac3f01edba67bc80f0a5af373347e6a6ca967590ddf99c0f0b0a14d6315eabfa7d" prot="public" virt="non-virtual"><scope>Filter</scope><name>ramp</name></member>
+      <member refid="structFilter_1ac3f01edba67bc80f0a5af373347e6a6ca4fe7389922429ce40e3c5c8d970eb557" prot="public" virt="non-virtual"><scope>Filter</scope><name>rectangle</name></member>
+      <member refid="structFilter_1a2782421bd82a5977ed0c256a5c4b916c" prot="public" virt="non-virtual"><scope>Filter</scope><name>reg</name></member>
+      <member refid="structFilter_1a1e30571c493b025b2d9f50d56ee92913" prot="public" virt="non-virtual"><scope>Filter</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

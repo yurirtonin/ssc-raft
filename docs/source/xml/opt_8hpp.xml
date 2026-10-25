@@ -1,0 +1,601 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="opt_8hpp" kind="file" language="C++">
+    <compoundname>opt.hpp</compoundname>
+    <includes local="no">cuda.h</includes>
+    <includes local="no">cuda_runtime.h</includes>
+    <includes refid="cuda__runtime__api_8h" local="no">cuda_runtime_api.h</includes>
+    <includes local="no">cufft.h</includes>
+    <includes local="no">driver_types.h</includes>
+    <includes refid="configs_8hpp" local="yes">common/configs.hpp</includes>
+    <includes refid="logerror_8hpp" local="yes">common/logerror.hpp</includes>
+    <includedby refid="opt_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/opt.cu</includedby>
+    <includedby refid="padding_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/padding.cu</includedby>
+    <includedby refid="workspace_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/workspace.cu</includedby>
+    <includedby refid="fdk__backproj_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_backproj.cu</includedby>
+    <includedby refid="fdk__filtering_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_filtering.cu</includedby>
+    <includedby refid="radon__rt_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/radon_rt.cu</includedby>
+    <includedby refid="bst_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/bst.cu</includedby>
+    <includedby refid="em__frequency_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/em_frequency.cu</includedby>
+    <includedby refid="em__rt_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/em_rt.cu</includedby>
+    <includedby refid="fbp_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/fbp.cu</includedby>
+    <includedby refid="pipeline_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/pipelines/pipeline.cu</includedby>
+    <includedby refid="background__correction_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/background_correction.cu</includedby>
+    <includedby refid="excentric__tomo_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/excentric_tomo.cu</includedby>
+    <includedby refid="filters_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/filters/filters.cu</includedby>
+    <includedby refid="low__pass_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/filters/low_pass.cu</includedby>
+    <includedby refid="paganin_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/phase/kernels/paganin.cu</includedby>
+    <includedby refid="phase__retrieval_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/phase/phase_retrieval.cu</includedby>
+    <includedby refid="rings_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/rings.cu</includedby>
+    <includedby refid="rotation__axis_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/rotation_axis.cu</includedby>
+    <incdepgraph>
+      <node id="20">
+        <label>helper_cuda.h</label>
+        <link refid="helper__cuda_8h_source"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>cuda_runtime_api.h</label>
+        <link refid="cuda__runtime__api_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>cuda_device_runtime_api.h</label>
+      </node>
+      <node id="23">
+        <label>helper_string.h</label>
+        <link refid="helper__string_8h_source"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>assert.h</label>
+      </node>
+      <node id="8">
+        <label>cufft.h</label>
+      </node>
+      <node id="21">
+        <label>stdint.h</label>
+      </node>
+      <node id="22">
+        <label>stdlib.h</label>
+      </node>
+      <node id="3">
+        <label>cuda_runtime.h</label>
+      </node>
+      <node id="28">
+        <label>cassert</label>
+      </node>
+      <node id="12">
+        <label>vector_types.h</label>
+      </node>
+      <node id="25">
+        <label>string</label>
+      </node>
+      <node id="6">
+        <label>builtin_types.h</label>
+      </node>
+      <node id="17">
+        <label>common/logerror.hpp</label>
+        <link refid="logerror_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>fstream</label>
+      </node>
+      <node id="9">
+        <label>driver_types.h</label>
+      </node>
+      <node id="10">
+        <label>common/configs.hpp</label>
+        <link refid="configs_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>string.h</label>
+      </node>
+      <node id="16">
+        <label>future</label>
+      </node>
+      <node id="1">
+        <label>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp</label>
+        <link refid="opt_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>complex.h</label>
+      </node>
+      <node id="29">
+        <label>sstream</label>
+      </node>
+      <node id="18">
+        <label>cuComplex.h</label>
+      </node>
+      <node id="30">
+        <label>math.h</label>
+      </node>
+      <node id="15">
+        <label>iostream</label>
+      </node>
+      <node id="26">
+        <label>strings.h</label>
+      </node>
+      <node id="13">
+        <label>cstddef</label>
+      </node>
+      <node id="5">
+        <label>crt/host_defines.h</label>
+      </node>
+      <node id="2">
+        <label>cuda.h</label>
+      </node>
+      <node id="14">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceopt">opt</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="opt_8hpp_1a24c8af2c7ffbae25da6ca4cec0b1d32c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void getLog</definition>
+        <argsstring>(float *data, dim3 size, cudaStream_t stream=0)</argsstring>
+        <name>getLog</name>
+        <param>
+          <type>float *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="26" column="6" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/opt.cu" bodystart="271" bodyend="277" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" declline="26" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1a1ccbc44ca8d1c3c260d414a388b5af7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void getlog</definition>
+        <argsstring>(float *data, dim3 size)</argsstring>
+        <name>getlog</name>
+        <param>
+          <type>float *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="27" column="6" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/opt.cu" bodystart="279" bodyend="285" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" declline="27" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1ab824fa5ea39650562207a6b75e9fba36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void getExp</definition>
+        <argsstring>(float *data, dim3 size, cudaStream_t stream=0)</argsstring>
+        <name>getExp</name>
+        <param>
+          <type>float *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="28" column="6" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/opt.cu" bodystart="287" bodyend="293" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" declline="28" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1ad100eb3baecd916e588bd6aee6a75583" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void getexp</definition>
+        <argsstring>(float *data, dim3 size)</argsstring>
+        <name>getexp</name>
+        <param>
+          <type>float *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="29" column="6" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/opt.cu" bodystart="295" bodyend="301" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" declline="29" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1a0c0464e447f7088a0c6cc8e7083b84d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void setSinCosTable</definition>
+        <argsstring>(float *sintable, float *costable, float *angles, int nangles)</argsstring>
+        <name>setSinCosTable</name>
+        <param>
+          <type>float *</type>
+          <declname>sintable</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>costable</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nangles</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="31" column="17" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/opt.cu" bodystart="238" bodyend="245" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" declline="31" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1a41c5a3cc5d6ae8cd31f292fa3e7fc40a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>static __global__ void Klog</definition>
+        <argsstring>(float *data, dim3 size)</argsstring>
+        <name>Klog</name>
+        <param>
+          <type>float *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="33" column="24" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" declline="33" declcolumn="24"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>File contains kernels for the most basic operations. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Paola Ferraz </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2024-02-09</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2024 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>RAFT_OPT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RAFT_OPT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cuda.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cuda_runtime.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cuda_runtime_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cufft.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;driver_types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#include<sp/>&lt;cublas.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;common/configs.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;common/logerror.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getLog(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*data,<sp/>dim3<sp/>size,<sp/>cudaStream_t<sp/>stream<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getlog(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*data,<sp/>dim3<sp/>size);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getExp(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*data,<sp/>dim3<sp/>size,<sp/>cudaStream_t<sp/>stream<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getexp(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*data,<sp/>dim3<sp/>size);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setSinCosTable(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*sintable,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*costable,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Klog(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>data,<sp/>dim3<sp/>size);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">opt{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>__host__<sp/>__device__<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>assert_dimension(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size2)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/>size1<sp/>==<sp/>size2<sp/>?<sp/>1<sp/>:<sp/>0<sp/>);<sp/>};</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>__host__<sp/>__device__<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>assert_dimension_xyz(dim3<sp/>size1,<sp/>dim3<sp/>size2)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>assert_dimension(size1.x,<sp/>size2.x)<sp/>==<sp/>1<sp/>&amp;&amp;<sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert_dimension(size1.y,<sp/>size2.y)<sp/>==<sp/>1<sp/>&amp;&amp;<sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert_dimension(size1.z,<sp/>size2.z)<sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>){<sp/>i<sp/>=<sp/>1;<sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size2.z<sp/>==<sp/>1){<sp/>i<sp/>=<sp/>2;<sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{<sp/>i<sp/>=<sp/>0;<sp/>}<sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>__host__<sp/>__device__<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>assert_dimension_xy(dim3<sp/>size1,<sp/>dim3<sp/>size2)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>assert_dimension(size1.x,<sp/>size2.x)<sp/>==<sp/>1<sp/>&amp;&amp;<sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert_dimension(size1.y,<sp/>size2.y)<sp/>==<sp/>1<sp/><sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>){<sp/>i<sp/>=<sp/>1;<sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{<sp/>i<sp/>=<sp/>0;<sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>__host__<sp/>__device__<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>assert_dimension_xz(dim3<sp/>size1,<sp/>dim3<sp/>size2)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>assert_dimension(size1.x,<sp/>size2.x)<sp/>==<sp/>1<sp/>&amp;&amp;<sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert_dimension(size1.z,<sp/>size2.z)<sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>){<sp/>i<sp/>=<sp/>1;<sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{<sp/>i<sp/>=<sp/>0;<sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>__host__<sp/>__device__<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>assert_dimension_yz(dim3<sp/>size1,<sp/>dim3<sp/>size2)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>assert_dimension(size1.y,<sp/>size2.y)<sp/>==<sp/>1<sp/>&amp;&amp;<sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert_dimension(size1.z,<sp/>size2.z)<sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>){<sp/>i<sp/>=<sp/>1;<sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{<sp/>i<sp/>=<sp/>0;<sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>__host__<sp/>__device__<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>get_total_points(dim3<sp/>size)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>total_points<sp/>=<sp/>size.x<sp/>*<sp/>size.y<sp/>*<sp/>size.z;<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>total_points;<sp/>};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>scale(Type<sp/>*data,<sp/>dim3<sp/>size,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>scale)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>blockIdx.x*blockDim.x<sp/>+<sp/>threadIdx.x;<sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>blockIdx.y*blockDim.y<sp/>+<sp/>threadIdx.y;<sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>blockIdx.z*blockDim.z<sp/>+<sp/>threadIdx.z;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>size.y<sp/>*<sp/>size.x<sp/>*<sp/>k<sp/>+<sp/>size.x<sp/>*<sp/>j<sp/>+<sp/>i;<sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>(i<sp/>&gt;=<sp/>size.x)<sp/>||<sp/>(j<sp/>&gt;=<sp/>size.y)<sp/>||<sp/>(k<sp/>&gt;=<sp/>size.z))<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;<sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data[index]<sp/>=<sp/>data[index]<sp/>/<sp/>scale;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>scale(cufftComplex<sp/>*data,<sp/>dim3<sp/>size,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>scale);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>Type*<sp/>allocGPU(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/>cudaStream_t<sp/>stream)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/>Type<sp/>*ptr;<sp/>HANDLE_ERROR(cudaMallocAsync((</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**)&amp;ptr,<sp/>size<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(Type),<sp/>stream));<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr;<sp/>};</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>Type*<sp/>allocGPU(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/>Type<sp/>*ptr;<sp/>HANDLE_ERROR(<ref refid="group__CUDART__MEMORY_1ga2ec57cea7c57e8e3c4beca43dd327134" kindref="member">cudaMalloc</ref>((</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**)&amp;ptr,<sp/>size<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(Type)));<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr;<sp/>};</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>CPUToGPU(Type<sp/>*cpuptr,<sp/>Type<sp/>*gpuptr,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/>cudaStream_t<sp/>stream)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>{HANDLE_ERROR(<ref refid="group__CUDART__MEMORY_1gafb6d05d580838d8efbe581ca69cd7ac7" kindref="member">cudaMemcpyAsync</ref>(gpuptr,<sp/>cpuptr,<sp/>size<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(Type),<sp/>cudaMemcpyHostToDevice,<sp/>stream));};</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>CPUToGPU(Type<sp/>*cpuptr,<sp/>Type<sp/>*gpuptr,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>{HANDLE_ERROR(<ref refid="group__CUDART__MEMORY_1gae2bbb87e03bde890140dae4b348e1886" kindref="member">cudaMemcpy</ref>(gpuptr,<sp/>cpuptr,<sp/>size<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(Type),<sp/>cudaMemcpyHostToDevice));};</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>GPUToCPU(Type<sp/>*cpuptr,<sp/>Type<sp/>*gpuptr,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/>cudaStream_t<sp/>stream)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>{HANDLE_ERROR(<ref refid="group__CUDART__MEMORY_1gafb6d05d580838d8efbe581ca69cd7ac7" kindref="member">cudaMemcpyAsync</ref>(cpuptr,<sp/>gpuptr,<sp/>size<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(Type),<sp/>cudaMemcpyDeviceToHost,<sp/>stream));};</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>GPUToCPU(Type<sp/>*cpuptr,<sp/>Type<sp/>*gpuptr,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>{HANDLE_ERROR(<ref refid="group__CUDART__MEMORY_1gae2bbb87e03bde890140dae4b348e1886" kindref="member">cudaMemcpy</ref>(cpuptr,<sp/>gpuptr,<sp/>size<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(Type),<sp/>cudaMemcpyDeviceToHost));};</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>GPUToGPU(Type<sp/>*gpuptrIn,<sp/>Type<sp/>*gpuptrOut,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>{HANDLE_ERROR(<ref refid="group__CUDART__MEMORY_1gae2bbb87e03bde890140dae4b348e1886" kindref="member">cudaMemcpy</ref>(gpuptrOut,<sp/>gpuptrIn,<sp/>size<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(Type),<sp/>cudaMemcpyDeviceToDevice));};</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MPlanFFT(cufftHandle<sp/>*mplan,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>RANK,<sp/>dim3<sp/>DATASIZE,<sp/>cufftType<sp/>FFT_TYPE);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>dim3<sp/>setGridBlock(dim3<sp/>size,<sp/>dim3<sp/>BT);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>fftshift2D(Type<sp/>*c,<sp/>dim3<sp/>size)</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Type<sp/>temp;<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>shift;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>N<sp/>=<sp/>(<sp/>(size.x<sp/>*<sp/>size.y)<sp/>+<sp/>size.x<sp/>)<sp/>/<sp/>2<sp/>;<sp/></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>M<sp/>=<sp/>(<sp/>(size.x<sp/>*<sp/>size.y)<sp/>-<sp/>size.x<sp/>)<sp/>/<sp/>2<sp/>;<sp/></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>blockIdx.x*blockDim.x<sp/>+<sp/>threadIdx.x;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>blockIdx.x*blockDim.x<sp/>+<sp/>threadIdx.x;<sp/></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>blockIdx.x*blockDim.x<sp/>+<sp/>threadIdx.x;<sp/></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>IND(i,j,k,size.x,size.y);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(i<sp/>&gt;=<sp/>size.x)<sp/>||<sp/>(j<sp/>&gt;=<sp/>size.y)<sp/>||<sp/>(k<sp/>&gt;=<sp/>size.z)<sp/>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>&lt;<sp/>(<sp/>size.x<sp/>/<sp/>2<sp/>)<sp/>){<sp/><sp/></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>j<sp/>&lt;<sp/>(<sp/>size.y<sp/>/<sp/>2<sp/>)<sp/>){<sp/><sp/></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shift<sp/>=<sp/>index<sp/>+<sp/>N;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/><sp/><sp/><sp/><sp/>=<sp/>c[index];<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c[index]<sp/>=<sp/>c[shift];<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c[shift]<sp/>=<sp/>temp;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>j<sp/>&lt;<sp/>(<sp/>size.y<sp/>/<sp/>2<sp/>)<sp/>){</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shift<sp/>=<sp/>index<sp/>+<sp/>M;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/><sp/><sp/><sp/><sp/>=<sp/>c[index];<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c[index]<sp/>=<sp/>c[shift];<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c[shift]<sp/>=<sp/>temp;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>fftshift1D(Type<sp/>*data,<sp/>dim3<sp/>size)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Type<sp/>temp;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>blockIdx.x*blockDim.x<sp/>+<sp/>threadIdx.x;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>blockIdx.x*blockDim.x<sp/>+<sp/>threadIdx.x;<sp/></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>blockIdx.x*blockDim.x<sp/>+<sp/>threadIdx.x;<sp/></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>IND(i,j,k,size.x,size.y);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index<sp/>&lt;<sp/>(<sp/>size.x<sp/>*<sp/>size.y<sp/>*<sp/>size.z<sp/>/<sp/>2<sp/>)){</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>size.x<sp/>/<sp/>2<sp/>&lt;=<sp/>i)<sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>index<sp/>+=<sp/>-size.x/2<sp/>+<sp/>size.x<sp/>*<sp/>size.y<sp/>*<sp/>size.z/2;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>=<sp/>data[index];</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data[index]<sp/>=<sp/>data[index<sp/>+<sp/>size.x/2];</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data[index<sp/>+<sp/>size.x/2]<sp/>=<sp/>temp;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>=<sp/>data[index];</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data[index]<sp/>=<sp/>data[index<sp/>+<sp/>size.x/2];</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data[index<sp/>+<sp/>size.x/2]<sp/>=<sp/>temp;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_excentric_tomo_dimensions(dim3<sp/>&amp;tomo);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>get_angleList_dimension(dim3<sp/>tomo,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>is_excentric);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>dim3<sp/>compute_size_padded(dim3<sp/>size,<sp/>dim3<sp/>pad);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>compute_dim_padded(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pad);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>compute_padding_size(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pad);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>paddR2C(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*in,<sp/>cufftComplex<sp/>*outpadded,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>padding_mode,<sp/>dim3<sp/>size,<sp/>dim3<sp/>pad);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>paddC2C(cufftComplex<sp/>*in,<sp/>cufftComplex<sp/>*outpadded,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>padding_mode,<sp/>dim3<sp/>size,<sp/>dim3<sp/>pad);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>paddC2R(cufftComplex<sp/>*in,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*outpadded,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>padding_mode,<sp/>dim3<sp/>size,<sp/>dim3<sp/>pad);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>paddR2R(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*in,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*outpadded,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>padding_mode,<sp/>dim3<sp/>size,<sp/>dim3<sp/>pad);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>remove_paddC2R(cufftComplex<sp/>*inpadded,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*out,<sp/>dim3<sp/>size,<sp/>dim3<sp/>padsize);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>remove_paddC2C(cufftComplex<sp/>*inpadded,<sp/>cufftComplex<sp/>*out,<sp/>dim3<sp/>size,<sp/>dim3<sp/>padsize);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>remove_paddR2C(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*inpadded,<sp/>cufftComplex<sp/>*out,<sp/>dim3<sp/>size,<sp/>dim3<sp/>padsize);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>remove_paddR2R(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*inpadded,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*out,<sp/>dim3<sp/>size,<sp/>dim3<sp/>pad);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>TransposeOperation</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>none<sp/>=<sp/>0,<sp/></highlight><highlight class="comment">/*<sp/>Do<sp/>nothing<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log<sp/><sp/>=<sp/>1,<sp/></highlight><highlight class="comment">/*<sp/>Apply<sp/>data<sp/>=<sp/>-log(<sp/>data)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exp<sp/><sp/>=<sp/>2<sp/><sp/></highlight><highlight class="comment">/*<sp/>Apply<sp/>data<sp/>=<sp/><sp/>exp(-data)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>PaddingMode</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>none<sp/>=<sp/>0,<sp/></highlight><highlight class="comment">/*<sp/>No<sp/>padding<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zero<sp/>=<sp/>1,<sp/></highlight><highlight class="comment">/*<sp/>Zero<sp/>padding<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>edge<sp/>=<sp/>2,<sp/></highlight><highlight class="comment">/*<sp/>Edge<sp/>padding<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ones<sp/>=<sp/>3<sp/><sp/></highlight><highlight class="comment">/*<sp/>Ones<sp/>padding<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>flip_x(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizex,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizey,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizez);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>transpose_cpu_zyx2xyz(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizex,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizey,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizez);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>transpose_zyx2yzx(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>gpus,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ngpus,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizex,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizey,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizez,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blockx);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>transpose_zyx2yzx_log(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>gpus,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ngpus,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizex,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizey,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizez,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blockx);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>transpose_zyx2yzx_exp(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>gpus,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ngpus,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizex,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizey,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizez,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blockx);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="227"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp"/>
+  </compounddef>
+</doxygen>

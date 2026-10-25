@@ -1,0 +1,834 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="radon__kernel_8cu" kind="file" language="C++">
+    <compoundname>radon_kernel.cu</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">chrono</includes>
+    <includes local="yes">geometries/conebeam/radon.cuh</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>cmath</label>
+      </node>
+      <node id="6">
+        <label>geometries/conebeam/radon.cuh</label>
+      </node>
+      <node id="4">
+        <label>stdexcept</label>
+      </node>
+      <node id="1">
+        <label>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu</label>
+        <link refid="radon__kernel_8cu"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>chrono</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="radon__kernel_8cu_1a6391d6714d9222d8be82a72008a1756f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ray_integral</definition>
+        <argsstring>(struct Lab lab, float *px, float *py, float *pz, float *beta, float *phantom, float *tomo, enum Optimize optimize_path, int gpu_id)</argsstring>
+        <name>ray_integral</name>
+        <param>
+          <type>struct <ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>px</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>py</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>pz</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>beta</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>phantom</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>tomo</declname>
+        </param>
+        <param>
+          <type>enum Optimize</type>
+          <declname>optimize_path</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>gpu_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" line="18" column="5" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" bodystart="18" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="radon__kernel_8cu_1a010fa5ee459ad7a5fcd7cc0dac47d156" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void malloc_float_on_gpu</definition>
+        <argsstring>(float **cuda_pointer, size_t N)</argsstring>
+        <name>malloc_float_on_gpu</name>
+        <param>
+          <type>float **</type>
+          <declname>cuda_pointer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>N</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" line="93" column="6" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" bodystart="93" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="radon__kernel_8cu_1aa66bcd689521428f60be37b5ed1c6448" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void copy_float_array_from_cpu_to_gpu</definition>
+        <argsstring>(float *cuda_pointer, float *pointer, long long int N)</argsstring>
+        <name>copy_float_array_from_cpu_to_gpu</name>
+        <param>
+          <type>float *</type>
+          <declname>cuda_pointer</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>pointer</declname>
+        </param>
+        <param>
+          <type>long long int</type>
+          <declname>N</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" line="102" column="6" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" bodystart="102" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="radon__kernel_8cu_1a02b8aa384d0e493734476813071125fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void copy_float_array_from_gpu_to_cpu</definition>
+        <argsstring>(float *pointer, float *cuda_pointer, long long int N)</argsstring>
+        <name>copy_float_array_from_gpu_to_cpu</name>
+        <param>
+          <type>float *</type>
+          <declname>pointer</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>cuda_pointer</declname>
+        </param>
+        <param>
+          <type>long long int</type>
+          <declname>N</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" line="106" column="6" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" bodystart="106" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="radon__kernel_8cu_1ab7f482e37e95701afda3a98ef019d7f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void kernel_OPT_OFF</definition>
+        <argsstring>(float *px, float *py, float *pz, float *beta, float *phantom, float *tomo, struct Lab lab)</argsstring>
+        <name>kernel_OPT_OFF</name>
+        <param>
+          <type>float *</type>
+          <declname>px</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>py</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>pz</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>beta</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>phantom</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>tomo</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" line="111" column="17" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" bodystart="111" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="radon__kernel_8cu_1a6c185153706f24f92c164ec313daeda6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void kernel_OPT_ON</definition>
+        <argsstring>(float *px, float *py, float *pz, float *beta, float *phantom, float *tomo, struct Lab lab)</argsstring>
+        <name>kernel_OPT_ON</name>
+        <param>
+          <type>float *</type>
+          <declname>px</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>py</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>pz</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>beta</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>phantom</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>tomo</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" line="139" column="17" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" bodystart="139" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="radon__kernel_8cu_1a480aab421f872ac0b93a286b67d7156d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__device__ size_t</type>
+        <definition>__device__ size_t tomo_Idx</definition>
+        <argsstring>()</argsstring>
+        <name>tomo_Idx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" line="181" column="26" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" bodystart="181" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="radon__kernel_8cu_1ad2927c878400ecac8eac3336dd82dd56" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__device__ size_t</type>
+        <definition>__device__ size_t pixel_Idx</definition>
+        <argsstring>(struct Lab lab)</argsstring>
+        <name>pixel_Idx</name>
+        <param>
+          <type>struct <ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" line="186" column="26" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" bodystart="186" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="radon__kernel_8cu_1a2a1d665e2cf426d7a761761239fc2f57" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__device__ size_t</type>
+        <definition>__device__ size_t beta_Idx</definition>
+        <argsstring>(struct Lab lab)</argsstring>
+        <name>beta_Idx</name>
+        <param>
+          <type>struct <ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" line="191" column="26" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" bodystart="191" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="radon__kernel_8cu_1a6b4901b7d4887c2f27c666951be6200b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__device__ float</type>
+        <definition>__device__ float radius</definition>
+        <argsstring>(struct Lab lab)</argsstring>
+        <name>radius</name>
+        <param>
+          <type>struct <ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" line="196" column="25" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" bodystart="196" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="radon__kernel_8cu_1a082f463e51e5fbcb96ffa2fe638b67be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__device__ double</type>
+        <definition>__device__ double xray</definition>
+        <argsstring>(double t, float ray_versor[3], struct Lab lab, float cosb, float sinb)</argsstring>
+        <name>xray</name>
+        <param>
+          <type>double</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ray_versor</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type>struct <ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>cosb</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>sinb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" line="201" column="26" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" bodystart="201" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="radon__kernel_8cu_1a138e5f75a72b09f66c154e391d24bb84" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__device__ double</type>
+        <definition>__device__ double yray</definition>
+        <argsstring>(double t, float ray_versor[3], struct Lab lab, float cosb, float sinb)</argsstring>
+        <name>yray</name>
+        <param>
+          <type>double</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ray_versor</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type>struct <ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>cosb</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>sinb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" line="206" column="26" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" bodystart="206" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="radon__kernel_8cu_1aa79281323adc230a54d15a6d87c23fbc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__device__ double</type>
+        <definition>__device__ double zray</definition>
+        <argsstring>(double t, float ray_versor[3], float sz)</argsstring>
+        <name>zray</name>
+        <param>
+          <type>double</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ray_versor</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>sz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" line="211" column="26" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" bodystart="211" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="radon__kernel_8cu_1af6acf8b3ad411e48ead08ed4cff44ab5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__device__ void</type>
+        <definition>__device__ void apply_rotations</definition>
+        <argsstring>(double *tm, float ray_versor[3], float detector_x, float detector_y, float detector_z, float cosb, float sinb, struct Lab lab)</argsstring>
+        <name>apply_rotations</name>
+        <param>
+          <type>double *</type>
+          <declname>tm</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ray_versor</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>detector_x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>detector_y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>detector_z</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>cosb</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>sinb</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" line="216" column="24" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" bodystart="216" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="radon__kernel_8cu_1a0035a549df0d6b0830492ce6fa330bef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__device__ void</type>
+        <definition>__device__ void set_tomo_idxs</definition>
+        <argsstring>(long long int n, long int *i_detector, short int *m, struct Lab lab)</argsstring>
+        <name>set_tomo_idxs</name>
+        <param>
+          <type>long long int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>long int *</type>
+          <declname>i_detector</declname>
+        </param>
+        <param>
+          <type>short int *</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" line="239" column="24" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" bodystart="239" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="radon__kernel_8cu_1a363985d5d65b26bee9c72e5d6768fdc8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__device__ void</type>
+        <definition>__device__ void set_phantom_idxs</definition>
+        <argsstring>(float x, float y, float z, long long int *i, long long int *j, long long int *k, struct Lab lab)</argsstring>
+        <name>set_phantom_idxs</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>long long int *</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>long long int *</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>long long int *</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" line="245" column="24" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" bodystart="245" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="radon__kernel_8cu_1af463cf4ccbcb6b9bac7f34e5a62fe1f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__device__ bool</type>
+        <definition>__device__ bool not_inside_phantom</definition>
+        <argsstring>(long long int i, long long int j, long long int k, struct Lab lab)</argsstring>
+        <name>not_inside_phantom</name>
+        <param>
+          <type>long long int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>long long int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>long long int</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" line="257" column="24" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu" bodystart="257" bodyend="278"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;chrono&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;geometries/conebeam/radon.cuh&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/><sp/><sp/>FALTA:</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CHECAR<sp/>SE<sp/>OS<sp/>INPUTS<sp/>DO<sp/>USUÁRIO<sp/>ESTÃO<sp/>DE<sp/>ACORDO<sp/>COM<sp/>O<sp/>ESPERADO<sp/>PELO<sp/>PROGRAMA:</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lab.n(x,<sp/>y,<sp/>z)<sp/>deve<sp/>ser<sp/>par,<sp/>etc;</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verificar<sp/>se<sp/>nenhum<sp/>nx,<sp/>nbeta<sp/>etc<sp/>vai<sp/>dar<sp/>overflow<sp/>(melhor<sp/>fazer<sp/>isso<sp/>em<sp/>python<sp/>pq<sp/>quando<sp/>chegar<sp/>aqui<sp/>já<sp/>vai<sp/>ter<sp/>o<sp/>overflow);</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"></highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESCOLHER<sp/>SE<sp/>VAMOS<sp/>TER<sp/>NH<sp/>E<sp/>NV<sp/>PARA<sp/>O<sp/>DETECTOR<sp/>OU<sp/>SÓ<sp/>N_DETECTOR;<sp/>(na<sp/>struct<sp/>lab).</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"></highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Na<sp/>função<sp/>set_phantomidxs<sp/>falta<sp/>considerar<sp/>o<sp/>shift<sp/>do<sp/>phantom.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ray_integral(</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*px,<sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*py,<sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*pz,<sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*beta,<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*phantom,<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*tomo,<sp/><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>Optimize<sp/>optimize_path,<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>gpu_id)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/>N_phantom,<sp/>N_tomo;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*cuda_tomo<sp/>=<sp/>NULL,<sp/>*cuda_phantom<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*cuda_px<sp/>=<sp/>NULL,<sp/>*cuda_py<sp/>=<sp/>NULL,<sp/>*cuda_pz<sp/>=<sp/>NULL,<sp/>*cuda_beta<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>num_blocks;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cudaStream_t<sp/>s;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__CUDART__DEVICE_1ga7b63629909800b614427aae92b22d606" kindref="member">cudaSetDevice</ref>(gpu_id);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cudaStreamCreate(&amp;s);<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>N_phantom<sp/>=<sp/>(size_t)lab.nx<sp/>*<sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">)lab.ny<sp/>*<sp/>(size_t)lab.nz;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>N_tomo<sp/>=<sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">)lab.n_detector<sp/>*<sp/>(size_t)lab.nbeta;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>num_blocks<sp/><sp/>=<sp/>N_tomo<sp/>/<sp/>NUM_THREADS<sp/>+<sp/>(N_tomo<sp/>%<sp/>NUM_THREADS<sp/>==<sp/>0<sp/>?<sp/>0:1);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;nbeta<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>lab.nbeta<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;ntomo<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>N_tomo<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;ntomo_sqrt<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::cbrt(N_tomo)<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Number<sp/>of<sp/>threads<sp/>per<sp/>block:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>NUM_THREADS<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Number<sp/>of<sp/>blocks:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>num_blocks<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>malloc_float_on_gpu(&amp;cuda_tomo,<sp/>N_tomo);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>malloc_float_on_gpu(&amp;cuda_phantom,<sp/>N_phantom);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>malloc_float_on_gpu(&amp;cuda_px,<sp/>lab.n_detector);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>malloc_float_on_gpu(&amp;cuda_py,<sp/>lab.n_detector);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>malloc_float_on_gpu(&amp;cuda_pz,<sp/>lab.n_detector);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>malloc_float_on_gpu(&amp;cuda_beta,<sp/>lab.nbeta);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>copy_float_array_from_cpu_to_gpu(cuda_phantom,<sp/>phantom,<sp/>N_phantom);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>copy_float_array_from_cpu_to_gpu(cuda_px,<sp/>px,<sp/>lab.n_detector);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>copy_float_array_from_cpu_to_gpu(cuda_py,<sp/>py,<sp/>lab.n_detector);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>copy_float_array_from_cpu_to_gpu(cuda_pz,<sp/>pz,<sp/>lab.n_detector);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>copy_float_array_from_cpu_to_gpu(cuda_beta,<sp/>beta,<sp/>lab.nbeta);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>cudaError_t<sp/>err<sp/>=<sp/><ref refid="group__CUDART__ERROR_1ga63b4ef56febc6ec907b3d7ae1708f201" kindref="member">cudaGetLastError</ref>();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err<sp/>!=<sp/>cudaSuccess)<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;CUDA<sp/>error:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="group__CUDART__ERROR_1ga56c463546abbd711ad96efed479a1da8" kindref="member">cudaGetErrorString</ref>(err));</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(optimize_path)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>OPT_OFF:</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Running<sp/>kernel...\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>kernel_OPT_OFF&lt;&lt;&lt;num_blocks,<sp/>NUM_THREADS&gt;&gt;&gt;(cuda_px,<sp/>cuda_py,<sp/>cuda_pz,<sp/>cuda_beta,<sp/>cuda_phantom,<sp/>cuda_tomo,<sp/>lab);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>OPT_ON:</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Running<sp/>safely<sp/>optimized<sp/>kernel...\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>kernel_OPT_ON&lt;&lt;&lt;num_blocks,<sp/>NUM_THREADS&gt;&gt;&gt;(cuda_px,<sp/>cuda_py,<sp/>cuda_pz,<sp/>cuda_beta,<sp/>cuda_phantom,<sp/>cuda_tomo,<sp/>lab);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::invalid_argument(</highlight><highlight class="stringliteral">&quot;Invalid<sp/>argument.<sp/>Variable<sp/>&apos;optimize_path&apos;<sp/>must<sp/>be<sp/>of<sp/>type<sp/>&apos;enum<sp/>OPTIMIZE&apos;.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>copy_float_array_from_gpu_to_cpu(tomo,<sp/>cuda_tomo,<sp/>N_tomo);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__CUDART__MEMORY_1ga5635c759c41d1d2ea21fd46bb5744f15" kindref="member">cudaFree</ref>(cuda_tomo);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__CUDART__MEMORY_1ga5635c759c41d1d2ea21fd46bb5744f15" kindref="member">cudaFree</ref>(cuda_phantom);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__CUDART__MEMORY_1ga5635c759c41d1d2ea21fd46bb5744f15" kindref="member">cudaFree</ref>(cuda_px);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__CUDART__MEMORY_1ga5635c759c41d1d2ea21fd46bb5744f15" kindref="member">cudaFree</ref>(cuda_py);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__CUDART__MEMORY_1ga5635c759c41d1d2ea21fd46bb5744f15" kindref="member">cudaFree</ref>(cuda_pz);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__CUDART__MEMORY_1ga5635c759c41d1d2ea21fd46bb5744f15" kindref="member">cudaFree</ref>(cuda_beta);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__CUDART__DEVICE_1gabad4c7a01961e63aa4744ce597cfaf1d" kindref="member">cudaDeviceSynchronize</ref>();<sp/></highlight><highlight class="comment">//cudaDeviceSynchronize();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/><ref refid="group__CUDART__ERROR_1ga56c463546abbd711ad96efed479a1da8" kindref="member">cudaGetErrorString</ref>(<ref refid="group__CUDART__ERROR_1ga63b4ef56febc6ec907b3d7ae1708f201" kindref="member">cudaGetLastError</ref>())<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>malloc_float_on_gpu(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>**cuda_pointer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>N)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__CUDART__MEMORY_1ga2ec57cea7c57e8e3c4beca43dd327134" kindref="member">cudaMalloc</ref>(cuda_pointer,<sp/>N<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*cuda_pointer<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>allocate<sp/>memory<sp/>on<sp/>GPU.\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>allocate<sp/>memory<sp/>on<sp/>GPU.\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::bad_alloc();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>copy_float_array_from_cpu_to_gpu(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*cuda_pointer,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*pointer,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N)<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__CUDART__MEMORY_1gae2bbb87e03bde890140dae4b348e1886" kindref="member">cudaMemcpy</ref>(cuda_pointer,<sp/>pointer,<sp/>N<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">),<sp/>cudaMemcpyHostToDevice);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>copy_float_array_from_gpu_to_cpu(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*pointer,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*cuda_pointer,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N)<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__CUDART__MEMORY_1gae2bbb87e03bde890140dae4b348e1886" kindref="member">cudaMemcpy</ref>(pointer,<sp/>cuda_pointer,<sp/>N<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">),<sp/>cudaMemcpyDeviceToHost);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal">__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>kernel_OPT_OFF(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*px,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*py,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*pz,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*beta,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*phantom,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>tomo,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structLab" kindref="compound">Lab</ref><sp/>lab)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/>j,<sp/>k;<sp/></highlight><highlight class="comment">//<sp/>índices<sp/>do<sp/>raio<sp/>na<sp/>coordenada<sp/>top.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>cosb,<sp/>sinb;<sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t,<sp/>dt;<sp/></highlight><highlight class="comment">//<sp/>t<sp/>é<sp/>a<sp/>variável<sp/>de<sp/>parametrização<sp/>do<sp/>raio<sp/>de<sp/>luz.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ray_versor[3];<sp/></highlight><highlight class="comment">//<sp/>versor<sp/>com<sp/>a<sp/>direção<sp/>do<sp/>raio.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ray_sum<sp/>=<sp/>0;<sp/></highlight><highlight class="comment">//<sp/>soma.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>cosb<sp/>=<sp/>__cosf(beta[beta_Idx(lab)]);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>sinb<sp/>=<sp/>__sinf(beta[beta_Idx(lab)]);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>apply_rotations(&amp;t,<sp/>ray_versor,<sp/>px[pixel_Idx(lab)],<sp/>py[pixel_Idx(lab)],<sp/>pz[pixel_Idx(lab)],<sp/>cosb,<sp/>sinb,<sp/>lab);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(radius(lab)<sp/>&lt;<sp/>norm3df(xray(t,<sp/>ray_versor,<sp/>lab,<sp/>cosb,<sp/>sinb)-lab.x0,<sp/>yray(t,<sp/>ray_versor,<sp/>lab,<sp/>cosb,<sp/>sinb)-lab.y0,<sp/>zray(t,<sp/>ray_versor,<sp/>lab.sz)-lab.z0))<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tomo[tomo_Idx()]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>dt<sp/>=<sp/>2*radius(lab)<sp/>/<sp/>(lab.n_ray_points<sp/>+<sp/>1);<sp/></highlight><highlight class="comment">//<sp/>+1<sp/>para<sp/>ficar<sp/>simétrico<sp/>em<sp/>torno<sp/>de<sp/>tm<sp/>e<sp/>pegar<sp/>até<sp/>o<sp/>último<sp/>pedacito,<sp/>dado<sp/>que<sp/>n_ray_points<sp/>vai<sp/>ser<sp/>par<sp/>para<sp/>pessoas<sp/>normais.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>t<sp/>-=<sp/>radius(lab);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>0;<sp/>it<sp/>&lt;<sp/>lab.n_ray_points<sp/>+<sp/>1;<sp/>it++)<sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t<sp/>+=<sp/>dt;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>set_phantom_idxs(xray(t,<sp/>ray_versor,<sp/>lab,<sp/>cosb,<sp/>sinb),<sp/>yray(t,<sp/>ray_versor,<sp/>lab,<sp/>cosb,<sp/>sinb),<sp/>zray(t,<sp/>ray_versor,<sp/>lab.sz),<sp/>&amp;i,<sp/>&amp;j,<sp/>&amp;k,<sp/>lab);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(not_inside_phantom(i,<sp/>j,<sp/>k,<sp/>lab))<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ray_sum<sp/>+=<sp/>phantom[k*lab.nx*lab.ny<sp/>+<sp/>j*lab.nx<sp/>+<sp/>i];</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>tomo[tomo_Idx()]<sp/>=<sp/>ray_sum*dt;<sp/></highlight><highlight class="comment">//<sp/>como<sp/>o<sp/>nosso<sp/>vetor<sp/>direção<sp/>da<sp/>reta<sp/>é<sp/>normalizado,<sp/>uma<sp/>variação<sp/>dt<sp/>na<sp/>variável<sp/>de<sp/>parametrização<sp/>t<sp/>também<sp/>implica<sp/>em<sp/>uma<sp/>variação<sp/>dt<sp/>na<sp/>nossa<sp/>reta.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal">__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>kernel_OPT_ON(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*px,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*py,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*pz,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*beta,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*phantom,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>tomo,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structLab" kindref="compound">Lab</ref><sp/>lab)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n<sp/>=<sp/>size_t(blockDim.x)<sp/>*<sp/>size_t(blockIdx.x)<sp/>+<sp/>size_t(threadIdx.x);<sp/></highlight><highlight class="comment">//<sp/>acho<sp/>melhor<sp/>trocar<sp/>a<sp/>variável<sp/>pela<sp/>conta<sp/>explícita<sp/>quando<sp/>precisar<sp/>para<sp/>economizar<sp/>memória.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_detector;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m;<sp/></highlight><highlight class="comment">//<sp/>índices<sp/>no<sp/>tomograma.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/>j,<sp/>k;<sp/></highlight><highlight class="comment">//<sp/>índices<sp/>do<sp/>raio<sp/>na<sp/>coordenada<sp/>top.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>cosb,<sp/>sinb;<sp/></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist,<sp/>tm,<sp/>t,<sp/>dt;<sp/></highlight><highlight class="comment">//<sp/>t<sp/>é<sp/>a<sp/>variável<sp/>de<sp/>parametrização<sp/>do<sp/>raio<sp/>de<sp/>luz.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ray_versor[3];<sp/></highlight><highlight class="comment">//<sp/>versor<sp/>com<sp/>a<sp/>direção<sp/>do<sp/>raio.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ray_sum<sp/>=<sp/>0;<sp/></highlight><highlight class="comment">//<sp/>soma.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>was_inside_phantom<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>set_tomo_idxs(n,<sp/>&amp;i_detector,<sp/>&amp;m,<sp/>lab);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>cosb<sp/>=<sp/>__cosf(beta[m]);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>sinb<sp/>=<sp/>__sinf(beta[m]);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>apply_rotations(&amp;tm,<sp/>ray_versor,<sp/>px[i_detector],<sp/>py[i_detector],<sp/>pz[i_detector],<sp/>cosb,<sp/>sinb,<sp/>lab);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>dist<sp/>=<sp/>norm3df(2*lab.x,<sp/>2*lab.y,<sp/>2*lab.z);<sp/></highlight><highlight class="comment">//<sp/>falta<sp/>adicionar<sp/>shift<sp/>phantom.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>trocar<sp/>o<sp/>seguint<sp/>if<sp/>por<sp/>funcao:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dist/2<sp/>&lt;<sp/>norm3df(xray(tm,<sp/>ray_versor,<sp/>lab,<sp/>cosb,<sp/>sinb)-lab.x0,<sp/>yray(tm,<sp/>ray_versor,<sp/>lab,<sp/>cosb,<sp/>sinb)-lab.y0,<sp/>zray(tm,<sp/>ray_versor,<sp/>lab.sz)-lab.z0))<sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tomo[n]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>verify<sp/>if<sp/>necessary</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>dt<sp/>=<sp/>dist<sp/>/<sp/>(lab.n_ray_points<sp/>+<sp/>1);<sp/></highlight><highlight class="comment">//<sp/>+1<sp/>para<sp/>ficar<sp/>simétrico<sp/>em<sp/>torno<sp/>de<sp/>tm<sp/>e<sp/>pegar<sp/>até<sp/>o<sp/>último<sp/>pedacito,<sp/>dado<sp/>que<sp/>n_ray_points<sp/>vai<sp/>ser<sp/>par<sp/>para<sp/>pessoas<sp/>normais.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>t<sp/>=<sp/>tm<sp/>-<sp/>dist/2;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>0;<sp/>it<sp/>&lt;<sp/>lab.n_ray_points<sp/>+<sp/>1;<sp/>it++)<sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t<sp/>+=<sp/>dt;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>set_phantom_idxs(xray(t,<sp/>ray_versor,<sp/>lab,<sp/>cosb,<sp/>sinb),<sp/>yray(t,<sp/>ray_versor,<sp/>lab,<sp/>cosb,<sp/>sinb),<sp/>zray(t,<sp/>ray_versor,<sp/>lab.sz),<sp/>&amp;i,<sp/>&amp;j,<sp/>&amp;k,<sp/>lab);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(not_inside_phantom(i,<sp/>j,<sp/>k,<sp/>lab))<sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(was_inside_phantom)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>porque<sp/>phantoms<sp/>são<sp/>cubinhos<sp/>convexos;<sp/>uma<sp/>vez<sp/>fora<sp/>depois<sp/>de<sp/>dentro,<sp/>nunca<sp/>mais<sp/>dentro.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ray_sum<sp/>+=<sp/>phantom[k*lab.nx*lab.ny<sp/>+<sp/>j*lab.nx<sp/>+<sp/>i];</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>was_inside_phantom<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>tomo[n]<sp/>=<sp/>ray_sum*dt;<sp/></highlight><highlight class="comment">//<sp/>como<sp/>o<sp/>nosso<sp/>vetor<sp/>direção<sp/>da<sp/>reta<sp/>é<sp/>normalizado,<sp/>uma<sp/>variação<sp/>dt<sp/>na<sp/>variável<sp/>de<sp/>parametrização<sp/>t<sp/>também<sp/>implica<sp/>em<sp/>uma<sp/>variação<sp/>dt<sp/>na<sp/>nossa<sp/>reta.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>__device__<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>tomo_Idx()<sp/></highlight></codeline>
+<codeline lineno="182"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>blockDim.x<sp/>*<sp/>blockIdx.x<sp/>+<sp/>threadIdx.x;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>__device__<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>pixel_Idx(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structLab" kindref="compound">Lab</ref><sp/>lab)<sp/></highlight></codeline>
+<codeline lineno="187"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tomo_Idx()<sp/>%<sp/>lab.n_detector;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>__device__<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>beta_Idx(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structLab" kindref="compound">Lab</ref><sp/>lab)<sp/></highlight></codeline>
+<codeline lineno="192"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tomo_Idx()<sp/>/<sp/>lab.n_detector;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>__device__<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>radius(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structLab" kindref="compound">Lab</ref><sp/>lab)</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>norm3df(lab.x,<sp/>lab.y,<sp/>lab.z);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>__device__<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xray(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ray_versor[3],<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>cosb,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>sinb)<sp/></highlight></codeline>
+<codeline lineno="202"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(cosb*lab.sx<sp/>-<sp/>sinb*lab.sy)<sp/>+<sp/>(t<sp/>*<sp/>ray_versor[0]);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>__device__<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>yray(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ray_versor[3],<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>cosb,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>sinb)</highlight></codeline>
+<codeline lineno="207"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(sinb*lab.sx<sp/>+<sp/>cosb*lab.sy)<sp/>+<sp/>(t<sp/>*<sp/>ray_versor[1]);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>__device__<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>zray(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ray_versor[3],<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>sz)</highlight></codeline>
+<codeline lineno="212"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sz<sp/>+<sp/>(t<sp/>*<sp/>ray_versor[2]);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>__device__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>apply_rotations(</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*tm,</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ray_versor[3],</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>detector_x,<sp/></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>detector_y,<sp/></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>detector_z,<sp/></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>cosb,</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>sinb,</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structLab" kindref="compound">Lab</ref><sp/>lab)<sp/></highlight></codeline>
+<codeline lineno="225"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist,<sp/>rot_sx,<sp/>rot_sy;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>rot_sx<sp/>=<sp/>cosb*lab.sx<sp/>-<sp/>sinb*lab.sy;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>rot_sy<sp/>=<sp/>sinb*lab.sx<sp/>+<sp/>cosb*lab.sy;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>ray_versor[0]<sp/>=<sp/>(cosb*detector_x<sp/>-<sp/>sinb*detector_y)<sp/>-<sp/>rot_sx;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>ray_versor[1]<sp/>=<sp/>(sinb*detector_x<sp/>+<sp/>cosb*detector_y)<sp/>-<sp/>rot_sy;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>ray_versor[2]<sp/>=<sp/>detector_z<sp/>-<sp/>lab.sz;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/>dist<sp/>=<sp/>norm3df(ray_versor[0],<sp/>ray_versor[1],<sp/>ray_versor[2]);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>ray_versor[0]<sp/>=<sp/>ray_versor[0]<sp/>/<sp/>(dist);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>ray_versor[1]<sp/>=<sp/>ray_versor[1]<sp/>/<sp/>(dist);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>ray_versor[2]<sp/>=<sp/>ray_versor[2]<sp/>/<sp/>(dist);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>*tm<sp/>=<sp/>-<sp/>(rot_sx*ray_versor[0]<sp/>+<sp/>rot_sy*ray_versor[1]<sp/>+<sp/>lab.sz*ray_versor[2]);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>__device__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_tomo_idxs(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*i_detector,<sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*m,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structLab" kindref="compound">Lab</ref><sp/>lab)<sp/></highlight></codeline>
+<codeline lineno="240"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/>*m<sp/>=<sp/>n<sp/>/<sp/>lab.n_detector;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>*i_detector<sp/>=<sp/>n<sp/>%<sp/>lab.n_detector;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>__device__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_phantom_idxs(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*i,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*j,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*k,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structLab" kindref="compound">Lab</ref><sp/>lab)<sp/></highlight></codeline>
+<codeline lineno="246"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dx,<sp/>dy,<sp/>dz;<sp/></highlight><highlight class="comment">//<sp/>usar<sp/>variaveis<sp/>locais<sp/>do<sp/>kernel<sp/>ao<sp/>inves<sp/>pra<sp/>não<sp/>ter<sp/>que<sp/>calcular<sp/>toda<sp/>vez.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/>dx<sp/>=<sp/>2*lab.x<sp/>/<sp/>(lab.nx);<sp/></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/>dy<sp/>=<sp/>2*lab.y<sp/>/<sp/>(lab.ny);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/>dz<sp/>=<sp/>2*lab.z<sp/>/<sp/>(lab.nz);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>*i<sp/>=<sp/>std::round((x-lab.x0)<sp/>/<sp/>dx)<sp/>+<sp/>lab.nx/2;<sp/></highlight><highlight class="comment">//<sp/>arrumar<sp/>para<sp/>evitar<sp/>overflow;<sp/>no<sp/>mínimo<sp/>provar<sp/>que<sp/>não<sp/>vai<sp/>acontecer<sp/>overflow<sp/>não<sp/>importa<sp/>a<sp/>entrada.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/>*j<sp/>=<sp/>std::round((y-lab.y0)<sp/>/<sp/>dy)<sp/>+<sp/>lab.ny/2;<sp/></highlight><highlight class="comment">//<sp/>arrumar<sp/>para<sp/>evitar<sp/>overflow;<sp/>no<sp/>mínimo<sp/>provar<sp/>que<sp/>não<sp/>vai<sp/>acontecer<sp/>overflow<sp/>não<sp/>importa<sp/>a<sp/>entrada.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/>*k<sp/>=<sp/>std::round((z-lab.z0)<sp/>/<sp/>dz)<sp/>+<sp/>lab.nz/2;<sp/></highlight><highlight class="comment">//<sp/>arrumar<sp/>para<sp/>evitar<sp/>overflow;<sp/>no<sp/>mínimo<sp/>provar<sp/>que<sp/>não<sp/>vai<sp/>acontecer<sp/>overflow<sp/>não<sp/>importa<sp/>a<sp/>entrada.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>__device__<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>not_inside_phantom(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structLab" kindref="compound">Lab</ref><sp/>lab)<sp/></highlight><highlight class="comment">//<sp/>criar<sp/>uma<sp/>not_inside<sp/>usando<sp/>floats<sp/>x,<sp/>y,<sp/>z<sp/>para<sp/>evitar<sp/>overflow<sp/>dos<sp/>indices<sp/>i,<sp/>j,<sp/>k.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>&gt;=<sp/>lab.nx)<sp/>{</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(j<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(j<sp/>&gt;=<sp/>lab.ny)<sp/>{</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(k<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(k<sp/>&gt;=<sp/>lab.nz)<sp/>{</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels/radon_kernel.cu"/>
+  </compounddef>
+</doxygen>

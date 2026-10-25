@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__CUDART__SURFACE" kind="group">
+    <compoundname>CUDART_SURFACE</compoundname>
+    <title>Surface Reference Management [DEPRECATED]</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__CUDART__SURFACE_1ga12d6b8861b95f3c581d2182752b3b89d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaBindSurfaceToArray</definition>
+        <argsstring>(const struct surfaceReference *surfref, cudaArray_const_t array, const struct cudaChannelFormatDesc *desc)</argsstring>
+        <name>cudaBindSurfaceToArray</name>
+        <param>
+          <type>const struct surfaceReference *</type>
+          <declname>surfref</declname>
+        </param>
+        <param>
+          <type>cudaArray_const_t</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>const struct cudaChannelFormatDesc *</type>
+          <declname>desc</declname>
+        </param>
+        <briefdescription>
+<para>Binds an array to a surface. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000021"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para>
+<para>Binds the CUDA array <computeroutput>array</computeroutput> to the surface reference <computeroutput>surfref</computeroutput>. <computeroutput>desc</computeroutput> describes how the memory is interpreted when fetching values from the surface. Any CUDA array previously bound to <computeroutput>surfref</computeroutput> is unbound.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>surfref</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Surface to bind </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Memory array on device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>desc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Channel format</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, ::cudaErrorInvalidSurface \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para>cudaBindSurfaceToArray (C++ API), cudaBindSurfaceToArray (C++ API, inherited channel descriptor), <ref refid="group__CUDART__SURFACE_1ga61c4fc9cbea3426309cf0720f521eb25" kindref="member">cudaGetSurfaceReference</ref>, ::cuSurfRefSetArray </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="7848" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="7848" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__SURFACE_1ga61c4fc9cbea3426309cf0720f521eb25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGetSurfaceReference</definition>
+        <argsstring>(const struct surfaceReference **surfref, const void *symbol)</argsstring>
+        <name>cudaGetSurfaceReference</name>
+        <param>
+          <type>const struct surfaceReference **</type>
+          <declname>surfref</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>symbol</declname>
+        </param>
+        <briefdescription>
+<para>Get the surface reference associated with a symbol. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000022"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para>
+<para>Returns in <computeroutput>*surfref</computeroutput> the structure associated to the surface reference defined by symbol <computeroutput>symbol</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>surfref</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Surface reference associated with symbol </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>symbol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Surface to get reference for</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidSurface \notefnerr \note_string_api_deprecation_50 \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__SURFACE_1ga12d6b8861b95f3c581d2182752b3b89d" kindref="member">cudaBindSurfaceToArray (C API)</ref>, ::cuModuleGetSurfRef </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="7873" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="7873" declcolumn="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>___MANBRIEF___ surface reference management functions of the CUDA runtime API (___CURRENT_FILE___) ___ENDMANBRIEF___</para>
+<para>This section describes the low level surface reference management functions of the CUDA runtime application programming interface.</para>
+<para>Some functions have overloaded C++ API template versions documented separately in the <ref refid="group__CUDART__HIGHLEVEL" kindref="compound">C++ API Routines</ref> module. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

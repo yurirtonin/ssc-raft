@@ -1,0 +1,561 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structProcess" kind="struct" language="C++" prot="public">
+    <compoundname>Process</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structProcess_1a11695a0e05b45b4d5e97a84968157e03" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Process::total_req_size_mem</definition>
+        <argsstring></argsstring>
+        <name>total_req_size_mem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="228" column="12" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1af1814bf8f2cad0fe3c320472634d265b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Process::process</definition>
+        <argsstring></argsstring>
+        <name>process</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="233" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1abdb345f89879c44976e9ecf3b9e30fa9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Process::gpu</definition>
+        <argsstring></argsstring>
+        <name>gpu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="233" column="17" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1a305e186d8afc5baec3ec706ce0c085d0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Process::tomobatch_size</definition>
+        <argsstring></argsstring>
+        <name>tomobatch_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="236" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1a068c6a6617e8aba4e66016cba2d9b38e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Process::objbatch_size</definition>
+        <argsstring></argsstring>
+        <name>objbatch_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="236" column="24" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1aa9546d9b09f4510f246c4a45aabc1238" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Process::gpu_proc_ind</definition>
+        <argsstring></argsstring>
+        <name>gpu_proc_ind</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="236" column="38" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1ac33edf5b86e9b9a80af32b31ed6b9f64" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Process::tomo_index</definition>
+        <argsstring></argsstring>
+        <name>tomo_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="239" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="239" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1a3d274a8c1c058a9d2d33485a889ebf9d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Process::filter_index</definition>
+        <argsstring></argsstring>
+        <name>filter_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="239" column="20" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="239" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1a63c991927d9e287b811af313a32dca25" prot="public" static="no" mutable="no">
+        <type>long long int</type>
+        <definition>long long int Process::tomoptr_index</definition>
+        <argsstring></argsstring>
+        <name>tomoptr_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="240" column="19" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="240" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1a091d754763cf798d2b930c2dc49f86b5" prot="public" static="no" mutable="no">
+        <type>long long int</type>
+        <definition>long long int Process::tomoptr_size</definition>
+        <argsstring></argsstring>
+        <name>tomoptr_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="240" column="33" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="240" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1adfe70fe237939dbda7ec1e7bbb78faec" prot="public" static="no" mutable="no">
+        <type>long long int</type>
+        <definition>long long int Process::filterptr_index</definition>
+        <argsstring></argsstring>
+        <name>filterptr_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="240" column="46" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="240" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1a7323c5241d1307dc486d0104851ffce5" prot="public" static="no" mutable="no">
+        <type>long long int</type>
+        <definition>long long int Process::filterptr_size</definition>
+        <argsstring></argsstring>
+        <name>filterptr_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="240" column="62" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="240" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1aec50695b5aa17ca188cb514ebde36ed2" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Process::tomo_pos</definition>
+        <argsstring></argsstring>
+        <name>tomo_pos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="241" column="11" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1a14d33826e4253bbe5ca299ddfe33ff7a" prot="public" static="no" mutable="no">
+        <type>long long int</type>
+        <definition>long long int Process::objptr_index</definition>
+        <argsstring></argsstring>
+        <name>objptr_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="244" column="19" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1a785d4f1f5775b67b5fe51018271b05c6" prot="public" static="no" mutable="no">
+        <type>long long int</type>
+        <definition>long long int Process::objptr_size</definition>
+        <argsstring></argsstring>
+        <name>objptr_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="244" column="32" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1a4c76f73cc4d39b206a72c4ef75542383" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Process::obj_pos</definition>
+        <argsstring></argsstring>
+        <name>obj_pos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="245" column="11" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1a06093894171235fe921c728086a31b4b" prot="public" static="no" mutable="no">
+        <type>long long int</type>
+        <definition>long long int Process::n_recon</definition>
+        <argsstring></argsstring>
+        <name>n_recon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="247" column="19" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="247" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1a4d6cb50897e3ec4ca44219d19ebebf0a" prot="public" static="no" mutable="no">
+        <type>long long int</type>
+        <definition>long long int Process::n_recon_pad</definition>
+        <argsstring></argsstring>
+        <name>n_recon_pad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="247" column="27" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="247" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1a95ac9e6bd21fb91623a1649e24322d17" prot="public" static="no" mutable="no">
+        <type>long long int</type>
+        <definition>long long int Process::n_tomo</definition>
+        <argsstring></argsstring>
+        <name>n_tomo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="247" column="39" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="247" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1a044f03abcc18aa926a3aafdb07bfa69c" prot="public" static="no" mutable="no">
+        <type>long long int</type>
+        <definition>long long int Process::n_filter</definition>
+        <argsstring></argsstring>
+        <name>n_filter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="247" column="46" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="247" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1acc867e96052613b31af008e3d5008e72" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Process::i</definition>
+        <argsstring></argsstring>
+        <name>i</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="248" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1a28cf2b41e26400b9dc765cc7f73422fd" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Process::i_gpu</definition>
+        <argsstring></argsstring>
+        <name>i_gpu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="248" column="11" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1afccdb5dbde7e0cb59bc20cf891c8ef46" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Process::zi</definition>
+        <argsstring></argsstring>
+        <name>zi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="248" column="17" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1aa6ef3170c50d671083f4636802b57b5c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Process::z_filter</definition>
+        <argsstring></argsstring>
+        <name>z_filter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="248" column="20" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1ad7a44edc4cda5e818af1b19bd24b7cfd" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Process::z_filter_pad</definition>
+        <argsstring></argsstring>
+        <name>z_filter_pad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="248" column="29" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1ac2d2d03340a0b1ee8409a9c95df01c29" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Process::z_proj</definition>
+        <argsstring></argsstring>
+        <name>z_proj</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="248" column="42" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1abe983494fa98de4ec749722caa495b18" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Process::z_recon</definition>
+        <argsstring></argsstring>
+        <name>z_recon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="248" column="49" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1ae1eac82c5c477dc34c587cd5e9397c2a" prot="public" static="no" mutable="no">
+        <type>long long int</type>
+        <definition>long long int Process::n_proj</definition>
+        <argsstring></argsstring>
+        <name>n_proj</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="249" column="19" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="249" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1a4921564e786db3c2039a1befd4d7f333" prot="public" static="no" mutable="no">
+        <type>long long int</type>
+        <definition>long long int Process::n_proj_pad</definition>
+        <argsstring></argsstring>
+        <name>n_proj_pad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="249" column="26" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="249" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1aa8035d404c433e062a35d26363ee35a0" prot="public" static="no" mutable="no">
+        <type>long long int</type>
+        <definition>long long int Process::n_filter_pad</definition>
+        <argsstring></argsstring>
+        <name>n_filter_pad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="249" column="37" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="249" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1a49ec5fc4ea6bb430e707fb93735d091e" prot="public" static="no" mutable="no">
+        <type>long long int</type>
+        <definition>long long int Process::idx_proj</definition>
+        <argsstring></argsstring>
+        <name>idx_proj</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="250" column="19" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1a91bd6e850adb4b30d869af2b03f9135b" prot="public" static="no" mutable="no">
+        <type>long long int</type>
+        <definition>long long int Process::idx_proj_pad</definition>
+        <argsstring></argsstring>
+        <name>idx_proj_pad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="250" column="28" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1a57e85c42d31b7861b4fe3c421e8aba24" prot="public" static="no" mutable="no">
+        <type>long long int</type>
+        <definition>long long int Process::idx_proj_max</definition>
+        <argsstring></argsstring>
+        <name>idx_proj_max</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="250" column="41" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1abaccce0fe0d76b229ed355e88c8558f2" prot="public" static="no" mutable="no">
+        <type>long long int</type>
+        <definition>long long int Process::idx_recon</definition>
+        <argsstring></argsstring>
+        <name>idx_recon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="250" column="54" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1a50aca679b77a8efaf99046850f36e454" prot="public" static="no" mutable="no">
+        <type>long long int</type>
+        <definition>long long int Process::idx_recon_pad</definition>
+        <argsstring></argsstring>
+        <name>idx_recon_pad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="250" column="64" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1ad536965024a1a07672980daba87d8ee6" prot="public" static="no" mutable="no">
+        <type>long long int</type>
+        <definition>long long int Process::idx_filter</definition>
+        <argsstring></argsstring>
+        <name>idx_filter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="250" column="78" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1a36eceb2b3c509cc88ba2ea124c1518cc" prot="public" static="no" mutable="no">
+        <type>long long int</type>
+        <definition>long long int Process::idx_filter_pad</definition>
+        <argsstring></argsstring>
+        <name>idx_filter_pad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="250" column="89" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1a8b41d283137d25b27be615b5cb29a23a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Process::z_ph</definition>
+        <argsstring></argsstring>
+        <name>z_ph</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="251" column="11" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="251" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structProcess_1a75f2de65b8c991fcc062ac6d2f041ef3" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Process::z_det</definition>
+        <argsstring></argsstring>
+        <name>z_det</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="251" column="16" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="251" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="227" column="1" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="227" bodyend="252"/>
+    <listofallmembers>
+      <member refid="structProcess_1a3d274a8c1c058a9d2d33485a889ebf9d" prot="public" virt="non-virtual"><scope>Process</scope><name>filter_index</name></member>
+      <member refid="structProcess_1adfe70fe237939dbda7ec1e7bbb78faec" prot="public" virt="non-virtual"><scope>Process</scope><name>filterptr_index</name></member>
+      <member refid="structProcess_1a7323c5241d1307dc486d0104851ffce5" prot="public" virt="non-virtual"><scope>Process</scope><name>filterptr_size</name></member>
+      <member refid="structProcess_1abdb345f89879c44976e9ecf3b9e30fa9" prot="public" virt="non-virtual"><scope>Process</scope><name>gpu</name></member>
+      <member refid="structProcess_1aa9546d9b09f4510f246c4a45aabc1238" prot="public" virt="non-virtual"><scope>Process</scope><name>gpu_proc_ind</name></member>
+      <member refid="structProcess_1acc867e96052613b31af008e3d5008e72" prot="public" virt="non-virtual"><scope>Process</scope><name>i</name></member>
+      <member refid="structProcess_1a28cf2b41e26400b9dc765cc7f73422fd" prot="public" virt="non-virtual"><scope>Process</scope><name>i_gpu</name></member>
+      <member refid="structProcess_1ad536965024a1a07672980daba87d8ee6" prot="public" virt="non-virtual"><scope>Process</scope><name>idx_filter</name></member>
+      <member refid="structProcess_1a36eceb2b3c509cc88ba2ea124c1518cc" prot="public" virt="non-virtual"><scope>Process</scope><name>idx_filter_pad</name></member>
+      <member refid="structProcess_1a49ec5fc4ea6bb430e707fb93735d091e" prot="public" virt="non-virtual"><scope>Process</scope><name>idx_proj</name></member>
+      <member refid="structProcess_1a57e85c42d31b7861b4fe3c421e8aba24" prot="public" virt="non-virtual"><scope>Process</scope><name>idx_proj_max</name></member>
+      <member refid="structProcess_1a91bd6e850adb4b30d869af2b03f9135b" prot="public" virt="non-virtual"><scope>Process</scope><name>idx_proj_pad</name></member>
+      <member refid="structProcess_1abaccce0fe0d76b229ed355e88c8558f2" prot="public" virt="non-virtual"><scope>Process</scope><name>idx_recon</name></member>
+      <member refid="structProcess_1a50aca679b77a8efaf99046850f36e454" prot="public" virt="non-virtual"><scope>Process</scope><name>idx_recon_pad</name></member>
+      <member refid="structProcess_1a044f03abcc18aa926a3aafdb07bfa69c" prot="public" virt="non-virtual"><scope>Process</scope><name>n_filter</name></member>
+      <member refid="structProcess_1aa8035d404c433e062a35d26363ee35a0" prot="public" virt="non-virtual"><scope>Process</scope><name>n_filter_pad</name></member>
+      <member refid="structProcess_1ae1eac82c5c477dc34c587cd5e9397c2a" prot="public" virt="non-virtual"><scope>Process</scope><name>n_proj</name></member>
+      <member refid="structProcess_1a4921564e786db3c2039a1befd4d7f333" prot="public" virt="non-virtual"><scope>Process</scope><name>n_proj_pad</name></member>
+      <member refid="structProcess_1a06093894171235fe921c728086a31b4b" prot="public" virt="non-virtual"><scope>Process</scope><name>n_recon</name></member>
+      <member refid="structProcess_1a4d6cb50897e3ec4ca44219d19ebebf0a" prot="public" virt="non-virtual"><scope>Process</scope><name>n_recon_pad</name></member>
+      <member refid="structProcess_1a95ac9e6bd21fb91623a1649e24322d17" prot="public" virt="non-virtual"><scope>Process</scope><name>n_tomo</name></member>
+      <member refid="structProcess_1a4c76f73cc4d39b206a72c4ef75542383" prot="public" virt="non-virtual"><scope>Process</scope><name>obj_pos</name></member>
+      <member refid="structProcess_1a068c6a6617e8aba4e66016cba2d9b38e" prot="public" virt="non-virtual"><scope>Process</scope><name>objbatch_size</name></member>
+      <member refid="structProcess_1a14d33826e4253bbe5ca299ddfe33ff7a" prot="public" virt="non-virtual"><scope>Process</scope><name>objptr_index</name></member>
+      <member refid="structProcess_1a785d4f1f5775b67b5fe51018271b05c6" prot="public" virt="non-virtual"><scope>Process</scope><name>objptr_size</name></member>
+      <member refid="structProcess_1af1814bf8f2cad0fe3c320472634d265b" prot="public" virt="non-virtual"><scope>Process</scope><name>process</name></member>
+      <member refid="structProcess_1ac33edf5b86e9b9a80af32b31ed6b9f64" prot="public" virt="non-virtual"><scope>Process</scope><name>tomo_index</name></member>
+      <member refid="structProcess_1aec50695b5aa17ca188cb514ebde36ed2" prot="public" virt="non-virtual"><scope>Process</scope><name>tomo_pos</name></member>
+      <member refid="structProcess_1a305e186d8afc5baec3ec706ce0c085d0" prot="public" virt="non-virtual"><scope>Process</scope><name>tomobatch_size</name></member>
+      <member refid="structProcess_1a63c991927d9e287b811af313a32dca25" prot="public" virt="non-virtual"><scope>Process</scope><name>tomoptr_index</name></member>
+      <member refid="structProcess_1a091d754763cf798d2b930c2dc49f86b5" prot="public" virt="non-virtual"><scope>Process</scope><name>tomoptr_size</name></member>
+      <member refid="structProcess_1a11695a0e05b45b4d5e97a84968157e03" prot="public" virt="non-virtual"><scope>Process</scope><name>total_req_size_mem</name></member>
+      <member refid="structProcess_1a75f2de65b8c991fcc062ac6d2f041ef3" prot="public" virt="non-virtual"><scope>Process</scope><name>z_det</name></member>
+      <member refid="structProcess_1aa6ef3170c50d671083f4636802b57b5c" prot="public" virt="non-virtual"><scope>Process</scope><name>z_filter</name></member>
+      <member refid="structProcess_1ad7a44edc4cda5e818af1b19bd24b7cfd" prot="public" virt="non-virtual"><scope>Process</scope><name>z_filter_pad</name></member>
+      <member refid="structProcess_1a8b41d283137d25b27be615b5cb29a23a" prot="public" virt="non-virtual"><scope>Process</scope><name>z_ph</name></member>
+      <member refid="structProcess_1ac2d2d03340a0b1ee8409a9c95df01c29" prot="public" virt="non-virtual"><scope>Process</scope><name>z_proj</name></member>
+      <member refid="structProcess_1abe983494fa98de4ec749722caa495b18" prot="public" virt="non-virtual"><scope>Process</scope><name>z_recon</name></member>
+      <member refid="structProcess_1afccdb5dbde7e0cb59bc20cf891c8ef46" prot="public" virt="non-virtual"><scope>Process</scope><name>zi</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

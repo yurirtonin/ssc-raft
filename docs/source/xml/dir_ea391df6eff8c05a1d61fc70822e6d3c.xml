@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_ea391df6eff8c05a1d61fc70822e6d3c" kind="dir">
+    <compoundname>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src</compoundname>
+    <innerdir refid="dir_b3259e56b4493d207b9a8bcc87842d3f">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common</innerdir>
+    <innerdir refid="dir_e3b6d228123555e09286042eeefa01a1">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries</innerdir>
+    <innerdir refid="dir_4bcd055e0d8316724b19bbb106da6367">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/pipelines</innerdir>
+    <innerdir refid="dir_8e72f0d12770df26bb0dfc063f65c750">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/"/>
+  </compounddef>
+</doxygen>

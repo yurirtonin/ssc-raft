@@ -175,9 +175,9 @@ def shift_slices_via_fourier_transform(data,shift_y, shift_x):
     XX, YY = numpy.meshgrid(ft_freq_x,ft_freq_y)
     
     exponential_part = numpy.exp(1j * 2 * numpy.pi * (shift_y[:, numpy.newaxis, numpy.newaxis] * YY + shift_x[:, numpy.newaxis, numpy.newaxis] * XX))
-    shifted_data = numpy.fft.ifft2(numpy.fft.ifftshift(ft_data*exponential_part))
+    shifted_data = numpy.fft.ifft2(numpy.fft.ifftshift(ft_data*exponential_part, axes=(1,2)))
 
-    return numpy.abs(shifted_data)
+    return shifted_data
 
 
 def apply_shifts(data,shifts, method='scipy',cpus=32,turn_off_vertical=False,remove_null_borders=True):
@@ -194,10 +194,12 @@ def apply_shifts(data,shifts, method='scipy',cpus=32,turn_off_vertical=False,rem
             results = list(tqdm(executor.map(call_shift, zip(data,shifts[:,0],shifts[:,1])),total=data.shape[0],desc='Shifting in progress...'))
             for counter, result in enumerate(results):
                 data[counter, :, :] = result
-    elif method == 'fourier_parallel':
+    elif method == 'fourier':
         data = shift_slices_via_fourier_transform(data,-shifts[:,0],-shifts[:,1]) # not filling in values with 0
+        data = np.real(data)
     elif method == 'fourier_parallel':
         data = shift_slices_via_fourier_transform_parallel(data,-shifts[:,0],-shifts[:,1],fill_in = 0)
+        data = np.real(data)
     else:
         sys.exit('Select alignment method correctly')
 
@@ -208,7 +210,7 @@ def apply_shifts(data,shifts, method='scipy',cpus=32,turn_off_vertical=False,rem
     return data
 
 def reproject(tomogram, angles,radon_method='raft',cpus=1,gpus=[0], pixel = 1):
-    logger.info('Reprojecting...')
+    logger.info(f'Reprojecting with {radon_method}...')
     if radon_method == 'raft':
         tomogram = radon_RT(tomogram, angles, gpus, pixel)
         tomogram = numpy.swapaxes(tomogram,0,1)
@@ -219,7 +221,7 @@ def reproject(tomogram, angles,radon_method='raft',cpus=1,gpus=[0], pixel = 1):
     return tomogram
 
 def reconstruct_and_reproject(data,angles,dic,tomo_method='raft',radon_method='raft',cpus=1,gpus=[0]):
-    logger.info('Reconstructing...')
+    logger.info(f'Reconstructing with {tomo_method} and reprojecting with {radon_method}...')
    
     if tomo_method == 'raft_fbp':
         tomo = fbp(numpy.swapaxes(data,0,1), dic = dic["algorithm_dic"])
@@ -228,8 +230,12 @@ def reconstruct_and_reproject(data,angles,dic,tomo_method='raft',radon_method='r
         tomo = em(numpy.swapaxes(data,0,1), dic = dic["algorithm_dic"])
     elif tomo_method == 'tomopy':
         tomo = tomopy.recon(data,angles,algorithm='fbp',ncore=cpus,filter_name='ramlak')
+    elif 'tomopy_' in tomo_method:
+        algo = tomo_method.split('_')[1]
+        tomo = tomopy.recon(data,angles,algorithm=algo,ncore=cpus,filter_name='ramlak')
     else:
         raise ValueError('Select a proper method for tomographic reconstruction: raft_fbp, raft_em or tomopy')
+    
     reprojected_data = reproject(tomo,angles,radon_method,cpus,gpus, dic["algorithm_dic"]["detectorPixel[m]"])
     return tomo, reprojected_data
 
@@ -435,12 +441,14 @@ def iterative_reprojection(original_sinogram, angles,
                                 cumulative_shifts,
                                 plot_type=plot_type) # plot initial recon
 
-    iter_count = 0 
     # descreasing list from max_downsampling to 1
     for downsampling in [int(max_downsampling/(2**i)) for i in range(0,int(numpy.log2(max_downsampling)+1))]: 
         logger.info(f'Downsampling data {downsampling} times...')
         
+        iter_count = 0 
+        
         while iter_count < max_iterations:
+
             logger.info(f'Iteration {iter_count}')
 
             logger.info(f'Finding shifts...')
@@ -471,13 +479,14 @@ def iterative_reprojection(original_sinogram, angles,
                 logger.info(f'All pixel shifts smaller than {threshold}. Exiting algorithm.')
                 break # exit while loop
             
+
             logger.info('Applying shifts...')
             sinogram = apply_shifts(original_sinogram.copy(),
                                     cumulative_shifts,
                                     method=apply_shift_method,
                                     turn_off_vertical=turn_off_vertical, 
                                     remove_null_borders=remove_null_borders)
-            sinogram = check_sinogram_shape(sinogram)
+
 
             logger.info('Reconstructing and reprojecting...')
             if using_phase_derivative:
@@ -494,13 +503,13 @@ def iterative_reprojection(original_sinogram, angles,
                                                                        tomo_method=tomo_method,
                                                                        radon_method=radon_method)
                 
-            fig, ax = plt.subplots(1,3,figsize=(12,4),dpi=200)
-            im0 = ax[0].imshow(sinogram[0])
-            fig.colorbar(im0,ax=ax[0])
-            im1=ax[1].imshow(reprojected_sinogram[0])
-            fig.colorbar(im1,ax=ax[1])            
-            im2=ax[2].imshow(numpy.angle(reprojected_sinogram[0]))
-            fig.colorbar(im2,ax=ax[2])
+            # fig, ax = plt.subplots(1,3,figsize=(12,4),dpi=200)
+            # im0 = ax[0].imshow(sinogram[0])
+            # fig.colorbar(im0,ax=ax[0])
+            # im1=ax[1].imshow(reprojected_sinogram[0])
+            # fig.colorbar(im1,ax=ax[1])            
+            # im2=ax[2].imshow(tomo[:,tomo.shape[1]//2,:])
+            # fig.colorbar(im2,ax=ax[2])
             
             if plot:
                 plot_iterative_reprojection(tomo,sinogram,dic["algorithm_dic"]['angles[rad]'],shifts,cumulative_shifts,plot_type=plot_type)
@@ -515,6 +524,6 @@ def iterative_reprojection(original_sinogram, angles,
     elif(tomo_method == 'raft_em'):
         aligned_tomo = em(numpy.swapaxes(sinogram,0,1), dic = dic["algorithm_dic"])
     elif(tomo_method == 'tomopy'):
-        aligned_tomo = tomopy.recon(numpy.swapaxes(sinogram,0,1),angles,algorithm='fbp',ncore=n_cpus,filter_name='ramlak')
+        aligned_tomo = tomopy.recon(sinogram,angles,algorithm='fbp',ncore=n_cpus,filter_name='ramlak')
 
     return aligned_tomo, sinogram, cumulative_shifts, reprojected_sinogram

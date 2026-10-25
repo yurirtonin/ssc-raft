@@ -1,0 +1,810 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="fdk__fourier_8cu" kind="file" language="C++">
+    <compoundname>fdk_fourier.cu</compoundname>
+    <includes refid="fdk_8hpp" local="yes">geometries/conebeam/fdk.hpp</includes>
+    <includes refid="logerror_8hpp" local="yes">common/logerror.hpp</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">cufft.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <incdepgraph>
+      <node id="25">
+        <label>helper_cuda.h</label>
+        <link refid="helper__cuda_8h_source"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu</label>
+        <link refid="fdk__fourier_8cu"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>cuda_runtime_api.h</label>
+        <link refid="cuda__runtime__api_8h_source"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>cuda_device_runtime_api.h</label>
+      </node>
+      <node id="27">
+        <label>helper_string.h</label>
+        <link refid="helper__string_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>assert.h</label>
+      </node>
+      <node id="4">
+        <label>cufft.h</label>
+      </node>
+      <node id="26">
+        <label>stdint.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="31">
+        <label>cassert</label>
+      </node>
+      <node id="15">
+        <label>vector_types.h</label>
+      </node>
+      <node id="28">
+        <label>string</label>
+      </node>
+      <node id="19">
+        <label>builtin_types.h</label>
+      </node>
+      <node id="21">
+        <label>common/logerror.hpp</label>
+        <link refid="logerror_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>fstream</label>
+      </node>
+      <node id="14">
+        <label>driver_types.h</label>
+      </node>
+      <node id="12">
+        <label>common/configs.hpp</label>
+        <link refid="configs_8hpp_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>string.h</label>
+      </node>
+      <node id="7">
+        <label>future</label>
+      </node>
+      <node id="10">
+        <label>vector</label>
+      </node>
+      <node id="13">
+        <label>complex.h</label>
+      </node>
+      <node id="2">
+        <label>geometries/conebeam/fdk.hpp</label>
+        <link refid="fdk_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>sstream</label>
+      </node>
+      <node id="22">
+        <label>cuComplex.h</label>
+      </node>
+      <node id="9">
+        <label>time.h</label>
+      </node>
+      <node id="33">
+        <label>math.h</label>
+      </node>
+      <node id="11">
+        <label>iostream</label>
+      </node>
+      <node id="29">
+        <label>strings.h</label>
+      </node>
+      <node id="16">
+        <label>cstddef</label>
+      </node>
+      <node id="18">
+        <label>crt/host_defines.h</label>
+      </node>
+      <node id="23">
+        <label>cuda.h</label>
+      </node>
+      <node id="8">
+        <label>thread</label>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="fdk__fourier_8cu_1a887f977c70334f0daadbc4dcf286ea6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ void</type>
+        <definition>__host__ void fft</definition>
+        <argsstring>(Lab lab, float *proj, cufftComplex *signal, float *W, Process process)</argsstring>
+        <name>fft</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>proj</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>signal</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>W</declname>
+        </param>
+        <param>
+          <type><ref refid="structProcess" kindref="compound">Process</ref></type>
+          <declname>process</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" line="8" column="15" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" bodystart="8" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk__fourier_8cu_1a91dfe3ca590bcfba2b4c7605e2232bf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void signal_save</definition>
+        <argsstring>(Lab lab, float *proj, cufftComplex *signal, Process process)</argsstring>
+        <name>signal_save</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>proj</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>signal</declname>
+        </param>
+        <param>
+          <type><ref refid="structProcess" kindref="compound">Process</ref></type>
+          <declname>process</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" line="37" column="17" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" bodystart="37" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk__fourier_8cu_1af7afb0784f8e91253dc6675de52f32f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void signal_filter</definition>
+        <argsstring>(Lab lab, float *W, cufftComplex *signal, Process process)</argsstring>
+        <name>signal_filter</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>W</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>signal</declname>
+        </param>
+        <param>
+          <type><ref refid="structProcess" kindref="compound">Process</ref></type>
+          <declname>process</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" line="55" column="17" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" bodystart="55" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk__fourier_8cu_1a60fd026eadbc582aa6f99330b30f0ed6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void signal_inv</definition>
+        <argsstring>(Lab lab, float *Q, cufftComplex *signal, Process process)</argsstring>
+        <name>signal_inv</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>Q</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>signal</declname>
+        </param>
+        <param>
+          <type><ref refid="structProcess" kindref="compound">Process</ref></type>
+          <declname>process</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" line="68" column="17" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" bodystart="68" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk__fourier_8cu_1afcf14206274f773aa98cb218306394e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__device__ void</type>
+        <definition>__device__ void set_filter_idxs</definition>
+        <argsstring>(long long int n, int *i, int *j, int *k, Lab lab, Process process)</argsstring>
+        <name>set_filter_idxs</name>
+        <param>
+          <type>long long int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type><ref refid="structProcess" kindref="compound">Process</ref></type>
+          <declname>process</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" line="80" column="17" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" bodystart="80" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk__fourier_8cu_1a595b5c2a519ec97755a6b5eeb7955fcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void filt_Ramp</definition>
+        <argsstring>(Lab lab, float *W)</argsstring>
+        <name>filt_Ramp</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>W</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" line="91" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" bodystart="91" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk__fourier_8cu_1afc9843e24e30d73f6802eeb68150b488" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void filt_W</definition>
+        <argsstring>(Lab lab, float *W)</argsstring>
+        <name>filt_W</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>W</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" line="110" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" bodystart="110" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk__fourier_8cu_1ad33c26eefa8107716b3e71bb28687200" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void filt_Gaussian</definition>
+        <argsstring>(Lab lab, float *W)</argsstring>
+        <name>filt_Gaussian</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>W</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" line="129" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" bodystart="129" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk__fourier_8cu_1acb0f5c09ad649263cd85592bcaae0ce5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void filt_Lorentz</definition>
+        <argsstring>(Lab lab, float *W)</argsstring>
+        <name>filt_Lorentz</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>W</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" line="149" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" bodystart="149" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk__fourier_8cu_1a9db01179afd09892f3e92286d2ea7e8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void filt_Cosine</definition>
+        <argsstring>(Lab lab, float *W)</argsstring>
+        <name>filt_Cosine</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>W</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" line="169" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" bodystart="169" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk__fourier_8cu_1a27780943daadb8bfb073fc0aee8d8006" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void filt_Rectangle</definition>
+        <argsstring>(Lab lab, float *W)</argsstring>
+        <name>filt_Rectangle</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>W</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" line="188" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" bodystart="188" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk__fourier_8cu_1aec3a5e7706a538d9355685ff18b6d7a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void filt_Hann</definition>
+        <argsstring>(Lab lab, float *W)</argsstring>
+        <name>filt_Hann</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>W</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" line="216" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" bodystart="216" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="fdk__fourier_8cu_1a85b370cdbc11d1c7b355749d587a48e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void filt_Hamming</definition>
+        <argsstring>(Lab lab, float *W)</argsstring>
+        <name>filt_Hamming</name>
+        <param>
+          <type><ref refid="structLab" kindref="compound">Lab</ref></type>
+          <declname>lab</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>W</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" line="236" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu" bodystart="236" bodyend="253"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;geometries/conebeam/fdk.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;common/logerror.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cufft.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">__host__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>fft(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>proj,<sp/>cufftComplex*<sp/>signal,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>W,<sp/><ref refid="structProcess" kindref="compound">Process</ref><sp/>process){</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>npad<sp/>=<sp/>lab.npfh;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>batch_pad<sp/>=<sp/>process.z_filter_pad*lab.nbeta;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Npad<sp/>=<sp/>process.n_filter_pad;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_threads<sp/>=<sp/>NUM_THREADS;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_blocks_pad<sp/><sp/>=<sp/>Npad/n_threads<sp/>+<sp/>(Npad<sp/>%<sp/>n_threads<sp/>==<sp/>0<sp/>?<sp/>0:1);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>HANDLE_ERROR(<ref refid="group__CUDART__DEVICE_1ga7b63629909800b614427aae92b22d606" kindref="member">cudaSetDevice</ref>(process.i_gpu));</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>vpad[]<sp/>=<sp/>{npad};</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>cufftHandle<sp/>plan;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>HANDLE_FFTERROR(cufftPlanMany(&amp;plan,<sp/>1,<sp/>vpad,<sp/>vpad,<sp/>1,<sp/>npad,<sp/>vpad,<sp/>1,<sp/>npad,<sp/>CUFFT_C2C,<sp/>batch_pad));</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Calculate<sp/>Signal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>signal_save&lt;&lt;&lt;n_blocks_pad,<sp/>n_threads&gt;&gt;&gt;(lab,<sp/>proj,<sp/>signal,<sp/>process);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>HANDLE_FFTERROR(cufftExecC2C(plan,(cufftComplex*)<sp/>signal,(cufftComplex*)<sp/>signal,<sp/>CUFFT_FORWARD));</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>signal_filter&lt;&lt;&lt;n_blocks_pad,<sp/>n_threads&gt;&gt;&gt;(lab,<sp/>W,<sp/>signal,<sp/>process);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>HANDLE_FFTERROR(cufftExecC2C(plan,(cufftComplex*)<sp/>signal,(cufftComplex*)<sp/>signal,<sp/>CUFFT_INVERSE));</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>signal_inv&lt;&lt;&lt;n_blocks_pad,<sp/>n_threads&gt;&gt;&gt;(lab,<sp/>proj,<sp/>signal,<sp/>process);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>HANDLE_FFTERROR(cufftDestroy(plan));<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>signal_save(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>proj,<sp/>cufftComplex*<sp/>signal,<sp/><ref refid="structProcess" kindref="compound">Process</ref><sp/>process){</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>npad<sp/>=<sp/>blockDim.x<sp/>*<sp/>blockIdx.x<sp/>+<sp/>threadIdx.x;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/>j,<sp/>k;<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>X,<sp/>Z,<sp/>aux;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>set_filter_idxs(npad,<sp/>&amp;k,<sp/>&amp;j,<sp/>&amp;i,<sp/>lab,<sp/>process);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>idx<sp/>=<sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>int)<sp/>k<sp/><sp/>+<sp/>j*lab.npfh<sp/>+<sp/>i*lab.npfh*lab.nbeta;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>X<sp/>=<sp/>k*lab.dh<sp/>-<sp/>lab.h;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>Z<sp/>=<sp/>(i<sp/>+<sp/>process.i*process.z_filter)*lab.dv<sp/>-<sp/>lab.v;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>aux<sp/>=<sp/>lab.D/sqrtf(lab.Dsd*lab.Dsd<sp/>+<sp/>Z*Z<sp/>+<sp/>X*X);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>signal[idx].x<sp/>=<sp/>proj[idx]*aux;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>signal[idx].y<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>signal_filter(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>W,<sp/>cufftComplex*<sp/>signal,<sp/><ref refid="structProcess" kindref="compound">Process</ref><sp/>process){</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n<sp/>=<sp/>blockDim.x<sp/>*<sp/>blockIdx.x<sp/>+<sp/>threadIdx.x<sp/>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,j,k;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>set_filter_idxs(n,<sp/>&amp;k,<sp/>&amp;j,<sp/>&amp;i,<sp/>lab,<sp/>process);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>idx<sp/>=<sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>int)<sp/>k<sp/>+<sp/>j*lab.npfh<sp/>+<sp/>i<sp/>*<sp/>lab.npfh<sp/>*<sp/>lab.nbeta;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>signal[idx].x<sp/>=<sp/>signal[idx].x<sp/>*<sp/>W[k];</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>signal[idx].y<sp/>=<sp/>signal[idx].y<sp/>*<sp/>W[k];<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>signal_inv(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>Q,<sp/>cufftComplex*<sp/>signal,<sp/><ref refid="structProcess" kindref="compound">Process</ref><sp/>process){</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>npad<sp/>=<sp/>blockDim.x<sp/>*<sp/>blockIdx.x<sp/>+<sp/>threadIdx.x<sp/>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,j,k;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>set_filter_idxs(npad,<sp/>&amp;k,<sp/>&amp;j,<sp/>&amp;i,<sp/>lab,<sp/>process);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>idx<sp/>=<sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>int)<sp/>k<sp/><sp/>+<sp/>j*lab.npfh<sp/>+<sp/>i*lab.npfh*lab.nbeta;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>Q[idx]<sp/>=<sp/>signal[idx].x/lab.npfh;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">__device__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_filter_idxs(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>i,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*j,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>k,<sp/><ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/><ref refid="structProcess" kindref="compound">Process</ref><sp/>process)<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nij,<sp/>rem_ij;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>nij<sp/>=<sp/>lab.npfh*lab.nbeta;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>*k<sp/>=<sp/>(n)<sp/>/<sp/>nij;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>rem_ij<sp/>=<sp/>(n)<sp/>%<sp/>nij;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>*j<sp/>=<sp/>rem_ij<sp/>/<sp/>lab.npfh;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>*i<sp/>=<sp/>rem_ij<sp/>%<sp/>lab.npfh;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>filt_Ramp(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>W){</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>wmax<sp/>=<sp/>1.0/(2.0*lab.dh);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>magn<sp/>=<sp/>lab.Dsd<sp/>/<sp/>lab.D;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z2<sp/><sp/><sp/>=<sp/>lab.Dsd<sp/>-<sp/>lab.D;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>wavelenght<sp/>=<sp/>(lab.reg<sp/>==<sp/>0.0<sp/>?<sp/>1.0:(<sp/>(<sp/>plank<sp/>*<sp/>vc<sp/>)<sp/>/<sp/>lab.energy<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>kernelX<sp/>=<sp/>wavelenght<sp/>*<sp/>z2<sp/>*<sp/>float(M_PI)<sp/>*<sp/>lab.reg<sp/>/<sp/>magn;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=<sp/>lab.npfh/2<sp/>;<sp/>i++)<sp/>W[i]<sp/>=<sp/>(wmax)/(lab.npfh)<sp/>+<sp/>(2*i*wmax)/(lab.npfh);<sp/></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>lab.npfh/2<sp/>;<sp/>i++)<sp/>W[lab.npfh/2<sp/>+<sp/>i]<sp/>=<sp/>wmax<sp/>-<sp/>(2*i*wmax)/(lab.npfh);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=lab.npfh/2<sp/>;<sp/>i++)<sp/>W[i]<sp/>=<sp/>W[i]<sp/>*<sp/>(<sp/>1.0f<sp/>/<sp/>(<sp/>1.0f<sp/>+<sp/>kernelX<sp/>*<sp/>W[i]<sp/>*<sp/>W[i]<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>lab.npfh/2<sp/>;<sp/>i++)<sp/>W[lab.npfh/2<sp/>+<sp/>i]<sp/>=<sp/>W[lab.npfh<sp/>/<sp/>2<sp/>+<sp/>i]<sp/>*<sp/>(<sp/>1.0f<sp/>/<sp/>(<sp/>1.0f<sp/>+<sp/>kernelX<sp/>*<sp/>W[lab.npfh<sp/>/<sp/>2<sp/>+<sp/>i]<sp/>*<sp/>W[lab.npfh<sp/>/<sp/>2<sp/>+<sp/>i]<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>filt_W(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>W){</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>wmax<sp/>=<sp/>1.0/(2.0*lab.dh);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>magn<sp/>=<sp/>lab.Dsd<sp/>/<sp/>lab.D;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z2<sp/>=<sp/>lab.Dsd<sp/>-<sp/>lab.D;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>wavelenght<sp/>=<sp/>(lab.reg<sp/>==<sp/>0.0<sp/>?<sp/>1.0:(<sp/>(<sp/>plank<sp/>*<sp/>vc<sp/>)<sp/>/<sp/>lab.energy<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>kernelX<sp/>=<sp/>wavelenght<sp/>*<sp/>z2<sp/>*<sp/>float(M_PI)<sp/>*<sp/>lab.reg<sp/>/<sp/>magn;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=<sp/>lab.npfh/2<sp/>;<sp/>i++)<sp/>W[i]<sp/>=<sp/>(2*i*wmax)/(lab.npfh);<sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>lab.npfh/2<sp/>;<sp/>i++)<sp/>W[lab.npfh/2<sp/>+<sp/>i]<sp/>=<sp/>wmax<sp/>-<sp/>(2*i*wmax)/(lab.npfh);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=lab.npfh/2<sp/>;<sp/>i++)<sp/>W[i]<sp/>=<sp/>W[i]*(0.54<sp/>+<sp/>0.46*cosf(2*M_PI*i/lab.npfh))<sp/>*<sp/>(<sp/>1.0f<sp/>/<sp/>(<sp/>1.0f<sp/>+<sp/>kernelX<sp/>*<sp/>W[i]<sp/>*<sp/>W[i]<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>lab.npfh/2<sp/>;<sp/>i++)<sp/>W[lab.npfh/2<sp/>+<sp/>i]<sp/>=<sp/>W[lab.npfh/2<sp/>+<sp/>i]*(0.54<sp/>+<sp/>0.46*cosf(2*M_PI*(lab.npfh/2<sp/>-<sp/>i)/lab.npfh))<sp/>*<sp/>(<sp/>1.0f<sp/>/<sp/>(<sp/>1.0f<sp/>+<sp/>kernelX<sp/>*<sp/>W[lab.npfh<sp/>/<sp/>2<sp/>+<sp/>i]<sp/>*<sp/>W[lab.npfh<sp/>/<sp/>2<sp/>+<sp/>i]<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>filt_Gaussian(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>W){</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>wmax<sp/>=<sp/>1.0/(2.0*lab.dh);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>c<sp/>=<sp/>0.693f;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>magn<sp/>=<sp/>lab.Dsd<sp/>/<sp/>lab.D;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z2<sp/>=<sp/>lab.Dsd<sp/>-<sp/>lab.D;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>wavelenght<sp/>=<sp/>(lab.reg<sp/>==<sp/>0.0<sp/>?<sp/>1.0:(<sp/>(<sp/>plank<sp/>*<sp/>vc<sp/>)<sp/>/<sp/>lab.energy<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>kernelX<sp/>=<sp/>wavelenght<sp/>*<sp/>z2<sp/>*<sp/>float(M_PI)<sp/>*<sp/>lab.reg<sp/>/<sp/>magn;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=<sp/>lab.npfh/2<sp/>;<sp/>i++)<sp/>W[i]<sp/>=<sp/>(2*i*wmax)/(lab.npfh);<sp/></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>lab.npfh/2<sp/>;<sp/>i++)<sp/>W[lab.npfh/2<sp/>+<sp/>i]<sp/>=<sp/>wmax<sp/>-<sp/>(2*i*wmax)/(lab.npfh);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=<sp/>lab.npfh/2<sp/>;<sp/>i++)<sp/>W[i]<sp/>=<sp/>W[i]*expf(-c*(i/lab.npfh)*(i/lab.npfh))<sp/>*<sp/>(<sp/>1.0f<sp/>/<sp/>(<sp/>1.0f<sp/>+<sp/>kernelX<sp/>*<sp/>W[i]<sp/>*<sp/>W[i]<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>lab.npfh/2<sp/>;<sp/>i++)<sp/>W[lab.npfh/2<sp/>+<sp/>i]<sp/>=<sp/>W[lab.npfh/2<sp/>+<sp/>i]*expf(-c*((lab.npfh/2<sp/>-<sp/>i)/lab.npfh)*((lab.npfh/2<sp/>-<sp/>i)/lab.npfh))<sp/>*<sp/>(<sp/>1.0f<sp/>/<sp/>(<sp/>1.0f<sp/>+<sp/>kernelX<sp/>*<sp/>W[lab.npfh<sp/>/<sp/>2<sp/>+<sp/>i]<sp/>*<sp/>W[lab.npfh<sp/>/<sp/>2<sp/>+<sp/>i]<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>filt_Lorentz(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>W){</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>wmax<sp/>=<sp/>1.0/(2.0*lab.dh);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>magn<sp/>=<sp/>lab.Dsd<sp/>/<sp/>lab.D;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z2<sp/>=<sp/>lab.Dsd<sp/>-<sp/>lab.D;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>wavelenght<sp/>=<sp/>(lab.reg<sp/>==<sp/>0.0<sp/>?<sp/>1.0:(<sp/>(<sp/>plank<sp/>*<sp/>vc<sp/>)<sp/>/<sp/>lab.energy<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>kernelX<sp/>=<sp/>wavelenght<sp/>*<sp/>z2<sp/>*<sp/>float(M_PI)<sp/>*<sp/>lab.reg<sp/>/<sp/>magn;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=<sp/>lab.npfh/2<sp/>;<sp/>i++)<sp/>W[i]<sp/>=<sp/>(2*i*wmax)/(lab.npfh);<sp/></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>lab.npfh/2<sp/>;<sp/>i++)<sp/>W[lab.npfh/2<sp/>+<sp/>i]<sp/>=<sp/>wmax<sp/>-<sp/>(2*i*wmax)/(lab.npfh);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=<sp/>lab.npfh/2<sp/>;<sp/>i++)<sp/>W[i]<sp/>=<sp/>(<sp/>W[i]/(1.0<sp/>+<sp/>(i/lab.npfh)*(i/lab.npfh))<sp/>)<sp/>*<sp/>(<sp/>1.0f<sp/>/<sp/>(<sp/>1.0f<sp/>+<sp/>kernelX<sp/>*<sp/>W[i]<sp/>*<sp/>W[i]<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>lab.npfh/2<sp/>;<sp/>i++)<sp/>W[lab.npfh/2<sp/>+<sp/>i]<sp/>=<sp/>(<sp/>W[lab.npfh/2<sp/>+<sp/>i]/(1.0<sp/>+<sp/>((lab.npfh/2<sp/>-<sp/>i)/lab.npfh)*((lab.npfh/2<sp/>-<sp/>i)/lab.npfh))<sp/>)<sp/>*<sp/>(<sp/>1.0f<sp/>/<sp/>(<sp/>1.0f<sp/>+<sp/>kernelX<sp/>*<sp/>W[lab.npfh<sp/>/<sp/>2<sp/>+<sp/>i]<sp/>*<sp/>W[lab.npfh<sp/>/<sp/>2<sp/>+<sp/>i]<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>filt_Cosine(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>W){</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>wmax<sp/>=<sp/>1.0/(2.0*lab.dh);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>magn<sp/>=<sp/>lab.Dsd<sp/>/<sp/>lab.D;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z2<sp/>=<sp/>lab.Dsd<sp/>-<sp/>lab.D;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>wavelenght<sp/>=<sp/>(lab.reg<sp/>==<sp/>0.0<sp/>?<sp/>1.0:(<sp/>(<sp/>plank<sp/>*<sp/>vc<sp/>)<sp/>/<sp/>lab.energy<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>kernelX<sp/>=<sp/>wavelenght<sp/>*<sp/>z2<sp/>*<sp/>float(M_PI)<sp/>*<sp/>lab.reg<sp/>/<sp/>magn;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=<sp/>lab.npfh/2<sp/>;<sp/>i++)<sp/>W[i]<sp/>=<sp/>(2*i*wmax)/(lab.npfh);<sp/></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>lab.npfh/2<sp/>;<sp/>i++)<sp/>W[lab.nh/2<sp/>+<sp/>i]<sp/>=<sp/>wmax<sp/>-<sp/>(2*i*wmax)/(lab.npfh);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=<sp/>lab.npfh/2<sp/>;<sp/>i++)<sp/>W[i]<sp/>=<sp/>W[i]<sp/>*<sp/>cosf(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">(M_PI)*0.5f*(i/lab.npfh))<sp/>*<sp/>(<sp/>1.0f<sp/>/<sp/>(<sp/>1.0f<sp/>+<sp/>kernelX<sp/>*<sp/>W[i]<sp/>*<sp/>W[i]<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>lab.npfh/2<sp/>;<sp/>i++)<sp/>W[lab.npfh/2<sp/>+<sp/>i]<sp/>=<sp/>W[lab.npfh/2<sp/>+<sp/>i]<sp/>*<sp/>cosf(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">(M_PI)*0.5f*((lab.npfh/2<sp/>-<sp/>i)/lab.npfh))<sp/>*<sp/>(<sp/>1.0f<sp/>/<sp/>(<sp/>1.0f<sp/>+<sp/>kernelX<sp/>*<sp/>W[lab.npfh<sp/>/<sp/>2<sp/>+<sp/>i]<sp/>*<sp/>W[lab.npfh<sp/>/<sp/>2<sp/>+<sp/>i]<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>filt_Rectangle(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>W){</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>wmax<sp/>=<sp/>1.0/(2.0*lab.dh);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>param;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>magn<sp/>=<sp/>lab.Dsd<sp/>/<sp/>lab.D;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z2<sp/>=<sp/>lab.Dsd<sp/>-<sp/>lab.D;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>wavelenght<sp/>=<sp/>(lab.reg<sp/>==<sp/>0.0<sp/>?<sp/>1.0:(<sp/>(<sp/>plank<sp/>*<sp/>vc<sp/>)<sp/>/<sp/>lab.energy<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>kernelX<sp/>=<sp/>wavelenght<sp/>*<sp/>z2<sp/>*<sp/>float(M_PI)<sp/>*<sp/>lab.reg<sp/>/<sp/>magn;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=<sp/>lab.npfh/2<sp/>;<sp/>i++)<sp/>W[i]<sp/>=<sp/>(2*i*wmax)/(lab.npfh);<sp/></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>lab.npfh/2<sp/>;<sp/>i++)<sp/>W[lab.npfh/2<sp/>+<sp/>i]<sp/>=<sp/>wmax<sp/>-<sp/>(2*i*wmax)/(lab.npfh);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=<sp/>lab.npfh/2<sp/>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param<sp/>=<sp/>fmaxf((i/lab.npfh)<sp/>*<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">(M_PI)<sp/>*<sp/>0.5f,<sp/>1E-4f);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>W[i]<sp/>=<sp/>(<sp/>W[i]<sp/>*<sp/>sinf(param)<sp/>/<sp/>param<sp/>)<sp/>*<sp/>(<sp/>1.0f<sp/>/<sp/>(<sp/>1.0f<sp/>+<sp/>kernelX<sp/>*<sp/>W[i]<sp/>*<sp/>W[i]<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>lab.npfh/2<sp/>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param<sp/>=<sp/>fmaxf(((lab.npfh/2<sp/>-<sp/>i)/lab.npfh)<sp/>*<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">(M_PI)<sp/>*<sp/>0.5f,<sp/>1E-4f);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>W[lab.npfh/2<sp/>+<sp/>i]<sp/>=<sp/>(<sp/>W[lab.npfh/2<sp/>+<sp/>i]<sp/>*<sp/>(param)<sp/>/<sp/>param)<sp/>*<sp/>(<sp/>1.0f<sp/>/<sp/>(<sp/>1.0f<sp/>+<sp/>kernelX<sp/>*<sp/>W[lab.npfh<sp/>/<sp/>2<sp/>+<sp/>i]<sp/>*<sp/>W[lab.npfh<sp/>/<sp/>2<sp/>+<sp/>i]<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>filt_Hann(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>W){</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>wmax<sp/>=<sp/>1.0/(2.0*lab.dh);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>magn<sp/>=<sp/>lab.Dsd<sp/>/<sp/>lab.D;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z2<sp/>=<sp/>lab.Dsd<sp/>-<sp/>lab.D;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>wavelenght<sp/>=<sp/>(lab.reg<sp/>==<sp/>0.0<sp/>?<sp/>1.0:(<sp/>(<sp/>plank<sp/>*<sp/>vc<sp/>)<sp/>/<sp/>lab.energy<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>kernelX<sp/>=<sp/>wavelenght<sp/>*<sp/>z2<sp/>*<sp/>float(M_PI)<sp/>*<sp/>lab.reg<sp/>/<sp/>magn;<sp/></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=<sp/>lab.npfh/2<sp/>;<sp/>i++)<sp/>W[i]<sp/>=<sp/>(2*i*wmax)/(lab.npfh);<sp/></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>lab.npfh/2<sp/>;<sp/>i++)<sp/>W[lab.npfh/2<sp/>+<sp/>i]<sp/>=<sp/>wmax<sp/>-<sp/>(2*i*wmax)/(lab.npfh);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=lab.npfh/2<sp/>;<sp/>i++)<sp/>W[i]<sp/>=<sp/>W[i]<sp/>*<sp/>(0.5<sp/>+<sp/>0.5*cosf(2*M_PI*i/lab.npfh))<sp/>*<sp/>(<sp/>1.0f<sp/>/<sp/>(<sp/>1.0f<sp/>+<sp/>kernelX<sp/>*<sp/>W[i]<sp/>*<sp/>W[i]<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>lab.npfh/2<sp/>;<sp/>i++)<sp/>W[lab.npfh/2<sp/>+<sp/>i]<sp/>=<sp/>W[lab.npfh/2<sp/>+<sp/>i]<sp/>*<sp/>(0.5<sp/>+<sp/>0.5*cosf(2*M_PI*(lab.npfh/2<sp/>-<sp/>i)/lab.npfh))<sp/>*<sp/>(<sp/>1.0f<sp/>/<sp/>(<sp/>1.0f<sp/>+<sp/>kernelX<sp/>*<sp/>W[lab.npfh<sp/>/<sp/>2<sp/>+<sp/>i]<sp/>*<sp/>W[lab.npfh<sp/>/<sp/>2<sp/>+<sp/>i]<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>filt_Hamming(<ref refid="structLab" kindref="compound">Lab</ref><sp/>lab,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>W){</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>wmax<sp/>=<sp/>1.0f<sp/>/<sp/>(<sp/>2.0f<sp/>*<sp/>lab.dh<sp/>);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>magn<sp/>=<sp/>lab.Dsd<sp/>/<sp/>lab.D;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z2<sp/>=<sp/>lab.Dsd<sp/>-<sp/>lab.D;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>wavelenght<sp/>=<sp/>(lab.reg<sp/>==<sp/>0.0<sp/>?<sp/>1.0:(<sp/>(<sp/>plank<sp/>*<sp/>vc<sp/>)<sp/>/<sp/>lab.energy<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>kernelX<sp/>=<sp/>wavelenght<sp/>*<sp/>z2<sp/>*<sp/>float(M_PI)<sp/>*<sp/>lab.reg<sp/>/<sp/>magn;<sp/></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=<sp/>lab.npfh/2<sp/>;<sp/>i++)<sp/>W[i]<sp/>=<sp/>(2.0f<sp/>*<sp/>i<sp/>*<sp/>wmax)<sp/>/<sp/>(<sp/>lab.npfh<sp/>);<sp/></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>lab.npfh/2<sp/>;<sp/>i++)<sp/>W[lab.npfh<sp/>/<sp/>2<sp/>+<sp/>i]<sp/>=<sp/>wmax<sp/>-<sp/>(<sp/>(<sp/>2.0f<sp/>*<sp/>i<sp/>*<sp/>wmax<sp/>)<sp/>/<sp/>lab.npfh<sp/>);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=lab.npfh/2<sp/>;<sp/>i++)<sp/>W[i]<sp/>=<sp/>(<sp/>W[i]<sp/>*<sp/>(<sp/>0.54f<sp/>+<sp/>0.46f<sp/>*<sp/>cosf(<sp/>2.0f<sp/>*<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">(M_PI)<sp/>*<sp/>i<sp/>/<sp/>lab.npfh<sp/>)<sp/>)<sp/>)<sp/>*<sp/>(<sp/>1.0f<sp/>/<sp/>(<sp/>1.0f<sp/>+<sp/>kernelX<sp/>*<sp/>W[i]<sp/>*<sp/>W[i]<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>lab.npfh/2<sp/>;<sp/>i++)<sp/>W[lab.npfh/2<sp/>+<sp/>i]<sp/>=<sp/>W[lab.npfh<sp/>/<sp/>2<sp/>+<sp/>i]<sp/>*<sp/>(0.54f<sp/>+<sp/>0.46f<sp/>*<sp/>cosf(<sp/>2.0f<sp/>*<sp/>M_PI<sp/>*<sp/>(<sp/>lab.npfh<sp/>/<sp/>2<sp/>-<sp/>i<sp/>)<sp/>/<sp/>lab.npfh)<sp/>)<sp/>*<sp/>(<sp/>1.0f<sp/>/<sp/>(<sp/>1.0f<sp/>+<sp/>kernelX<sp/>*<sp/>W[lab.npfh<sp/>/<sp/>2<sp/>+<sp/>i]<sp/>*<sp/>W[lab.npfh<sp/>/<sp/>2<sp/>+<sp/>i]<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/reconstruction_methods/kernels/fdk_fourier.cu"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,826 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="parallel_2em_8hpp" kind="file" language="C++">
+    <compoundname>em.hpp</compoundname>
+    <includes refid="configs_8hpp" local="yes">common/configs.hpp</includes>
+    <includedby refid="em__frequency_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/em_frequency.cu</includedby>
+    <includedby refid="em__rt_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/em_rt.cu</includedby>
+    <includedby refid="em__RT__kernel_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu</includedby>
+    <includedby refid="pipeline_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/pipelines/pipeline.cu</includedby>
+    <incdepgraph>
+      <node id="9">
+        <label>cuda_runtime_api.h</label>
+        <link refid="cuda__runtime__api_8h_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp</label>
+        <link refid="parallel_2em_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>cuda_device_runtime_api.h</label>
+      </node>
+      <node id="7">
+        <label>cufft.h</label>
+      </node>
+      <node id="5">
+        <label>vector_types.h</label>
+      </node>
+      <node id="11">
+        <label>builtin_types.h</label>
+      </node>
+      <node id="4">
+        <label>driver_types.h</label>
+      </node>
+      <node id="2">
+        <label>common/configs.hpp</label>
+        <link refid="configs_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>future</label>
+      </node>
+      <node id="3">
+        <label>complex.h</label>
+      </node>
+      <node id="13">
+        <label>iostream</label>
+      </node>
+      <node id="6">
+        <label>cstddef</label>
+      </node>
+      <node id="10">
+        <label>crt/host_defines.h</label>
+      </node>
+      <node id="8">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="parallel_2em_8hpp_1a9d894eb6962882eef7362c9b2c0d955f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void get_tEM_RT_MultiGPU</definition>
+        <argsstring>(DIM tomo, DIM obj, GEO geometry, REC ReconParam, int *gpus, int ngpus, float *object, float *count, float *flat, float *angles)</argsstring>
+        <name>get_tEM_RT_MultiGPU</name>
+        <param>
+          <type><ref refid="structdimension" kindref="compound">DIM</ref></type>
+          <declname>tomo</declname>
+        </param>
+        <param>
+          <type><ref refid="structdimension" kindref="compound">DIM</ref></type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type><ref refid="structgeometry" kindref="compound">GEO</ref></type>
+          <declname>geometry</declname>
+        </param>
+        <param>
+          <type><ref refid="structReconstruction" kindref="compound">REC</ref></type>
+          <declname>ReconParam</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>gpus</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ngpus</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>object</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>flat</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" line="9" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/em_rt.cu" bodystart="12" bodyend="79" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" declline="9" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="parallel_2em_8hpp_1a11b8f926b4196b1c46496471235b4913" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void get_eEM_RT_MultiGPU</definition>
+        <argsstring>(DIM tomo, DIM obj, GEO geometry, REC ReconParam, int *gpus, int ngpus, float *object, float *tomogram, float *angles)</argsstring>
+        <name>get_eEM_RT_MultiGPU</name>
+        <param>
+          <type><ref refid="structdimension" kindref="compound">DIM</ref></type>
+          <declname>tomo</declname>
+        </param>
+        <param>
+          <type><ref refid="structdimension" kindref="compound">DIM</ref></type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type><ref refid="structgeometry" kindref="compound">GEO</ref></type>
+          <declname>geometry</declname>
+        </param>
+        <param>
+          <type><ref refid="structReconstruction" kindref="compound">REC</ref></type>
+          <declname>ReconParam</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>gpus</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ngpus</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>object</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>tomogram</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" line="12" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/em_rt.cu" bodystart="202" bodyend="260" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" declline="12" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="parallel_2em_8hpp_1a48c462b98b9a6b709867f0e18b1ed171" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void get_tEM_RT_GPU</definition>
+        <argsstring>(CFG configs, REC ReconParam, float *obj, float *count, float *flat, float *angles, int sizez, int ngpu)</argsstring>
+        <name>get_tEM_RT_GPU</name>
+        <param>
+          <type><ref refid="structconfig" kindref="compound">CFG</ref></type>
+          <declname>configs</declname>
+        </param>
+        <param>
+          <type><ref refid="structReconstruction" kindref="compound">REC</ref></type>
+          <declname>ReconParam</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>flat</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizez</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ngpu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" line="15" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/em_rt.cu" bodystart="81" bodyend="153" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" declline="15" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="parallel_2em_8hpp_1abb20d15abd8590ac8a4992fe5219431e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void get_eEM_RT_GPU</definition>
+        <argsstring>(CFG configs, REC ReconParam, float *obj, float *tomogram, float *angles, int sizez, int ngpu)</argsstring>
+        <name>get_eEM_RT_GPU</name>
+        <param>
+          <type><ref refid="structconfig" kindref="compound">CFG</ref></type>
+          <declname>configs</declname>
+        </param>
+        <param>
+          <type><ref refid="structReconstruction" kindref="compound">REC</ref></type>
+          <declname>ReconParam</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>tomogram</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizez</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ngpu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" line="19" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/em_rt.cu" bodystart="262" bodyend="325" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" declline="19" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="parallel_2em_8hpp_1a2c49d4a18d383f4d7fd3c2d0a53f3937" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void get_tEM_RT</definition>
+        <argsstring>(CFG configs, REC ReconParam, float *output, float *count, float *flat, float *angles, float *backcounts, float *temp, float *back, int blockSize)</argsstring>
+        <name>get_tEM_RT</name>
+        <param>
+          <type><ref refid="structconfig" kindref="compound">CFG</ref></type>
+          <declname>configs</declname>
+        </param>
+        <param>
+          <type><ref refid="structReconstruction" kindref="compound">REC</ref></type>
+          <declname>ReconParam</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>flat</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>backcounts</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>temp</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>back</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blockSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" line="23" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/em_rt.cu" bodystart="155" bodyend="193" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" declline="23" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="parallel_2em_8hpp_1a8511467cf2dd7b611642ba15013e4b8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void get_eEM_RT</definition>
+        <argsstring>(CFG configs, REC ReconParam, float *output, float *tomo, float *angles, float *backones, float *temp, int blockSize)</argsstring>
+        <name>get_eEM_RT</name>
+        <param>
+          <type><ref refid="structconfig" kindref="compound">CFG</ref></type>
+          <declname>configs</declname>
+        </param>
+        <param>
+          <type><ref refid="structReconstruction" kindref="compound">REC</ref></type>
+          <declname>ReconParam</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>tomo</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>backones</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>temp</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blockSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" line="28" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/em_rt.cu" bodystart="331" bodyend="365" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" declline="28" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="parallel_2em_8hpp_1a4a16cb57e0fb8f73d2cd42d982e1d964" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void kernel_ones</definition>
+        <argsstring>(float *output, int sizeImage, int nrays, int nangles, int blockSize)</argsstring>
+        <name>kernel_ones</name>
+        <param>
+          <type>float *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizeImage</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blockSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" line="36" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu" bodystart="4" bodyend="16" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" declline="36" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="parallel_2em_8hpp_1a157f3e52222eab959f8fd86c352344e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void kernel_flatTimesExp</definition>
+        <argsstring>(float *tmp, float *flat, int sizeImage, int nrays, int nangles, int blockSize)</argsstring>
+        <name>kernel_flatTimesExp</name>
+        <param>
+          <type>float *</type>
+          <declname>tmp</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>flat</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizeImage</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blockSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" line="37" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu" bodystart="20" bodyend="31" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" declline="37" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="parallel_2em_8hpp_1a14b9de12ade06436347df36bb6433d3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void kernel_update</definition>
+        <argsstring>(float *output, float *back, float *backcounts, int sizeImage, int nrays, int nangles, int blockSize)</argsstring>
+        <name>kernel_update</name>
+        <param>
+          <type>float *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>back</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>backcounts</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizeImage</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blockSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" line="38" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu" bodystart="52" bodyend="65" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" declline="38" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="parallel_2em_8hpp_1a8595ab8a9a95b226475315c10e38b094" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void kernel_difference_F</definition>
+        <argsstring>(float *y, float *x, int sizeImage, int blockSize)</argsstring>
+        <name>kernel_difference_F</name>
+        <param>
+          <type>float *</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizeImage</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blockSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" line="39" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu" bodystart="73" bodyend="87" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" declline="39" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="parallel_2em_8hpp_1adf9c27c8c99a9a23a5ab307380cec234" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void kernel_backprojection</definition>
+        <argsstring>(float *image, float *blocksino, float *angles, int sizeImage, int nrays, int nangles, int blockSize)</argsstring>
+        <name>kernel_backprojection</name>
+        <param>
+          <type>float *</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>blocksino</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizeImage</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blockSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" line="40" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu" bodystart="92" bodyend="142" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" declline="40" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="parallel_2em_8hpp_1abae4ab3599d0409f2b609e7b625cfa04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void kernel_radon</definition>
+        <argsstring>(float *output, float *input, float *angles, int sizeImage, int nrays, int nangles, int blockSize, float a)</argsstring>
+        <name>kernel_radon</name>
+        <param>
+          <type>float *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizeImage</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blockSize</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" line="41" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu" bodystart="146" bodyend="191" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" declline="41" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="parallel_2em_8hpp_1a1ae8f7a920270e831d41343d6f4d7c76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void kernel_radonWithDivision</definition>
+        <argsstring>(float *output, float *input, float *sino, float *angles, int sizeImage, int nrays, int nangles, int blockSize, float a)</argsstring>
+        <name>kernel_radonWithDivision</name>
+        <param>
+          <type>float *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>sino</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizeImage</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blockSize</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" line="42" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu" bodystart="195" bodyend="258" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" declline="42" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="parallel_2em_8hpp_1a3106b6cc24a6e067efe0f62a27d55337" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void kernel_backprojectionWithUpdate</definition>
+        <argsstring>(float *image, float *blocksino, float *backones, float *angles, int sizeImage, int nrays, int nangles, int blockSize)</argsstring>
+        <name>kernel_backprojectionWithUpdate</name>
+        <param>
+          <type>float *</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>blocksino</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>backones</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizeImage</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blockSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" line="43" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu" bodystart="262" bodyend="313" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" declline="43" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="parallel_2em_8hpp_1ac895abcf242e2744fc5aaf4643076a0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void kernel_backprojectionOfOnes</definition>
+        <argsstring>(float *backones, float *angles, int sizeImage, int nrays, int nangles, int blockSize)</argsstring>
+        <name>kernel_backprojectionOfOnes</name>
+        <param>
+          <type>float *</type>
+          <declname>backones</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>angles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizeImage</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blockSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" line="44" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/kernels/em_RT_kernel.cu" bodystart="317" bodyend="365" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" declline="44" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="parallel_2em_8hpp_1a04192e79796bc259b72b158edfa5d516" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void kernel_updateTV</definition>
+        <argsstring>(float *y, float *x, float *backones, int sizeImage, int blockSize, float reg, float epsilon)</argsstring>
+        <name>kernel_updateTV</name>
+        <param>
+          <type>float *</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>backones</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizeImage</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blockSize</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>epsilon</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" line="45" column="21" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp" declline="45" declcolumn="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>RAFT_EM_PAR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RAFT_EM_PAR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;common/configs.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>EM<sp/>Parallel<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>get_tEM_RT_MultiGPU(<ref refid="structdimension" kindref="compound">DIM</ref><sp/>tomo,<sp/><ref refid="structdimension" kindref="compound">DIM</ref><sp/>obj,<sp/><ref refid="structgeometry" kindref="compound">GEO</ref><sp/><ref refid="structgeometry" kindref="compound">geometry</ref>,<sp/><ref refid="structReconstruction" kindref="compound">REC</ref><sp/>ReconParam,</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>gpus,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ngpus,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>count,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*flat,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>angles);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>get_eEM_RT_MultiGPU(<ref refid="structdimension" kindref="compound">DIM</ref><sp/>tomo,<sp/><ref refid="structdimension" kindref="compound">DIM</ref><sp/>obj,<sp/><ref refid="structgeometry" kindref="compound">GEO</ref><sp/><ref refid="structgeometry" kindref="compound">geometry</ref>,<sp/><ref refid="structReconstruction" kindref="compound">REC</ref><sp/>ReconParam,</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>gpus,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ngpus,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>tomogram,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>angles);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>get_tEM_RT_GPU(<ref refid="structconfig" kindref="compound">CFG</ref><sp/>configs,<sp/><ref refid="structReconstruction" kindref="compound">REC</ref><sp/>ReconParam,<sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*obj,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*count,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*flat,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizez,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ngpu);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>get_eEM_RT_GPU(<ref refid="structconfig" kindref="compound">CFG</ref><sp/>configs,<sp/><ref refid="structReconstruction" kindref="compound">REC</ref><sp/>ReconParam,<sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*obj,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*tomogram,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,<sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizez,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ngpu);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>get_tEM_RT(<ref refid="structconfig" kindref="compound">CFG</ref><sp/>configs,<sp/><ref refid="structReconstruction" kindref="compound">REC</ref><sp/>ReconParam,<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*output,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*count,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*flat,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*backcounts,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*temp,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*back,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blockSize);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>get_eEM_RT(<ref refid="structconfig" kindref="compound">CFG</ref><sp/>configs,<sp/><ref refid="structReconstruction" kindref="compound">REC</ref><sp/>ReconParam,<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*output,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*tomo,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*backones,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*temp,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blockSize);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>CUDA<sp/>KERNELS<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>kernel_ones(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*output,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeImage,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles,<sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blockSize);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>kernel_flatTimesExp(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*tmp,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*flat,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeImage,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles,<sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blockSize);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>kernel_update(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*output,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*back,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*backcounts,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeImage,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles,<sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blockSize);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>kernel_difference_F(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*y,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeImage,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blockSize);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>kernel_backprojection(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*image,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*blocksino,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeImage,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles,<sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blockSize);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>kernel_radon(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*output,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*input,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeImage,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blockSize,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>kernel_radonWithDivision(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*output,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*input,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*sino,<sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeImage,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blockSize,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>kernel_backprojectionWithUpdate(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*image,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*blocksino,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*backones,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeImage,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles,<sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blockSize);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>kernel_backprojectionOfOnes(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*backones,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*angles,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeImage,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles,<sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blockSize);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>kernel_updateTV(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*y,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*backones,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeImage,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blockSize,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>reg,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>epsilon);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp"/>
+  </compounddef>
+</doxygen>

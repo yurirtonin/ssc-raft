@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespaceReduction" kind="namespace" language="C++">
+    <compoundname>Reduction</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="operations_8hpp_1a0324c20289d576e7307d76ab49e09dc6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>__device__ void</type>
+        <definition>__device__ void Reduction::KSharedReduce32</definition>
+        <argsstring>(Type *intermediate)</argsstring>
+        <name>KSharedReduce32</name>
+        <param>
+          <type>Type *</type>
+          <declname>intermediate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="287" column="24" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" bodystart="287" bodyend="296"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1abb4aab2de7bbb8eeb25aec4ee452765f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>__device__ void</type>
+        <definition>__device__ void Reduction::KSharedReduce</definition>
+        <argsstring>(Type *intermediate, int size)</argsstring>
+        <name>KSharedReduce</name>
+        <param>
+          <type>Type *</type>
+          <declname>intermediate</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="299" column="24" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" bodystart="299" bodyend="308"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1aadb0aedfc209afbc177c9f338336d98a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void Reduction::KGlobalReduce</definition>
+        <argsstring>(Type *out, const Type *in, size_t size)</argsstring>
+        <name>KGlobalReduce</name>
+        <param>
+          <type>Type *</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const Type *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="311" column="17" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="311" declcolumn="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="235" column="1"/>
+  </compounddef>
+</doxygen>

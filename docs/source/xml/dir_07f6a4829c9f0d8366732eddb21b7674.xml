@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_07f6a4829c9f0d8366732eddb21b7674" kind="dir">
+    <compoundname>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10</compoundname>
+    <innerfile refid="cublas__v2_8h">cublas_v2.h</innerfile>
+    <innerfile refid="cuda__runtime__api_8h">cuda_runtime_api.h</innerfile>
+    <innerfile refid="cufft__utils_8h">cufft_utils.h</innerfile>
+    <innerfile refid="helper__cuda_8h">helper_cuda.h</innerfile>
+    <innerfile refid="helper__string_8h">helper_string.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/"/>
+  </compounddef>
+</doxygen>

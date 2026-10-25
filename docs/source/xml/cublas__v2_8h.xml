@@ -1,0 +1,2105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="cublas__v2_8h" kind="file" language="C++">
+    <compoundname>cublas_v2.h</compoundname>
+    <includes local="yes">cublas_api.h</includes>
+    <includedby refid="phase__retrieval_8cu" local="no">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/phase/phase_retrieval.cu</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>cublas_api.h</label>
+      </node>
+      <node id="1">
+        <label>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h</label>
+        <link refid="cublas__v2_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="cublas__v2_8h_1a0e1c0f348ab1aadb23028e5a3345776c" prot="public" static="no">
+        <name>CUBLASAPI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="62" column="11" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a715db1597d00daf87bda227790ba137a" prot="public" static="no">
+        <name>cublasCreate</name>
+        <initializer>cublasCreate_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="67" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a2406f6a57c9880af7241ec5ed0252942" prot="public" static="no">
+        <name>cublasDestroy</name>
+        <initializer>cublasDestroy_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="68" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a9d42ccc6070c17ee5454b8f687d069b0" prot="public" static="no">
+        <name>cublasGetVersion</name>
+        <initializer>cublasGetVersion_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="69" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1aada40b4985d8e2c94b335ab66bf74f45" prot="public" static="no">
+        <name>cublasSetStream</name>
+        <initializer>cublasSetStream_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="70" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a8f0020538e7c86b36952e0768f9e655a" prot="public" static="no">
+        <name>cublasGetStream</name>
+        <initializer>cublasGetStream_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="71" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a965dbf058c5965e067ede2508d94c64f" prot="public" static="no">
+        <name>cublasGetPointerMode</name>
+        <initializer>cublasGetPointerMode_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="72" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a9985e02192ab9d448b6047b4e709214b" prot="public" static="no">
+        <name>cublasSetPointerMode</name>
+        <initializer>cublasSetPointerMode_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="73" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a76b3df421ef44626e8ae218419cda820" prot="public" static="no">
+        <name>cublasSnrm2</name>
+        <initializer>cublasSnrm2_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="77" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a09636591528704830ebbc95ccebcaa51" prot="public" static="no">
+        <name>cublasDnrm2</name>
+        <initializer>cublasDnrm2_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="78" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a17888edce3df79c275e2def453e1123f" prot="public" static="no">
+        <name>cublasScnrm2</name>
+        <initializer>cublasScnrm2_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="79" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a77dacfcb7dd5de790aa2479e8d9aa2db" prot="public" static="no">
+        <name>cublasDznrm2</name>
+        <initializer>cublasDznrm2_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="80" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a2909ddc0c644e62ec5ab88638d0562ff" prot="public" static="no">
+        <name>cublasSdot</name>
+        <initializer>cublasSdot_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="82" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a450a889e10f646ece1fb2a8ce81da14f" prot="public" static="no">
+        <name>cublasDdot</name>
+        <initializer>cublasDdot_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="83" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a008490718076e3fa812036f0033e0b15" prot="public" static="no">
+        <name>cublasCdotu</name>
+        <initializer>cublasCdotu_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="84" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a219cd5e1513e19cd1762862d681c29d0" prot="public" static="no">
+        <name>cublasCdotc</name>
+        <initializer>cublasCdotc_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="85" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a8a47cac4af48c26e481c96b97b22e775" prot="public" static="no">
+        <name>cublasZdotu</name>
+        <initializer>cublasZdotu_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="86" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a11506ae20e651bf5cfa0598d64335c88" prot="public" static="no">
+        <name>cublasZdotc</name>
+        <initializer>cublasZdotc_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="87" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1adcf9ac94a208cfa2bf7796f4897b5c12" prot="public" static="no">
+        <name>cublasSscal</name>
+        <initializer>cublasSscal_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="89" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1afe7786e73a93293051e23b9f535294dc" prot="public" static="no">
+        <name>cublasDscal</name>
+        <initializer>cublasDscal_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="90" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a63a5e625c13381f2c8323007ea891069" prot="public" static="no">
+        <name>cublasCscal</name>
+        <initializer>cublasCscal_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="91" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a9e9657173e8fe2a28fe13f94bd7c1a7b" prot="public" static="no">
+        <name>cublasCsscal</name>
+        <initializer>cublasCsscal_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="92" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1acecdd31086e42ea9f45c3f00870a0d92" prot="public" static="no">
+        <name>cublasZscal</name>
+        <initializer>cublasZscal_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="93" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a6277f549c6d7a9b5909f9fed2ff70255" prot="public" static="no">
+        <name>cublasZdscal</name>
+        <initializer>cublasZdscal_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="94" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1ae0b83bd664e22e16d218abf9b3db9e41" prot="public" static="no">
+        <name>cublasSaxpy</name>
+        <initializer>cublasSaxpy_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="96" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1aff6c65f102c4605389b8034cf4abefa9" prot="public" static="no">
+        <name>cublasDaxpy</name>
+        <initializer>cublasDaxpy_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="97" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1aa23bfb63d9105e1f495a7dc5ac9af3e0" prot="public" static="no">
+        <name>cublasCaxpy</name>
+        <initializer>cublasCaxpy_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="98" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a9de334aaa44fcb73051108915a36e90a" prot="public" static="no">
+        <name>cublasZaxpy</name>
+        <initializer>cublasZaxpy_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="99" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1aa5a2e158c9a9b1c61d9d7aeccb1a5879" prot="public" static="no">
+        <name>cublasScopy</name>
+        <initializer>cublasScopy_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="101" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a17349a866dde1d71f24ba0bed3ea4a66" prot="public" static="no">
+        <name>cublasDcopy</name>
+        <initializer>cublasDcopy_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="102" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1aa6b360d77f5d36f7fbddcb7d8dbf063a" prot="public" static="no">
+        <name>cublasCcopy</name>
+        <initializer>cublasCcopy_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="103" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a25a83b27e193c915fab5391b9160872a" prot="public" static="no">
+        <name>cublasZcopy</name>
+        <initializer>cublasZcopy_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="104" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1abc7766d5de282f98367751e193f4baf9" prot="public" static="no">
+        <name>cublasSswap</name>
+        <initializer>cublasSswap_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="106" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a476720d7604a74d2d4441cb1c36af4cf" prot="public" static="no">
+        <name>cublasDswap</name>
+        <initializer>cublasDswap_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="107" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1aabc519685824c2c8fc60f5f152119777" prot="public" static="no">
+        <name>cublasCswap</name>
+        <initializer>cublasCswap_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="108" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a5443ed4e8fad8bfdc6dd34b6a8839a8e" prot="public" static="no">
+        <name>cublasZswap</name>
+        <initializer>cublasZswap_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="109" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a6c4c1de944dfa061c9e6a784b26832cb" prot="public" static="no">
+        <name>cublasIsamax</name>
+        <initializer>cublasIsamax_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="111" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1add3d90f1fd57f05a582e3151dfd02233" prot="public" static="no">
+        <name>cublasIdamax</name>
+        <initializer>cublasIdamax_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="112" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a2b3304430be450b351689945b2131239" prot="public" static="no">
+        <name>cublasIcamax</name>
+        <initializer>cublasIcamax_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="113" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a0bbafb967120e6838be1afd29dbb5005" prot="public" static="no">
+        <name>cublasIzamax</name>
+        <initializer>cublasIzamax_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="114" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1af632f15d959ee73f569620b91d8154bf" prot="public" static="no">
+        <name>cublasIsamin</name>
+        <initializer>cublasIsamin_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="116" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a8c0241cc0b1a9fe52556a7cc1fea0b70" prot="public" static="no">
+        <name>cublasIdamin</name>
+        <initializer>cublasIdamin_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="117" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1ab184827c86a1ba9266ee7082acd19aa8" prot="public" static="no">
+        <name>cublasIcamin</name>
+        <initializer>cublasIcamin_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="118" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a90479e39bb558ed25f4107d14f779cba" prot="public" static="no">
+        <name>cublasIzamin</name>
+        <initializer>cublasIzamin_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="119" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a40d84b761df5bc078eb53a6feba90f39" prot="public" static="no">
+        <name>cublasSasum</name>
+        <initializer>cublasSasum_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="121" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a07a8ad6434f4c7c4dd2ebbaf1b2ab45e" prot="public" static="no">
+        <name>cublasDasum</name>
+        <initializer>cublasDasum_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="122" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a6140727de6c8536e1cad7d6425bf5115" prot="public" static="no">
+        <name>cublasScasum</name>
+        <initializer>cublasScasum_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="123" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1ab170d4ba5a0c5dd5ee207da74e5efa46" prot="public" static="no">
+        <name>cublasDzasum</name>
+        <initializer>cublasDzasum_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="124" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1aef019ce74b5e18283ddb20de1c1f1fc0" prot="public" static="no">
+        <name>cublasSrot</name>
+        <initializer>cublasSrot_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="126" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1adb5aff368a02a76e95e891bd72bae865" prot="public" static="no">
+        <name>cublasDrot</name>
+        <initializer>cublasDrot_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="127" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a232a3bdd13bb4475c97f2fc9871db614" prot="public" static="no">
+        <name>cublasCrot</name>
+        <initializer>cublasCrot_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="128" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a38e401982a07b02db0d06bcf60043951" prot="public" static="no">
+        <name>cublasCsrot</name>
+        <initializer>cublasCsrot_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="129" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a6a8ba88f97a2178d4b2d8d90da9efc14" prot="public" static="no">
+        <name>cublasZrot</name>
+        <initializer>cublasZrot_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="130" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a554e32c5478fd7e3ac660941d694a50b" prot="public" static="no">
+        <name>cublasZdrot</name>
+        <initializer>cublasZdrot_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="131" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a4bc2797ee3f1e4c78e3794a82d01f413" prot="public" static="no">
+        <name>cublasSrotg</name>
+        <initializer>cublasSrotg_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="133" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a6119abe19fe5c7f05105bf1490b13dcf" prot="public" static="no">
+        <name>cublasDrotg</name>
+        <initializer>cublasDrotg_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="134" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a2e1bad8a8cb41d9741dc0004d256a434" prot="public" static="no">
+        <name>cublasCrotg</name>
+        <initializer>cublasCrotg_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="135" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a93a22c9f170d1b37d38d779a4c6ed749" prot="public" static="no">
+        <name>cublasZrotg</name>
+        <initializer>cublasZrotg_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="136" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a6b38d6d7cc80d584df758de4e1163635" prot="public" static="no">
+        <name>cublasSrotm</name>
+        <initializer>cublasSrotm_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="138" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a5ad2dfc3654712438a49eeaea38c4fec" prot="public" static="no">
+        <name>cublasDrotm</name>
+        <initializer>cublasDrotm_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="139" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1abc573a3a1152ee71a76cf42c39648ac7" prot="public" static="no">
+        <name>cublasSrotmg</name>
+        <initializer>cublasSrotmg_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="141" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a34b04229ec39c336153b54899abd5124" prot="public" static="no">
+        <name>cublasDrotmg</name>
+        <initializer>cublasDrotmg_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="142" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a438d6cd2e8eec4e96beb71912a86a6e1" prot="public" static="no">
+        <name>cublasSgemv</name>
+        <initializer>cublasSgemv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="147" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a74d61d9e5c5a227fbc19032efa0b00ee" prot="public" static="no">
+        <name>cublasDgemv</name>
+        <initializer>cublasDgemv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="148" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a726b166cac61e6a845abbdcae899c894" prot="public" static="no">
+        <name>cublasCgemv</name>
+        <initializer>cublasCgemv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="149" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a674dcbaa611c41fee7e0d58fed144f82" prot="public" static="no">
+        <name>cublasZgemv</name>
+        <initializer>cublasZgemv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="150" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1ac84c94799be654ce7dfa10fa0cb7b72d" prot="public" static="no">
+        <name>cublasSgbmv</name>
+        <initializer>cublasSgbmv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="152" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a8789142101535b90137985e54ce528f5" prot="public" static="no">
+        <name>cublasDgbmv</name>
+        <initializer>cublasDgbmv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="153" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1ab363c75539b4defe19401e6ac6d89bd5" prot="public" static="no">
+        <name>cublasCgbmv</name>
+        <initializer>cublasCgbmv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="154" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1ae0c8118ed8bc8021b056e11f89c62b71" prot="public" static="no">
+        <name>cublasZgbmv</name>
+        <initializer>cublasZgbmv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="155" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a8a65361715873fbe293d8f734e3721a8" prot="public" static="no">
+        <name>cublasStrmv</name>
+        <initializer>cublasStrmv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="157" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1aa61a362bd97c27f5801c9f2d4148bd94" prot="public" static="no">
+        <name>cublasDtrmv</name>
+        <initializer>cublasDtrmv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="158" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1abc1c1017b4c9221f3936f12011e3cbc7" prot="public" static="no">
+        <name>cublasCtrmv</name>
+        <initializer>cublasCtrmv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="159" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a87a807af8df39b2cd429472e27f0d45f" prot="public" static="no">
+        <name>cublasZtrmv</name>
+        <initializer>cublasZtrmv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="160" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a9b436d10fb51d0ef592827e733c134aa" prot="public" static="no">
+        <name>cublasStbmv</name>
+        <initializer>cublasStbmv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="162" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1aa17dd1df35291690edb9217a67da808b" prot="public" static="no">
+        <name>cublasDtbmv</name>
+        <initializer>cublasDtbmv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="163" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a02fda5b925f58b1255d2553d06ca63bc" prot="public" static="no">
+        <name>cublasCtbmv</name>
+        <initializer>cublasCtbmv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="164" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a4a2fdd14f318b21c522bd94f7c57b61d" prot="public" static="no">
+        <name>cublasZtbmv</name>
+        <initializer>cublasZtbmv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="165" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a9fa85b5a39246a6f6e4a9dd82bf0513d" prot="public" static="no">
+        <name>cublasStpmv</name>
+        <initializer>cublasStpmv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="167" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1afc3adee2c44d1be9a12996f780cbeb7a" prot="public" static="no">
+        <name>cublasDtpmv</name>
+        <initializer>cublasDtpmv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="168" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1accc3b7cb00b26bfd4eaeade736291186" prot="public" static="no">
+        <name>cublasCtpmv</name>
+        <initializer>cublasCtpmv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="169" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a579847c5c6f64156cc8555dab501cef1" prot="public" static="no">
+        <name>cublasZtpmv</name>
+        <initializer>cublasZtpmv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="170" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a809072dc6755144f2be2ef0b293c2c79" prot="public" static="no">
+        <name>cublasStrsv</name>
+        <initializer>cublasStrsv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="172" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1ae5372f4f47c91512074c0ae9886f60cf" prot="public" static="no">
+        <name>cublasDtrsv</name>
+        <initializer>cublasDtrsv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="173" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1ac5d991a5d5eaeda0f759b69c62c8733f" prot="public" static="no">
+        <name>cublasCtrsv</name>
+        <initializer>cublasCtrsv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="174" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a8cfc22ca5dc60f087dd86b9c5188bdbf" prot="public" static="no">
+        <name>cublasZtrsv</name>
+        <initializer>cublasZtrsv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="175" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1aeccc705032cb513dbf483d6a44f7d5a2" prot="public" static="no">
+        <name>cublasStpsv</name>
+        <initializer>cublasStpsv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="177" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1ac613c44940b27ce55be83b9a2ab73437" prot="public" static="no">
+        <name>cublasDtpsv</name>
+        <initializer>cublasDtpsv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="178" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1ae82cd14da2de576e6d9e33688f9c717f" prot="public" static="no">
+        <name>cublasCtpsv</name>
+        <initializer>cublasCtpsv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="179" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1ae4e76b134bb47b8a47cda03eb21445e5" prot="public" static="no">
+        <name>cublasZtpsv</name>
+        <initializer>cublasZtpsv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="180" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a016e987e2b1861467bfdf8638c4dbbc7" prot="public" static="no">
+        <name>cublasStbsv</name>
+        <initializer>cublasStbsv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="182" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a244342f869332a3f2d224cd65cf1c2d3" prot="public" static="no">
+        <name>cublasDtbsv</name>
+        <initializer>cublasDtbsv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="183" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a8fd5364010bc55a0e70cbdd06be8e72b" prot="public" static="no">
+        <name>cublasCtbsv</name>
+        <initializer>cublasCtbsv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="184" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a9839f9e9f4de50c29d61864e86d528a9" prot="public" static="no">
+        <name>cublasZtbsv</name>
+        <initializer>cublasZtbsv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="185" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a8fbaf1e5ea8bd571c08f16137fe310bf" prot="public" static="no">
+        <name>cublasSsymv</name>
+        <initializer>cublasSsymv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="187" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1abdf626323a593cf698d12f07a9e5401c" prot="public" static="no">
+        <name>cublasDsymv</name>
+        <initializer>cublasDsymv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="188" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1ab7312c638f869fa91b697aaa8497ecf3" prot="public" static="no">
+        <name>cublasCsymv</name>
+        <initializer>cublasCsymv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="189" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a17b2dfcb48e225c9e4d5738463a54001" prot="public" static="no">
+        <name>cublasZsymv</name>
+        <initializer>cublasZsymv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="190" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1ae3c85bfd29946683ec8649774c5c06cc" prot="public" static="no">
+        <name>cublasChemv</name>
+        <initializer>cublasChemv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="191" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a25162fd62cae3e6353773120ae0455f1" prot="public" static="no">
+        <name>cublasZhemv</name>
+        <initializer>cublasZhemv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="192" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1ab370d0788a569f35b71e450cf4174d56" prot="public" static="no">
+        <name>cublasSsbmv</name>
+        <initializer>cublasSsbmv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="194" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1ab9c2ddb05b2bf22314530c660e481b10" prot="public" static="no">
+        <name>cublasDsbmv</name>
+        <initializer>cublasDsbmv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="195" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1af1c9029e6895bd981c32e7bc8fd9517b" prot="public" static="no">
+        <name>cublasChbmv</name>
+        <initializer>cublasChbmv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="196" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a510e7b13d0ad155de769a4ba2c33f848" prot="public" static="no">
+        <name>cublasZhbmv</name>
+        <initializer>cublasZhbmv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="197" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1ac7bd5188c032565c1adb334fde238686" prot="public" static="no">
+        <name>cublasSspmv</name>
+        <initializer>cublasSspmv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="199" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1adaa80850925fd24c5acfd438e3b09b77" prot="public" static="no">
+        <name>cublasDspmv</name>
+        <initializer>cublasDspmv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="200" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a3c5884580b45d02fb5fd7ae1f76c0d9b" prot="public" static="no">
+        <name>cublasChpmv</name>
+        <initializer>cublasChpmv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="201" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1af7e3ea6db7417fcfc90575904ea70332" prot="public" static="no">
+        <name>cublasZhpmv</name>
+        <initializer>cublasZhpmv_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="202" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a636c706b410c29df34f9336886f0a459" prot="public" static="no">
+        <name>cublasSger</name>
+        <initializer>cublasSger_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="205" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a45021353c8e11c7d62dfe07ebf668254" prot="public" static="no">
+        <name>cublasDger</name>
+        <initializer>cublasDger_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="206" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1ac80d18eacab950fba3619331ed48ed2e" prot="public" static="no">
+        <name>cublasCgeru</name>
+        <initializer>cublasCgeru_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="207" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a0d9b6749ae18d23911b08bc9df5f1acb" prot="public" static="no">
+        <name>cublasCgerc</name>
+        <initializer>cublasCgerc_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="208" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1aef21ff44775f97ae1e8dc42bad309b63" prot="public" static="no">
+        <name>cublasZgeru</name>
+        <initializer>cublasZgeru_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="209" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a7756729a2c9212950e9d294de14739d2" prot="public" static="no">
+        <name>cublasZgerc</name>
+        <initializer>cublasZgerc_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="210" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1ad05ce3c9b9a46bb1d3c06d8665256883" prot="public" static="no">
+        <name>cublasSsyr</name>
+        <initializer>cublasSsyr_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="212" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1aeb4df6375fdc89418ae1f1d5183ff44b" prot="public" static="no">
+        <name>cublasDsyr</name>
+        <initializer>cublasDsyr_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="213" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a550e535dc413f1aa0a5bc03bb7988ef9" prot="public" static="no">
+        <name>cublasCsyr</name>
+        <initializer>cublasCsyr_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="214" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1aae052b249ab5327f2af3c3040914fea5" prot="public" static="no">
+        <name>cublasZsyr</name>
+        <initializer>cublasZsyr_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="215" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1ab36ab468ccda86427ab98a2787bb3e5c" prot="public" static="no">
+        <name>cublasCher</name>
+        <initializer>cublasCher_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="216" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a50a2a69eabe45e64f30cb27324faf48a" prot="public" static="no">
+        <name>cublasZher</name>
+        <initializer>cublasZher_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="217" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a576c373089fdb179b66274eb0735752d" prot="public" static="no">
+        <name>cublasSspr</name>
+        <initializer>cublasSspr_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="219" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1abc44192b1c0396f638409dea6cc478ab" prot="public" static="no">
+        <name>cublasDspr</name>
+        <initializer>cublasDspr_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="220" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1ad0f1927e635ed70a5790b8956e8b7217" prot="public" static="no">
+        <name>cublasChpr</name>
+        <initializer>cublasChpr_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="221" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1aac21b4274de06075577f9c34a3615d85" prot="public" static="no">
+        <name>cublasZhpr</name>
+        <initializer>cublasZhpr_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="222" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1aa335c76508584cff729c6a20066a764e" prot="public" static="no">
+        <name>cublasSsyr2</name>
+        <initializer>cublasSsyr2_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="224" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="224" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a980b9de863c13acdd834338cc49a3d4a" prot="public" static="no">
+        <name>cublasDsyr2</name>
+        <initializer>cublasDsyr2_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="225" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a9480c176c8bdf914a438990b9963dcc1" prot="public" static="no">
+        <name>cublasCsyr2</name>
+        <initializer>cublasCsyr2_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="226" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a555751802ab89be603ac9797eeb0cdf7" prot="public" static="no">
+        <name>cublasZsyr2</name>
+        <initializer>cublasZsyr2_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="227" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a0ff814d8c97315519666336511af4f87" prot="public" static="no">
+        <name>cublasCher2</name>
+        <initializer>cublasCher2_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="228" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a942eab6440f4a4554db074f974e711fe" prot="public" static="no">
+        <name>cublasZher2</name>
+        <initializer>cublasZher2_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="229" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1ab3a31dc2354f682013c4617518e0fadf" prot="public" static="no">
+        <name>cublasSspr2</name>
+        <initializer>cublasSspr2_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="231" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a2de95b24c27bfc77e8dfa200f9857c43" prot="public" static="no">
+        <name>cublasDspr2</name>
+        <initializer>cublasDspr2_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="232" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a252f27a2f0da1c3c5722bf0bc44c7692" prot="public" static="no">
+        <name>cublasChpr2</name>
+        <initializer>cublasChpr2_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="233" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1aa8b135a1ad1c292b92753240b8224695" prot="public" static="no">
+        <name>cublasZhpr2</name>
+        <initializer>cublasZhpr2_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="234" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a343f0298d3c4ea3661c4ea9412284786" prot="public" static="no">
+        <name>cublasSgemm</name>
+        <initializer>cublasSgemm_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="238" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="238" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a105d5f94a8f6d1deb0233177e4553775" prot="public" static="no">
+        <name>cublasDgemm</name>
+        <initializer>cublasDgemm_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="239" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="239" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1ab29ed03c28efbb1ffe1a505f68f7046a" prot="public" static="no">
+        <name>cublasCgemm</name>
+        <initializer>cublasCgemm_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="240" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="240" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1aecb52d72e9ffea7ef25fe8a45c509635" prot="public" static="no">
+        <name>cublasZgemm</name>
+        <initializer>cublasZgemm_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="241" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a91a10879c797bbc996745372b662e5dc" prot="public" static="no">
+        <name>cublasSsyrk</name>
+        <initializer>cublasSsyrk_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="243" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="243" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a8befa2ac1bb892189863d404cb262a4a" prot="public" static="no">
+        <name>cublasDsyrk</name>
+        <initializer>cublasDsyrk_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="244" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a2129d1f6e492596a5810af6d2299ef9e" prot="public" static="no">
+        <name>cublasCsyrk</name>
+        <initializer>cublasCsyrk_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="245" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a6954df12b76f80fc01a47018d1f4b85b" prot="public" static="no">
+        <name>cublasZsyrk</name>
+        <initializer>cublasZsyrk_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="246" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="246" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a6ca657aae0f96c896031d1193928c8f1" prot="public" static="no">
+        <name>cublasCherk</name>
+        <initializer>cublasCherk_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="247" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="247" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1aa248fcf014825d051463dc87775cf662" prot="public" static="no">
+        <name>cublasZherk</name>
+        <initializer>cublasZherk_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="248" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1abb457eaf11c8872ee0c188bf16ac89fc" prot="public" static="no">
+        <name>cublasSsyr2k</name>
+        <initializer>cublasSsyr2k_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="250" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a9f03d093115c36b73fd8cacced2a1611" prot="public" static="no">
+        <name>cublasDsyr2k</name>
+        <initializer>cublasDsyr2k_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="251" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="251" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a0d39511495016408bf8f92499c810f21" prot="public" static="no">
+        <name>cublasCsyr2k</name>
+        <initializer>cublasCsyr2k_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="252" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="252" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a506d6d6cb79fe1b2aaee9de9e9f0926a" prot="public" static="no">
+        <name>cublasZsyr2k</name>
+        <initializer>cublasZsyr2k_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="253" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1ab714f2a6b8c97c82e2a31a8fb261bf04" prot="public" static="no">
+        <name>cublasCher2k</name>
+        <initializer>cublasCher2k_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="254" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="254" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1aaaab3e52646db197c19fd7b75d04a9aa" prot="public" static="no">
+        <name>cublasZher2k</name>
+        <initializer>cublasZher2k_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="255" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="255" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a632a7fa9bbcdfafc2e02b331a33e4c28" prot="public" static="no">
+        <name>cublasSsymm</name>
+        <initializer>cublasSsymm_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="257" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="257" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1ae7c6863e2bd286c4b8255a4f523ffdc9" prot="public" static="no">
+        <name>cublasDsymm</name>
+        <initializer>cublasDsymm_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="258" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="258" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1aba262ccd249e50c4a5cc22a940ca4811" prot="public" static="no">
+        <name>cublasCsymm</name>
+        <initializer>cublasCsymm_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="259" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="259" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a479f757d1afc94ef3bced01d24d3d8c5" prot="public" static="no">
+        <name>cublasZsymm</name>
+        <initializer>cublasZsymm_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="260" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="260" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1ad62c407445437fcdc223a276d4f6959d" prot="public" static="no">
+        <name>cublasChemm</name>
+        <initializer>cublasChemm_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="261" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1ae9f74f6066ffdbe243bf6f7ca04a9d2f" prot="public" static="no">
+        <name>cublasZhemm</name>
+        <initializer>cublasZhemm_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="262" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="262" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a87e0200bc9067b814e775ff536ce4e69" prot="public" static="no">
+        <name>cublasStrsm</name>
+        <initializer>cublasStrsm_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="264" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="264" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1ab3b4a56abb487ccbe51b8ae40e16421f" prot="public" static="no">
+        <name>cublasDtrsm</name>
+        <initializer>cublasDtrsm_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="265" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="265" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a97adb1eec929c7cf79be2dcd5b592706" prot="public" static="no">
+        <name>cublasCtrsm</name>
+        <initializer>cublasCtrsm_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="266" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="266" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a8a0f0dd8b1bedd9f98efadb6c82798d1" prot="public" static="no">
+        <name>cublasZtrsm</name>
+        <initializer>cublasZtrsm_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="267" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="267" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a01c646a52b199cfc66469b197fa49050" prot="public" static="no">
+        <name>cublasStrmm</name>
+        <initializer>cublasStrmm_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="269" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="269" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1a9ebe15a03e6010fd66fd6eb7ac31421b" prot="public" static="no">
+        <name>cublasDtrmm</name>
+        <initializer>cublasDtrmm_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="270" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="270" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1aa8b9ab9890dbc6d43aa1216cae433c5c" prot="public" static="no">
+        <name>cublasCtrmm</name>
+        <initializer>cublasCtrmm_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="271" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="271" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cublas__v2_8h_1afc783f81e31c9fb2b5b3ca883b39731b" prot="public" static="no">
+        <name>cublasZtrmm</name>
+        <initializer>cublasZtrmm_v2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" line="272" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>1993-2019<sp/>NVIDIA<sp/>Corporation.<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>NOTICE<sp/>TO<sp/>LICENSEE:</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>This<sp/>source<sp/>code<sp/>and/or<sp/>documentation<sp/>(&quot;Licensed<sp/>Deliverables&quot;)<sp/>are</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>subject<sp/>to<sp/>NVIDIA<sp/>intellectual<sp/>property<sp/>rights<sp/>under<sp/>U.S.<sp/>and</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>international<sp/>Copyright<sp/>laws.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>These<sp/>Licensed<sp/>Deliverables<sp/>contained<sp/>herein<sp/>is<sp/>PROPRIETARY<sp/>and</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>CONFIDENTIAL<sp/>to<sp/>NVIDIA<sp/>and<sp/>is<sp/>being<sp/>provided<sp/>under<sp/>the<sp/>terms<sp/>and</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>conditions<sp/>of<sp/>a<sp/>form<sp/>of<sp/>NVIDIA<sp/>software<sp/>license<sp/>agreement<sp/>by<sp/>and</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>between<sp/>NVIDIA<sp/>and<sp/>Licensee<sp/>(&quot;License<sp/>Agreement&quot;)<sp/>or<sp/>electronically</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>accepted<sp/>by<sp/>Licensee.<sp/><sp/>Notwithstanding<sp/>any<sp/>terms<sp/>or<sp/>conditions<sp/>to</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>the<sp/>contrary<sp/>in<sp/>the<sp/>License<sp/>Agreement,<sp/>reproduction<sp/>or<sp/>disclosure</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>of<sp/>the<sp/>Licensed<sp/>Deliverables<sp/>to<sp/>any<sp/>third<sp/>party<sp/>without<sp/>the<sp/>express</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>written<sp/>consent<sp/>of<sp/>NVIDIA<sp/>is<sp/>prohibited.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>NOTWITHSTANDING<sp/>ANY<sp/>TERMS<sp/>OR<sp/>CONDITIONS<sp/>TO<sp/>THE<sp/>CONTRARY<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>LICENSE<sp/>AGREEMENT,<sp/>NVIDIA<sp/>MAKES<sp/>NO<sp/>REPRESENTATION<sp/>ABOUT<sp/>THE</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>SUITABILITY<sp/>OF<sp/>THESE<sp/>LICENSED<sp/>DELIVERABLES<sp/>FOR<sp/>ANY<sp/>PURPOSE.<sp/><sp/>IT<sp/>IS</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;<sp/>WITHOUT<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>NVIDIA<sp/>DISCLAIMS<sp/>ALL<sp/>WARRANTIES<sp/>WITH<sp/>REGARD<sp/>TO<sp/>THESE<sp/>LICENSED</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>DELIVERABLES,<sp/>INCLUDING<sp/>ALL<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT,<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>NOTWITHSTANDING<sp/>ANY<sp/>TERMS<sp/>OR<sp/>CONDITIONS<sp/>TO<sp/>THE<sp/>CONTRARY<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>LICENSE<sp/>AGREEMENT,<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>NVIDIA<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/>SPECIAL,<sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES,<sp/>OR<sp/>ANY</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/>DAMAGES<sp/>WHATSOEVER<sp/>RESULTING<sp/>FROM<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA<sp/>OR<sp/>PROFITS,</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>NEGLIGENCE<sp/>OR<sp/>OTHER<sp/>TORTIOUS</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/>ACTION,<sp/>ARISING<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>USE<sp/>OR<sp/>PERFORMANCE</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/>OF<sp/>THESE<sp/>LICENSED<sp/>DELIVERABLES.</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*<sp/>U.S.<sp/>Government<sp/>End<sp/>Users.<sp/><sp/>These<sp/>Licensed<sp/>Deliverables<sp/>are<sp/>a</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*<sp/>&quot;commercial<sp/>item&quot;<sp/>as<sp/>that<sp/>term<sp/>is<sp/>defined<sp/>at<sp/>48<sp/>C.F.R.<sp/>2.101<sp/>(OCT</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*<sp/>1995),<sp/>consisting<sp/>of<sp/>&quot;commercial<sp/>computer<sp/>software&quot;<sp/>and<sp/>&quot;commercial</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*<sp/>computer<sp/>software<sp/>documentation&quot;<sp/>as<sp/>such<sp/>terms<sp/>are<sp/>used<sp/>in<sp/>48</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*<sp/>C.F.R.<sp/>12.212<sp/>(SEPT<sp/>1995)<sp/>and<sp/>is<sp/>provided<sp/>to<sp/>the<sp/>U.S.<sp/>Government</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>*<sp/>only<sp/>as<sp/>a<sp/>commercial<sp/>end<sp/>item.<sp/><sp/>Consistent<sp/>with<sp/>48<sp/>C.F.R.12.212<sp/>and</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>*<sp/>48<sp/>C.F.R.<sp/>227.7202-1<sp/>through<sp/>227.7202-4<sp/>(JUNE<sp/>1995),<sp/>all</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>*<sp/>U.S.<sp/>Government<sp/>End<sp/>Users<sp/>acquire<sp/>the<sp/>Licensed<sp/>Deliverables<sp/>with</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>*<sp/>only<sp/>those<sp/>rights<sp/>set<sp/>forth<sp/>herein.</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/>*<sp/>Any<sp/>use<sp/>of<sp/>the<sp/>Licensed<sp/>Deliverables<sp/>in<sp/>individual<sp/>and<sp/>commercial</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/>*<sp/>software<sp/>must<sp/>include,<sp/>in<sp/>the<sp/>user<sp/>documentation<sp/>and<sp/>internal</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/>*<sp/>comments<sp/>to<sp/>the<sp/>code,<sp/>the<sp/>above<sp/>Disclaimer<sp/>and<sp/>U.S.<sp/>Government<sp/>End</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*<sp/>Users<sp/>Notice.</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/>*<sp/>This<sp/>is<sp/>the<sp/>public<sp/>header<sp/>file<sp/>for<sp/>the<sp/>new<sp/>CUBLAS<sp/>library<sp/>API,<sp/>it<sp/>mapped<sp/>the<sp/>generic<sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/>*<sp/>Cublas<sp/>name<sp/>functions<sp/>to<sp/>the<sp/>actual<sp/>_v2<sp/>implementations.</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(CUBLAS_V2_H_)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CUBLAS_V2_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>CUBLASAPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__CUDACC__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CUBLASAPI<sp/>__host__<sp/>__device__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CUBLASAPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cublas_api.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCreate<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCreate_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDestroy<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDestroy_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasGetVersion<sp/><sp/><sp/><sp/><sp/>cublasGetVersion_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasSetStream<sp/><sp/><sp/><sp/><sp/><sp/>cublasSetStream_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasGetStream<sp/><sp/><sp/><sp/><sp/><sp/>cublasGetStream_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasGetPointerMode<sp/>cublasGetPointerMode_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasSetPointerMode<sp/>cublasSetPointerMode_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Blas3<sp/>Routines<sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasSnrm2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasSnrm2_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDnrm2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDnrm2_v2<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasScnrm2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasScnrm2_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDznrm2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDznrm2_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasSdot<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasSdot_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDdot<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDdot_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCdotu<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCdotu_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCdotc<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCdotc_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZdotu<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZdotu_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZdotc<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZdotc_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasSscal<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasSscal_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDscal<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDscal_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCscal<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCscal_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCsscal<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCsscal_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZscal<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZscal_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZdscal<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZdscal_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasSaxpy<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasSaxpy_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDaxpy<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDaxpy_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCaxpy<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCaxpy_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZaxpy<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZaxpy_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasScopy<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasScopy_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDcopy<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDcopy_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCcopy<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCcopy_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZcopy<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZcopy_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasSswap<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasSswap_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDswap<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDswap_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCswap<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCswap_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZswap<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZswap_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasIsamax<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasIsamax_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasIdamax<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasIdamax_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasIcamax<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasIcamax_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasIzamax<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasIzamax_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasIsamin<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasIsamin_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasIdamin<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasIdamin_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasIcamin<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasIcamin_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasIzamin<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasIzamin_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasSasum<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasSasum_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDasum<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDasum_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasScasum<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasScasum_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDzasum<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDzasum_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasSrot<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasSrot_v2<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDrot<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDrot_v2<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCrot<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCrot_v2<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCsrot<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCsrot_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZrot<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZrot_v2<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZdrot<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZdrot_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasSrotg<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasSrotg_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDrotg<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDrotg_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCrotg<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCrotg_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZrotg<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZrotg_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasSrotm<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasSrotm_v2<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDrotm<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDrotm_v2<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasSrotmg<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasSrotmg_v2<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDrotmg<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDrotmg_v2<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Blas2<sp/>Routines<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasSgemv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasSgemv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDgemv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDgemv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCgemv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCgemv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZgemv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZgemv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasSgbmv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasSgbmv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDgbmv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDgbmv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCgbmv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCgbmv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZgbmv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZgbmv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasStrmv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasStrmv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDtrmv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDtrmv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCtrmv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCtrmv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZtrmv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZtrmv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasStbmv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasStbmv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDtbmv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDtbmv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCtbmv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCtbmv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZtbmv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZtbmv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasStpmv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasStpmv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDtpmv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDtpmv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCtpmv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCtpmv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZtpmv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZtpmv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasStrsv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasStrsv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDtrsv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDtrsv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCtrsv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCtrsv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZtrsv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZtrsv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasStpsv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasStpsv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDtpsv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDtpsv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCtpsv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCtpsv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZtpsv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZtpsv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasStbsv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasStbsv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDtbsv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDtbsv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCtbsv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCtbsv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZtbsv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZtbsv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasSsymv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasSsymv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDsymv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDsymv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCsymv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCsymv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZsymv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZsymv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasChemv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasChemv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZhemv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZhemv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasSsbmv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasSsbmv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDsbmv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDsbmv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasChbmv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasChbmv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZhbmv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZhbmv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasSspmv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasSspmv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDspmv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDspmv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasChpmv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasChpmv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZhpmv<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZhpmv_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasSger<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasSger_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDger<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDger_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCgeru<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCgeru_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCgerc<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCgerc_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZgeru<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZgeru_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZgerc<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZgerc_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasSsyr<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasSsyr_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDsyr<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDsyr_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCsyr<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCsyr_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZsyr<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZsyr_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCher<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCher_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZher<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZher_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasSspr<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasSspr_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDspr<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDspr_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasChpr<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasChpr_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZhpr<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZhpr_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasSsyr2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasSsyr2_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDsyr2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDsyr2_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCsyr2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCsyr2_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZsyr2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZsyr2_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCher2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCher2_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZher2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZher2_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasSspr2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasSspr2_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDspr2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDspr2_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasChpr2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasChpr2_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZhpr2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZhpr2_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Blas3<sp/>Routines<sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasSgemm<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasSgemm_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDgemm<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDgemm_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCgemm<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCgemm_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZgemm<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZgemm_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasSsyrk<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasSsyrk_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDsyrk<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDsyrk_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCsyrk<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCsyrk_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZsyrk<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZsyrk_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCherk<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCherk_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZherk<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZherk_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasSsyr2k<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasSsyr2k_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDsyr2k<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDsyr2k_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCsyr2k<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCsyr2k_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZsyr2k<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZsyr2k_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCher2k<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCher2k_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZher2k<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZher2k_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasSsymm<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasSsymm_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDsymm<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDsymm_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCsymm<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCsymm_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZsymm<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZsymm_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasChemm<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasChemm_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZhemm<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZhemm_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasStrsm<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasStrsm_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDtrsm<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDtrsm_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCtrsm<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCtrsm_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZtrsm<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZtrsm_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasStrmm<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasStrmm_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasDtrmm<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasDtrmm_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasCtrmm<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasCtrmm_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cublasZtrmm<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cublasZtrmm_v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!defined(CUBLAS_V2_H_)<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cublas_v2.h"/>
+  </compounddef>
+</doxygen>

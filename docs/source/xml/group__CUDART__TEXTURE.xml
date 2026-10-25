@@ -1,0 +1,452 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__CUDART__TEXTURE" kind="group">
+    <compoundname>CUDART_TEXTURE</compoundname>
+    <title>Texture Reference Management [DEPRECATED]</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__CUDART__TEXTURE_1ga0866e5f26fb19d71fecb42f506a8414b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaBindTexture</definition>
+        <argsstring>(size_t *offset, const struct textureReference *texref, const void *devPtr, const struct cudaChannelFormatDesc *desc, size_t size __dv(UINT_MAX))</argsstring>
+        <name>cudaBindTexture</name>
+        <param>
+          <type>size_t *</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>const struct textureReference *</type>
+          <declname>texref</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>devPtr</declname>
+        </param>
+        <param>
+          <type>const struct cudaChannelFormatDesc *</type>
+          <declname>desc</declname>
+        </param>
+        <param>
+          <type>size_t size </type>
+          <declname>__dv</declname>
+          <array>UINT_MAX</array>
+        </param>
+        <briefdescription>
+<para>Binds a memory area to a texture. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000014"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para>
+<para>Binds <computeroutput>size</computeroutput> bytes of the memory area pointed to by <computeroutput>devPtr</computeroutput> to the texture reference <computeroutput>texref</computeroutput>. <computeroutput>desc</computeroutput> describes how the memory is interpreted when fetching values from the texture. Any memory previously bound to <computeroutput>texref</computeroutput> is unbound.</para>
+<para>Since the hardware enforces an alignment requirement on texture base addresses, cudaBindTexture() returns in <computeroutput>*offset</computeroutput> a byte offset that must be applied to texture fetches in order to read from the desired memory. This offset must be divided by the texel size and passed to kernels that read from the texture so they can be applied to the ::tex1Dfetch() function. If the device memory pointer was returned from <ref refid="group__CUDART__MEMORY_1ga2ec57cea7c57e8e3c4beca43dd327134" kindref="member">cudaMalloc()</ref>, the offset is guaranteed to be 0 and NULL may be passed as the <computeroutput>offset</computeroutput> parameter.</para>
+<para>The total number of elements (or texels) in the linear address range cannot exceed ::cudaDeviceProp::maxTexture1DLinear[0]. The number of elements is computed as (<computeroutput>size</computeroutput> / elementSize), where elementSize is determined from <computeroutput>desc</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Offset in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>texref</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Texture to bind </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>devPtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Memory area on device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>desc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Channel format </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Size of the memory area pointed to by devPtr</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, ::cudaErrorInvalidTexture \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__TEXTURE__OBJECT_1ga91840d654e4a4ffb86e9b2fd793e9196" kindref="member">cudaCreateChannelDesc (C API)</ref>, <ref refid="group__CUDART__TEXTURE__OBJECT_1ga29002aca135dacb5e071fa3eb97743ba" kindref="member">cudaGetChannelDesc</ref>, <ref refid="group__CUDART__TEXTURE_1ga5992b95d35aabdd05d34a81bd48aa8fd" kindref="member">cudaGetTextureReference</ref>, cudaBindTexture (C++ API), <ref refid="group__CUDART__TEXTURE_1ga6809c52dd5e0f10c4c103fdede3d66fd" kindref="member">cudaBindTexture2D (C API)</ref>, <ref refid="group__CUDART__TEXTURE_1ga15ca067716b65a496ff594e63e624a8d" kindref="member">cudaBindTextureToArray (C API)</ref>, <ref refid="group__CUDART__TEXTURE_1ga81912a5f11bf5286d1ff0baff679335b" kindref="member">cudaUnbindTexture (C API)</ref>, <ref refid="group__CUDART__TEXTURE_1ga2e264a1004bc3bcd994df1ab0a331d92" kindref="member">cudaGetTextureAlignmentOffset (C API)</ref>, ::cuTexRefSetAddress, ::cuTexRefSetAddressMode, ::cuTexRefSetFormat, ::cuTexRefSetFlags, ::cuTexRefSetBorderColor </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="7581" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="7581" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__TEXTURE_1ga6809c52dd5e0f10c4c103fdede3d66fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaBindTexture2D</definition>
+        <argsstring>(size_t *offset, const struct textureReference *texref, const void *devPtr, const struct cudaChannelFormatDesc *desc, size_t width, size_t height, size_t pitch)</argsstring>
+        <name>cudaBindTexture2D</name>
+        <param>
+          <type>size_t *</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>const struct textureReference *</type>
+          <declname>texref</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>devPtr</declname>
+        </param>
+        <param>
+          <type>const struct cudaChannelFormatDesc *</type>
+          <declname>desc</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>pitch</declname>
+        </param>
+        <briefdescription>
+<para>Binds a 2D memory area to a texture. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000015"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para>
+<para>Binds the 2D memory area pointed to by <computeroutput>devPtr</computeroutput> to the texture reference <computeroutput>texref</computeroutput>. The size of the area is constrained by <computeroutput>width</computeroutput> in texel units, <computeroutput>height</computeroutput> in texel units, and <computeroutput>pitch</computeroutput> in byte units. <computeroutput>desc</computeroutput> describes how the memory is interpreted when fetching values from the texture. Any memory previously bound to <computeroutput>texref</computeroutput> is unbound.</para>
+<para>Since the hardware enforces an alignment requirement on texture base addresses, <ref refid="group__CUDART__TEXTURE_1ga6809c52dd5e0f10c4c103fdede3d66fd" kindref="member">cudaBindTexture2D()</ref> returns in <computeroutput>*offset</computeroutput> a byte offset that must be applied to texture fetches in order to read from the desired memory. This offset must be divided by the texel size and passed to kernels that read from the texture so they can be applied to the ::tex2D() function. If the device memory pointer was returned from <ref refid="group__CUDART__MEMORY_1ga2ec57cea7c57e8e3c4beca43dd327134" kindref="member">cudaMalloc()</ref>, the offset is guaranteed to be 0 and NULL may be passed as the <computeroutput>offset</computeroutput> parameter.</para>
+<para><computeroutput>width</computeroutput> and <computeroutput>height</computeroutput>, which are specified in elements (or texels), cannot exceed ::cudaDeviceProp::maxTexture2DLinear[0] and ::cudaDeviceProp::maxTexture2DLinear[1] respectively. <computeroutput>pitch</computeroutput>, which is specified in bytes, cannot exceed ::cudaDeviceProp::maxTexture2DLinear[2].</para>
+<para>The driver returns ::cudaErrorInvalidValue if <computeroutput>pitch</computeroutput> is not a multiple of ::cudaDeviceProp::texturePitchAlignment.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Offset in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>texref</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Texture reference to bind </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>devPtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- 2D memory area on device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>desc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Channel format </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Width in texel units </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Height in texel units </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pitch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Pitch in bytes</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, ::cudaErrorInvalidTexture \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__TEXTURE__OBJECT_1ga91840d654e4a4ffb86e9b2fd793e9196" kindref="member">cudaCreateChannelDesc (C API)</ref>, <ref refid="group__CUDART__TEXTURE__OBJECT_1ga29002aca135dacb5e071fa3eb97743ba" kindref="member">cudaGetChannelDesc</ref>, <ref refid="group__CUDART__TEXTURE_1ga5992b95d35aabdd05d34a81bd48aa8fd" kindref="member">cudaGetTextureReference</ref>, cudaBindTexture (C API), cudaBindTexture2D (C++ API), cudaBindTexture2D (C++ API, inherited channel descriptor), <ref refid="group__CUDART__TEXTURE_1ga15ca067716b65a496ff594e63e624a8d" kindref="member">cudaBindTextureToArray (C API)</ref>, <ref refid="group__CUDART__TEXTURE_1ga81912a5f11bf5286d1ff0baff679335b" kindref="member">cudaBindTextureToArray (C API)</ref>, <ref refid="group__CUDART__TEXTURE_1ga2e264a1004bc3bcd994df1ab0a331d92" kindref="member">cudaGetTextureAlignmentOffset (C API)</ref>, ::cuTexRefSetAddress2D, ::cuTexRefSetFormat, ::cuTexRefSetFlags, ::cuTexRefSetAddressMode, ::cuTexRefSetBorderColor </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="7640" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="7640" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__TEXTURE_1ga15ca067716b65a496ff594e63e624a8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaBindTextureToArray</definition>
+        <argsstring>(const struct textureReference *texref, cudaArray_const_t array, const struct cudaChannelFormatDesc *desc)</argsstring>
+        <name>cudaBindTextureToArray</name>
+        <param>
+          <type>const struct textureReference *</type>
+          <declname>texref</declname>
+        </param>
+        <param>
+          <type>cudaArray_const_t</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>const struct cudaChannelFormatDesc *</type>
+          <declname>desc</declname>
+        </param>
+        <briefdescription>
+<para>Binds an array to a texture. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000016"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para>
+<para>Binds the CUDA array <computeroutput>array</computeroutput> to the texture reference <computeroutput>texref</computeroutput>. <computeroutput>desc</computeroutput> describes how the memory is interpreted when fetching values from the texture. Any CUDA array previously bound to <computeroutput>texref</computeroutput> is unbound.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>texref</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Texture to bind </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Memory array on device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>desc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Channel format</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, ::cudaErrorInvalidTexture \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__TEXTURE__OBJECT_1ga91840d654e4a4ffb86e9b2fd793e9196" kindref="member">cudaCreateChannelDesc (C API)</ref>, <ref refid="group__CUDART__TEXTURE__OBJECT_1ga29002aca135dacb5e071fa3eb97743ba" kindref="member">cudaGetChannelDesc</ref>, <ref refid="group__CUDART__TEXTURE_1ga5992b95d35aabdd05d34a81bd48aa8fd" kindref="member">cudaGetTextureReference</ref>, cudaBindTexture (C API), <ref refid="group__CUDART__TEXTURE_1ga6809c52dd5e0f10c4c103fdede3d66fd" kindref="member">cudaBindTexture2D (C API)</ref>, cudaBindTextureToArray (C++ API), <ref refid="group__CUDART__TEXTURE_1ga81912a5f11bf5286d1ff0baff679335b" kindref="member">cudaUnbindTexture (C API)</ref>, <ref refid="group__CUDART__TEXTURE_1ga2e264a1004bc3bcd994df1ab0a331d92" kindref="member">cudaGetTextureAlignmentOffset (C API)</ref>, ::cuTexRefSetArray, ::cuTexRefSetFormat, ::cuTexRefSetFlags, ::cuTexRefSetAddressMode, ::cuTexRefSetFilterMode, ::cuTexRefSetBorderColor, ::cuTexRefSetMaxAnisotropy </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="7678" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="7678" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__TEXTURE_1ga892eec199cd61ebf84070523f03388c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaBindTextureToMipmappedArray</definition>
+        <argsstring>(const struct textureReference *texref, cudaMipmappedArray_const_t mipmappedArray, const struct cudaChannelFormatDesc *desc)</argsstring>
+        <name>cudaBindTextureToMipmappedArray</name>
+        <param>
+          <type>const struct textureReference *</type>
+          <declname>texref</declname>
+        </param>
+        <param>
+          <type>cudaMipmappedArray_const_t</type>
+          <declname>mipmappedArray</declname>
+        </param>
+        <param>
+          <type>const struct cudaChannelFormatDesc *</type>
+          <declname>desc</declname>
+        </param>
+        <briefdescription>
+<para>Binds a mipmapped array to a texture. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000017"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para>
+<para>Binds the CUDA mipmapped array <computeroutput>mipmappedArray</computeroutput> to the texture reference <computeroutput>texref</computeroutput>. <computeroutput>desc</computeroutput> describes how the memory is interpreted when fetching values from the texture. Any CUDA mipmapped array previously bound to <computeroutput>texref</computeroutput> is unbound.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>texref</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Texture to bind </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mipmappedArray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Memory mipmapped array on device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>desc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Channel format</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, ::cudaErrorInvalidTexture \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__TEXTURE__OBJECT_1ga91840d654e4a4ffb86e9b2fd793e9196" kindref="member">cudaCreateChannelDesc (C API)</ref>, <ref refid="group__CUDART__TEXTURE__OBJECT_1ga29002aca135dacb5e071fa3eb97743ba" kindref="member">cudaGetChannelDesc</ref>, <ref refid="group__CUDART__TEXTURE_1ga5992b95d35aabdd05d34a81bd48aa8fd" kindref="member">cudaGetTextureReference</ref>, cudaBindTexture (C API), <ref refid="group__CUDART__TEXTURE_1ga6809c52dd5e0f10c4c103fdede3d66fd" kindref="member">cudaBindTexture2D (C API)</ref>, cudaBindTextureToArray (C++ API), <ref refid="group__CUDART__TEXTURE_1ga81912a5f11bf5286d1ff0baff679335b" kindref="member">cudaUnbindTexture (C API)</ref>, <ref refid="group__CUDART__TEXTURE_1ga2e264a1004bc3bcd994df1ab0a331d92" kindref="member">cudaGetTextureAlignmentOffset (C API)</ref>, ::cuTexRefSetMipmappedArray, ::cuTexRefSetMipmapFilterMode ::cuTexRefSetMipmapLevelClamp, ::cuTexRefSetMipmapLevelBias, ::cuTexRefSetFormat, ::cuTexRefSetFlags, ::cuTexRefSetAddressMode, ::cuTexRefSetBorderColor, ::cuTexRefSetMaxAnisotropy </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="7718" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="7718" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__TEXTURE_1ga81912a5f11bf5286d1ff0baff679335b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaUnbindTexture</definition>
+        <argsstring>(const struct textureReference *texref)</argsstring>
+        <name>cudaUnbindTexture</name>
+        <param>
+          <type>const struct textureReference *</type>
+          <declname>texref</declname>
+        </param>
+        <briefdescription>
+<para>Unbinds a texture. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000018"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para>
+<para>Unbinds the texture bound to <computeroutput>texref</computeroutput>. If <computeroutput>texref</computeroutput> is not currently bound, no operation is performed.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>texref</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Texture to unbind</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidTexture \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__TEXTURE__OBJECT_1ga91840d654e4a4ffb86e9b2fd793e9196" kindref="member">cudaCreateChannelDesc (C API)</ref>, <ref refid="group__CUDART__TEXTURE__OBJECT_1ga29002aca135dacb5e071fa3eb97743ba" kindref="member">cudaGetChannelDesc</ref>, <ref refid="group__CUDART__TEXTURE_1ga5992b95d35aabdd05d34a81bd48aa8fd" kindref="member">cudaGetTextureReference</ref>, cudaBindTexture (C API), <ref refid="group__CUDART__TEXTURE_1ga6809c52dd5e0f10c4c103fdede3d66fd" kindref="member">cudaBindTexture2D (C API)</ref>, <ref refid="group__CUDART__TEXTURE_1ga15ca067716b65a496ff594e63e624a8d" kindref="member">cudaBindTextureToArray (C API)</ref>, cudaUnbindTexture (C++ API), <ref refid="group__CUDART__TEXTURE_1ga2e264a1004bc3bcd994df1ab0a331d92" kindref="member">cudaGetTextureAlignmentOffset (C API)</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="7744" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="7744" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__TEXTURE_1ga2e264a1004bc3bcd994df1ab0a331d92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGetTextureAlignmentOffset</definition>
+        <argsstring>(size_t *offset, const struct textureReference *texref)</argsstring>
+        <name>cudaGetTextureAlignmentOffset</name>
+        <param>
+          <type>size_t *</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>const struct textureReference *</type>
+          <declname>texref</declname>
+        </param>
+        <briefdescription>
+<para>Get the alignment offset of a texture. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000019"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para>
+<para>Returns in <computeroutput>*offset</computeroutput> the offset that was returned when texture reference <computeroutput>texref</computeroutput> was bound.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Offset of texture reference in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>texref</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Texture to get offset of</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidTexture, ::cudaErrorInvalidTextureBinding \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__TEXTURE__OBJECT_1ga91840d654e4a4ffb86e9b2fd793e9196" kindref="member">cudaCreateChannelDesc (C API)</ref>, <ref refid="group__CUDART__TEXTURE__OBJECT_1ga29002aca135dacb5e071fa3eb97743ba" kindref="member">cudaGetChannelDesc</ref>, <ref refid="group__CUDART__TEXTURE_1ga5992b95d35aabdd05d34a81bd48aa8fd" kindref="member">cudaGetTextureReference</ref>, cudaBindTexture (C API), <ref refid="group__CUDART__TEXTURE_1ga6809c52dd5e0f10c4c103fdede3d66fd" kindref="member">cudaBindTexture2D (C API)</ref>, <ref refid="group__CUDART__TEXTURE_1ga15ca067716b65a496ff594e63e624a8d" kindref="member">cudaBindTextureToArray (C API)</ref>, <ref refid="group__CUDART__TEXTURE_1ga81912a5f11bf5286d1ff0baff679335b" kindref="member">cudaUnbindTexture (C API)</ref>, cudaGetTextureAlignmentOffset (C++ API) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="7773" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="7773" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__TEXTURE_1ga5992b95d35aabdd05d34a81bd48aa8fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGetTextureReference</definition>
+        <argsstring>(const struct textureReference **texref, const void *symbol)</argsstring>
+        <name>cudaGetTextureReference</name>
+        <param>
+          <type>const struct textureReference **</type>
+          <declname>texref</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>symbol</declname>
+        </param>
+        <briefdescription>
+<para>Get the texture reference associated with a symbol. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000020"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para>
+<para>Returns in <computeroutput>*texref</computeroutput> the structure associated to the texture reference defined by symbol <computeroutput>symbol</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>texref</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Texture reference associated with symbol </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>symbol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Texture to get reference for</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidTexture \notefnerr \note_string_api_deprecation_50 \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__TEXTURE__OBJECT_1ga91840d654e4a4ffb86e9b2fd793e9196" kindref="member">cudaCreateChannelDesc (C API)</ref>, <ref refid="group__CUDART__TEXTURE__OBJECT_1ga29002aca135dacb5e071fa3eb97743ba" kindref="member">cudaGetChannelDesc</ref>, <ref refid="group__CUDART__TEXTURE_1ga2e264a1004bc3bcd994df1ab0a331d92" kindref="member">cudaGetTextureAlignmentOffset (C API)</ref>, cudaBindTexture (C API), <ref refid="group__CUDART__TEXTURE_1ga6809c52dd5e0f10c4c103fdede3d66fd" kindref="member">cudaBindTexture2D (C API)</ref>, <ref refid="group__CUDART__TEXTURE_1ga15ca067716b65a496ff594e63e624a8d" kindref="member">cudaBindTextureToArray (C API)</ref>, <ref refid="group__CUDART__TEXTURE_1ga81912a5f11bf5286d1ff0baff679335b" kindref="member">cudaUnbindTexture (C API)</ref>, ::cuModuleGetTexRef </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="7803" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="7803" declcolumn="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>___MANBRIEF___ texture reference management functions of the CUDA runtime API (___CURRENT_FILE___) ___ENDMANBRIEF___</para>
+<para>This section describes the low level texture reference management functions of the CUDA runtime application programming interface.</para>
+<para>Some functions have overloaded C++ API template versions documented separately in the <ref refid="group__CUDART__HIGHLEVEL" kindref="compound">C++ API Routines</ref> module. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

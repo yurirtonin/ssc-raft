@@ -1,0 +1,945 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespaceBasicOps" kind="namespace" language="C++">
+    <compoundname>BasicOps</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="operations_8hpp_1a4d2d08b2bf146b004917e25d190070b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__device__ size_t</type>
+        <definition>__device__ size_t BasicOps::GetIndex</definition>
+        <argsstring>()</argsstring>
+        <name>GetIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="85" column="26" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" bodystart="85" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1afa01004b9d1483b4d1d1d61dced3d6d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type1</type>
+          </param>
+          <param>
+            <type>typename Type2</type>
+          </param>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void BasicOps::KB_Add</definition>
+        <argsstring>(Type1 *a, const Type2 *b, size_t size, size_t size2)</argsstring>
+        <name>KB_Add</name>
+        <param>
+          <type>Type1 *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const Type2 *</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="90" column="17" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="90" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1a7e67390e2d52411198be76dec473e2c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type1</type>
+          </param>
+          <param>
+            <type>typename Type2</type>
+          </param>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void BasicOps::KB_Sub</definition>
+        <argsstring>(Type1 *a, const Type2 *b, size_t size, size_t size2)</argsstring>
+        <name>KB_Sub</name>
+        <param>
+          <type>Type1 *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const Type2 *</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="93" column="17" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="93" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1a56f8cd7ebf076a1a8f4a1a45098bfd43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type1</type>
+          </param>
+          <param>
+            <type>typename Type2</type>
+          </param>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void BasicOps::KB_Mul</definition>
+        <argsstring>(Type1 *a, const Type2 *b, size_t size, size_t size2)</argsstring>
+        <name>KB_Mul</name>
+        <param>
+          <type>Type1 *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const Type2 *</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="96" column="17" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="96" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1a3007a415657f1b945385bf1dc6ce84bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type1</type>
+          </param>
+          <param>
+            <type>typename Type2</type>
+          </param>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void BasicOps::KB_Div</definition>
+        <argsstring>(Type1 *a, const Type2 *b, size_t size, size_t size2)</argsstring>
+        <name>KB_Div</name>
+        <param>
+          <type>Type1 *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const Type2 *</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="99" column="17" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="99" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1a4738cb0394f94cb2739572b12c693638" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type1</type>
+          </param>
+          <param>
+            <type>typename Type2</type>
+            <defval>Type1</defval>
+          </param>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void BasicOps::KB_Add</definition>
+        <argsstring>(Type1 *a, Type2 n, size_t size)</argsstring>
+        <name>KB_Add</name>
+        <param>
+          <type>Type1 *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>Type2</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="102" column="17" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="102" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1a2ac883cacb0180ad6775797cb66ae4cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type1</type>
+          </param>
+          <param>
+            <type>typename Type2</type>
+            <defval>Type1</defval>
+          </param>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void BasicOps::KB_Sub</definition>
+        <argsstring>(Type1 *a, Type2 n, size_t size)</argsstring>
+        <name>KB_Sub</name>
+        <param>
+          <type>Type1 *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>Type2</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="105" column="17" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="105" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1a4466108336b8cf1a9dc574e8267b38e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type1</type>
+          </param>
+          <param>
+            <type>typename Type2</type>
+            <defval>Type1</defval>
+          </param>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void BasicOps::KB_Mul</definition>
+        <argsstring>(Type1 *a, Type2 n, size_t size)</argsstring>
+        <name>KB_Mul</name>
+        <param>
+          <type>Type1 *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>Type2</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="108" column="17" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="108" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1a85b298d532a5c5cc2db9cc4562111c23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type1</type>
+          </param>
+          <param>
+            <type>typename Type2</type>
+            <defval>Type1</defval>
+          </param>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void BasicOps::KB_Div</definition>
+        <argsstring>(Type1 *a, Type2 n, size_t size)</argsstring>
+        <name>KB_Div</name>
+        <param>
+          <type>Type1 *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>Type2</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="111" column="17" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="111" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1a6a64c5ebcc5572b81bdf1434ddd1bc3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void BasicOps::KB_Log</definition>
+        <argsstring>(Type *a, size_t size)</argsstring>
+        <name>KB_Log</name>
+        <param>
+          <type>Type *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="114" column="17" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="114" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1a40e5b945ab99127a952157b3726c19fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void BasicOps::KB_Exp</definition>
+        <argsstring>(Type *a, size_t size, bool bNeg)</argsstring>
+        <name>KB_Exp</name>
+        <param>
+          <type>Type *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bNeg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="117" column="17" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="117" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1a4eda713134682abda2fc57feebd5e1a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void BasicOps::KB_Clamp</definition>
+        <argsstring>(Type *a, const Type b, const Type c, size_t size)</argsstring>
+        <name>KB_Clamp</name>
+        <param>
+          <type>Type *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const Type</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const Type</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="120" column="17" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="120" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1adb19e86fda106be1a2f94b52390c5250" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void BasicOps::KB_log1j</definition>
+        <argsstring>(float *out, const Type *in, size_t size)</argsstring>
+        <name>KB_log1j</name>
+        <param>
+          <type>float *</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const Type *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="123" column="17" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="123" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1a03faef779c285ee958334441a741b779" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void BasicOps::KB_exp1j</definition>
+        <argsstring>(Type *out, const float *in, size_t size)</argsstring>
+        <name>KB_exp1j</name>
+        <param>
+          <type>Type *</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const float *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="126" column="17" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="126" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1ace4cecef9e5ba403c313c62c524f70da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void BasicOps::KB_log1j&lt; complex &gt;</definition>
+        <argsstring>(float *out, const complex *in, size_t size)</argsstring>
+        <name>KB_log1j&lt; complex &gt;</name>
+        <param>
+          <type>float *</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structcomplex" kindref="compound">complex</ref> *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="129" column="12" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="129" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1a3d6f3fdbf998b6e7a0fa348916312d48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void BasicOps::KB_exp1j&lt; complex &gt;</definition>
+        <argsstring>(complex *out, const float *in, size_t size)</argsstring>
+        <name>KB_exp1j&lt; complex &gt;</name>
+        <param>
+          <type><ref refid="structcomplex" kindref="compound">complex</ref> *</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const float *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="132" column="12" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="132" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1a0644e0fbe9534662c050049947bc6b80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void BasicOps::KB_Power</definition>
+        <argsstring>(Type *a, float P, size_t size)</argsstring>
+        <name>KB_Power</name>
+        <param>
+          <type>Type *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>P</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="135" column="17" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="135" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1a47a323293480407f2ddbae992d5ed18e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void BasicOps::KB_Power&lt; float &gt;</definition>
+        <argsstring>(float *out, float P, size_t size)</argsstring>
+        <name>KB_Power&lt; float &gt;</name>
+        <param>
+          <type>float *</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>P</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="138" column="12" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="138" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1a1cac73197578fa98836817131c9af73a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void BasicOps::KB_Power&lt; complex &gt;</definition>
+        <argsstring>(complex *out, float P, size_t size)</argsstring>
+        <name>KB_Power&lt; complex &gt;</name>
+        <param>
+          <type><ref refid="structcomplex" kindref="compound">complex</ref> *</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>P</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="141" column="12" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="141" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1a339a59b97f48e65638e3ef289e5cbe85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void BasicOps::KB_ABS2</definition>
+        <argsstring>(float *out, Type *a, size_t size)</argsstring>
+        <name>KB_ABS2</name>
+        <param>
+          <type>float *</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>Type *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="144" column="17" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="144" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1a86478171191c0ac895e76b6e2b748ae6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void BasicOps::KB_ABS2&lt; complex &gt;</definition>
+        <argsstring>(float *out, complex *in, size_t size)</argsstring>
+        <name>KB_ABS2&lt; complex &gt;</name>
+        <param>
+          <type>float *</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type><ref refid="structcomplex" kindref="compound">complex</ref> *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="147" column="12" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="147" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1afa028260cc178ae8dfa748c3ee1a7779" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void BasicOps::KB_ABS2&lt; float &gt;</definition>
+        <argsstring>(float *out, float *in, size_t size)</argsstring>
+        <name>KB_ABS2&lt; float &gt;</name>
+        <param>
+          <type>float *</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="150" column="12" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="150" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1a786ec3c34f06fa0ff075c62ef0a642e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type2</type>
+          </param>
+          <param>
+            <type>typename Type1</type>
+          </param>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void BasicOps::KConvert</definition>
+        <argsstring>(Type2 *out, Type1 *in, size_t size, float threshold)</argsstring>
+        <name>KConvert</name>
+        <param>
+          <type>Type2 *</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>Type1 *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>threshold</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="153" column="17" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="153" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1ac92191ad0da238a7b68e0b09f6b4d790" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>__device__ Type</type>
+        <definition>__device__ Type BasicOps::convert</definition>
+        <argsstring>(float var, float threshold)</argsstring>
+        <name>convert</name>
+        <param>
+          <type>float</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>threshold</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="163" column="24" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" bodystart="163" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1adeb58ebec0e8af1f33eaf9e1a6c0f9f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>__device__ uint16_t</type>
+        <definition>__device__ int BasicOps::convert</definition>
+        <argsstring>(float var, float threshold)</argsstring>
+        <name>convert</name>
+        <param>
+          <type>float</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>threshold</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="177" column="28" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" bodystart="177" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1a3d4f358178b8aa7ccae607b4a292b18f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>__device__ void</type>
+        <definition>__device__ void BasicOps::set_pixel</definition>
+        <argsstring>(void *recon, float var, int i, int j, int wdI, float threshold)</argsstring>
+        <name>set_pixel</name>
+        <param>
+          <type>void *</type>
+          <declname>recon</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>wdI</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>threshold</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="196" column="24" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" bodystart="196" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1a29c0a88ac3c45e7ccb5b9dadc7dbf4da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__device__ void</type>
+        <definition>__device__ void BasicOps::set_pixel</definition>
+        <argsstring>(void *recon, float var, int i, int j, int wdI, float threshold, EType::TypeEnum raftDatatype)</argsstring>
+        <name>set_pixel</name>
+        <param>
+          <type>void *</type>
+          <declname>recon</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>wdI</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>threshold</declname>
+        </param>
+        <param>
+          <type>EType::TypeEnum</type>
+          <declname>raftDatatype</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="200" column="24" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" bodystart="200" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1a8a5a0627438773939c8ca231d8125f37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void BasicOps::KFFTshift1</definition>
+        <argsstring>(Type *img, size_t sizex, size_t sizey)</argsstring>
+        <name>KFFTshift1</name>
+        <param>
+          <type>Type *</type>
+          <declname>img</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizex</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="224" column="17" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="224" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1a748a40620872c8ffb932174565e84b4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void BasicOps::KFFTshift2</definition>
+        <argsstring>(Type *img, size_t sizex, size_t sizey)</argsstring>
+        <name>KFFTshift2</name>
+        <param>
+          <type>Type *</type>
+          <declname>img</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizex</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="227" column="17" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="227" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1a356d2552a1a555204e6bdc7664e085ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void BasicOps::KFFTshift3</definition>
+        <argsstring>(Type *img, size_t sizex, size_t sizey, size_t sizez)</argsstring>
+        <name>KFFTshift3</name>
+        <param>
+          <type>Type *</type>
+          <declname>img</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizex</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizey</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizez</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="230" column="17" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" declline="230" declcolumn="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/operations.hpp" line="84" column="1"/>
+  </compounddef>
+</doxygen>

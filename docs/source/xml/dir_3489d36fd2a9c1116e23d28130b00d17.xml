@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_3489d36fd2a9c1116e23d28130b00d17" kind="dir">
+    <compoundname>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/phase</compoundname>
+    <innerdir refid="dir_652231b97616a19314b06146e280d443">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/phase/kernels</innerdir>
+    <innerfile refid="phase__retrieval_8cu">phase_retrieval.cu</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/phase/"/>
+  </compounddef>
+</doxygen>

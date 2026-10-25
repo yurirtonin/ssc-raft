@@ -1,0 +1,1516 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="configs_8hpp" kind="file" language="C++">
+    <compoundname>configs.hpp</compoundname>
+    <includes local="no">complex.h</includes>
+    <includes local="no">driver_types.h</includes>
+    <includes local="no">vector_types.h</includes>
+    <includes local="no">cstddef</includes>
+    <includes local="yes">cufft.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes refid="cuda__runtime__api_8h" local="no">cuda_runtime_api.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">future</includes>
+    <includedby refid="config_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/config.cu</includedby>
+    <includedby refid="opt_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/opt.cu</includedby>
+    <includedby refid="padding_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/padding.cu</includedby>
+    <includedby refid="workspace_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/workspace.cu</includedby>
+    <includedby refid="radon_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/radon.cu</includedby>
+    <includedby refid="radon__rt_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/forward_methods/radon_rt.cu</includedby>
+    <includedby refid="bst_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/bst.cu</includedby>
+    <includedby refid="em__frequency_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/em_frequency.cu</includedby>
+    <includedby refid="em__rt_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/parallel/reconstruction_methods/em_rt.cu</includedby>
+    <includedby refid="pipeline_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/pipelines/pipeline.cu</includedby>
+    <includedby refid="process_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/pipelines/process.cu</includedby>
+    <includedby refid="filters_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/filters/filters.cu</includedby>
+    <includedby refid="opt_8hpp" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp</includedby>
+    <includedby refid="fdk_8hpp" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp</includedby>
+    <includedby refid="bst_8hpp" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/bst.hpp</includedby>
+    <includedby refid="parallel_2em_8hpp" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp</includedby>
+    <includedby refid="fbp_8hpp" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/fbp.hpp</includedby>
+    <includedby refid="pipeline_8hpp" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/pipelines/pipeline.hpp</includedby>
+    <includedby refid="filters_8hpp" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/filters.hpp</includedby>
+    <includedby refid="processing_8hpp" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp</includedby>
+    <incdepgraph>
+      <node id="8">
+        <label>cuda_runtime_api.h</label>
+        <link refid="cuda__runtime__api_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>cuda_device_runtime_api.h</label>
+      </node>
+      <node id="6">
+        <label>cufft.h</label>
+      </node>
+      <node id="4">
+        <label>vector_types.h</label>
+      </node>
+      <node id="10">
+        <label>builtin_types.h</label>
+      </node>
+      <node id="3">
+        <label>driver_types.h</label>
+      </node>
+      <node id="1">
+        <label>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp</label>
+        <link refid="configs_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>future</label>
+      </node>
+      <node id="2">
+        <label>complex.h</label>
+      </node>
+      <node id="12">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>cstddef</label>
+      </node>
+      <node id="9">
+        <label>crt/host_defines.h</label>
+      </node>
+      <node id="7">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/em.hpp</label>
+        <link refid="parallel_2em_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp</label>
+        <link refid="configs_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp</label>
+        <link refid="opt_8hpp"/>
+      </node>
+      <node id="7">
+        <label>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/pipelines/pipeline.hpp</label>
+        <link refid="pipeline_8hpp_source"/>
+      </node>
+      <node id="3">
+        <label>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/conebeam/fdk.hpp</label>
+        <link refid="fdk_8hpp_source"/>
+      </node>
+      <node id="6">
+        <label>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/fbp.hpp</label>
+        <link refid="fbp_8hpp_source"/>
+      </node>
+      <node id="4">
+        <label>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/geometries/parallel/bst.hpp</label>
+        <link refid="bst_8hpp_source"/>
+      </node>
+      <node id="9">
+        <label>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp</label>
+        <link refid="processing_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/filters.hpp</label>
+        <link refid="filters_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structcoordinates" prot="public">coordinates</innerclass>
+    <innerclass refid="structdimension" prot="public">dimension</innerclass>
+    <innerclass refid="structgeometry" prot="public">geometry</innerclass>
+    <innerclass refid="structflags" prot="public">flags</innerclass>
+    <innerclass refid="structContrastEnhancementFilter" prot="public">ContrastEnhancementFilter</innerclass>
+    <innerclass refid="structRingsFilter" prot="public">RingsFilter</innerclass>
+    <innerclass refid="structAlignment" prot="public">Alignment</innerclass>
+    <innerclass refid="structReconstruction" prot="public">Reconstruction</innerclass>
+    <innerclass refid="structconfig" prot="public">config</innerclass>
+    <innerclass refid="structworkspace" prot="public">workspace</innerclass>
+    <innerclass refid="structProcess" prot="public">Process</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="configs_8hpp_1aae5a54a544c60bb4a24bcbff8f32aee6" prot="public" static="no">
+        <name>FFT_RANK_2D</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="9" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="configs_8hpp_1ad2ec6ba8ae94ff69237508617022aa2a" prot="public" static="no">
+        <name>FFT_RANK_1D</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="10" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="configs_8hpp_1aa8521d16bbeb10ba7000128bdd8f320e" prot="public" static="no">
+        <name>IND</name>
+        <param><defname>I</defname></param>
+        <param><defname>J</defname></param>
+        <param><defname>K</defname></param>
+        <param><defname>NX</defname></param>
+        <param><defname>NY</defname></param>
+        <initializer>(long long int)( (I) + ( (J) * (NX) ) + ( (K) * (NX) * (NY) ) )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="12" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="configs_8hpp_1af7d54770527a724b019ec8f2385d000e" prot="public" static="no">
+        <name>PADS</name>
+        <param><defname>X</defname></param>
+        <param><defname>P</defname></param>
+        <initializer>(int)( ( X * P) / 100 )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="13" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="configs_8hpp_1a515ff4f3fcb886cf54cadcd4433e05da" prot="public" static="no">
+        <name>PDIM</name>
+        <param><defname>X</defname></param>
+        <param><defname>P</defname></param>
+        <initializer>(int)( X + ( 2 * ( (int)( (X * P) / 100 ) ) ) )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="14" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="configs_8hpp_1aff943633016deb6c62a519ffe92c6819" prot="public" static="no">
+        <name>vc</name>
+        <initializer>299792458           /* Velocity of Light [m/s] */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="17" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="configs_8hpp_1af8cdc4ac8b3df03108af76b129a270ac" prot="public" static="no">
+        <name>plank</name>
+        <initializer>4.135667696E-15  /* Plank constant [ev*s] */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="18" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="configs_8hpp_1a598a3330b3c21701223ee0ca14316eca" prot="public" static="no">
+        <name>PI</name>
+        <initializer>3.141592653589793238462643383279502884</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="19" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="configs_8hpp_1a5aebde1d8208cd685f6e697b95db3eaa" prot="public" static="no">
+        <name>BOLTZMANN_CONSTANT</name>
+        <initializer>1.3806488e-16  /* [erg/k] */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="21" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="configs_8hpp_1a7b5cb503d827fae6b26874e21254d68f" prot="public" static="no">
+        <name>SPEED_OF_LIGHT</name>
+        <initializer>299792458e+2       /* [cm/s]  */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="22" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="configs_8hpp_1aac2073145afe106a5a7d90ffe459a109" prot="public" static="no">
+        <name>PLANCK_CONSTANT</name>
+        <initializer>6.58211928e-19    /* [keV*s] */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="23" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="configs_8hpp_1aaa40a3f48811b3485a7ff88c4ef90af8" prot="public" static="no">
+        <name>TPBX</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="25" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="configs_8hpp_1a5a7b431789ba2cf01ad4588e492ed62a" prot="public" static="no">
+        <name>TPBY</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="26" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="configs_8hpp_1ae4d5f6af6f9f5c61191656e87ebfb12d" prot="public" static="no">
+        <name>TPBZ</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="27" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="configs_8hpp_1a7388ebd75a04fca9b48b4bdcf2f0d3e3" prot="public" static="no">
+        <name>TPBE</name>
+        <initializer>256</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="28" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="configs_8hpp_1a78a6115b485de47c7cc56b224c558ea2" prot="public" static="no">
+        <name>MEGA</name>
+        <initializer>1048576UL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="30" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="configs_8hpp_1ad63937294d26f46ec6eada84b1ee8fec" prot="public" static="no">
+        <name>GIGA</name>
+        <initializer>1073741824UL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="31" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="configs_8hpp_1aa7866fa5e4e0ee9b034e9dab6599a9cc" prot="public" static="no">
+        <name>SQR</name>
+        <param><defname>x</defname></param>
+        <initializer>((x)*(x))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="33" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="configs_8hpp_1a8c5ff70b6b28cd0157c50a22406f92c4" prot="public" static="no">
+        <name>SIGN</name>
+        <param><defname>x</defname></param>
+        <initializer>((x &gt; 0) ? 1 : ((x &lt; 0) ? -1 : 0))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="34" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="configs_8hpp_1ac414f658c7aa1c77e0e3f7270ffeecd3" prot="public" static="no">
+        <name>APPROXINVX</name>
+        <param><defname>x</defname></param>
+        <param><defname>e</defname></param>
+        <initializer>((SIGN(x))/(sqrtf( SQR(e) + SQR(x) )))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="35" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="configs_8hpp_1a846a8d3ccdb9513c6a3b92a492ae7db6" prot="public" static="no">
+        <name>BYTES_TO_GB</name>
+        <initializer>(1.0/(1024.0*1024.0*1024.0))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="37" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="configs_8hpp_1ac222c063be6ee13e9bf5280e7c7340cc" prot="public" static="no">
+        <name>A100_MEM</name>
+        <initializer>39.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="38" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="configs_8hpp_1a35dd9da82428f71316754bc622b02651" prot="public" static="no">
+        <name>TRANSPOSE_RAYS</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="40" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="configs_8hpp_1a350d23b258dddcd0ebf41c13692c1ecb" prot="public" static="no">
+        <name>SLICES_ANGLES_RAYS</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="41" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="configs_8hpp_1abc6957325d72ed57fdedb83d6c6cd4c9" prot="public" static="no">
+        <name>ANGLES_SLICES_RAYS</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="42" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="configs_8hpp_1abfa4544a30f6891013ddec98c99d9c5d" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>ReconstructionMethod</name>
+        <enumvalue id="configs_8hpp_1abfa4544a30f6891013ddec98c99d9c5da334c4a4c42fdb79d7ebc3e73b517e6f8" prot="public">
+          <name>none</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="configs_8hpp_1abfa4544a30f6891013ddec98c99d9c5dab484f7c1a50c15c3d2ea3d7b89e5e267" prot="public">
+          <name>fbp</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="configs_8hpp_1abfa4544a30f6891013ddec98c99d9c5da37482d08ba742837abbab57e40d7d5b9" prot="public">
+          <name>bst</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="configs_8hpp_1abfa4544a30f6891013ddec98c99d9c5da2cc9751e4362b5666e2ead352c7f6009" prot="public">
+          <name>eEMRT</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="configs_8hpp_1abfa4544a30f6891013ddec98c99d9c5da69b4c3f911055e9a9414db58f9081f0e" prot="public">
+          <name>tEMRT</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="configs_8hpp_1abfa4544a30f6891013ddec98c99d9c5dae28b538747e17af59adb78dca1674bf4" prot="public">
+          <name>tEMFQ</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="configs_8hpp_1abfa4544a30f6891013ddec98c99d9c5da0c6dc52e5b0f8f58d8229f7fa907488d" prot="public">
+          <name>fdk</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="54" column="1" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="55" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="configs_8hpp_1a9be34ed1528802735a260b84b5cb119e" prot="public" static="no">
+        <type>struct <ref refid="structcoordinates" kindref="compound">coordinates</ref></type>
+        <definition>typedef struct coordinates coord</definition>
+        <argsstring></argsstring>
+        <name>coord</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="70" column="7"/>
+      </memberdef>
+      <memberdef kind="typedef" id="configs_8hpp_1ae33467cf1e80f91b06cebcbd165e0294" prot="public" static="no">
+        <type>struct <ref refid="structdimension" kindref="compound">dimension</ref></type>
+        <definition>typedef struct dimension DIM</definition>
+        <argsstring></argsstring>
+        <name>DIM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="78" column="5"/>
+      </memberdef>
+      <memberdef kind="typedef" id="configs_8hpp_1abe3b30e3417f02b1be33272429d0f40b" prot="public" static="no">
+        <type>struct <ref refid="structgeometry" kindref="compound">geometry</ref></type>
+        <definition>typedef struct geometry GEO</definition>
+        <argsstring></argsstring>
+        <name>GEO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="103" column="4"/>
+      </memberdef>
+      <memberdef kind="typedef" id="configs_8hpp_1ad2bc8e297f12edcb8fdeae5aa62815bb" prot="public" static="no">
+        <type>struct <ref refid="structflags" kindref="compound">flags</ref></type>
+        <definition>typedef struct flags FLAG</definition>
+        <argsstring></argsstring>
+        <name>FLAG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="118" column="5"/>
+      </memberdef>
+      <memberdef kind="typedef" id="configs_8hpp_1afa1e6154c40496c8e766ba954452df12" prot="public" static="no">
+        <type>struct <ref refid="structContrastEnhancementFilter" kindref="compound">ContrastEnhancementFilter</ref></type>
+        <definition>typedef struct ContrastEnhancementFilter CEF</definition>
+        <argsstring></argsstring>
+        <name>CEF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="128" column="4"/>
+      </memberdef>
+      <memberdef kind="typedef" id="configs_8hpp_1a32e3097aef24f18b8e06fae89b33122b" prot="public" static="no">
+        <type>struct <ref refid="structRingsFilter" kindref="compound">RingsFilter</ref></type>
+        <definition>typedef struct RingsFilter RF</definition>
+        <argsstring></argsstring>
+        <name>RF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="136" column="3"/>
+      </memberdef>
+      <memberdef kind="typedef" id="configs_8hpp_1a3958da318c1e006908eb4857ea5bcfd5" prot="public" static="no">
+        <type>struct <ref refid="structAlignment" kindref="compound">Alignment</ref></type>
+        <definition>typedef struct Alignment ALGN</definition>
+        <argsstring></argsstring>
+        <name>ALGN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="144" column="5"/>
+      </memberdef>
+      <memberdef kind="typedef" id="configs_8hpp_1add5c9f9da28b37a2fdf951a8b1269863" prot="public" static="no">
+        <type>struct <ref refid="structReconstruction" kindref="compound">Reconstruction</ref></type>
+        <definition>typedef struct Reconstruction REC</definition>
+        <argsstring></argsstring>
+        <name>REC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="159" column="4"/>
+      </memberdef>
+      <memberdef kind="typedef" id="configs_8hpp_1a33b78137051e67a51e044abde08744fc" prot="public" static="no">
+        <type>struct <ref refid="structconfig" kindref="compound">config</ref></type>
+        <definition>typedef struct config CFG</definition>
+        <argsstring></argsstring>
+        <name>CFG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="175" column="4"/>
+      </memberdef>
+      <memberdef kind="typedef" id="configs_8hpp_1ab2d3e707b75ac5fc9cfd6dcea839684e" prot="public" static="no">
+        <type>struct <ref refid="structworkspace" kindref="compound">workspace</ref></type>
+        <definition>typedef struct workspace WKP</definition>
+        <argsstring></argsstring>
+        <name>WKP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="225" column="4"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="configs_8hpp_1a80bfc47a18ac7526ef5f5b0778a35e45" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float calcSliceMemoryBytes</definition>
+        <argsstring>(DIM dimension)</argsstring>
+        <name>calcSliceMemoryBytes</name>
+        <param>
+          <type><ref refid="structdimension" kindref="compound">DIM</ref></type>
+          <declname>dimension</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="80" column="14" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="80" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="configs_8hpp_1afed4f25df7d940ef63b2b53555f27574" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float calcPaddedSliceMemoryBytes</definition>
+        <argsstring>(DIM dimension)</argsstring>
+        <name>calcPaddedSliceMemoryBytes</name>
+        <param>
+          <type><ref refid="structdimension" kindref="compound">DIM</ref></type>
+          <declname>dimension</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="84" column="14" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="84" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="configs_8hpp_1ab2b812311fd7a480b3ac8e3c0e362134" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float calcWidthMemoryBytes</definition>
+        <argsstring>(DIM dimension)</argsstring>
+        <name>calcWidthMemoryBytes</name>
+        <param>
+          <type><ref refid="structdimension" kindref="compound">DIM</ref></type>
+          <declname>dimension</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="90" column="14" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="90" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="configs_8hpp_1adaf4e03d9012cc9a22a969ceac418b64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float calcLengthMemoryBytes</definition>
+        <argsstring>(DIM dimension)</argsstring>
+        <name>calcLengthMemoryBytes</name>
+        <param>
+          <type><ref refid="structdimension" kindref="compound">DIM</ref></type>
+          <declname>dimension</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="94" column="14" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="94" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="configs_8hpp_1ad106c0a740d06d747337293d3418d011" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void printDim</definition>
+        <argsstring>(dim3 d)</argsstring>
+        <name>printDim</name>
+        <param>
+          <type>dim3</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="177" column="13" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="177" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="configs_8hpp_1adde1d5a632735296e35d6dfd5cda1a3a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float calcTotalRequiredMemoryBytes</definition>
+        <argsstring>(DIM tomo, DIM obj)</argsstring>
+        <name>calcTotalRequiredMemoryBytes</name>
+        <param>
+          <type><ref refid="structdimension" kindref="compound">DIM</ref></type>
+          <declname>tomo</declname>
+        </param>
+        <param>
+          <type><ref refid="structdimension" kindref="compound">DIM</ref></type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="181" column="14" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="181" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="configs_8hpp_1a05a84d640885aab635f16a33230b1619" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool isParallelOrFanbeamGeometry</definition>
+        <argsstring>(GEO geometry)</argsstring>
+        <name>isParallelOrFanbeamGeometry</name>
+        <param>
+          <type><ref refid="structgeometry" kindref="compound">GEO</ref></type>
+          <declname>geometry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="191" column="13" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="191" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="configs_8hpp_1ade4face8936ac82c6d5ac938d9432ad8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool isConeGeometry</definition>
+        <argsstring>(GEO geometry)</argsstring>
+        <name>isConeGeometry</name>
+        <param>
+          <type><ref refid="structgeometry" kindref="compound">GEO</ref></type>
+          <declname>geometry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="195" column="13" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="195" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="configs_8hpp_1a5f4f0194b8634f7b009014761e4c0b1e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int getSubblock</definition>
+        <argsstring>(int a, int b)</argsstring>
+        <name>getSubblock</name>
+        <param>
+          <type>int</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="199" column="19" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="199" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="configs_8hpp_1ae9c3fb97e4cbe5f910ddb04a55ae3e89" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int getNumberOfBlocks</definition>
+        <argsstring>(int totalsize, int blocksize)</argsstring>
+        <name>getNumberOfBlocks</name>
+        <param>
+          <type>int</type>
+          <declname>totalsize</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blocksize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="203" column="19" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="203" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="configs_8hpp_1abff295f063562b0b1f52686d351c41d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void getDeviceProperties</definition>
+        <argsstring>()</argsstring>
+        <name>getDeviceProperties</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="209" column="13" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="209" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="configs_8hpp_1a461019d7a7b7543cd6dfc1e8c424c191" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t getTotalDeviceMemory</definition>
+        <argsstring>()</argsstring>
+        <name>getTotalDeviceMemory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="255" column="15" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="255" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="configs_8hpp_1ab839673d9c6d7293eba706e117c8a27f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t getTotalDeviceMemory</definition>
+        <argsstring>(int device)</argsstring>
+        <name>getTotalDeviceMemory</name>
+        <param>
+          <type>int</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="263" column="15" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="263" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="function" id="configs_8hpp_1abffaf99b8ae11f1f01db57f285fb83ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structProcess" kindref="compound">Process</ref> *</type>
+        <definition>Process* setProcesses</definition>
+        <argsstring>(CFG configs, int *gpus, int ngpus, int total_number_of_processes)</argsstring>
+        <name>setProcesses</name>
+        <param>
+          <type><ref refid="structconfig" kindref="compound">CFG</ref></type>
+          <declname>configs</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>gpus</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ngpus</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>total_number_of_processes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="277" column="13" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/pipelines/process.cu" bodystart="115" bodyend="124" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" declline="277" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="configs_8hpp_1a426fef3cfe7f0fbf5163f1d1af558d67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setProcessParallel</definition>
+        <argsstring>(CFG configs, Process *process, int *gpus, int ngpus, int index, int n_total_processes)</argsstring>
+        <name>setProcessParallel</name>
+        <param>
+          <type><ref refid="structconfig" kindref="compound">CFG</ref></type>
+          <declname>configs</declname>
+        </param>
+        <param>
+          <type><ref refid="structProcess" kindref="compound">Process</ref> *</type>
+          <declname>process</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>gpus</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ngpus</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_total_processes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="279" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/pipelines/process.cu" bodystart="128" bodyend="167" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" declline="279" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="configs_8hpp_1a6ce3b663b7ffbe3489959d4139fad2ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getTotalProcesses</definition>
+        <argsstring>(int ngpus, int sizeZ, const int blockSize, const size_t total_required_mem_per_slice_bytes, bool using_fft)</argsstring>
+        <name>getTotalProcesses</name>
+        <param>
+          <type>int</type>
+          <declname>ngpus</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizeZ</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>blockSize</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>total_required_mem_per_slice_bytes</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>using_fft</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="283" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/pipelines/process.cu" bodystart="87" bodyend="110" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" declline="283" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="configs_8hpp_1a6c74404bce3385b8446a77ad123e25b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int compute_GPU_blocksize</definition>
+        <argsstring>(int nslices, float total_required_mem_per_slice, bool using_fft, float GPU_MEMORY)</argsstring>
+        <name>compute_GPU_blocksize</name>
+        <param>
+          <type>int</type>
+          <declname>nslices</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>total_required_mem_per_slice</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>using_fft</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>GPU_MEMORY</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="285" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/pipelines/process.cu" bodystart="31" bodyend="66" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" declline="285" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="configs_8hpp_1ad01b7e2f332c008fdbc7eb57d735ac56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getGPUBlocksize</definition>
+        <argsstring>(int input_blocksize, int gpu_block, float total_required_memory_per_unitary_block_bytes, int max_blocksize, bool using_fft)</argsstring>
+        <name>getGPUBlocksize</name>
+        <param>
+          <type>int</type>
+          <declname>input_blocksize</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>gpu_block</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>total_required_memory_per_unitary_block_bytes</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_blocksize</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>using_fft</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="287" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/pipelines/process.cu" bodystart="68" bodyend="83" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" declline="287" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="configs_8hpp_1a8d2dbe2c1d5c3014eb37ea99a0f5d93a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structworkspace" kindref="compound">WKP</ref> *</type>
+        <definition>WKP* Initialize_workspace</definition>
+        <argsstring>(dim3 size_tomo, dim3 size_obj, dim3 size_flat, dim3 size_dark, dim3 tomo_pad, dim3 obj_pad, int nangles)</argsstring>
+        <name>Initialize_workspace</name>
+        <param>
+          <type>dim3</type>
+          <declname>size_tomo</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>size_obj</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>size_flat</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>size_dark</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>tomo_pad</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>obj_pad</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nangles</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="295" column="5" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/workspace.cu" bodystart="8" bodyend="49" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" declline="295" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="configs_8hpp_1a27f7b9fbfb520005451eceb556e3e224" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void freeWorkspace</definition>
+        <argsstring>(WKP *workspace)</argsstring>
+        <name>freeWorkspace</name>
+        <param>
+          <type><ref refid="structworkspace" kindref="compound">WKP</ref> *</type>
+          <declname>workspace</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="298" column="6" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/workspace.cu" bodystart="53" bodyend="67" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" declline="298" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="configs_8hpp_1ac9aa9032adf0179f255895a3426b7dc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void KCopyShiftX</definition>
+        <argsstring>(Type *out, Type *in, size_t outsizex, size_t insizex, size_t nangles, int csino, float filler)</argsstring>
+        <name>KCopyShiftX</name>
+        <param>
+          <type>Type *</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>Type *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>outsizex</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>insizex</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>csino</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>filler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="306" column="17" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="306" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="function" id="configs_8hpp_1aeeed5a11aee804b0452c2343d2e73f9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void KSetToOne</definition>
+        <argsstring>(Type *vec, size_t size)</argsstring>
+        <name>KSetToOne</name>
+        <param>
+          <type>Type *</type>
+          <declname>vec</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" line="321" column="17" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp" bodystart="321" bodyend="326"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>RAFT_CONFIGS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RAFT_CONFIGS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;complex.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;driver_types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector_types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FFT_RANK_2D<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FFT_RANK_1D<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IND(I,J,K,NX,NY)<sp/>(long<sp/>long<sp/>int)(<sp/>(I)<sp/>+<sp/>(<sp/>(J)<sp/>*<sp/>(NX)<sp/>)<sp/>+<sp/>(<sp/>(K)<sp/>*<sp/>(NX)<sp/>*<sp/>(NY)<sp/>)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PADS(X,<sp/>P)<sp/>(int)(<sp/>(<sp/>X<sp/>*<sp/>P)<sp/>/<sp/>100<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PDIM(X,P)<sp/>(int)(<sp/>X<sp/>+<sp/>(<sp/>2<sp/>*<sp/>(<sp/>(int)(<sp/>(X<sp/>*<sp/>P)<sp/>/<sp/>100<sp/>)<sp/>)<sp/>)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#define<sp/>COMPUTE_SUBBLOCK<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>vc<sp/>299792458<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Velocity<sp/>of<sp/>Light<sp/>[m/s]<sp/>*/</highlight><highlight class="preprocessor"><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>plank<sp/>4.135667696E-15<sp/><sp/></highlight><highlight class="comment">/*<sp/>Plank<sp/>constant<sp/>[ev*s]<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PI<sp/>3.141592653589793238462643383279502884</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BOLTZMANN_CONSTANT<sp/>1.3806488e-16<sp/><sp/></highlight><highlight class="comment">/*<sp/>[erg/k]<sp/>*/</highlight><highlight class="preprocessor"><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPEED_OF_LIGHT<sp/>299792458e+2<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>[cm/s]<sp/><sp/>*/</highlight><highlight class="preprocessor"><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PLANCK_CONSTANT<sp/>6.58211928e-19<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>[keV*s]<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TPBX<sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TPBY<sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TPBZ<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TPBE<sp/>256</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MEGA<sp/>1048576UL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GIGA<sp/>1073741824UL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SQR(x)<sp/>((x)*(x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SIGN(x)<sp/>((x<sp/>&gt;<sp/>0)<sp/>?<sp/>1<sp/>:<sp/>((x<sp/>&lt;<sp/>0)<sp/>?<sp/>-1<sp/>:<sp/>0))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>APPROXINVX(x,e)<sp/>((SIGN(x))/(sqrtf(<sp/>SQR(e)<sp/>+<sp/>SQR(x)<sp/>)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BYTES_TO_GB<sp/>(1.0/(1024.0*1024.0*1024.0))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>A100_MEM<sp/>39.5<sp/></highlight><highlight class="comment">//<sp/>A100<sp/>40GB<sp/>device<sp/>RAM<sp/>memory,<sp/>in<sp/>GB.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRANSPOSE_RAYS<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SLICES_ANGLES_RAYS<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ANGLES_SLICES_RAYS<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cufft.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cuda_runtime_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//<sp/>following<sp/>includes<sp/>not<sp/>directly<sp/>used<sp/>here,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//<sp/>should<sp/>we<sp/>move<sp/>to<sp/>specific<sp/>files?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;future&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>ReconstructionMethod</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>none<sp/><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>fbp<sp/><sp/><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>bst<sp/><sp/><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>eEMRT<sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>tEMRT<sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>tEMFQ<sp/>=<sp/>5,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>fdk<sp/><sp/><sp/>=<sp/>6</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="structcoordinates" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structcoordinates" kindref="compound">coordinates</ref></highlight></codeline>
+<codeline lineno="66"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x;<sp/></highlight><highlight class="comment">/*<sp/>Coordinates<sp/>values<sp/>on<sp/>x-direction<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y;<sp/></highlight><highlight class="comment">/*<sp/>Coordinates<sp/>values<sp/>on<sp/>y-direction<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z;<sp/></highlight><highlight class="comment">/*<sp/>Coordinates<sp/>values<sp/>on<sp/>z-direction<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}<sp/><ref refid="structcoordinates" kindref="compound">coord</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Coordinates<sp/>values<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="structdimension" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdimension" kindref="compound">dimension</ref></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>dim3<sp/>size;<sp/></highlight><highlight class="comment">/*<sp/>Dimension<sp/>values<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>dim3<sp/><sp/>pad;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Pad<sp/>value<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blocksize;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>padding_mode;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}<sp/><ref refid="structdimension" kindref="compound">DIM</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Data<sp/>dimensions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>calcSliceMemoryBytes(<ref refid="structdimension" kindref="compound">DIM</ref><sp/><ref refid="structdimension" kindref="compound">dimension</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/><ref refid="structdimension" kindref="compound">dimension</ref>.size.x<sp/>*<sp/><ref refid="structdimension" kindref="compound">dimension</ref>.size.y<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)<sp/>);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>calcPaddedSliceMemoryBytes(<ref refid="structdimension" kindref="compound">DIM</ref><sp/><ref refid="structdimension" kindref="compound">dimension</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizepadx<sp/>=<sp/>PDIM(<ref refid="structdimension" kindref="compound">dimension</ref>.size.x,<ref refid="structdimension" kindref="compound">dimension</ref>.pad.x);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizepady<sp/>=<sp/>PDIM(<ref refid="structdimension" kindref="compound">dimension</ref>.size.y,<ref refid="structdimension" kindref="compound">dimension</ref>.pad.y);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/>sizepadx<sp/>*<sp/>sizepady<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)<sp/>);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>calcWidthMemoryBytes(<ref refid="structdimension" kindref="compound">DIM</ref><sp/><ref refid="structdimension" kindref="compound">dimension</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/><ref refid="structdimension" kindref="compound">dimension</ref>.size.y<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)<sp/>);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>calcLengthMemoryBytes(<ref refid="structdimension" kindref="compound">DIM</ref><sp/><ref refid="structdimension" kindref="compound">dimension</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/><ref refid="structdimension" kindref="compound">dimension</ref>.size.x<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)<sp/>);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="structgeometry" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structgeometry" kindref="compound">geometry</ref></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>General<sp/>reconstruction<sp/>variables*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structcoordinates" kindref="compound">coord</ref><sp/>detector_pixel,<sp/>obj_pixel;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z1,<sp/>z2,<sp/>magnitude,<sp/>energy,<sp/>wavelength;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}<ref refid="structgeometry" kindref="compound">GEO</ref>;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="structflags" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structflags" kindref="compound">flags</ref></highlight></codeline>
+<codeline lineno="106"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Bool<sp/>variables<sp/>-<sp/>Pipeline<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>do_flat_dark_correction;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>do_flat_dark_log;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>do_paganin_filter;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>do_rings;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>do_rotation_axis_offset;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>do_rotation_correction;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>do_alignment;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>do_excentric_offset;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>do_excentric;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>do_reconstruction;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}<ref refid="structflags" kindref="compound">FLAG</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="structContrastEnhancementFilter" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structContrastEnhancementFilter" kindref="compound">ContrastEnhancementFilter</ref></highlight></codeline>
+<codeline lineno="121"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Paganin<sp/>Filter<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>method;<sp/></highlight><highlight class="comment">/*<sp/>Contrast<sp/>Enhancement<sp/>methods.<sp/>Options:<sp/>paganin,<sp/>paganin_slices<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>beta_delta;<sp/></highlight><highlight class="comment">/*<sp/>beta/delta<sp/>parameter<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>regularization;<sp/></highlight><highlight class="comment">/*<sp/>regularization<sp/>parameter<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>post_process;<sp/></highlight><highlight class="comment">/*<sp/>Function<sp/>applied<sp/>after<sp/>usual<sp/>convolution:<sp/>ex.<sp/>aplly<sp/>-log()<sp/>after<sp/>Paganin<sp/>kernel<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal">}<ref refid="structContrastEnhancementFilter" kindref="compound">CEF</ref>;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="structRingsFilter" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structRingsFilter" kindref="compound">RingsFilter</ref></highlight></codeline>
+<codeline lineno="131"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Paganin<sp/>Filter<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>method;<sp/></highlight><highlight class="comment">/*<sp/>Rings<sp/>methods.<sp/>Options:<sp/>titarenko*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rings_block;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Titarenko&apos;s<sp/>parameter<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>rings_lambda;<sp/></highlight><highlight class="comment">/*<sp/>Titarenko&apos;s<sp/>regularization<sp/>parameter<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal">}<ref refid="structRingsFilter" kindref="compound">RF</ref>;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="structAlignment" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structAlignment" kindref="compound">Alignment</ref></highlight></codeline>
+<codeline lineno="139"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Alignment<sp/>methods<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>method;<sp/></highlight><highlight class="comment">/*<sp/>Alignment<sp/>methods.<sp/>Options:<sp/>none<sp/>yet<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>excentric_offset;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Excentric<sp/>offset<sp/>parameter<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>rotation_axis_offset;<sp/></highlight><highlight class="comment">/*<sp/>Rotation<sp/>axis<sp/>offset<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal">}<ref refid="structAlignment" kindref="compound">ALGN</ref>;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="structReconstruction" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structReconstruction" kindref="compound">Reconstruction</ref></highlight></codeline>
+<codeline lineno="147"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Reconstruction<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>method;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Reconstruction<sp/>methods.<sp/>Options:<sp/>FBP<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>filter;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Filter.<sp/>Options:<sp/>ramp,<sp/>hamming,<sp/>hann,<sp/>...<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>filter_reg;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>General<sp/>regularization<sp/>parameter<sp/>for<sp/>filter<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>filter_pad;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Padding<sp/>dimension<sp/>for<sp/>filter<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>filter_padMode;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Padding<sp/>Mode<sp/>(values)<sp/>to<sp/>be<sp/>filled<sp/>for<sp/>filter<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>paganin_slices;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Paganin<sp/>regularization<sp/>parameter<sp/>for<sp/>slices<sp/>method<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iterations;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Iterations<sp/>for<sp/>iterative<sp/>methods<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>rotation_axis_offset;<sp/><sp/></highlight><highlight class="comment">/*<sp/>Rotation<sp/>axis<sp/>offset<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>total_variation;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Total<sp/>variation<sp/>regularization<sp/>parameter<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>interpolation;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Interpolation<sp/>Type.<sp/>Options:<sp/>&apos;bilinear&apos;<sp/>and<sp/>&apos;nearest&apos;<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal">}<ref refid="structReconstruction" kindref="compound">REC</ref>;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161" refid="structconfig" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structconfig" kindref="compound">config</ref></highlight></codeline>
+<codeline lineno="162"><highlight class="normal">{<sp/></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structgeometry" kindref="compound">GEO</ref><sp/><ref refid="structgeometry" kindref="compound">geometry</ref>;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Reconstruction<sp/>variables<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdimension" kindref="compound">DIM</ref><sp/>obj;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Tomogram<sp/>variables<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdimension" kindref="compound">DIM</ref><sp/>tomo;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdimension" kindref="compound">DIM</ref><sp/>flat;<sp/></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdimension" kindref="compound">DIM</ref><sp/>dark;<sp/></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structflags" kindref="compound">FLAG</ref><sp/><ref refid="structflags" kindref="compound">flags</ref>;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structContrastEnhancementFilter" kindref="compound">CEF</ref><sp/>ContrastParam;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structRingsFilter" kindref="compound">RF</ref><sp/>RingsParam;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structAlignment" kindref="compound">ALGN</ref><sp/>AlignParam;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structReconstruction" kindref="compound">REC</ref><sp/>ReconParam;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">}<ref refid="structconfig" kindref="compound">CFG</ref>;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>printDim(dim3<sp/>d)<sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;dim3<sp/>{%d,<sp/>%d,<sp/>%d}\n&quot;</highlight><highlight class="normal">,<sp/>d.x,<sp/>d.y,<sp/>d.z);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>calcTotalRequiredMemoryBytes(<ref refid="structdimension" kindref="compound">DIM</ref><sp/>tomo,<sp/><ref refid="structdimension" kindref="compound">DIM</ref><sp/>obj)<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>calcSliceMemoryBytes(tomo)<sp/>+</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>calcSliceMemoryBytes(obj)<sp/>+</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>calcPaddedSliceMemoryBytes(tomo)<sp/>+</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>calcLengthMemoryBytes(tomo)<sp/>+</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>calcWidthMemoryBytes(tomo)</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isParallelOrFanbeamGeometry(<ref refid="structgeometry" kindref="compound">GEO</ref><sp/><ref refid="structgeometry" kindref="compound">geometry</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structgeometry" kindref="compound">geometry</ref>.magnitude<sp/>==<sp/>1;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isConeGeometry(<ref refid="structgeometry" kindref="compound">GEO</ref><sp/><ref refid="structgeometry" kindref="compound">geometry</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structgeometry" kindref="compound">geometry</ref>.magnitude<sp/>!=<sp/>1;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>getSubblock(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>b)<sp/>{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(a<sp/>&lt;<sp/>b)<sp/>?<sp/>a<sp/>:<sp/>b;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>getNumberOfBlocks(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>totalsize,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blocksize)<sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)ceil(<sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)<sp/>totalsize<sp/>/<sp/>blocksize<sp/>);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getDeviceProperties()</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Get<sp/>Device<sp/>Properties<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>gpudevices;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cudaDeviceProp<sp/>prop;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__CUDART__DEVICE_1ga5b0c57f32cb245582010c07e952753e6" kindref="member">cudaGetDeviceCount</ref>(&amp;gpudevices);<sp/></highlight><highlight class="comment">/*<sp/>Total<sp/>Number<sp/>of<sp/>GPUs<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;GPUs<sp/>number:<sp/>%d\n&quot;</highlight><highlight class="normal">,gpudevices);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__CUDART__DEVICE_1ga3b5b6abf4a8eeabb2e3a4ca60a9d26d3" kindref="member">cudaGetDeviceProperties</ref>(&amp;prop,0);<sp/></highlight><highlight class="comment">/*<sp/>Name<sp/>of<sp/>GPU<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Device<sp/>name:<sp/>%s\n&quot;</highlight><highlight class="normal">,prop.name);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221" refid="structworkspace" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structworkspace" kindref="compound">workspace</ref></highlight></codeline>
+<codeline lineno="222"><highlight class="normal">{<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>GPU<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*tomo,<sp/>*obj,<sp/>*tomoPadd,<sp/>*objPadd;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*data,<sp/>*flat,<sp/>*dark,<sp/>*angles;<sp/></highlight></codeline>
+<codeline lineno="225"><highlight class="normal">}<ref refid="structworkspace" kindref="compound">WKP</ref>;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227" refid="structProcess" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structProcess" kindref="compound">Process</ref>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>total_req_size_mem;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Process<sp/>variables<sp/>to<sp/>parallelize<sp/>the<sp/>data<sp/>z-axis<sp/>by<sp/>independent<sp/>blocks<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>GPU<sp/>*/</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>process,<sp/>gpu;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Processes*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tomobatch_size,<sp/>objbatch_size,<sp/>gpu_proc_ind;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Tomogram<sp/>(or<sp/>detector)<sp/>and<sp/>reconstruction<sp/>filter<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tomo_index,<sp/>filter_index;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tomoptr_index,<sp/>tomoptr_size,<sp/>filterptr_index,<sp/>filterptr_size;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>tomo_pos;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Object<sp/>-<sp/>Reconstruction<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>objptr_index,<sp/>objptr_size;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>obj_pos;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_recon,<sp/>n_recon_pad,<sp/>n_tomo,<sp/>n_filter;<sp/></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/>i_gpu,<sp/>zi,<sp/>z_filter,<sp/>z_filter_pad,<sp/>z_proj,<sp/>z_recon;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_proj,<sp/>n_proj_pad,<sp/>n_filter_pad;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx_proj,<sp/>idx_proj_pad,<sp/>idx_proj_max,<sp/>idx_recon,<sp/>idx_recon_pad,<sp/>idx_filter,<sp/>idx_filter_pad;</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z_ph,<sp/>z_det;</highlight></codeline>
+<codeline lineno="252"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>getTotalDeviceMemory()<sp/>{</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>total_mem,<sp/>free_mem;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__CUDART__MEMORY_1gad5dad131be512b949e362a169eed7be2" kindref="member">cudaMemGetInfo</ref>(&amp;free_mem,<sp/>&amp;total_mem);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>total_mem;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>getTotalDeviceMemory(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>device)<sp/>{</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>total_mem,<sp/>free_mem;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__CUDART__DEVICE_1ga7b63629909800b614427aae92b22d606" kindref="member">cudaSetDevice</ref>(device);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__CUDART__MEMORY_1gad5dad131be512b949e362a169eed7be2" kindref="member">cudaMemGetInfo</ref>(&amp;free_mem,<sp/>&amp;total_mem);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>total_mem;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Processes<sp/>-<sp/>parallelization<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structProcess" kindref="compound">Process</ref><sp/>*setProcesses(<ref refid="structconfig" kindref="compound">CFG</ref><sp/>configs,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*gpus,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ngpus,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>total_number_of_processes);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setProcessParallel(<ref refid="structconfig" kindref="compound">CFG</ref><sp/>configs,<sp/><ref refid="structProcess" kindref="compound">Process</ref>*<sp/>process,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*gpus,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ngpus,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_total_processes);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>void<sp/>setProcessConebeam(CFG<sp/>configs,<sp/>Process*<sp/>process,<sp/>GPU<sp/>gpus,<sp/>int<sp/>index,<sp/>int<sp/>n_total_processes);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>getTotalProcesses(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ngpus,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeZ,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blockSize,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>total_required_mem_per_slice_bytes,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>using_fft);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>compute_GPU_blocksize(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nslices,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>total_required_mem_per_slice,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>using_fft,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>GPU_MEMORY);</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>getGPUBlocksize(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>input_blocksize,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>gpu_block,<sp/></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>total_required_memory_per_unitary_block_bytes,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_blocksize,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>using_fft);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Workspace<sp/>-<sp/>GPU<sp/>pointers<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structworkspace" kindref="compound">WKP</ref><sp/>*Initialize_workspace(dim3<sp/>size_tomo,<sp/>dim3<sp/>size_obj,<sp/></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/>dim3<sp/>size_flat,<sp/>dim3<sp/>size_dark,<sp/>dim3<sp/>tomo_pad,<sp/>dim3<sp/>obj_pad,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles);</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>freeWorkspace(<ref refid="structworkspace" kindref="compound">WKP</ref><sp/>*<ref refid="structworkspace" kindref="compound">workspace</ref>);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight><highlight class="comment">//<sp/>FFT<sp/>SHIFT<sp/>-&gt;<sp/>Crop/Place<sp/>-&gt;<sp/>FFT<sp/>ISHIFT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Warning:<sp/>Fills<sp/>empty<sp/>space<sp/>with<sp/>non-zeros</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-&gt;<sp/>Blame<sp/>EM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="306"><highlight class="normal">__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>KCopyShiftX(Type*<sp/>out,<sp/>Type*<sp/>in,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>outsizex,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>insizex,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nangles,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>csino,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>filler)</highlight></codeline>
+<codeline lineno="307"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>idx<sp/>=<sp/>blockIdx.x*blockDim.x<sp/>+<sp/>threadIdx.x;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>idy<sp/>=<sp/>blockIdx.y;</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>idy<sp/>*<sp/>insizex<sp/>+<sp/>(idx+insizex-csino)%insizex;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>shift<sp/>=<sp/>idy<sp/>*<sp/>outsizex<sp/>+<sp/>(idx<sp/>+<sp/>outsizex<sp/>-<sp/>insizex/2)<sp/>%<sp/>outsizex;</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(idx<sp/>&lt;<sp/>insizex)</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out[shift]<sp/>=<sp/>in[index];</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(idx<sp/>&lt;<sp/>outsizex)</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out[shift]<sp/>=<sp/>filler;</highlight></codeline>
+<codeline lineno="318"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Type&gt;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal">__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>KSetToOne(Type*<sp/>vec,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="322"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>idx<sp/>=<sp/>blockDim.x<sp/>*<sp/>blockIdx.x<sp/>+<sp/>threadIdx.x;</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(idx<sp/>&lt;<sp/>size)</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vec[idx]<sp/>=<sp/>Type(1);</highlight></codeline>
+<codeline lineno="326"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight></codeline>
+    </programlisting>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/configs.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespaceopt" kind="namespace" language="C++">
+    <compoundname>opt</compoundname>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="opt_8hpp_1a2e99195c18b0693556dd57a84f84ab2c" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>TransposeOperation</name>
+        <enumvalue id="opt_8hpp_1a2e99195c18b0693556dd57a84f84ab2ca334c4a4c42fdb79d7ebc3e73b517e6f8" prot="public">
+          <name>none</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="opt_8hpp_1a2e99195c18b0693556dd57a84f84ab2cadc1d71bbb5c4d2a5e936db79ef10c19f" prot="public">
+          <name>log</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="opt_8hpp_1a2e99195c18b0693556dd57a84f84ab2cab0ab0254bd58eb87eaee3172ba49fefb" prot="public">
+          <name>exp</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="204" column="5" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" bodystart="205" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="enum" id="opt_8hpp_1a985ae6ca570308c6654fc804f89fa31d" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>PaddingMode</name>
+        <enumvalue id="opt_8hpp_1a985ae6ca570308c6654fc804f89fa31da334c4a4c42fdb79d7ebc3e73b517e6f8" prot="public">
+          <name>none</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="opt_8hpp_1a985ae6ca570308c6654fc804f89fa31dad02c4c4cde7ae76252540d116a40f23a" prot="public">
+          <name>zero</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="opt_8hpp_1a985ae6ca570308c6654fc804f89fa31da09039bd1628a3c1b25fda3134a4fe050" prot="public">
+          <name>edge</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="opt_8hpp_1a985ae6ca570308c6654fc804f89fa31da50a1e8d0ea071aca23f99488fd969483" prot="public">
+          <name>ones</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="211" column="5" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" bodystart="212" bodyend="217"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="opt_8hpp_1a78261f71a1349f947479dc36f8def16f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__host__ __device__ int</type>
+        <definition>__host__ __device__ int opt::assert_dimension</definition>
+        <argsstring>(int size1, int size2)</argsstring>
+        <name>assert_dimension</name>
+        <param>
+          <type>int</type>
+          <declname>size1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="37" column="36" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" bodystart="37" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1a67a6e59a6785111307c963392f649cf3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__host__ __device__ int</type>
+        <definition>__host__ __device__ int opt::assert_dimension_xyz</definition>
+        <argsstring>(dim3 size1, dim3 size2)</argsstring>
+        <name>assert_dimension_xyz</name>
+        <param>
+          <type>dim3</type>
+          <declname>size1</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>size2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="40" column="36" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" bodystart="40" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1a201ab8d5797bbf658d1c11f452dbef8a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__host__ __device__ int</type>
+        <definition>__host__ __device__ int opt::assert_dimension_xy</definition>
+        <argsstring>(dim3 size1, dim3 size2)</argsstring>
+        <name>assert_dimension_xy</name>
+        <param>
+          <type>dim3</type>
+          <declname>size1</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>size2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="50" column="36" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" bodystart="50" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1a7d07d88c70e153f315d0f4acf6ec1470" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__host__ __device__ int</type>
+        <definition>__host__ __device__ int opt::assert_dimension_xz</definition>
+        <argsstring>(dim3 size1, dim3 size2)</argsstring>
+        <name>assert_dimension_xz</name>
+        <param>
+          <type>dim3</type>
+          <declname>size1</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>size2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="59" column="36" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" bodystart="59" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1a8180c9bea5603da9cef269a22778d0fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__host__ __device__ int</type>
+        <definition>__host__ __device__ int opt::assert_dimension_yz</definition>
+        <argsstring>(dim3 size1, dim3 size2)</argsstring>
+        <name>assert_dimension_yz</name>
+        <param>
+          <type>dim3</type>
+          <declname>size1</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>size2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="68" column="36" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" bodystart="68" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1a3490f329330bc72d482ab0a857fbe259" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__host__ __device__ size_t</type>
+        <definition>__host__ __device__ size_t opt::get_total_points</definition>
+        <argsstring>(dim3 size)</argsstring>
+        <name>get_total_points</name>
+        <param>
+          <type>dim3</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="77" column="39" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" bodystart="77" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1a93c0e47a255bcadeedc3cbb3295d0759" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void opt::scale</definition>
+        <argsstring>(Type *data, dim3 size, float scale)</argsstring>
+        <name>scale</name>
+        <param>
+          <type>Type *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="81" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" bodystart="81" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1adcea4201aecb5dbb6514568cc37b9e1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void opt::scale</definition>
+        <argsstring>(cufftComplex *data, dim3 size, float scale)</argsstring>
+        <name>scale</name>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="94" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/opt.cu" bodystart="311" bodyend="323" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" declline="94" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1ae77858a20cf3b04fecd28e339d887e1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>Type *</type>
+        <definition>Type* opt::allocGPU</definition>
+        <argsstring>(size_t size, cudaStream_t stream)</argsstring>
+        <name>allocGPU</name>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="97" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" bodystart="97" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1a814c06468b70821ca4c8f19a544b162e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>Type *</type>
+        <definition>Type* opt::allocGPU</definition>
+        <argsstring>(size_t size)</argsstring>
+        <name>allocGPU</name>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="101" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" bodystart="101" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1a264abd40f312948435429b7d5cca88ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void opt::CPUToGPU</definition>
+        <argsstring>(Type *cpuptr, Type *gpuptr, size_t size, cudaStream_t stream)</argsstring>
+        <name>CPUToGPU</name>
+        <param>
+          <type>Type *</type>
+          <declname>cpuptr</declname>
+        </param>
+        <param>
+          <type>Type *</type>
+          <declname>gpuptr</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="105" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" bodystart="105" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1a287a8a2d03ad62ff637cf937d2be8348" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void opt::CPUToGPU</definition>
+        <argsstring>(Type *cpuptr, Type *gpuptr, size_t size)</argsstring>
+        <name>CPUToGPU</name>
+        <param>
+          <type>Type *</type>
+          <declname>cpuptr</declname>
+        </param>
+        <param>
+          <type>Type *</type>
+          <declname>gpuptr</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="109" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" bodystart="109" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1a0127da73f8c470990b4eef853d9474c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void opt::GPUToCPU</definition>
+        <argsstring>(Type *cpuptr, Type *gpuptr, size_t size, cudaStream_t stream)</argsstring>
+        <name>GPUToCPU</name>
+        <param>
+          <type>Type *</type>
+          <declname>cpuptr</declname>
+        </param>
+        <param>
+          <type>Type *</type>
+          <declname>gpuptr</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="113" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" bodystart="113" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1a726cde54e9d00e7a343869a5914128c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void opt::GPUToCPU</definition>
+        <argsstring>(Type *cpuptr, Type *gpuptr, size_t size)</argsstring>
+        <name>GPUToCPU</name>
+        <param>
+          <type>Type *</type>
+          <declname>cpuptr</declname>
+        </param>
+        <param>
+          <type>Type *</type>
+          <declname>gpuptr</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="117" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" bodystart="117" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1ac8ed1cedba5788d5a607839e97a39010" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void opt::GPUToGPU</definition>
+        <argsstring>(Type *gpuptrIn, Type *gpuptrOut, size_t size)</argsstring>
+        <name>GPUToGPU</name>
+        <param>
+          <type>Type *</type>
+          <declname>gpuptrIn</declname>
+        </param>
+        <param>
+          <type>Type *</type>
+          <declname>gpuptrOut</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="121" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" bodystart="121" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1a1c59f29c37a539e603e53b826750cd23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void opt::MPlanFFT</definition>
+        <argsstring>(cufftHandle *mplan, int RANK, dim3 DATASIZE, cufftType FFT_TYPE)</argsstring>
+        <name>MPlanFFT</name>
+        <param>
+          <type>cufftHandle *</type>
+          <declname>mplan</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>RANK</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>DATASIZE</declname>
+        </param>
+        <param>
+          <type>cufftType</type>
+          <declname>FFT_TYPE</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="124" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/opt.cu" bodystart="196" bodyend="236" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" declline="124" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1a546afaba271f514575fcd0bdde2bff1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>dim3</type>
+        <definition>dim3 opt::setGridBlock</definition>
+        <argsstring>(dim3 size, dim3 BT)</argsstring>
+        <name>setGridBlock</name>
+        <param>
+          <type>dim3</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>BT</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="126" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/opt.cu" bodystart="303" bodyend="309" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" declline="126" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1aa1fe37062141c07a2ac4028ae21ee0f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void opt::fftshift2D</definition>
+        <argsstring>(Type *c, dim3 size)</argsstring>
+        <name>fftshift2D</name>
+        <param>
+          <type>Type *</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="129" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" bodystart="129" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1a51b1d341e282bc575699b68c0b68469d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>__global__ void</type>
+        <definition>__global__ void opt::fftshift1D</definition>
+        <argsstring>(Type *data, dim3 size)</argsstring>
+        <name>fftshift1D</name>
+        <param>
+          <type>Type *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="163" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" bodystart="163" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1a2f2ffbc56e9cde265c562f5916ccc13a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void opt::set_excentric_tomo_dimensions</definition>
+        <argsstring>(dim3 &amp;tomo)</argsstring>
+        <name>set_excentric_tomo_dimensions</name>
+        <param>
+          <type>dim3 &amp;</type>
+          <declname>tomo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="187" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/opt.cu" bodystart="183" bodyend="186" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" declline="187" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1a1ce92463a674b261358269c074acc33c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int opt::get_angleList_dimension</definition>
+        <argsstring>(dim3 tomo, int is_excentric)</argsstring>
+        <name>get_angleList_dimension</name>
+        <param>
+          <type>dim3</type>
+          <declname>tomo</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>is_excentric</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="188" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/opt.cu" bodystart="188" bodyend="194" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" declline="188" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1ac661bfe89a841a674e617251ec5dc8b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>dim3</type>
+        <definition>dim3 opt::compute_size_padded</definition>
+        <argsstring>(dim3 size, dim3 pad)</argsstring>
+        <name>compute_size_padded</name>
+        <param>
+          <type>dim3</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>pad</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="190" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/padding.cu" bodystart="18" bodyend="27" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" declline="190" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1a36dc6eb726360d40c1b7599ec2643763" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int opt::compute_dim_padded</definition>
+        <argsstring>(int size, int pad)</argsstring>
+        <name>compute_dim_padded</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pad</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="191" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/padding.cu" bodystart="13" bodyend="16" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" declline="191" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1a936251247ade9e47e5c6eb69e1323287" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int opt::compute_padding_size</definition>
+        <argsstring>(int size, int pad)</argsstring>
+        <name>compute_padding_size</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pad</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="192" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/padding.cu" bodystart="8" bodyend="11" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" declline="192" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1aad1d5672b9ff1913dc48c6b36723a793" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void opt::paddR2C</definition>
+        <argsstring>(float *in, cufftComplex *outpadded, int padding_mode, dim3 size, dim3 pad)</argsstring>
+        <name>paddR2C</name>
+        <param>
+          <type>float *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>outpadded</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>padding_mode</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>pad</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="194" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/padding.cu" bodystart="29" bodyend="87" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" declline="194" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1ae06b9e1638515f1096aab5f3e4c55a89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void opt::paddC2C</definition>
+        <argsstring>(cufftComplex *in, cufftComplex *outpadded, int padding_mode, dim3 size, dim3 pad)</argsstring>
+        <name>paddC2C</name>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>outpadded</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>padding_mode</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>pad</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="195" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/padding.cu" bodystart="89" bodyend="158" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" declline="195" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1a801723383bd4e23f2c13e019809727f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void opt::paddC2R</definition>
+        <argsstring>(cufftComplex *in, float *outpadded, int padding_mode, dim3 size, dim3 pad)</argsstring>
+        <name>paddC2R</name>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>outpadded</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>padding_mode</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>pad</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="196" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/padding.cu" bodystart="160" bodyend="215" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" declline="196" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1a8f2cdc31eb9188d8000a246d1cabd9ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void opt::paddR2R</definition>
+        <argsstring>(float *in, float *outpadded, int padding_mode, dim3 size, dim3 pad)</argsstring>
+        <name>paddR2R</name>
+        <param>
+          <type>float *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>outpadded</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>padding_mode</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>pad</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="197" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/padding.cu" bodystart="217" bodyend="272" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" declline="197" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1a18cb9fc57a9bf521ce035f36e527b370" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void opt::remove_paddC2R</definition>
+        <argsstring>(cufftComplex *inpadded, float *out, dim3 size, dim3 padsize)</argsstring>
+        <name>remove_paddC2R</name>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>inpadded</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>padsize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="199" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/padding.cu" bodystart="274" bodyend="296" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" declline="199" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1adb8e948d6530e0f6e1013e9bb82a23ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void opt::remove_paddC2C</definition>
+        <argsstring>(cufftComplex *inpadded, cufftComplex *out, dim3 size, dim3 padsize)</argsstring>
+        <name>remove_paddC2C</name>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>inpadded</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>padsize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="200" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/padding.cu" bodystart="298" bodyend="321" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" declline="200" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1ab6409cfd617d8b039640bb340b6e21be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void opt::remove_paddR2C</definition>
+        <argsstring>(float *inpadded, cufftComplex *out, dim3 size, dim3 padsize)</argsstring>
+        <name>remove_paddR2C</name>
+        <param>
+          <type>float *</type>
+          <declname>inpadded</declname>
+        </param>
+        <param>
+          <type>cufftComplex *</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>padsize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="201" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/padding.cu" bodystart="323" bodyend="345" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" declline="201" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1ab95f5f8cf65545276f661edd5a9b1c91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__global__ void</type>
+        <definition>__global__ void opt::remove_paddR2R</definition>
+        <argsstring>(float *inpadded, float *out, dim3 size, dim3 pad)</argsstring>
+        <name>remove_paddR2R</name>
+        <param>
+          <type>float *</type>
+          <declname>inpadded</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>pad</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="202" column="21" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/padding.cu" bodystart="347" bodyend="369" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" declline="202" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1a1e17ae431e97945c72b6c281b1d5d7f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void opt::flip_x</definition>
+        <argsstring>(float *data, int sizex, int sizey, int sizez)</argsstring>
+        <name>flip_x</name>
+        <param>
+          <type>float *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizex</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizey</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizez</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="221" column="14" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/opt.cu" bodystart="22" bodyend="33" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" declline="221" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1a71f9dac3d9471107d148e5ae753ee7d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void opt::transpose_cpu_zyx2xyz</definition>
+        <argsstring>(float *data, int sizex, int sizey, int sizez)</argsstring>
+        <name>transpose_cpu_zyx2xyz</name>
+        <param>
+          <type>float *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizex</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizey</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizez</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="222" column="14" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/opt.cu" bodystart="49" bodyend="75" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" declline="222" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1a7cbbce58cc406f582747bc269cda5b8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void opt::transpose_zyx2yzx</definition>
+        <argsstring>(int *gpus, int ngpus, float *data, int sizex, int sizey, int sizez, int blockx)</argsstring>
+        <name>transpose_zyx2yzx</name>
+        <param>
+          <type>int *</type>
+          <declname>gpus</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ngpus</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizex</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizey</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizez</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blockx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="223" column="14" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/opt.cu" bodystart="138" bodyend="151" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" declline="223" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1a56ca263cff5d12975aaa70540855f81c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void opt::transpose_zyx2yzx_log</definition>
+        <argsstring>(int *gpus, int ngpus, float *data, int sizex, int sizey, int sizez, int blockx)</argsstring>
+        <name>transpose_zyx2yzx_log</name>
+        <param>
+          <type>int *</type>
+          <declname>gpus</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ngpus</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizex</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizey</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizez</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blockx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="224" column="14" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/opt.cu" bodystart="153" bodyend="166" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" declline="224" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="opt_8hpp_1a8ee845b828f8d7dd8a1585dd3ac4f1ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void opt::transpose_zyx2yzx_exp</definition>
+        <argsstring>(int *gpus, int ngpus, float *data, int sizex, int sizey, int sizez, int blockx)</argsstring>
+        <name>transpose_zyx2yzx_exp</name>
+        <param>
+          <type>int *</type>
+          <declname>gpus</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ngpus</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizex</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizey</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizez</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blockx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="225" column="14" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/common/opt.cu" bodystart="168" bodyend="181" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" declline="225" declcolumn="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/opt.hpp" line="35" column="1"/>
+  </compounddef>
+</doxygen>

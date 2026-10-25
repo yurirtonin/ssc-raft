@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__CUDART__PEER" kind="group">
+    <compoundname>CUDART_PEER</compoundname>
+    <title>Peer Device Memory Access</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__CUDART__PEER_1ga46cf1454e8daa73d9bc17aa5a1589a38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaDeviceCanAccessPeer</definition>
+        <argsstring>(int *canAccessPeer, int device, int peerDevice)</argsstring>
+        <name>cudaDeviceCanAccessPeer</name>
+        <param>
+          <type>int *</type>
+          <declname>canAccessPeer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>peerDevice</declname>
+        </param>
+        <briefdescription>
+<para>Queries if a device may directly access a peer device&apos;s memory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns in <computeroutput>*canAccessPeer</computeroutput> a value of 1 if device <computeroutput>device</computeroutput> is capable of directly accessing memory from <computeroutput>peerDevice</computeroutput> and 0 otherwise. If direct access of <computeroutput>peerDevice</computeroutput> from <computeroutput>device</computeroutput> is possible, then access may be enabled by calling <ref refid="group__CUDART__PEER_1ga7443ed162ccf7463a7caf15dc799cc6d" kindref="member">cudaDeviceEnablePeerAccess()</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>canAccessPeer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Returned access capability </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Device from which allocations on <computeroutput>peerDevice</computeroutput> are to be directly accessed. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>peerDevice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Device on which the allocations to be directly accessed by <computeroutput>device</computeroutput> reside.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidDevice \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__PEER_1ga7443ed162ccf7463a7caf15dc799cc6d" kindref="member">cudaDeviceEnablePeerAccess</ref>, <ref refid="group__CUDART__PEER_1gad1d17e928a31f1cb1691a42de480c2d3" kindref="member">cudaDeviceDisablePeerAccess</ref>, ::cuDeviceCanAccessPeer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="7175" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="7175" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__PEER_1ga7443ed162ccf7463a7caf15dc799cc6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaDeviceEnablePeerAccess</definition>
+        <argsstring>(int peerDevice, unsigned int flags)</argsstring>
+        <name>cudaDeviceEnablePeerAccess</name>
+        <param>
+          <type>int</type>
+          <declname>peerDevice</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Enables direct access to memory allocations on a peer device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>On success, all allocations from <computeroutput>peerDevice</computeroutput> will immediately be accessible by the current device. They will remain accessible until access is explicitly disabled using <ref refid="group__CUDART__PEER_1gad1d17e928a31f1cb1691a42de480c2d3" kindref="member">cudaDeviceDisablePeerAccess()</ref> or either device is reset using <ref refid="group__CUDART__DEVICE_1gadf472c0854e8464c58659e2bde63eee9" kindref="member">cudaDeviceReset()</ref>.</para>
+<para>Note that access granted by this call is unidirectional and that in order to access memory on the current device from <computeroutput>peerDevice</computeroutput>, a separate symmetric call to <ref refid="group__CUDART__PEER_1ga7443ed162ccf7463a7caf15dc799cc6d" kindref="member">cudaDeviceEnablePeerAccess()</ref> is required.</para>
+<para>Note that there are both device-wide and system-wide limitations per system configuration, as noted in the CUDA Programming Guide under the section &quot;Peer-to-Peer Memory Access&quot;.</para>
+<para>Returns ::cudaErrorInvalidDevice if <ref refid="group__CUDART__PEER_1ga46cf1454e8daa73d9bc17aa5a1589a38" kindref="member">cudaDeviceCanAccessPeer()</ref> indicates that the current device cannot directly access memory from <computeroutput>peerDevice</computeroutput>.</para>
+<para>Returns ::cudaErrorPeerAccessAlreadyEnabled if direct access of <computeroutput>peerDevice</computeroutput> from the current device has already been enabled.</para>
+<para>Returns ::cudaErrorInvalidValue if <computeroutput>flags</computeroutput> is not 0.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>peerDevice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Peer device to enable direct access to from the current device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Reserved for future use and must be set to 0</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidDevice, ::cudaErrorPeerAccessAlreadyEnabled, ::cudaErrorInvalidValue \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__PEER_1ga46cf1454e8daa73d9bc17aa5a1589a38" kindref="member">cudaDeviceCanAccessPeer</ref>, <ref refid="group__CUDART__PEER_1gad1d17e928a31f1cb1691a42de480c2d3" kindref="member">cudaDeviceDisablePeerAccess</ref>, ::cuCtxEnablePeerAccess </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="7217" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="7217" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__PEER_1gad1d17e928a31f1cb1691a42de480c2d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaDeviceDisablePeerAccess</definition>
+        <argsstring>(int peerDevice)</argsstring>
+        <name>cudaDeviceDisablePeerAccess</name>
+        <param>
+          <type>int</type>
+          <declname>peerDevice</declname>
+        </param>
+        <briefdescription>
+<para>Disables direct access to memory allocations on a peer device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns ::cudaErrorPeerAccessNotEnabled if direct access to memory on <computeroutput>peerDevice</computeroutput> has not yet been enabled from the current device.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>peerDevice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Peer device to disable direct access to</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorPeerAccessNotEnabled, ::cudaErrorInvalidDevice \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__PEER_1ga46cf1454e8daa73d9bc17aa5a1589a38" kindref="member">cudaDeviceCanAccessPeer</ref>, <ref refid="group__CUDART__PEER_1ga7443ed162ccf7463a7caf15dc799cc6d" kindref="member">cudaDeviceEnablePeerAccess</ref>, ::cuCtxDisablePeerAccess </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="7239" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="7239" declcolumn="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>___MANBRIEF___ peer device memory access functions of the CUDA runtime API (___CURRENT_FILE___) ___ENDMANBRIEF___</para>
+<para>This section describes the peer device memory access functions of the CUDA runtime application programming interface. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

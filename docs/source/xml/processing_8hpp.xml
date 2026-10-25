@@ -1,0 +1,865 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="processing_8hpp" kind="file" language="C++">
+    <compoundname>processing.hpp</compoundname>
+    <includes local="no">driver_types.h</includes>
+    <includes refid="complex_8hpp" local="yes">common/complex.hpp</includes>
+    <includes refid="configs_8hpp" local="yes">common/configs.hpp</includes>
+    <includedby refid="pipeline_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/pipelines/pipeline.cu</includedby>
+    <includedby refid="background__correction_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/background_correction.cu</includedby>
+    <includedby refid="excentric__tomo_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/excentric_tomo.cu</includedby>
+    <includedby refid="paganin_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/phase/kernels/paganin.cu</includedby>
+    <includedby refid="phase__retrieval_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/phase/phase_retrieval.cu</includedby>
+    <includedby refid="rings_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/rings.cu</includedby>
+    <includedby refid="rotation__axis_8cu" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/rotation_axis.cu</includedby>
+    <includedby refid="pipeline_8hpp" local="yes">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/pipelines/pipeline.hpp</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>cuda_runtime_api.h</label>
+        <link refid="cuda__runtime__api_8h_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>cuda_device_runtime_api.h</label>
+      </node>
+      <node id="11">
+        <label>cufft.h</label>
+      </node>
+      <node id="14">
+        <label>vector_types.h</label>
+      </node>
+      <node id="7">
+        <label>builtin_types.h</label>
+      </node>
+      <node id="2">
+        <label>driver_types.h</label>
+      </node>
+      <node id="12">
+        <label>common/configs.hpp</label>
+        <link refid="configs_8hpp_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>common/complex.hpp</label>
+        <link refid="complex_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>future</label>
+      </node>
+      <node id="9">
+        <label>cuda_fp16.h</label>
+      </node>
+      <node id="13">
+        <label>complex.h</label>
+      </node>
+      <node id="10">
+        <label>cuComplex.h</label>
+      </node>
+      <node id="17">
+        <label>iostream</label>
+      </node>
+      <node id="15">
+        <label>cstddef</label>
+      </node>
+      <node id="6">
+        <label>crt/host_defines.h</label>
+      </node>
+      <node id="4">
+        <label>cuda.h</label>
+      </node>
+      <node id="1">
+        <label>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp</label>
+        <link refid="processing_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/pipelines/pipeline.hpp</label>
+        <link refid="pipeline_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp</label>
+        <link refid="processing_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacecontrast__enhance">contrast_enhance</innernamespace>
+    <innernamespace refid="namespacedenoise">denoise</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="processing_8hpp_1a3eebd09a9a94c914de17855816e6ac45" prot="public" static="no">
+        <name>PADDING</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" line="5" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="processing_8hpp_1ade25c726c3a5ec5a33465a9e51e2c090" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void getBackgroundCorrectionMultiGPU</definition>
+        <argsstring>(int *gpus, int ngpus, float *frames, float *flat, float *dark, int nrays, int nangles, int nslices, int numflats, int is_log, int order, int blocksize, const int nstreams)</argsstring>
+        <name>getBackgroundCorrectionMultiGPU</name>
+        <param>
+          <type>int *</type>
+          <declname>gpus</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ngpus</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>frames</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>flat</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dark</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nslices</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numflats</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>is_log</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>order</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blocksize</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>nstreams</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" line="12" column="6" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/background_correction.cu" bodystart="391" bodyend="487" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" declline="12" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="processing_8hpp_1a13e3fb3690935beba74ea0d330ab2d38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void getBackgroundCorrection_slices</definition>
+        <argsstring>(float *frames, float *flat, float *dark, dim3 size, int numflats, int is_log)</argsstring>
+        <name>getBackgroundCorrection_slices</name>
+        <param>
+          <type>float *</type>
+          <declname>frames</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>flat</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dark</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numflats</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>is_log</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" line="15" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/background_correction.cu" bodystart="126" bodyend="140" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" declline="15" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="processing_8hpp_1a8fb33184118c8750507af64855a3770f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void getBackgroundCorrection_frames</definition>
+        <argsstring>(float *frames, float *flat, float *dark, dim3 size, int numflats, int is_log)</argsstring>
+        <name>getBackgroundCorrection_frames</name>
+        <param>
+          <type>float *</type>
+          <declname>frames</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>flat</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dark</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numflats</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>is_log</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" line="18" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/background_correction.cu" bodystart="142" bodyend="157" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" declline="18" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="processing_8hpp_1a62182b9237aa41fd3c8f49ec96a679c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void getTitarenkoRingsMultiGPU</definition>
+        <argsstring>(int *gpus, int ngpus, float *data, int nrays, int nangles, int nslices, float lambda_rings, int ring_blocks, int blocksize)</argsstring>
+        <name>getTitarenkoRingsMultiGPU</name>
+        <param>
+          <type>int *</type>
+          <declname>gpus</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ngpus</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nslices</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lambda_rings</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ring_blocks</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blocksize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" line="24" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/rings.cu" bodystart="576" bodyend="605" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" declline="24" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="processing_8hpp_1a582d3f4a11e9ca017062a23166f27e9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void getTitarenkoRingsGPU</definition>
+        <argsstring>(int gpu, float *data, dim3 size, float lambda_rings, int ring_blocks, int blockSize)</argsstring>
+        <name>getTitarenkoRingsGPU</name>
+        <param>
+          <type>int</type>
+          <declname>gpu</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lambda_rings</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ring_blocks</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blockSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" line="28" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/rings.cu" bodystart="515" bodyend="571" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" declline="28" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="processing_8hpp_1a8fbdc165f940739ff2b7fcbda9efb4a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void getTitarenkoRings</definition>
+        <argsstring>(float *tomogram, dim3 size, float lambda_rings, int ring_blocks, cudaStream_t stream=0)</argsstring>
+        <name>getTitarenkoRings</name>
+        <param>
+          <type>float *</type>
+          <declname>tomogram</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lambda_rings</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ring_blocks</declname>
+        </param>
+        <param>
+          <type>cudaStream_t</type>
+          <declname>stream</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" line="31" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/rings.cu" bodystart="472" bodyend="513" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" declline="31" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="processing_8hpp_1a92ac1c47e010e0a74653936b23dd70e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void getCorrectRotationAxis</definition>
+        <argsstring>(float *d_tomo_in, float *d_tomo_out, dim3 tomo_size, int deviation)</argsstring>
+        <name>getCorrectRotationAxis</name>
+        <param>
+          <type>float *</type>
+          <declname>d_tomo_in</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>d_tomo_out</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>tomo_size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>deviation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" line="38" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/rotation_axis.cu" bodystart="386" bodyend="394" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" declline="38" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="processing_8hpp_1a6ac636ba0665da21b85478216c6ce604" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void getRotAxisCorrectionMultiGPU</definition>
+        <argsstring>(int *gpus, int ngpus, float *tomogram, float axis_offset, int nrays, int nangles, int nslices, int blocksize)</argsstring>
+        <name>getRotAxisCorrectionMultiGPU</name>
+        <param>
+          <type>int *</type>
+          <declname>gpus</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ngpus</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>tomogram</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>axis_offset</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nslices</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blocksize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" line="41" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/rotation_axis.cu" bodystart="577" bodyend="626" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" declline="41" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="processing_8hpp_1ad069627474a17ab808dc4ff062c40011" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void getRotAxisCorrectionGPU</definition>
+        <argsstring>(float *tomogram, float axis_offset, dim3 tomo_size, int ngpu, int blockSize)</argsstring>
+        <name>getRotAxisCorrectionGPU</name>
+        <param>
+          <type>float *</type>
+          <declname>tomogram</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>axis_offset</declname>
+        </param>
+        <param>
+          <type>dim3</type>
+          <declname>tomo_size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ngpu</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blockSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" line="45" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/rotation_axis.cu" bodystart="531" bodyend="575" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" declline="45" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="processing_8hpp_1a0035fe246fdfe7b70dc52bf5bda58e6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float findcentersino_subpixel</definition>
+        <argsstring>(float *frame0, float *frame180, float *dark, float *flat, int sizex, int sizey)</argsstring>
+        <name>findcentersino_subpixel</name>
+        <param>
+          <type>float *</type>
+          <declname>frame0</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>frame180</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dark</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>flat</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizex</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" line="54" column="11" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/rotation_axis.cu" bodystart="435" bodyend="440" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" declline="54" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="processing_8hpp_1aa29b222f9ab065b6fe04fd9ad8e094f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float getCentersino_subpixel</definition>
+        <argsstring>(float *frame0, float *frame180, float *dark, float *flat, size_t sizex, size_t sizey)</argsstring>
+        <name>getCentersino_subpixel</name>
+        <param>
+          <type>float *</type>
+          <declname>frame0</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>frame180</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dark</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>flat</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizex</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" line="57" column="11" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/rotation_axis.cu" bodystart="282" bodyend="361" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" declline="57" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="processing_8hpp_1ab1577eebbbcf35751ba24df538e0a4fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getCentersino</definition>
+        <argsstring>(float *frame0, float *frame180, float *dark, float *flat, size_t sizex, size_t sizey)</argsstring>
+        <name>getCentersino</name>
+        <param>
+          <type>float *</type>
+          <declname>frame0</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>frame180</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dark</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>flat</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizex</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" line="60" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/rotation_axis.cu" bodystart="220" bodyend="280" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" declline="60" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="processing_8hpp_1ac84a4b6059a5790d0478204db174c8d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void getExcentricTomo</definition>
+        <argsstring>(float *data, int nrays, int nangles, int nslices, int offset)</argsstring>
+        <name>getExcentricTomo</name>
+        <param>
+          <type>float *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nrays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nangles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nslices</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" line="63" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/excentric_tomo.cu" bodystart="574" bodyend="610" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" declline="63" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="processing_8hpp_1a3b9ac253f536bfc71fe721f09b381f4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getOffsetExcentricTomo</definition>
+        <argsstring>(float *sinogram, size_t sizex, size_t sizey, size_t sizez)</argsstring>
+        <name>getOffsetExcentricTomo</name>
+        <param>
+          <type>float *</type>
+          <declname>sinogram</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizex</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizey</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizez</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" line="65" column="9" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/excentric_tomo.cu" bodystart="549" bodyend="553" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" declline="65" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="processing_8hpp_1a81f96d9547b1b0864602a7179563ecf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void getContrastEnhencementMultiGPU</definition>
+        <argsstring>(DIM tomo, GEO geometry, CEF ContrastFilter, int *gpus, int ngpus, float *projections)</argsstring>
+        <name>getContrastEnhencementMultiGPU</name>
+        <param>
+          <type><ref refid="structdimension" kindref="compound">DIM</ref></type>
+          <declname>tomo</declname>
+        </param>
+        <param>
+          <type><ref refid="structgeometry" kindref="compound">GEO</ref></type>
+          <declname>geometry</declname>
+        </param>
+        <param>
+          <type><ref refid="structContrastEnhancementFilter" kindref="compound">CEF</ref></type>
+          <declname>ContrastFilter</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>gpus</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ngpus</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>projections</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" line="72" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/phase/phase_retrieval.cu" bodystart="151" bodyend="197" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" declline="72" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="processing_8hpp_1ae3f027d1acf1f6bbea43b2c1d1c51625" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void getContrastEnhencementGPU</definition>
+        <argsstring>(DIM tomo, GEO geometry, CEF ContrastFilter, float *projections, int sizez, int ngpu)</argsstring>
+        <name>getContrastEnhencementGPU</name>
+        <param>
+          <type><ref refid="structdimension" kindref="compound">DIM</ref></type>
+          <declname>tomo</declname>
+        </param>
+        <param>
+          <type><ref refid="structgeometry" kindref="compound">GEO</ref></type>
+          <declname>geometry</declname>
+        </param>
+        <param>
+          <type><ref refid="structContrastEnhancementFilter" kindref="compound">CEF</ref></type>
+          <declname>ContrastFilter</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>projections</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizez</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ngpu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" line="75" column="10" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/processing/phase/phase_retrieval.cu" bodystart="73" bodyend="149" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp" declline="75" declcolumn="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>RAFT_PROCESSING_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RAFT_PROCESSING_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;driver_types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PADDING<sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="complex_8hpp" kindref="compound">common/complex.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;common/configs.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Background<sp/>Correction<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getBackgroundCorrectionMultiGPU(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>gpus,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ngpus,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>frames,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>flat,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>dark,<sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nslices,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numflats,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>is_log,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>order,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blocksize,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nstreams);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getBackgroundCorrection_slices(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>frames,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>flat,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>dark,<sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dim3<sp/>size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numflats,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>is_log);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getBackgroundCorrection_frames(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>frames,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>flat,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>dark,<sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dim3<sp/>size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numflats,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>is_log);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Rings<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getTitarenkoRingsMultiGPU(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*gpus,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ngpus,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*data,<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nslices,<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>lambda_rings,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ring_blocks,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blocksize);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getTitarenkoRingsGPU(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>gpu,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*data,<sp/>dim3<sp/>size,<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>lambda_rings,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ring_blocks,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blockSize);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getTitarenkoRings(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*tomogram,<sp/>dim3<sp/>size,<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>lambda_rings,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ring_blocks,<sp/>cudaStream_t<sp/>stream<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Rotation<sp/>Axis<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getCorrectRotationAxis(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>d_tomo_in,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>d_tomo_out,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dim3<sp/>tomo_size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>deviation);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getRotAxisCorrectionMultiGPU(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>gpus,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ngpus,<sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>tomogram,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>axis_offset,<sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nslices,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blocksize);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getRotAxisCorrectionGPU(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*tomogram,<sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>axis_offset,<sp/>dim3<sp/>tomo_size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ngpu,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blockSize);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Centersino<sp/>-<sp/>Find<sp/>offset<sp/>for<sp/>180<sp/>degrees<sp/>parallel<sp/>tomogram<sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/><sp/><sp/>Excentric<sp/>Tomo<sp/>-<sp/>Find<sp/>offset<sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>findcentersino_subpixel(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>frame0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>frame180,<sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>dark,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>flat,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizex,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizey);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>getCentersino_subpixel(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>frame0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>frame180,<sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>dark,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>flat,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sizex,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sizey);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>getCentersino(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>frame0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>frame180,<sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>dark,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>flat,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sizex,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sizey);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getExcentricTomo(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>data,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrays,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nangles,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nslices,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>offset);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>getOffsetExcentricTomo(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>sinogram,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sizex,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sizey,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sizez);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Contrast<sp/>Enhancement<sp/>Functions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getContrastEnhencementMultiGPU(<ref refid="structdimension" kindref="compound">DIM</ref><sp/>tomo,<sp/><ref refid="structgeometry" kindref="compound">GEO</ref><sp/><ref refid="structgeometry" kindref="compound">geometry</ref>,<sp/><ref refid="structContrastEnhancementFilter" kindref="compound">CEF</ref><sp/>ContrastFilter,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*gpus,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ngpus,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*projections);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getContrastEnhencementGPU(<ref refid="structdimension" kindref="compound">DIM</ref><sp/>tomo,<sp/><ref refid="structgeometry" kindref="compound">GEO</ref><sp/><ref refid="structgeometry" kindref="compound">geometry</ref>,<sp/><ref refid="structContrastEnhancementFilter" kindref="compound">CEF</ref><sp/>ContrastFilter,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*projections,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizez,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ngpu);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">contrast_enhance{<sp/></highlight><highlight class="comment">//<sp/>Phase<sp/>retrieval<sp/>Paganin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>ContrastEnhanceType</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>none<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>paganin<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>paganin_slices<sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>contrast<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>3</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>paganinKernel(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*kernel,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>beta_delta,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>wavelength,<sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pixel_objx,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pixel_objy,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z2,<sp/>dim3<sp/>size);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>multiplication(cufftComplex<sp/>*a,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*b,<sp/>cufftComplex<sp/>*ans,<sp/>dim3<sp/>size);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>__global__<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>contrast_paganin_based_Kernel(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*kernel,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>regularization,<sp/>dim3<sp/>size);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">denoise{}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/processing/processing.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,488 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__CUDART__TEXTURE__OBJECT" kind="group">
+    <compoundname>CUDART_TEXTURE_OBJECT</compoundname>
+    <title>Texture Object Management</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__CUDART__TEXTURE__OBJECT_1ga29002aca135dacb5e071fa3eb97743ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGetChannelDesc</definition>
+        <argsstring>(struct cudaChannelFormatDesc *desc, cudaArray_const_t array)</argsstring>
+        <name>cudaGetChannelDesc</name>
+        <param>
+          <type>struct cudaChannelFormatDesc *</type>
+          <declname>desc</declname>
+        </param>
+        <param>
+          <type>cudaArray_const_t</type>
+          <declname>array</declname>
+        </param>
+        <briefdescription>
+<para>Get the channel descriptor of an array. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns in <computeroutput>*desc</computeroutput> the channel descriptor of the CUDA array <computeroutput>array</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>desc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Channel format </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Memory array on device</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__TEXTURE__OBJECT_1ga91840d654e4a4ffb86e9b2fd793e9196" kindref="member">cudaCreateChannelDesc (C API)</ref>, <ref refid="group__CUDART__TEXTURE__OBJECT_1ga0ea16a1a22e515f340aa8f63d74bfeb3" kindref="member">cudaCreateTextureObject</ref>, <ref refid="group__CUDART__SURFACE__OBJECT_1ga6a74f75ea2c4a70b98396182911c611f" kindref="member">cudaCreateSurfaceObject</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="7908" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="7908" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__TEXTURE__OBJECT_1ga91840d654e4a4ffb86e9b2fd793e9196" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ struct cudaChannelFormatDesc CUDARTAPI</type>
+        <definition>__host__ struct cudaChannelFormatDesc CUDARTAPI cudaCreateChannelDesc</definition>
+        <argsstring>(int x, int y, int z, int w, enum cudaChannelFormatKind f)</argsstring>
+        <name>cudaCreateChannelDesc</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type>enum cudaChannelFormatKind</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+<para>Returns a channel descriptor using the specified format. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a channel descriptor with format <computeroutput>f</computeroutput> and number of bits of each component <computeroutput>x</computeroutput>, <computeroutput>y</computeroutput>, <computeroutput>z</computeroutput>, and <computeroutput>w</computeroutput>. The ::cudaChannelFormatDesc is defined as: <programlisting><codeline><highlight class="normal">struct<sp/>cudaChannelFormatDesc<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>int<sp/>x,<sp/>y,<sp/>z,<sp/>w;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>enum<sp/>cudaChannelFormatKind<sp/>f;</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+</programlisting></para>
+<para>where ::cudaChannelFormatKind is one of ::cudaChannelFormatKindSigned, ::cudaChannelFormatKindUnsigned, or ::cudaChannelFormatKindFloat.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- X component </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Y component </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Z component </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- W component </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Channel format</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Channel descriptor with format <computeroutput>f</computeroutput> </para>
+</simplesect>
+<simplesect kind="see"><para>cudaCreateChannelDesc (C++ API), <ref refid="group__CUDART__TEXTURE__OBJECT_1ga29002aca135dacb5e071fa3eb97743ba" kindref="member">cudaGetChannelDesc</ref>, <ref refid="group__CUDART__TEXTURE__OBJECT_1ga0ea16a1a22e515f340aa8f63d74bfeb3" kindref="member">cudaCreateTextureObject</ref>, <ref refid="group__CUDART__SURFACE__OBJECT_1ga6a74f75ea2c4a70b98396182911c611f" kindref="member">cudaCreateSurfaceObject</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="7938" column="8" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="7938" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__TEXTURE__OBJECT_1ga0ea16a1a22e515f340aa8f63d74bfeb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaCreateTextureObject</definition>
+        <argsstring>(cudaTextureObject_t *pTexObject, const struct cudaResourceDesc *pResDesc, const struct cudaTextureDesc *pTexDesc, const struct cudaResourceViewDesc *pResViewDesc)</argsstring>
+        <name>cudaCreateTextureObject</name>
+        <param>
+          <type>cudaTextureObject_t *</type>
+          <declname>pTexObject</declname>
+        </param>
+        <param>
+          <type>const struct cudaResourceDesc *</type>
+          <declname>pResDesc</declname>
+        </param>
+        <param>
+          <type>const struct cudaTextureDesc *</type>
+          <declname>pTexDesc</declname>
+        </param>
+        <param>
+          <type>const struct cudaResourceViewDesc *</type>
+          <declname>pResViewDesc</declname>
+        </param>
+        <briefdescription>
+<para>Creates a texture object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a texture object and returns it in <computeroutput>pTexObject</computeroutput>. <computeroutput>pResDesc</computeroutput> describes the data to texture from. <computeroutput>pTexDesc</computeroutput> describes how the data should be sampled. <computeroutput>pResViewDesc</computeroutput> is an optional argument that specifies an alternate format for the data described by <computeroutput>pResDesc</computeroutput>, and also describes the subresource region to restrict access to when texturing. <computeroutput>pResViewDesc</computeroutput> can only be specified if the type of resource is a CUDA array or a CUDA mipmapped array.</para>
+<para>Texture objects are only supported on devices of compute capability 3.0 or higher. Additionally, a texture object is an opaque value, and, as such, should only be accessed through CUDA API calls.</para>
+<para>The ::cudaResourceDesc structure is defined as: <programlisting><codeline><highlight class="normal">struct<sp/>cudaResourceDesc<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>enum<sp/>cudaResourceType<sp/>resType;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>union<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>struct<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cudaArray_t<sp/>array;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>array;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>struct<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cudaMipmappedArray_t<sp/>mipmap;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>mipmap;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>struct<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>*devPtr;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>struct<sp/>cudaChannelFormatDesc<sp/>desc;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size_t<sp/>sizeInBytes;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>linear;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>struct<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>*devPtr;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>struct<sp/>cudaChannelFormatDesc<sp/>desc;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size_t<sp/>width;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size_t<sp/>height;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size_t<sp/>pitchInBytes;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>pitch2D;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>res;</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+</programlisting> where:<itemizedlist>
+<listitem><para>::cudaResourceDesc::resType specifies the type of resource to texture from. CUresourceType is defined as: <programlisting><codeline><highlight class="normal">enum<sp/>cudaResourceType<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaResourceTypeArray<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaResourceTypeMipmappedArray<sp/>=<sp/>0x01,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaResourceTypeLinear<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x02,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaResourceTypePitch2D<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x03</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+</programlisting></para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="par"><title></title><para>If ::cudaResourceDesc::resType is set to ::cudaResourceTypeArray, ::cudaResourceDesc::res::array::array must be set to a valid CUDA array handle.</para>
+</simplesect>
+<simplesect kind="par"><title></title><para>If ::cudaResourceDesc::resType is set to ::cudaResourceTypeMipmappedArray, ::cudaResourceDesc::res::mipmap::mipmap must be set to a valid CUDA mipmapped array handle and ::cudaTextureDesc::normalizedCoords must be set to true.</para>
+</simplesect>
+<simplesect kind="par"><title></title><para>If ::cudaResourceDesc::resType is set to ::cudaResourceTypeLinear, ::cudaResourceDesc::res::linear::devPtr must be set to a valid device pointer, that is aligned to ::cudaDeviceProp::textureAlignment. ::cudaResourceDesc::res::linear::desc describes the format and the number of components per array element. ::cudaResourceDesc::res::linear::sizeInBytes specifies the size of the array in bytes. The total number of elements in the linear address range cannot exceed ::cudaDeviceProp::maxTexture1DLinear. The number of elements is computed as (sizeInBytes / sizeof(desc)).</para>
+</simplesect>
+<simplesect kind="par"><title></title><para>If ::cudaResourceDesc::resType is set to ::cudaResourceTypePitch2D, ::cudaResourceDesc::res::pitch2D::devPtr must be set to a valid device pointer, that is aligned to ::cudaDeviceProp::textureAlignment. ::cudaResourceDesc::res::pitch2D::desc describes the format and the number of components per array element. ::cudaResourceDesc::res::pitch2D::width and ::cudaResourceDesc::res::pitch2D::height specify the width and height of the array in elements, and cannot exceed ::cudaDeviceProp::maxTexture2DLinear[0] and ::cudaDeviceProp::maxTexture2DLinear[1] respectively. ::cudaResourceDesc::res::pitch2D::pitchInBytes specifies the pitch between two rows in bytes and has to be aligned to ::cudaDeviceProp::texturePitchAlignment. Pitch cannot exceed ::cudaDeviceProp::maxTexture2DLinear[2].</para>
+</simplesect>
+The ::cudaTextureDesc struct is defined as <programlisting><codeline><highlight class="normal">struct<sp/>cudaTextureDesc<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>enum<sp/>cudaTextureAddressMode<sp/>addressMode[3];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>enum<sp/>cudaTextureFilterMode<sp/><sp/>filterMode;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>enum<sp/>cudaTextureReadMode<sp/><sp/><sp/><sp/>readMode;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sRGB;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>float<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>borderColor[4];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>normalizedCoords;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>unsigned<sp/>int<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>maxAnisotropy;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>enum<sp/>cudaTextureFilterMode<sp/><sp/>mipmapFilterMode;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>float<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mipmapLevelBias;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>float<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>minMipmapLevelClamp;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>float<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>maxMipmapLevelClamp;</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+</programlisting> where<itemizedlist>
+<listitem><para>::cudaTextureDesc::addressMode specifies the addressing mode for each dimension of the texture data. ::cudaTextureAddressMode is defined as: <programlisting><codeline><highlight class="normal">enum<sp/>cudaTextureAddressMode<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaAddressModeWrap<sp/><sp/><sp/>=<sp/>0,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaAddressModeClamp<sp/><sp/>=<sp/>1,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaAddressModeMirror<sp/>=<sp/>2,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaAddressModeBorder<sp/>=<sp/>3</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+</programlisting> This is ignored if ::cudaResourceDesc::resType is ::cudaResourceTypeLinear. Also, if ::cudaTextureDesc::normalizedCoords is set to zero, ::cudaAddressModeWrap and ::cudaAddressModeMirror won&apos;t be supported and will be switched to ::cudaAddressModeClamp.</para>
+</listitem><listitem><para>::cudaTextureDesc::filterMode specifies the filtering mode to be used when fetching from the texture. ::cudaTextureFilterMode is defined as: <programlisting><codeline><highlight class="normal">enum<sp/>cudaTextureFilterMode<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaFilterModePoint<sp/><sp/>=<sp/>0,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaFilterModeLinear<sp/>=<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+</programlisting> This is ignored if ::cudaResourceDesc::resType is ::cudaResourceTypeLinear.</para>
+</listitem><listitem><para>::cudaTextureDesc::readMode specifies whether integer data should be converted to floating point or not. ::cudaTextureReadMode is defined as: <programlisting><codeline><highlight class="normal">enum<sp/>cudaTextureReadMode<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaReadModeElementType<sp/><sp/><sp/><sp/><sp/>=<sp/>0,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cudaReadModeNormalizedFloat<sp/>=<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+</programlisting> Note that this applies only to 8-bit and 16-bit integer formats. 32-bit integer format would not be promoted, regardless of whether or not this ::cudaTextureDesc::readMode is set ::cudaReadModeNormalizedFloat is specified.</para>
+</listitem><listitem><para>::cudaTextureDesc::sRGB specifies whether sRGB to linear conversion should be performed during texture fetch.</para>
+</listitem><listitem><para>::cudaTextureDesc::borderColor specifies the float values of color. where: ::cudaTextureDesc::borderColor[0] contains value of &apos;R&apos;, ::cudaTextureDesc::borderColor[1] contains value of &apos;G&apos;, ::cudaTextureDesc::borderColor[2] contains value of &apos;B&apos;, ::cudaTextureDesc::borderColor[3] contains value of &apos;A&apos; Note that application using integer border color values will need to &lt;reinterpret_cast&gt; these values to float. The values are set only when the addressing mode specified by ::cudaTextureDesc::addressMode is cudaAddressModeBorder.</para>
+</listitem><listitem><para>::cudaTextureDesc::normalizedCoords specifies whether the texture coordinates will be normalized or not.</para>
+</listitem><listitem><para>::cudaTextureDesc::maxAnisotropy specifies the maximum anistropy ratio to be used when doing anisotropic filtering. This value will be clamped to the range [1,16].</para>
+</listitem><listitem><para>::cudaTextureDesc::mipmapFilterMode specifies the filter mode when the calculated mipmap level lies between two defined mipmap levels.</para>
+</listitem><listitem><para>::cudaTextureDesc::mipmapLevelBias specifies the offset to be applied to the calculated mipmap level.</para>
+</listitem><listitem><para>::cudaTextureDesc::minMipmapLevelClamp specifies the lower end of the mipmap level range to clamp access to.</para>
+</listitem><listitem><para>::cudaTextureDesc::maxMipmapLevelClamp specifies the upper end of the mipmap level range to clamp access to.</para>
+</listitem></itemizedlist>
+</para>
+<para>The ::cudaResourceViewDesc struct is defined as <programlisting><codeline><highlight class="normal">struct<sp/>cudaResourceViewDesc<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>enum<sp/>cudaResourceViewFormat<sp/>format;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>size_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>width;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>size_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>height;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>size_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>depth;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>unsigned<sp/>int<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>firstMipmapLevel;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>unsigned<sp/>int<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lastMipmapLevel;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>unsigned<sp/>int<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>firstLayer;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>unsigned<sp/>int<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lastLayer;</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+</programlisting> where:<itemizedlist>
+<listitem><para>::cudaResourceViewDesc::format specifies how the data contained in the CUDA array or CUDA mipmapped array should be interpreted. Note that this can incur a change in size of the texture data. If the resource view format is a block compressed format, then the underlying CUDA array or CUDA mipmapped array has to have a 32-bit unsigned integer format with 2 or 4 channels, depending on the block compressed format. For ex., BC1 and BC4 require the underlying CUDA array to have a 32-bit unsigned int with 2 channels. The other BC formats require the underlying resource to have the same 32-bit unsigned int format but with 4 channels.</para>
+</listitem><listitem><para>::cudaResourceViewDesc::width specifies the new width of the texture data. If the resource view format is a block compressed format, this value has to be 4 times the original width of the resource. For non block compressed formats, this value has to be equal to that of the original resource.</para>
+</listitem><listitem><para>::cudaResourceViewDesc::height specifies the new height of the texture data. If the resource view format is a block compressed format, this value has to be 4 times the original height of the resource. For non block compressed formats, this value has to be equal to that of the original resource.</para>
+</listitem><listitem><para>::cudaResourceViewDesc::depth specifies the new depth of the texture data. This value has to be equal to that of the original resource.</para>
+</listitem><listitem><para>::cudaResourceViewDesc::firstMipmapLevel specifies the most detailed mipmap level. This will be the new mipmap level zero. For non-mipmapped resources, this value has to be zero.::cudaTextureDesc::minMipmapLevelClamp and ::cudaTextureDesc::maxMipmapLevelClamp will be relative to this value. For ex., if the firstMipmapLevel is set to 2, and a minMipmapLevelClamp of 1.2 is specified, then the actual minimum mipmap level clamp will be 3.2.</para>
+</listitem><listitem><para>::cudaResourceViewDesc::lastMipmapLevel specifies the least detailed mipmap level. For non-mipmapped resources, this value has to be zero.</para>
+</listitem><listitem><para>::cudaResourceViewDesc::firstLayer specifies the first layer index for layered textures. This will be the new layer zero. For non-layered resources, this value has to be zero.</para>
+</listitem><listitem><para>::cudaResourceViewDesc::lastLayer specifies the last layer index for layered textures. For non-layered resources, this value has to be zero.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pTexObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Texture object to create </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pResDesc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Resource descriptor </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pTexDesc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Texture descriptor </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pResViewDesc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Resource view descriptor</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__TEXTURE__OBJECT_1gaf51f56be67e3dd88b9d75e8f14179ce0" kindref="member">cudaDestroyTextureObject</ref>, ::cuTexObjectCreate </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="8153" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="8153" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__TEXTURE__OBJECT_1gaf51f56be67e3dd88b9d75e8f14179ce0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaDestroyTextureObject</definition>
+        <argsstring>(cudaTextureObject_t texObject)</argsstring>
+        <name>cudaDestroyTextureObject</name>
+        <param>
+          <type>cudaTextureObject_t</type>
+          <declname>texObject</declname>
+        </param>
+        <briefdescription>
+<para>Destroys a texture object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Destroys the texture object specified by <computeroutput>texObject</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>texObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Texture object to destroy</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__TEXTURE__OBJECT_1ga0ea16a1a22e515f340aa8f63d74bfeb3" kindref="member">cudaCreateTextureObject</ref>, ::cuTexObjectDestroy </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="8172" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="8172" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__TEXTURE__OBJECT_1ga57915ff40b83b0b63dd79ee4d22c3ed2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGetTextureObjectResourceDesc</definition>
+        <argsstring>(struct cudaResourceDesc *pResDesc, cudaTextureObject_t texObject)</argsstring>
+        <name>cudaGetTextureObjectResourceDesc</name>
+        <param>
+          <type>struct cudaResourceDesc *</type>
+          <declname>pResDesc</declname>
+        </param>
+        <param>
+          <type>cudaTextureObject_t</type>
+          <declname>texObject</declname>
+        </param>
+        <briefdescription>
+<para>Returns a texture object&apos;s resource descriptor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the resource descriptor for the texture object specified by <computeroutput>texObject</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pResDesc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Resource descriptor </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>texObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Texture object</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__TEXTURE__OBJECT_1ga0ea16a1a22e515f340aa8f63d74bfeb3" kindref="member">cudaCreateTextureObject</ref>, ::cuTexObjectGetResourceDesc </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="8192" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="8192" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__TEXTURE__OBJECT_1gab9acc954820290f5f26db1dcd0f8396f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGetTextureObjectTextureDesc</definition>
+        <argsstring>(struct cudaTextureDesc *pTexDesc, cudaTextureObject_t texObject)</argsstring>
+        <name>cudaGetTextureObjectTextureDesc</name>
+        <param>
+          <type>struct cudaTextureDesc *</type>
+          <declname>pTexDesc</declname>
+        </param>
+        <param>
+          <type>cudaTextureObject_t</type>
+          <declname>texObject</declname>
+        </param>
+        <briefdescription>
+<para>Returns a texture object&apos;s texture descriptor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the texture descriptor for the texture object specified by <computeroutput>texObject</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pTexDesc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Texture descriptor </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>texObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Texture object</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__TEXTURE__OBJECT_1ga0ea16a1a22e515f340aa8f63d74bfeb3" kindref="member">cudaCreateTextureObject</ref>, ::cuTexObjectGetTextureDesc </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="8212" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="8212" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__TEXTURE__OBJECT_1gac35e70068aa46bb4d2520ce148429621" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__host__ cudaError_t CUDARTAPI</type>
+        <definition>__host__ cudaError_t CUDARTAPI cudaGetTextureObjectResourceViewDesc</definition>
+        <argsstring>(struct cudaResourceViewDesc *pResViewDesc, cudaTextureObject_t texObject)</argsstring>
+        <name>cudaGetTextureObjectResourceViewDesc</name>
+        <param>
+          <type>struct cudaResourceViewDesc *</type>
+          <declname>pResViewDesc</declname>
+        </param>
+        <param>
+          <type>cudaTextureObject_t</type>
+          <declname>texObject</declname>
+        </param>
+        <briefdescription>
+<para>Returns a texture object&apos;s resource view descriptor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the resource view descriptor for the texture object specified by <computeroutput>texObject</computeroutput>. If no resource view was specified, ::cudaErrorInvalidValue is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pResViewDesc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Resource view descriptor </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>texObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Texture object</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__TEXTURE__OBJECT_1ga0ea16a1a22e515f340aa8f63d74bfeb3" kindref="member">cudaCreateTextureObject</ref>, ::cuTexObjectGetResourceViewDesc </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="8233" column="39" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="8233" declcolumn="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>___MANBRIEF___ texture object management functions of the CUDA runtime API (___CURRENT_FILE___) ___ENDMANBRIEF___</para>
+<para>This section describes the low level texture object management functions of the CUDA runtime application programming interface. The texture object API is only supported on devices of compute capability 3.0 or higher. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

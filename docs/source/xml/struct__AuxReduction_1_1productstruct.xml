@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct__AuxReduction_1_1productstruct" kind="struct" language="C++" prot="public">
+    <compoundname>_AuxReduction::productstruct</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename T1</type>
+      </param>
+      <param>
+        <type>typename T2</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct__AuxReduction_1_1productstruct_1a45d597e8b89d333f88f7ed31402bd842" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>__hevice T1</type>
+        <definition>__hevice T1 _AuxReduction::productstruct&lt; T1, T2 &gt;::operator()</definition>
+        <argsstring>(const T1 &amp;x1, const T2 &amp;x2) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const T1 &amp;</type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type>const T2 &amp;</type>
+          <declname>x2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="142" column="17" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="142" bodyend="142"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" line="141" column="1" bodyfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common/types.hpp" bodystart="141" bodyend="143"/>
+    <listofallmembers>
+      <member refid="struct__AuxReduction_1_1productstruct_1a45d597e8b89d333f88f7ed31402bd842" prot="public" virt="non-virtual"><scope>_AuxReduction::productstruct</scope><name>operator()</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

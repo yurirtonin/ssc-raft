@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__CUDART__HIGHLEVEL" kind="group">
+    <compoundname>CUDART_HIGHLEVEL</compoundname>
+    <title>C++ API Routines</title>
+    <briefdescription>
+<para>C++-style interface built on top of CUDA runtime API. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>impl_private</para>
+<para>___MANBRIEF___ C++ high level API functions of the CUDA runtime API (___CURRENT_FILE___) ___ENDMANBRIEF___</para>
+<para>This section describes the C++ high level API functions of the CUDA runtime application programming interface. To use these functions, your application needs to be compiled with the <computeroutput>nvcc</computeroutput> compiler. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

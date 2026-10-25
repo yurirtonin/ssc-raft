@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_e6baec5d92c8559538ba91e3c4c6bd05" kind="dir">
+    <compoundname>/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods</compoundname>
+    <innerdir refid="dir_9e784e579ca1448c3070b80ce625ad35">/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/kernels</innerdir>
+    <innerfile refid="radon_8cu">radon.cu</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/src/geometries/conebeam/forward_methods/"/>
+  </compounddef>
+</doxygen>

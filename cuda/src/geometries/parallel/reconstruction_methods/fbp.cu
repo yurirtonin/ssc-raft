@@ -23,8 +23,17 @@ extern "C"{
         // float tmin = -1.0;
         // float dt   = 2.0 / (nrays - 1);
 
-        float xmin = - pixel_size * obj_size.x / 2.0f;
-        float ymin = - pixel_size * obj_size.y / 2.0f;
+        /* The rotation centre must land on the centre of the object array, index
+           (n-1)/2, which is the convention the forward projector (radon_rt.cu) uses:
+           there x = -ax + i*dx with dx = 2*ax/(nx-1). Centring on n/2 instead put the
+           reconstruction half a voxel off the projector's grid in both x and y, i.e.
+           a rigid (0.5,0.5) px translation, which reprojection reports as a
+           0.5*sqrt(2) = 0.707 px sinusoid in theta (cnpem/ssc-raft#3).
+           The detector term below needs no such change: (t - tmin)/dt with
+           tmin = -pixel*nrays/2 already equals (t + pixel*(nrays-1)/2)/dt + 0.5,
+           i.e. it is centred on (nrays-1)/2 and rounded. */
+        float xmin = - pixel_size * ( obj_size.x - 1 ) / 2.0f;
+        float ymin = - pixel_size * ( obj_size.y - 1 ) / 2.0f;
         float dx   =   pixel_size;
         float dy   =   pixel_size;
 

@@ -1,0 +1,539 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__CUDART__MEMORY__DEPRECATED" kind="group">
+    <compoundname>CUDART_MEMORY_DEPRECATED</compoundname>
+    <title>Memory Management [DEPRECATED]</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__CUDART__MEMORY__DEPRECATED_1ga31922de556f15c30839047528f79d520" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__CUDA_DEPRECATED __host__ cudaError_t CUDARTAPI</type>
+        <definition>__CUDA_DEPRECATED __host__ cudaError_t CUDARTAPI cudaMemcpyToArray</definition>
+        <argsstring>(cudaArray_t dst, size_t wOffset, size_t hOffset, const void *src, size_t count, enum cudaMemcpyKind kind)</argsstring>
+        <name>cudaMemcpyToArray</name>
+        <param>
+          <type>cudaArray_t</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>wOffset</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>hOffset</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>enum cudaMemcpyKind</type>
+          <declname>kind</declname>
+        </param>
+        <briefdescription>
+<para>Copies data between host and device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000009"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para>
+<para>Copies <computeroutput>count</computeroutput> bytes from the memory area pointed to by <computeroutput>src</computeroutput> to the CUDA array <computeroutput>dst</computeroutput> starting at the upper left corner (<computeroutput>wOffset</computeroutput>, <computeroutput>hOffset</computeroutput>), where <computeroutput>kind</computeroutput> specifies the direction of the copy, and must be one of ::cudaMemcpyHostToHost, ::cudaMemcpyHostToDevice, ::cudaMemcpyDeviceToHost, ::cudaMemcpyDeviceToDevice, or ::cudaMemcpyDefault. Passing ::cudaMemcpyDefault is recommended, in which case the type of transfer is inferred from the pointer values. However, ::cudaMemcpyDefault is only allowed on systems that support unified virtual addressing.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Destination memory address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wOffset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Destination starting X offset </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hOffset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Destination starting Y offset </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Source memory address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Size in bytes to copy </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Type of transfer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, ::cudaErrorInvalidMemcpyDirection \notefnerr \note_sync \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__MEMORY_1gae2bbb87e03bde890140dae4b348e1886" kindref="member">cudaMemcpy</ref>, <ref refid="group__CUDART__MEMORY_1gadf7361e67d7228dbb554f1ccb47d54b1" kindref="member">cudaMemcpy2D</ref>, <ref refid="group__CUDART__MEMORY_1ga6ea4e52dd6157f45425fdcff3f6d9d3d" kindref="member">cudaMemcpy2DToArray</ref>, <ref refid="group__CUDART__MEMORY__DEPRECATED_1ga29798beaebc6adb7997469208b855206" kindref="member">cudaMemcpyFromArray</ref>, <ref refid="group__CUDART__MEMORY_1ga94a63ef65830ce0c5a8bc8b8208caacb" kindref="member">cudaMemcpy2DFromArray</ref>, <ref refid="group__CUDART__MEMORY__DEPRECATED_1ga0e68b84a77d35d320fa33b963b7770aa" kindref="member">cudaMemcpyArrayToArray</ref>, <ref refid="group__CUDART__MEMORY_1gac8f08a316c1b641bb7ecc85012ddf25d" kindref="member">cudaMemcpy2DArrayToArray</ref>, <ref refid="group__CUDART__MEMORY_1gab81cd4dead648a67aa745cb1e10059ba" kindref="member">cudaMemcpyToSymbol</ref>, <ref refid="group__CUDART__MEMORY_1ga9356cb69eef5a12c7ea255c1b010f121" kindref="member">cudaMemcpyFromSymbol</ref>, <ref refid="group__CUDART__MEMORY_1gafb6d05d580838d8efbe581ca69cd7ac7" kindref="member">cudaMemcpyAsync</ref>, <ref refid="group__CUDART__MEMORY_1ga18f73e4d8f45009a3a733407b0ab5fbf" kindref="member">cudaMemcpy2DAsync</ref>, <ref refid="group__CUDART__MEMORY__DEPRECATED_1gaeb0fbece86bf4174085142b1f87f4710" kindref="member">cudaMemcpyToArrayAsync</ref>, <ref refid="group__CUDART__MEMORY_1ga5e33c77f7fe3cbc1add4671604c30b7d" kindref="member">cudaMemcpy2DToArrayAsync</ref>, <ref refid="group__CUDART__MEMORY__DEPRECATED_1ga34390303a1a78d9969e608168b180e26" kindref="member">cudaMemcpyFromArrayAsync</ref>, <ref refid="group__CUDART__MEMORY_1gae66d22de38a11ce8e09f8f788b2cf275" kindref="member">cudaMemcpy2DFromArrayAsync</ref>, <ref refid="group__CUDART__MEMORY_1ga6110c29da79fc76851d202e27de9aa2c" kindref="member">cudaMemcpyToSymbolAsync</ref>, <ref refid="group__CUDART__MEMORY_1ga4be8411d879e1ed4589da65c87d99857" kindref="member">cudaMemcpyFromSymbolAsync</ref>, ::cuMemcpyHtoA, ::cuMemcpyDtoA </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="6782" column="57" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="6782" declcolumn="57"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__MEMORY__DEPRECATED_1ga29798beaebc6adb7997469208b855206" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__CUDA_DEPRECATED __host__ cudaError_t CUDARTAPI</type>
+        <definition>__CUDA_DEPRECATED __host__ cudaError_t CUDARTAPI cudaMemcpyFromArray</definition>
+        <argsstring>(void *dst, cudaArray_const_t src, size_t wOffset, size_t hOffset, size_t count, enum cudaMemcpyKind kind)</argsstring>
+        <name>cudaMemcpyFromArray</name>
+        <param>
+          <type>void *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>cudaArray_const_t</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>wOffset</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>hOffset</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>enum cudaMemcpyKind</type>
+          <declname>kind</declname>
+        </param>
+        <briefdescription>
+<para>Copies data between host and device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000010"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para>
+<para>Copies <computeroutput>count</computeroutput> bytes from the CUDA array <computeroutput>src</computeroutput> starting at the upper left corner (<computeroutput>wOffset</computeroutput>, hOffset) to the memory area pointed to by <computeroutput>dst</computeroutput>, where <computeroutput>kind</computeroutput> specifies the direction of the copy, and must be one of ::cudaMemcpyHostToHost, ::cudaMemcpyHostToDevice, ::cudaMemcpyDeviceToHost, ::cudaMemcpyDeviceToDevice, or ::cudaMemcpyDefault. Passing ::cudaMemcpyDefault is recommended, in which case the type of transfer is inferred from the pointer values. However, ::cudaMemcpyDefault is only allowed on systems that support unified virtual addressing.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Destination memory address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Source memory address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wOffset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Source starting X offset </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hOffset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Source starting Y offset </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Size in bytes to copy </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Type of transfer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, ::cudaErrorInvalidMemcpyDirection \notefnerr \note_sync \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__MEMORY_1gae2bbb87e03bde890140dae4b348e1886" kindref="member">cudaMemcpy</ref>, <ref refid="group__CUDART__MEMORY_1gadf7361e67d7228dbb554f1ccb47d54b1" kindref="member">cudaMemcpy2D</ref>, <ref refid="group__CUDART__MEMORY__DEPRECATED_1ga31922de556f15c30839047528f79d520" kindref="member">cudaMemcpyToArray</ref>, <ref refid="group__CUDART__MEMORY_1ga6ea4e52dd6157f45425fdcff3f6d9d3d" kindref="member">cudaMemcpy2DToArray</ref>, <ref refid="group__CUDART__MEMORY_1ga94a63ef65830ce0c5a8bc8b8208caacb" kindref="member">cudaMemcpy2DFromArray</ref>, <ref refid="group__CUDART__MEMORY__DEPRECATED_1ga0e68b84a77d35d320fa33b963b7770aa" kindref="member">cudaMemcpyArrayToArray</ref>, <ref refid="group__CUDART__MEMORY_1gac8f08a316c1b641bb7ecc85012ddf25d" kindref="member">cudaMemcpy2DArrayToArray</ref>, <ref refid="group__CUDART__MEMORY_1gab81cd4dead648a67aa745cb1e10059ba" kindref="member">cudaMemcpyToSymbol</ref>, <ref refid="group__CUDART__MEMORY_1ga9356cb69eef5a12c7ea255c1b010f121" kindref="member">cudaMemcpyFromSymbol</ref>, <ref refid="group__CUDART__MEMORY_1gafb6d05d580838d8efbe581ca69cd7ac7" kindref="member">cudaMemcpyAsync</ref>, <ref refid="group__CUDART__MEMORY_1ga18f73e4d8f45009a3a733407b0ab5fbf" kindref="member">cudaMemcpy2DAsync</ref>, <ref refid="group__CUDART__MEMORY__DEPRECATED_1gaeb0fbece86bf4174085142b1f87f4710" kindref="member">cudaMemcpyToArrayAsync</ref>, <ref refid="group__CUDART__MEMORY_1ga5e33c77f7fe3cbc1add4671604c30b7d" kindref="member">cudaMemcpy2DToArrayAsync</ref>, <ref refid="group__CUDART__MEMORY__DEPRECATED_1ga34390303a1a78d9969e608168b180e26" kindref="member">cudaMemcpyFromArrayAsync</ref>, <ref refid="group__CUDART__MEMORY_1gae66d22de38a11ce8e09f8f788b2cf275" kindref="member">cudaMemcpy2DFromArrayAsync</ref>, <ref refid="group__CUDART__MEMORY_1ga6110c29da79fc76851d202e27de9aa2c" kindref="member">cudaMemcpyToSymbolAsync</ref>, <ref refid="group__CUDART__MEMORY_1ga4be8411d879e1ed4589da65c87d99857" kindref="member">cudaMemcpyFromSymbolAsync</ref>, ::cuMemcpyAtoH, ::cuMemcpyAtoD </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="6824" column="57" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="6824" declcolumn="57"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__MEMORY__DEPRECATED_1ga0e68b84a77d35d320fa33b963b7770aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__CUDA_DEPRECATED __host__ cudaError_t CUDARTAPI</type>
+        <definition>__CUDA_DEPRECATED __host__ cudaError_t CUDARTAPI cudaMemcpyArrayToArray</definition>
+        <argsstring>(cudaArray_t dst, size_t wOffsetDst, size_t hOffsetDst, cudaArray_const_t src, size_t wOffsetSrc, size_t hOffsetSrc, size_t count, enum cudaMemcpyKind kind __dv(cudaMemcpyDeviceToDevice))</argsstring>
+        <name>cudaMemcpyArrayToArray</name>
+        <param>
+          <type>cudaArray_t</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>wOffsetDst</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>hOffsetDst</declname>
+        </param>
+        <param>
+          <type>cudaArray_const_t</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>wOffsetSrc</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>hOffsetSrc</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>enum cudaMemcpyKind kind </type>
+          <declname>__dv</declname>
+          <array>cudaMemcpyDeviceToDevice</array>
+        </param>
+        <briefdescription>
+<para>Copies data between host and device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000011"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para>
+<para>Copies <computeroutput>count</computeroutput> bytes from the CUDA array <computeroutput>src</computeroutput> starting at the upper left corner (<computeroutput>wOffsetSrc</computeroutput>, <computeroutput>hOffsetSrc</computeroutput>) to the CUDA array <computeroutput>dst</computeroutput> starting at the upper left corner (<computeroutput>wOffsetDst</computeroutput>, <computeroutput>hOffsetDst</computeroutput>) where <computeroutput>kind</computeroutput> specifies the direction of the copy, and must be one of ::cudaMemcpyHostToHost, ::cudaMemcpyHostToDevice, ::cudaMemcpyDeviceToHost, ::cudaMemcpyDeviceToDevice, or ::cudaMemcpyDefault. Passing ::cudaMemcpyDefault is recommended, in which case the type of transfer is inferred from the pointer values. However, ::cudaMemcpyDefault is only allowed on systems that support unified virtual addressing.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Destination memory address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wOffsetDst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Destination starting X offset </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hOffsetDst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Destination starting Y offset </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Source memory address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wOffsetSrc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Source starting X offset </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hOffsetSrc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Source starting Y offset </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Size in bytes to copy </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Type of transfer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, ::cudaErrorInvalidMemcpyDirection \notefnerr \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__MEMORY_1gae2bbb87e03bde890140dae4b348e1886" kindref="member">cudaMemcpy</ref>, <ref refid="group__CUDART__MEMORY_1gadf7361e67d7228dbb554f1ccb47d54b1" kindref="member">cudaMemcpy2D</ref>, <ref refid="group__CUDART__MEMORY__DEPRECATED_1ga31922de556f15c30839047528f79d520" kindref="member">cudaMemcpyToArray</ref>, <ref refid="group__CUDART__MEMORY_1ga6ea4e52dd6157f45425fdcff3f6d9d3d" kindref="member">cudaMemcpy2DToArray</ref>, <ref refid="group__CUDART__MEMORY__DEPRECATED_1ga29798beaebc6adb7997469208b855206" kindref="member">cudaMemcpyFromArray</ref>, <ref refid="group__CUDART__MEMORY_1ga94a63ef65830ce0c5a8bc8b8208caacb" kindref="member">cudaMemcpy2DFromArray</ref>, <ref refid="group__CUDART__MEMORY_1gac8f08a316c1b641bb7ecc85012ddf25d" kindref="member">cudaMemcpy2DArrayToArray</ref>, <ref refid="group__CUDART__MEMORY_1gab81cd4dead648a67aa745cb1e10059ba" kindref="member">cudaMemcpyToSymbol</ref>, <ref refid="group__CUDART__MEMORY_1ga9356cb69eef5a12c7ea255c1b010f121" kindref="member">cudaMemcpyFromSymbol</ref>, <ref refid="group__CUDART__MEMORY_1gafb6d05d580838d8efbe581ca69cd7ac7" kindref="member">cudaMemcpyAsync</ref>, <ref refid="group__CUDART__MEMORY_1ga18f73e4d8f45009a3a733407b0ab5fbf" kindref="member">cudaMemcpy2DAsync</ref>, <ref refid="group__CUDART__MEMORY__DEPRECATED_1gaeb0fbece86bf4174085142b1f87f4710" kindref="member">cudaMemcpyToArrayAsync</ref>, <ref refid="group__CUDART__MEMORY_1ga5e33c77f7fe3cbc1add4671604c30b7d" kindref="member">cudaMemcpy2DToArrayAsync</ref>, <ref refid="group__CUDART__MEMORY__DEPRECATED_1ga34390303a1a78d9969e608168b180e26" kindref="member">cudaMemcpyFromArrayAsync</ref>, <ref refid="group__CUDART__MEMORY_1gae66d22de38a11ce8e09f8f788b2cf275" kindref="member">cudaMemcpy2DFromArrayAsync</ref>, <ref refid="group__CUDART__MEMORY_1ga6110c29da79fc76851d202e27de9aa2c" kindref="member">cudaMemcpyToSymbolAsync</ref>, <ref refid="group__CUDART__MEMORY_1ga4be8411d879e1ed4589da65c87d99857" kindref="member">cudaMemcpyFromSymbolAsync</ref>, ::cuMemcpyAtoA </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="6867" column="57" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="6867" declcolumn="57"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__MEMORY__DEPRECATED_1gaeb0fbece86bf4174085142b1f87f4710" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__CUDA_DEPRECATED __host__ cudaError_t CUDARTAPI</type>
+        <definition>__CUDA_DEPRECATED __host__ cudaError_t CUDARTAPI cudaMemcpyToArrayAsync</definition>
+        <argsstring>(cudaArray_t dst, size_t wOffset, size_t hOffset, const void *src, size_t count, enum cudaMemcpyKind kind, cudaStream_t stream __dv(0))</argsstring>
+        <name>cudaMemcpyToArrayAsync</name>
+        <param>
+          <type>cudaArray_t</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>wOffset</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>hOffset</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>enum cudaMemcpyKind</type>
+          <declname>kind</declname>
+        </param>
+        <param>
+          <type>cudaStream_t stream </type>
+          <declname>__dv</declname>
+          <array>0</array>
+        </param>
+        <briefdescription>
+<para>Copies data between host and device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000012"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para>
+<para>Copies <computeroutput>count</computeroutput> bytes from the memory area pointed to by <computeroutput>src</computeroutput> to the CUDA array <computeroutput>dst</computeroutput> starting at the upper left corner (<computeroutput>wOffset</computeroutput>, <computeroutput>hOffset</computeroutput>), where <computeroutput>kind</computeroutput> specifies the direction of the copy, and must be one of ::cudaMemcpyHostToHost, ::cudaMemcpyHostToDevice, ::cudaMemcpyDeviceToHost, ::cudaMemcpyDeviceToDevice, or ::cudaMemcpyDefault. Passing ::cudaMemcpyDefault is recommended, in which case the type of transfer is inferred from the pointer values. However, ::cudaMemcpyDefault is only allowed on systems that support unified virtual addressing.</para>
+<para><ref refid="group__CUDART__MEMORY__DEPRECATED_1gaeb0fbece86bf4174085142b1f87f4710" kindref="member">cudaMemcpyToArrayAsync()</ref> is asynchronous with respect to the host, so the call may return before the copy is complete. The copy can optionally be associated to a stream by passing a non-zero <computeroutput>stream</computeroutput> argument. If <computeroutput>kind</computeroutput> is ::cudaMemcpyHostToDevice or ::cudaMemcpyDeviceToHost and <computeroutput>stream</computeroutput> is non-zero, the copy may overlap with operations in other streams.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Destination memory address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wOffset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Destination starting X offset </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hOffset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Destination starting Y offset </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Source memory address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Size in bytes to copy </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Type of transfer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Stream identifier</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, ::cudaErrorInvalidMemcpyDirection \notefnerr \note_async \note_null_stream \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__MEMORY_1gae2bbb87e03bde890140dae4b348e1886" kindref="member">cudaMemcpy</ref>, <ref refid="group__CUDART__MEMORY_1gadf7361e67d7228dbb554f1ccb47d54b1" kindref="member">cudaMemcpy2D</ref>, <ref refid="group__CUDART__MEMORY__DEPRECATED_1ga31922de556f15c30839047528f79d520" kindref="member">cudaMemcpyToArray</ref>, <ref refid="group__CUDART__MEMORY_1ga6ea4e52dd6157f45425fdcff3f6d9d3d" kindref="member">cudaMemcpy2DToArray</ref>, <ref refid="group__CUDART__MEMORY__DEPRECATED_1ga29798beaebc6adb7997469208b855206" kindref="member">cudaMemcpyFromArray</ref>, <ref refid="group__CUDART__MEMORY_1ga94a63ef65830ce0c5a8bc8b8208caacb" kindref="member">cudaMemcpy2DFromArray</ref>, <ref refid="group__CUDART__MEMORY__DEPRECATED_1ga0e68b84a77d35d320fa33b963b7770aa" kindref="member">cudaMemcpyArrayToArray</ref>, <ref refid="group__CUDART__MEMORY_1gac8f08a316c1b641bb7ecc85012ddf25d" kindref="member">cudaMemcpy2DArrayToArray</ref>, <ref refid="group__CUDART__MEMORY_1gab81cd4dead648a67aa745cb1e10059ba" kindref="member">cudaMemcpyToSymbol</ref>, <ref refid="group__CUDART__MEMORY_1ga9356cb69eef5a12c7ea255c1b010f121" kindref="member">cudaMemcpyFromSymbol</ref>, <ref refid="group__CUDART__MEMORY_1gafb6d05d580838d8efbe581ca69cd7ac7" kindref="member">cudaMemcpyAsync</ref>, <ref refid="group__CUDART__MEMORY_1ga18f73e4d8f45009a3a733407b0ab5fbf" kindref="member">cudaMemcpy2DAsync</ref>, <ref refid="group__CUDART__MEMORY_1ga5e33c77f7fe3cbc1add4671604c30b7d" kindref="member">cudaMemcpy2DToArrayAsync</ref>, <ref refid="group__CUDART__MEMORY__DEPRECATED_1ga34390303a1a78d9969e608168b180e26" kindref="member">cudaMemcpyFromArrayAsync</ref>, <ref refid="group__CUDART__MEMORY_1gae66d22de38a11ce8e09f8f788b2cf275" kindref="member">cudaMemcpy2DFromArrayAsync</ref>, <ref refid="group__CUDART__MEMORY_1ga6110c29da79fc76851d202e27de9aa2c" kindref="member">cudaMemcpyToSymbolAsync</ref>, <ref refid="group__CUDART__MEMORY_1ga4be8411d879e1ed4589da65c87d99857" kindref="member">cudaMemcpyFromSymbolAsync</ref>, ::cuMemcpyHtoAAsync, ::cuMemcpy2DAsync </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="6918" column="57" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="6918" declcolumn="57"/>
+      </memberdef>
+      <memberdef kind="function" id="group__CUDART__MEMORY__DEPRECATED_1ga34390303a1a78d9969e608168b180e26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__CUDA_DEPRECATED __host__ cudaError_t CUDARTAPI</type>
+        <definition>__CUDA_DEPRECATED __host__ cudaError_t CUDARTAPI cudaMemcpyFromArrayAsync</definition>
+        <argsstring>(void *dst, cudaArray_const_t src, size_t wOffset, size_t hOffset, size_t count, enum cudaMemcpyKind kind, cudaStream_t stream __dv(0))</argsstring>
+        <name>cudaMemcpyFromArrayAsync</name>
+        <param>
+          <type>void *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>cudaArray_const_t</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>wOffset</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>hOffset</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>enum cudaMemcpyKind</type>
+          <declname>kind</declname>
+        </param>
+        <param>
+          <type>cudaStream_t stream </type>
+          <declname>__dv</declname>
+          <array>0</array>
+        </param>
+        <briefdescription>
+<para>Copies data between host and device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000013"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para>
+<para>Copies <computeroutput>count</computeroutput> bytes from the CUDA array <computeroutput>src</computeroutput> starting at the upper left corner (<computeroutput>wOffset</computeroutput>, hOffset) to the memory area pointed to by <computeroutput>dst</computeroutput>, where <computeroutput>kind</computeroutput> specifies the direction of the copy, and must be one of ::cudaMemcpyHostToHost, ::cudaMemcpyHostToDevice, ::cudaMemcpyDeviceToHost, ::cudaMemcpyDeviceToDevice, or ::cudaMemcpyDefault. Passing ::cudaMemcpyDefault is recommended, in which case the type of transfer is inferred from the pointer values. However, ::cudaMemcpyDefault is only allowed on systems that support unified virtual addressing.</para>
+<para><ref refid="group__CUDART__MEMORY__DEPRECATED_1ga34390303a1a78d9969e608168b180e26" kindref="member">cudaMemcpyFromArrayAsync()</ref> is asynchronous with respect to the host, so the call may return before the copy is complete. The copy can optionally be associated to a stream by passing a non-zero <computeroutput>stream</computeroutput> argument. If <computeroutput>kind</computeroutput> is ::cudaMemcpyHostToDevice or ::cudaMemcpyDeviceToHost and <computeroutput>stream</computeroutput> is non-zero, the copy may overlap with operations in other streams.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Destination memory address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Source memory address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wOffset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Source starting X offset </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hOffset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Source starting Y offset </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Size in bytes to copy </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Type of transfer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Stream identifier</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>::cudaSuccess, ::cudaErrorInvalidValue, ::cudaErrorInvalidMemcpyDirection \notefnerr \note_async \note_null_stream \note_init_rt \note_callback</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__CUDART__MEMORY_1gae2bbb87e03bde890140dae4b348e1886" kindref="member">cudaMemcpy</ref>, <ref refid="group__CUDART__MEMORY_1gadf7361e67d7228dbb554f1ccb47d54b1" kindref="member">cudaMemcpy2D</ref>, <ref refid="group__CUDART__MEMORY__DEPRECATED_1ga31922de556f15c30839047528f79d520" kindref="member">cudaMemcpyToArray</ref>, <ref refid="group__CUDART__MEMORY_1ga6ea4e52dd6157f45425fdcff3f6d9d3d" kindref="member">cudaMemcpy2DToArray</ref>, <ref refid="group__CUDART__MEMORY__DEPRECATED_1ga29798beaebc6adb7997469208b855206" kindref="member">cudaMemcpyFromArray</ref>, <ref refid="group__CUDART__MEMORY_1ga94a63ef65830ce0c5a8bc8b8208caacb" kindref="member">cudaMemcpy2DFromArray</ref>, <ref refid="group__CUDART__MEMORY__DEPRECATED_1ga0e68b84a77d35d320fa33b963b7770aa" kindref="member">cudaMemcpyArrayToArray</ref>, <ref refid="group__CUDART__MEMORY_1gac8f08a316c1b641bb7ecc85012ddf25d" kindref="member">cudaMemcpy2DArrayToArray</ref>, <ref refid="group__CUDART__MEMORY_1gab81cd4dead648a67aa745cb1e10059ba" kindref="member">cudaMemcpyToSymbol</ref>, <ref refid="group__CUDART__MEMORY_1ga9356cb69eef5a12c7ea255c1b010f121" kindref="member">cudaMemcpyFromSymbol</ref>, <ref refid="group__CUDART__MEMORY_1gafb6d05d580838d8efbe581ca69cd7ac7" kindref="member">cudaMemcpyAsync</ref>, <ref refid="group__CUDART__MEMORY_1ga18f73e4d8f45009a3a733407b0ab5fbf" kindref="member">cudaMemcpy2DAsync</ref>, <ref refid="group__CUDART__MEMORY__DEPRECATED_1gaeb0fbece86bf4174085142b1f87f4710" kindref="member">cudaMemcpyToArrayAsync</ref>, <ref refid="group__CUDART__MEMORY_1ga5e33c77f7fe3cbc1add4671604c30b7d" kindref="member">cudaMemcpy2DToArrayAsync</ref>, <ref refid="group__CUDART__MEMORY_1gae66d22de38a11ce8e09f8f788b2cf275" kindref="member">cudaMemcpy2DFromArrayAsync</ref>, <ref refid="group__CUDART__MEMORY_1ga6110c29da79fc76851d202e27de9aa2c" kindref="member">cudaMemcpyToSymbolAsync</ref>, <ref refid="group__CUDART__MEMORY_1ga4be8411d879e1ed4589da65c87d99857" kindref="member">cudaMemcpyFromSymbolAsync</ref>, ::cuMemcpyAtoHAsync, ::cuMemcpy2DAsync </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" line="6968" column="57" declfile="/net/roentgen/home/yrossitonin/code/ssc-raft/cuda/inc/common10/cuda_runtime_api.h" declline="6968" declcolumn="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>___MANBRIEF___ deprecated memory management functions of the CUDA runtime API (___CURRENT_FILE___) ___ENDMANBRIEF___</para>
+<para>This section describes deprecated memory management functions of the CUDA runtime application programming interface.</para>
+<para>Some functions have overloaded C++ API template versions documented separately in the <ref refid="group__CUDART__HIGHLEVEL" kindref="compound">C++ API Routines</ref> module. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>
